@@ -1,0 +1,68 @@
+{
+  "frozen_at_utc": "2026-10-24T10:18:16.855747+00:00",
+  "purpose": "External steady-state resource-constraint transfer challenge; not dynamic kinetic validation",
+  "selection": "All five Table 1 oxygen conditions, including anaerobic applicability boundary",
+  "fitting": "None; no experimental outputs used to select or calibrate model parameters",
+  "network": "Same archived processed yeast A,b,c and reconstructed bounds used by frozen Zampar model",
+  "epsilon": 0,
+  "barrier_parameter": 0,
+  "solution_route": "LP limit",
+  "objective": "Maximize archived biomass objective r_2111",
+  "maintenance_mmol_gDW_h": 5.565032869183548,
+  "glucose_oxygen_roles": "Positive measured uptake means are external input constraints, not outputs or true uptake capacity measurements",
+  "resource_semantics": {
+    "capacity": "-qG <= vG <= 0; -qO <= vO <= 0",
+    "prescribed": "vG=-qG and vO=-qO"
+  },
+  "ethanol": "Keep original exchange lower bound zero and upper bound1000; allow secretion. No measured ethanol or growth imposed. Internal ethanol transport remains original.",
+  "media": {
+    "archived_medium": "Original frozen uptake permissions and finite inherited bounds",
+    "unlimited_lipid_availability": "Open existing r_1757 ergosterol and r_2189 oleate lower bounds to-1000; no new reactions. Inherited1000 is nonlimiting sensitivity assumption, not measured flux. Oleate is an imperfect Tween80 proxy. Additional lipid carbon/energy can confound growth; feasibility/confounding diagnostic only."
+  },
+  "input_sensitivity": "Nominal plus all unique corners of qG mean\u00b11 SEM and qO mean\u00b11 SEM, clipped at0. Missing SEM gives unchanged input; no joint confidence interpretation.",
+  "expected_primary_lp_count": 92,
+  "solver": {
+    "method": "scipy.optimize.linprog(method=highs-ds)",
+    "primal_feasibility_tolerance": 1e-09,
+    "dual_feasibility_tolerance": 1e-09
+  },
+  "ethanol_fva": "Min/max ethanol on cTv >= optimal_growth-1e-9; not conditioned on measured growth. Report failed ranges and never use arbitrary LP vertex as unique prediction.",
+  "biomass_fva_slack_h-1": 1e-09,
+  "numerical_acceptance": {
+    "max_equality_residual": 1e-07,
+    "max_bound_violation": 1e-07
+  },
+  "reported_outputs": [
+    "solver status",
+    "growth",
+    "growth error vs D=0.1",
+    "realized glucose/oxygen uptake",
+    "one optimal ethanol flux",
+    "near-optimal ethanol FVA interval",
+    "ethanol mean\u00b1SEM interval overlap (descriptive)",
+    "lipid uptake",
+    "numerical residuals"
+  ],
+  "limits": [
+    "Cross-strain FY4-to-CEN.PK113-1A and medium transfer",
+    "SEM corners are descriptive input perturbations, not confidence bands",
+    "No residual glucose or measured capacity data, so qmax/K kinetics are not tested",
+    "No biological replicate validation, no full dynamic trajectory validation",
+    "No post-outcome constraint repair or model selection"
+  ],
+  "input_sha256": {
+    "inputs/SC_Model.mat": "6712c7af12964a8e0ba919eee24c49fbbdb1d18392c28a275a3bd9e452d2bc2f",
+    "inputs/SCerevisiae_Data.mat": "e69b562f34cae97d676513d57175f4642559ee629b32bb1a5839177dd943acbd",
+    "inputs/SCerevisiae_Model.mat": "3a06c7d58912cdbe079f09cc18a9cf92dd93ac2c46556c3f9d19a72c41f9b65b",
+    "inputs/zampar_fit_summary.json": "47751e39bc04d4c09f8d335207cd07779c2e1bb3a0692bdc6d42819c89b6a6f5"
+  },
+  "source_paths": {
+    "SC_Model.mat": "14_control_pso/09_Sc_Kp/SC_Model.mat",
+    "SCerevisiae_Data.mat": "14_control_pso/09_Sc_Kp/SCerevisiae_Data.mat",
+    "SCerevisiae_Model.mat": "recovered/local/Downloads/One drive/research_MATLAB/Ta's work/Problem_3/SCerevisiae_Model.mat",
+    "zampar_fit_summary.json": "research_completion/runs/figure11_zampar_2026-10-21/fit_summary.json"
+  },
+  "observations_sha256": "0f2fc5ba4d2bafd4fc17295dd1a9ba3672cf871db14311a7536dc93b2a8670a4",
+  "run_script_sha256": "9c84c4860434bb33147ffb1b008fd6e513adc130e1233d115db4ee4844b50ef1",
+  "prepare_script_sha256": "fb0435cb9033d7c706659692f16ad089d07a8e288c3ddb018f0b13b7c0a272a6"
+}

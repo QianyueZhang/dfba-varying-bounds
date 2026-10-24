@@ -1,0 +1,11 @@
+{
+  "declared_utc": "2026-10-24T11:19:40Z",
+  "script_sha256": "b425eb6a33e6264f9023b4b26c5b06a9196f874b3e97e2d54d30ab595342e553",
+  "primary_results_sha256": "bc3cb1bb7c65c362bf4d264da0fb64d6b19caa4d91d3dfc04dc200fdd3677947",
+  "primary_protocol_sha256": "e02e9fa31327c58df8a1503c6e4f4ff436bc99675b4b7af475b875d72a789287",
+  "status": "Post-outcome diagnostic; does not replace failed primary forecast or refit parameters.",
+  "prefix": "Repeat identical RK45 equations/tolerances with step API, retaining every accepted endpoint and dense interpolant. Record accepted time and failed trial time/state separately. No extrapolation beyond last accepted time.",
+  "feasibility": "At failed trial state, remove fitted ATP lower demand and maximize ATP flux with every other bound unchanged. Compare available ATP to fitted demand; this concerns the queried state, not an exact event-time certificate.",
+  "matched": "Finish originally planned no-refit capacity-versus-prescribed LP comparison using original all-phase parameters; 301 matched states and1001trajectory times.",
+  "sensitivity": "Fine-tolerance pre-origin residual central differences in three log parameters with step.001; report SVD only, noCI. No full forecast rescue or clipping."
+}

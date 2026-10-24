@@ -1,0 +1,71 @@
+{
+  "status": "completed",
+  "start_utc": "2026-10-22T12:03:55.108908+00:00",
+  "python_executable": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+  "python_version": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "concurrent_checks": 2,
+  "timing_interpretation": "Concurrent verification costs only; not algorithm-ranking times. Common elapsed time measures launch to completion of both checks.",
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "verifier_script": "scripts/direct_verify.py",
+  "verifier_sha256": "d62e93af83885fdb334fa44d9f75c78c41349930a0c5b6af21bf46f69bd93cfa",
+  "backend_source_sha256": {
+    "flux_model.py": "480938e2a69b5632e5f22e768fed3858b4148e8da4f50c9f2424d79578d99387",
+    "primal_dual.py": "004ff0cb19944f8372f1408f6258276f2585b60e861c367fca32b70cb42a9994"
+  },
+  "checks": [
+    {
+      "label": "direct_multistart",
+      "input": "results/direct_input_direct_multistart.json",
+      "input_sha256": "cc7aa9efdc77d342be82f3063acd546a09d5c633d3700437057c6552379e1845",
+      "output": "results/direct_direct_multistart.json",
+      "log": "results/direct_direct_multistart.log",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+        "-B",
+        "scripts/direct_verify.py",
+        "--input",
+        "results/direct_input_direct_multistart.json",
+        "--output",
+        "results/direct_direct_multistart.json"
+      ],
+      "pid": 61929,
+      "status": "completed",
+      "launch_offset_seconds": 0.0012410832569003105,
+      "exit_code": 0,
+      "launch_to_completion_seconds": 575.533519458957,
+      "output_sha256": "cb9c5d2e76130ee3f208a47dc588d2d5674d0780d0e272dc5e344af8c4661f67",
+      "log_sha256": "f87175168e1e3810e27e97c3bc0ded77359c8f1fed0d1dbbb65c26e0969fc442"
+    },
+    {
+      "label": "mlp",
+      "input": "results/direct_input_mlp.json",
+      "input_sha256": "9f07edbda77a6254e17bc466c044f3a0c8b142f9f5ac2e91f8fb4624f33d709c",
+      "output": "results/direct_mlp.json",
+      "log": "results/direct_mlp.log",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+        "-B",
+        "scripts/direct_verify.py",
+        "--input",
+        "results/direct_input_mlp.json",
+        "--output",
+        "results/direct_mlp.json"
+      ],
+      "pid": 61930,
+      "status": "completed",
+      "launch_offset_seconds": 0.0031532500870525837,
+      "exit_code": 0,
+      "launch_to_completion_seconds": 650.6028071250767,
+      "output_sha256": "81de5600fa4be5a10a9ee7623364ea99f583c882a93d881a7716a77e934d4882",
+      "log_sha256": "e5deb9d17cf9451afb82cbb481163be2ac18b3dee3a3057dae34a2369bc30ee3"
+    }
+  ],
+  "elapsed_seconds": 650.6060985829681,
+  "finish_utc": "2026-10-22T12:14:45.830043+00:00",
+  "common_launch_to_completion_seconds": 650.6091168331914
+}

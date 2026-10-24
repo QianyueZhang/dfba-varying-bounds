@@ -1,0 +1,137 @@
+{
+  "complete": true,
+  "cases": [
+    {
+      "case": "manual_analytic_high_substrate",
+      "assertions_passed": true,
+      "seconds": 0.4598638331517577,
+      "feasible": true,
+      "plan": [
+        0.19773459035207422,
+        0.06998671641740623
+      ],
+      "best_error": 0.007479702060990245,
+      "worstB": 2.1457395833088175,
+      "count": {
+        "candidate_evaluations": 304,
+        "evaluation_requests": 451,
+        "cache_hits": 147,
+        "attempted_flow_calls": 3648,
+        "completed_flow_calls": 3648,
+        "accepted_integration_steps": 153216,
+        "rejected_integration_steps": 0,
+        "numerical_invalid_candidates": 0,
+        "physical_invalid_candidates": 0
+      },
+      "solver_statuses": [
+        {
+          "stage": "minimax",
+          "start": "grid_start",
+          "success": true,
+          "status": 0,
+          "message": "Optimization terminated successfully",
+          "iterations": 4,
+          "function_evaluations": 17,
+          "x": [
+            0.17447477238333112,
+            0.12011319093128324,
+            0.00653492546493594
+          ],
+          "candidate_index": 12
+        },
+        {
+          "stage": "minimax",
+          "start": "uniform_available_start",
+          "success": true,
+          "status": 0,
+          "message": "Optimization terminated successfully",
+          "iterations": 4,
+          "function_evaluations": 17,
+          "x": [
+            0.15729874893072282,
+            0.19025347801912426,
+            0.006535089049442577
+          ],
+          "candidate_index": 25
+        },
+        {
+          "stage": "economic",
+          "start_candidate_index": 10,
+          "success": false,
+          "status": 9,
+          "message": "Iteration limit reached",
+          "iterations": 60,
+          "function_evaluations": 339,
+          "x": [
+            0.19773359035207422,
+            0.06998671641740623,
+            0.7634845370817422
+          ],
+          "candidate_index": 301
+        }
+      ],
+      "max_independent_z_difference": 1.2656542480726785e-14,
+      "max_independent_logB_difference": 1.0880185641326534e-14,
+      "independent_inner_label_agrees": true
+    },
+    {
+      "case": "manual_analytic_low_substrate",
+      "assertions_passed": true,
+      "seconds": 0.21067212475463748,
+      "feasible": false,
+      "plan": [
+        0.04683472267477945,
+        0.060703550398761796
+      ],
+      "best_error": 0.012805905667687911,
+      "worstB": 29.74974274754393,
+      "count": {
+        "candidate_evaluations": 38,
+        "evaluation_requests": 69,
+        "cache_hits": 31,
+        "attempted_flow_calls": 456,
+        "completed_flow_calls": 456,
+        "accepted_integration_steps": 112560,
+        "rejected_integration_steps": 806,
+        "numerical_invalid_candidates": 0,
+        "physical_invalid_candidates": 2
+      },
+      "solver_statuses": [
+        {
+          "stage": "minimax",
+          "start": "grid_start",
+          "success": true,
+          "status": 0,
+          "message": "Optimization terminated successfully",
+          "iterations": 6,
+          "function_evaluations": 25,
+          "x": [
+            0.04683472267477945,
+            0.060703550398761796,
+            0.01280590566758115
+          ],
+          "candidate_index": 18
+        },
+        {
+          "stage": "minimax",
+          "start": "uniform_available_start",
+          "success": true,
+          "status": 0,
+          "message": "Optimization terminated successfully",
+          "iterations": 6,
+          "function_evaluations": 25,
+          "x": [
+            0.04683472051407249,
+            0.06070355237473768,
+            0.012805905667589788
+          ],
+          "candidate_index": 37
+        }
+      ],
+      "max_independent_z_difference": 3.197442310920451e-14,
+      "max_independent_logB_difference": 3.6415315207705135e-14,
+      "independent_inner_label_agrees": true
+    }
+  ],
+  "scope": "Two manual analytic development states, not evaluation or paper-effectiveness evidence"
+}

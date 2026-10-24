@@ -1,0 +1,29 @@
+# Frozen numerical decomposition: completed results
+
+All six LP reference integrations and both new direct finite-barrier trajectories completed and passed the declared checks. The protocol remains SHA256 `7280a0a16d163a72a3e309e2cfd24a9bf1bb7491f59d809d6a029fcd37c5735a`; all bound laws, fitted parameters, initial conditions and source hashes remained unchanged. No scientific run was interrupted or retuned. The full interval is -6.8 to 8.0583333335 h.
+
+The direct runs use the original KKT/Newton algorithm at each external ODE evaluation. The pair (epsilon, mu) = (1e-6, 1e-8) used 669 RHS evaluations and 1209 KKT solves in 1740.16 s; (1e-5, 1e-8) used 652 RHS evaluations and 1192 KKT solves in 1716.31 s. All accepted and saved external states are positive. Across all retained solves, maximum equality residuals are 2.3941e-12 and 2.2963e-12, maximum stationarity residuals 1.9966e-7 and 1.9135e-7, and minimum bound slacks 1.1460e-8 and 1.1638e-8, respectively. The saved-output biomass-objective gaps to the same-state expanded LP are positive and satisfy the declared upper check. These are numerical checks, not exact-arithmetic proofs.
+
+## Signed decomposition at experimental observation times
+
+`results/observation_decomposition.csv` contains all 256 eligible original observations for each of three parameter pairs, including original source-cell identities and calibration/withheld labels. `results/decomposition.json` gives signed mean, maximum absolute and RMS differences for each variable and subset. Biomass is evaluated in the measured OD600 scale, X/0.486. Concentration differences below are g/L. The signed identity is expansion + finite-minus-expanded-LP = finite-minus-unexpanded-LP. Its largest numerical residual over 768 rows is 2.585e-26.
+
+The following maxima refer to the 211 withheld observations (120 OD600, 47 glucose, 44 ethanol), in the order OD600, glucose, ethanol:
+
+- Archived adopted pair (1e-5, 1e-7): expansion maxima 0.00550272, 0.00401300, 0.00221217; finite-minus-expanded-LP maxima 0.00257041, 0.00167000, 0.000817925; total maxima 0.00293231, 0.00234300, 0.00139424. Total RMS differences are 0.00128900, 0.000885250, 0.000594948.
+- Jointly tightened pair (1e-6, 1e-8): expansion maxima 0.000551043, 0.000401807, 0.000222227; finite-minus-expanded-LP maxima 0.000263415, 0.000176791, 0.000109580; total maxima 0.000287627, 0.000225016, 0.000112648. Total RMS differences are 0.000125591, 0.0000850412, 0.0000507220.
+- Smaller barrier at fixed expansion (1e-5, 1e-8): expansion maxima remain 0.00550272, 0.00401300, 0.00221217; finite-minus-expanded-LP maxima decrease to 0.000219563, 0.000152253, 0.000137952; total maxima increase to 0.00528316, 0.00386075, 0.00207421. Total RMS differences are 0.00225230, 0.00145873, 0.000903306.
+
+In all three cases the two signed components oppose one another at all 211 withheld times. For the adopted pair, the maximum cancellation fractions are 0.637, 0.592 and 0.693. Reducing mu alone removes much of this cancellation (maxima 0.0767, 0.0731, 0.1216), so the total discrepancy grows despite the smaller finite-minus-expanded-LP component. This is the intended diagnostic: a small combined difference alone can conceal two larger contributions. Joint tightening reduces each contribution and the total, but two tested pairs do not establish a general convergence rate.
+
+## Scale comparison and integration checks
+
+The archived withheld residual RMSE values are 0.0689936 OD600, 0.0599768 g/L glucose and 0.142454 g/L ethanol. For the adopted pair, the largest individual component is 7.98%, 6.69% and 1.55% of those variable-specific residual scales. For the jointly tightened pair, the total numerical maxima are 0.417%, 0.375% and 0.0791% of the residual scales; each individual component is below 0.80% of its corresponding residual scale. This supports the limited statement that numerical approximation is small relative to the observed model-data discrepancy in this retained case. The residual RMSE is not a measurement uncertainty or a confidence interval, and this comparison does not validate the model biologically.
+
+New fine/coarse LP integrations have withheld-time maximum differences below 6.41e-8 in all reported variable/pair combinations. The archived adopted direct coarse/fine differences are 1.41795e-6 OD600, 1.25396e-6 g/L glucose and 2.65024e-6 g/L ethanol. This archived direct refinement estimate applies only to the adopted pair. No fresh direct refinement was run for the two new pairs; their finite-minus-LP trajectory differences retain integration and KKT-solver contributions and must not be called rigorous pure barrier-error bounds. The adopted direct trajectory was produced under its earlier recorded NumPy/SciPy versions, while the new runs use NumPy 2.2.2, SciPy 1.15.1 and highspy 1.15.1. Cross-runtime comparison is another explicit limitation.
+
+## Files and reproduction
+
+The immutable experiment script is `regularization_experiment.py`. Each direct case retains `result.json`, `trajectory.csv`, `accepted_states.npz`, `rhs_evaluations.npz` and `KKT_records.json` under `results/`. The `lp/` directory retains all six curves and status records. The reporting command `--report` succeeded without amendment; it verifies exact inclusion of every original observation time rather than interpolating missing output times.
+
+The script refuses to overwrite an existing protocol, results directory or final report. A fresh reproduction must use a fresh study destination with the declared source tree. Do not rerun the original thesis scripts' main functions against their archived output directories. A short runtime profile is retained in `audit/`; it diagnosed sparse KKT factorization as the bottleneck and caused no solver or source changes. Runtime comparisons with the archived campaign are not a performance benchmark.

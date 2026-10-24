@@ -1,0 +1,147 @@
+{
+  "declared_utc": "2026-10-24T04:00:06.450031+00:00",
+  "status": "Declared after completed deployment and before any diagnostic integrations",
+  "source_sha256": {
+    "audit/deployment_results.json": "4213df6467c87bf1d38dca24a58964cb6b0acd3779ce3095e76cf1c2931a1632",
+    "audit/deployment_protocol.json": "6d5ab5d999e2bfa07725c9877b9f1587470d8ed265eaf6b8f78f26bea06be02e",
+    "audit/independent_amount_model.py": "b0b42a3ab3bab1a014367fad97d9bdf71152ba7e209c8877eb4ad118c5b0995e",
+    "audit/diagnose_prefixes.py": "44b8034a0f7eddbc81bf8798135528d0cfe99c91363b9b870eb0141451b9817b",
+    "scripts/engine.py": "28843ca0c1064667a7990c569185d27b63557900809b597732a6d488e9905898",
+    "vendor/prior_kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6",
+    "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb",
+    "results/roots.json": "16ac9df9afc4d5bc3debc3f75cc6bae59892efe2ca91d2c353985f065ff00e66"
+  },
+  "runtime": {
+    "python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "executable": "python3.11",
+    "platform": "macOS-14.6.1-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.2.2",
+      "scipy": "1.15.1",
+      "numba": "0.68.0"
+    }
+  },
+  "deployment_original_passed": false,
+  "deployment_original_failure_records": 10,
+  "selection_rule": "Every root with any failed saved-prefix comparison or failed matched transition used in that prefix; no hand selection or duplicate root counting.",
+  "selected_roots": [
+    {
+      "root": "table_v0.9_early",
+      "selection_reasons": [
+        {
+          "stage": 4,
+          "kind": "failed_saved_prefix",
+          "transition_id": 41
+        },
+        {
+          "stage": 4,
+          "kind": "failed_matched_prefix_transition",
+          "transition_id": 41
+        }
+      ]
+    },
+    {
+      "root": "table_v1.3_early",
+      "selection_reasons": [
+        {
+          "stage": 4,
+          "kind": "failed_saved_prefix",
+          "transition_id": 55
+        }
+      ]
+    },
+    {
+      "root": "table_v1.7_early",
+      "selection_reasons": [
+        {
+          "stage": 4,
+          "kind": "failed_saved_prefix",
+          "transition_id": 65
+        }
+      ]
+    },
+    {
+      "root": "table_v1.7_late",
+      "selection_reasons": [
+        {
+          "stage": 4,
+          "kind": "failed_saved_prefix",
+          "transition_id": 68
+        }
+      ]
+    },
+    {
+      "root": "table_v1.7_uniform",
+      "selection_reasons": [
+        {
+          "stage": 4,
+          "kind": "failed_saved_prefix",
+          "transition_id": 73
+        }
+      ]
+    }
+  ],
+  "initial_physical_amount_state": [
+    0.5,
+    0.0005,
+    0.0005,
+    10.0
+  ],
+  "state_order": [
+    "volume_L",
+    "SC_gDW",
+    "KP_gDW",
+    "glucose_g"
+  ],
+  "intervals": 5,
+  "interval_duration_h": 2.0,
+  "affinities": [
+    1.0,
+    1.0
+  ],
+  "arms": {
+    "independent_original": {
+      "rtol": 2e-13,
+      "atol": 2e-14,
+      "maxstep_h": 0.025
+    },
+    "independent_refined": {
+      "rtol": 2e-14,
+      "atol": 2e-15,
+      "maxstep_h": 0.005
+    },
+    "engine_finer": {
+      "rtol": 2e-13,
+      "atol": 2e-15,
+      "maxstep_h": 0.01
+    }
+  },
+  "scipy_rtol_floor": 2.220446049250313e-14,
+  "scipy_rtol_note": "Refined independent requested rtol=2e-14 is below the SciPy floor; effective rtol=100*float64 epsilon, approximately 2.220446049250313e-14. Record emitted warnings.",
+  "thresholds_unchanged": {
+    "amount_absolute_g": 2e-07,
+    "amount_relative": 2e-08,
+    "log_ratio_absolute": 1e-07,
+    "volume_absolute_L": 2e-13,
+    "physical_substrate_min_g_L": -2e-07,
+    "volume_cap_L": 1.8,
+    "feed_max_L_h": 0.2,
+    "inner": 0.00748,
+    "outer": 0.0075,
+    "actual": 0.009950330853168092,
+    "comparison_tolerance": 1e-10
+  },
+  "comparison_rule": "For left minus right, amount allowance is abs_g + rel*abs(right amount), as in deployment. Compare volume and log ratio separately at each of five prefix endpoints.",
+  "comparisons": [
+    "engine_finer_vs_independent_refined",
+    "independent_original_vs_independent_refined",
+    "independent_original_vs_saved_engine",
+    "independent_refined_vs_saved_engine",
+    "engine_finer_vs_saved_engine",
+    "independent_original_vs_archived_independent"
+  ],
+  "verification_rule": "Original independent arm must recalculate every archived independent prefix endpoint with exact float64 array equality; also report unchanged-threshold comparisons and errors.",
+  "chain_rule": "All arms start from [0.5,0.0005,0.0005,10] and each uses only its own previous endpoint; no resetting to saved knots or prescribed roots.",
+  "preservation_rule": "Never overwrite or substitute roots, source code, main audit, failures, or thresholds. Diagnostic results neither erase nor convert the original audit failure into a pass.",
+  "scope_limit": "Post-audit convergence diagnostic of selected prefix roots only; does not certify integrators, controller trajectories, continuous uncertainty, or nonprefix failures."
+}

@@ -1,0 +1,494 @@
+{
+  "exact_stoichiometric_identity": true,
+  "metadata_source": "inputs/SCerevisiae_Model.mat",
+  "metadata_sha256": "3a06c7d58912cdbe079f09cc18a9cf92dd93ac2c46556c3f9d19a72c41f9b65b",
+  "source_model_description": "Saccharomyces_Cerevisiae.xml",
+  "internal_stoichiometric_matrix_shape": [
+    2220,
+    3493
+  ],
+  "processed_independent_shape": [
+    2127,
+    3493
+  ],
+  "objective": "maximise biomass-normalised growth flux r_2111; active assembly reaction r_4041",
+  "selected_reactions": [
+    {
+      "index_1based": 2665,
+      "reaction_id": "r_1714",
+      "name": "D-glucose exchange",
+      "source_lb": -1.0,
+      "source_ub": "inf",
+      "stoichiometry": [
+        {
+          "metabolite_id": "s_0565[c_06]",
+          "name": "D-glucose [extracellular]",
+          "coefficient": -1.0
+        }
+      ]
+    },
+    {
+      "index_1based": 2707,
+      "reaction_id": "r_1761",
+      "name": "ethanol exchange",
+      "source_lb": 0.0,
+      "source_ub": "inf",
+      "stoichiometry": [
+        {
+          "metabolite_id": "s_0681[c_06]",
+          "name": "ethanol [extracellular]",
+          "coefficient": -1.0
+        }
+      ]
+    },
+    {
+      "index_1based": 2708,
+      "reaction_id": "r_1762",
+      "name": "ethanol transport",
+      "source_lb": "-inf",
+      "source_ub": "inf",
+      "stoichiometry": [
+        {
+          "metabolite_id": "s_0680[c_03]",
+          "name": "ethanol [cytoplasm]",
+          "coefficient": -1.0
+        },
+        {
+          "metabolite_id": "s_0681[c_06]",
+          "name": "ethanol [extracellular]",
+          "coefficient": 1.0
+        }
+      ]
+    },
+    {
+      "index_1based": 2893,
+      "reaction_id": "r_1992",
+      "name": "oxygen exchange",
+      "source_lb": "-inf",
+      "source_ub": "inf",
+      "stoichiometry": [
+        {
+          "metabolite_id": "s_1277[c_06]",
+          "name": "oxygen [extracellular]",
+          "coefficient": -1.0
+        }
+      ]
+    },
+    {
+      "index_1based": 204,
+      "reaction_id": "r_0227",
+      "name": "ATPase, cytosolic",
+      "source_lb": 0.0,
+      "source_ub": "inf",
+      "stoichiometry": [
+        {
+          "metabolite_id": "s_0394[c_03]",
+          "name": "ADP [cytoplasm]",
+          "coefficient": 1.0
+        },
+        {
+          "metabolite_id": "s_0434[c_03]",
+          "name": "ATP [cytoplasm]",
+          "coefficient": -1.0
+        },
+        {
+          "metabolite_id": "s_0796[c_06]",
+          "name": "H+ [extracellular]",
+          "coefficient": 1.0
+        },
+        {
+          "metabolite_id": "s_0803[c_03]",
+          "name": "H2O [cytoplasm]",
+          "coefficient": -1.0
+        },
+        {
+          "metabolite_id": "s_1322[c_03]",
+          "name": "phosphate [cytoplasm]",
+          "coefficient": 1.0
+        }
+      ]
+    },
+    {
+      "index_1based": 2985,
+      "reaction_id": "r_2111",
+      "name": "growth",
+      "source_lb": 0.0,
+      "source_ub": "inf",
+      "stoichiometry": [
+        {
+          "metabolite_id": "s_0450[c_03]",
+          "name": "biomass [cytoplasm]",
+          "coefficient": -1.0
+        }
+      ]
+    },
+    {
+      "index_1based": 3493,
+      "reaction_id": "r_4041",
+      "name": "yeast 8 biomass pseudoreaction",
+      "source_lb": 0.0,
+      "source_ub": "inf",
+      "stoichiometry": [
+        {
+          "metabolite_id": "s_0002[c_03]",
+          "name": "(1->3)-beta-D-glucan [cytoplasm]",
+          "coefficient": -1.1348
+        },
+        {
+          "metabolite_id": "s_0004[c_02]",
+          "name": "(1->6)-beta-D-glucan [cell envelope]",
+          "coefficient": -1.1348
+        },
+        {
+          "metabolite_id": "s_0394[c_03]",
+          "name": "ADP [cytoplasm]",
+          "coefficient": 59.276
+        },
+        {
+          "metabolite_id": "s_0404[c_03]",
+          "name": "Ala-tRNA(Ala) [cytoplasm]",
+          "coefficient": -0.4588
+        },
+        {
+          "metabolite_id": "s_0423[c_03]",
+          "name": "AMP [cytoplasm]",
+          "coefficient": -0.046
+        },
+        {
+          "metabolite_id": "s_0428[c_03]",
+          "name": "Arg-tRNA(Arg) [cytoplasm]",
+          "coefficient": -0.1607
+        },
+        {
+          "metabolite_id": "s_0430[c_03]",
+          "name": "Asn-tRNA(Asn) [cytoplasm]",
+          "coefficient": -0.1017
+        },
+        {
+          "metabolite_id": "s_0432[c_03]",
+          "name": "Asp-tRNA(Asp) [cytoplasm]",
+          "coefficient": -0.2975
+        },
+        {
+          "metabolite_id": "s_0434[c_03]",
+          "name": "ATP [cytoplasm]",
+          "coefficient": -59.276
+        },
+        {
+          "metabolite_id": "s_0450[c_03]",
+          "name": "biomass [cytoplasm]",
+          "coefficient": 1.0
+        },
+        {
+          "metabolite_id": "s_0509[c_03]",
+          "name": "chitin [cytoplasm]",
+          "coefficient": -1e-06
+        },
+        {
+          "metabolite_id": "s_0526[c_03]",
+          "name": "CMP [cytoplasm]",
+          "coefficient": -0.0447
+        },
+        {
+          "metabolite_id": "s_0542[c_03]",
+          "name": "Cys-tRNA(Cys) [cytoplasm]",
+          "coefficient": -0.0066
+        },
+        {
+          "metabolite_id": "s_0584[c_03]",
+          "name": "dAMP [cytoplasm]",
+          "coefficient": -0.0036
+        },
+        {
+          "metabolite_id": "s_0589[c_03]",
+          "name": "dCMP [cytoplasm]",
+          "coefficient": -0.0024
+        },
+        {
+          "metabolite_id": "s_0615[c_03]",
+          "name": "dGMP [cytoplasm]",
+          "coefficient": -0.0024
+        },
+        {
+          "metabolite_id": "s_0649[c_03]",
+          "name": "dTMP [cytoplasm]",
+          "coefficient": -0.0036
+        },
+        {
+          "metabolite_id": "s_0747[c_03]",
+          "name": "Gln-tRNA(Gln) [cytoplasm]",
+          "coefficient": -0.1054
+        },
+        {
+          "metabolite_id": "s_0748[c_03]",
+          "name": "Glu-tRNA(Glu) [cytoplasm]",
+          "coefficient": -0.3018
+        },
+        {
+          "metabolite_id": "s_0757[c_03]",
+          "name": "Gly-tRNA(Gly) [cytoplasm]",
+          "coefficient": -0.2904
+        },
+        {
+          "metabolite_id": "s_0773[c_03]",
+          "name": "glycogen [cytoplasm]",
+          "coefficient": -0.5185
+        },
+        {
+          "metabolite_id": "s_0782[c_03]",
+          "name": "GMP [cytoplasm]",
+          "coefficient": -0.046
+        },
+        {
+          "metabolite_id": "s_0794[c_03]",
+          "name": "H+ [cytoplasm]",
+          "coefficient": 59.305
+        },
+        {
+          "metabolite_id": "s_0803[c_03]",
+          "name": "H2O [cytoplasm]",
+          "coefficient": -59.276
+        },
+        {
+          "metabolite_id": "s_0832[c_03]",
+          "name": "His-tRNA(His) [cytoplasm]",
+          "coefficient": -0.0663
+        },
+        {
+          "metabolite_id": "s_0847[c_03]",
+          "name": "Ile-tRNA(Ile) [cytoplasm]",
+          "coefficient": -0.1927
+        },
+        {
+          "metabolite_id": "s_1077[c_03]",
+          "name": "Leu-tRNA(Leu) [cytoplasm]",
+          "coefficient": -0.2964
+        },
+        {
+          "metabolite_id": "s_1096[c_03]",
+          "name": "lipid [cytoplasm]",
+          "coefficient": -1.0
+        },
+        {
+          "metabolite_id": "s_1099[c_03]",
+          "name": "Lys-tRNA(Lys) [cytoplasm]",
+          "coefficient": -0.2862
+        },
+        {
+          "metabolite_id": "s_1107[c_03]",
+          "name": "mannan [cytoplasm]",
+          "coefficient": -0.8079
+        },
+        {
+          "metabolite_id": "s_1148[c_03]",
+          "name": "Met-tRNA(Met) [cytoplasm]",
+          "coefficient": -0.0507
+        },
+        {
+          "metabolite_id": "s_1314[c_03]",
+          "name": "Phe-tRNA(Phe) [cytoplasm]",
+          "coefficient": -0.1339
+        },
+        {
+          "metabolite_id": "s_1322[c_03]",
+          "name": "phosphate [cytoplasm]",
+          "coefficient": 58.70001
+        },
+        {
+          "metabolite_id": "s_1379[c_03]",
+          "name": "Pro-tRNA(Pro) [cytoplasm]",
+          "coefficient": -0.1647
+        },
+        {
+          "metabolite_id": "s_1405[c_03]",
+          "name": "riboflavin [cytoplasm]",
+          "coefficient": -0.00099
+        },
+        {
+          "metabolite_id": "s_1428[c_03]",
+          "name": "Ser-tRNA(Ser) [cytoplasm]",
+          "coefficient": -0.1854
+        },
+        {
+          "metabolite_id": "s_1467[c_03]",
+          "name": "sulphate [cytoplasm]",
+          "coefficient": -0.02
+        },
+        {
+          "metabolite_id": "s_1491[c_03]",
+          "name": "Thr-tRNA(Thr) [cytoplasm]",
+          "coefficient": -0.1914
+        },
+        {
+          "metabolite_id": "s_1520[c_03]",
+          "name": "trehalose [cytoplasm]",
+          "coefficient": -0.0234
+        },
+        {
+          "metabolite_id": "s_1527[c_03]",
+          "name": "Trp-tRNA(Trp) [cytoplasm]",
+          "coefficient": -0.0284
+        },
+        {
+          "metabolite_id": "s_1533[c_03]",
+          "name": "Tyr-tRNA(Tyr) [cytoplasm]",
+          "coefficient": -0.102
+        },
+        {
+          "metabolite_id": "s_1545[c_03]",
+          "name": "UMP [cytoplasm]",
+          "coefficient": -0.0599
+        },
+        {
+          "metabolite_id": "s_1561[c_03]",
+          "name": "Val-tRNA(Val) [cytoplasm]",
+          "coefficient": -0.2646
+        },
+        {
+          "metabolite_id": "s_1582[c_03]",
+          "name": "tRNA(Ala), cytoplasmic [cytoplasm]",
+          "coefficient": 0.4588
+        },
+        {
+          "metabolite_id": "s_1583[c_03]",
+          "name": "tRNA(Arg), cytoplasmic [cytoplasm]",
+          "coefficient": 0.1607
+        },
+        {
+          "metabolite_id": "s_1585[c_03]",
+          "name": "tRNA(Asn), cytoplasmic [cytoplasm]",
+          "coefficient": 0.1017
+        },
+        {
+          "metabolite_id": "s_1587[c_03]",
+          "name": "tRNA(Asp), cytoplasmic [cytoplasm]",
+          "coefficient": 0.2975
+        },
+        {
+          "metabolite_id": "s_1589[c_03]",
+          "name": "tRNA(Cys), cytoplasmic [cytoplasm]",
+          "coefficient": 0.0066
+        },
+        {
+          "metabolite_id": "s_1590[c_03]",
+          "name": "tRNA(Gln), cytoplasmic [cytoplasm]",
+          "coefficient": 0.1054
+        },
+        {
+          "metabolite_id": "s_1591[c_03]",
+          "name": "tRNA(Glu), cytoplasmic [cytoplasm]",
+          "coefficient": 0.3018
+        },
+        {
+          "metabolite_id": "s_1593[c_03]",
+          "name": "tRNA(Gly), cytoplasmic [cytoplasm]",
+          "coefficient": 0.2904
+        },
+        {
+          "metabolite_id": "s_1594[c_03]",
+          "name": "tRNA(His), cytoplasmic [cytoplasm]",
+          "coefficient": 0.0663
+        },
+        {
+          "metabolite_id": "s_1596[c_03]",
+          "name": "tRNA(Ile), cytoplasmic [cytoplasm]",
+          "coefficient": 0.1927
+        },
+        {
+          "metabolite_id": "s_1598[c_03]",
+          "name": "tRNA(Leu), cytoplasmic [cytoplasm]",
+          "coefficient": 0.2964
+        },
+        {
+          "metabolite_id": "s_1600[c_03]",
+          "name": "tRNA(Lys), cytoplasmic [cytoplasm]",
+          "coefficient": 0.2862
+        },
+        {
+          "metabolite_id": "s_1602[c_03]",
+          "name": "tRNA(Met), cytoplasmic [cytoplasm]",
+          "coefficient": 0.0507
+        },
+        {
+          "metabolite_id": "s_1604[c_03]",
+          "name": "tRNA(Phe), cytoplasmic [cytoplasm]",
+          "coefficient": 0.1339
+        },
+        {
+          "metabolite_id": "s_1606[c_03]",
+          "name": "tRNA(Pro), cytoplasmic [cytoplasm]",
+          "coefficient": 0.1647
+        },
+        {
+          "metabolite_id": "s_1607[c_03]",
+          "name": "tRNA(Ser), cytoplasmic [cytoplasm]",
+          "coefficient": 0.1854
+        },
+        {
+          "metabolite_id": "s_1608[c_03]",
+          "name": "tRNA(Thr), cytoplasmic [cytoplasm]",
+          "coefficient": 0.1914
+        },
+        {
+          "metabolite_id": "s_1610[c_03]",
+          "name": "tRNA(Trp), cytoplasmic [cytoplasm]",
+          "coefficient": 0.0284
+        },
+        {
+          "metabolite_id": "s_1612[c_03]",
+          "name": "tRNA(Tyr), cytoplasmic [cytoplasm]",
+          "coefficient": 0.102
+        },
+        {
+          "metabolite_id": "s_1614[c_03]",
+          "name": "tRNA(Val), cytoplasmic [cytoplasm]",
+          "coefficient": 0.2646
+        },
+        {
+          "metabolite_id": "s_3714[c_03]",
+          "name": "heme a [cytoplasm]",
+          "coefficient": -1e-06
+        }
+      ]
+    }
+  ],
+  "media_open_inorganic_exchanges": [
+    {
+      "id": "r_1654",
+      "name": "ammonium exchange"
+    },
+    {
+      "id": "r_1832",
+      "name": "H+ exchange"
+    },
+    {
+      "id": "r_1861",
+      "name": "iron(2+) exchange"
+    },
+    {
+      "id": "r_1992",
+      "name": "oxygen exchange"
+    },
+    {
+      "id": "r_2005",
+      "name": "phosphate exchange"
+    },
+    {
+      "id": "r_2020",
+      "name": "potassium exchange"
+    },
+    {
+      "id": "r_2049",
+      "name": "sodium exchange"
+    },
+    {
+      "id": "r_2060",
+      "name": "sulphate exchange"
+    },
+    {
+      "id": "r_2100",
+      "name": "water exchange"
+    }
+  ],
+  "model_scope": "No uptake of other organic carbon substrates; ethanol exchange is explicitly opened with a glucose-repressed state-dependent capacity. Finite oxygen uptake represents effective respiratory capacity, not an independently estimated physical oxygen-transfer coefficient."
+}

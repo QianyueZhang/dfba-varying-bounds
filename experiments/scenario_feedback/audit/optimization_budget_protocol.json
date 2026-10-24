@@ -1,0 +1,24 @@
+{
+  "prepared_date": "2026-10-24",
+  "status": "Post hoc diagnostic specified during the primary campaign; not a prespecified primary endpoint; do not execute until primary and serial timing campaigns complete",
+  "primary_protocol_sha256": "0e1f3450616b890ba48bed1c374a0d53ff33c2d0be98bd570d9c1dac2a48adf5",
+  "source_campaign": "locked",
+  "required_completed_campaigns": ["locked", "timing_serial"],
+  "source_method": "scenario_feedback",
+  "source_stage": 0,
+  "zero_based_case_ordinals": [0, 22, 44, 66],
+  "case_ids": ["table_0_nominal", "table_2_nominal", "analytic_0_nominal", "analytic_2_nominal"],
+  "selection_scope": "Four fixed stage-zero decisions, two target/initial-condition blocks in each mathematical family; no representative sampling or universal optimizer claim",
+  "information": "Only observed state, declared model family, target, saved fixed reference/basis, saved controller scenario list, and the first recorded theta; actual hidden process parameters and future observations are not optimizer inputs",
+  "comparison": "Saved 12-iteration scenario-feedback incumbent versus three offline direct optimizations with maxiter=60 and the exact frozen objective, constraints, numerics, merit and candidate selection",
+  "offline_arms": [
+    {"id": "gain_zero_60", "gain_enabled": false, "start": "saved first trace theta, whose gain must be zero", "retain": ["original_zero_gain"]},
+    {"id": "gain_original_60", "gain_enabled": true, "start": "saved first trace theta", "retain": ["original_zero_gain"]},
+    {"id": "gain_seeded_60", "gain_enabled": true, "start": "selected gain_zero_60 theta", "retain": ["original_zero_gain", "gain_zero_60_selected"]}
+  ],
+  "saved_incumbent_policy": "The saved 12-iteration candidate is reported and independently re-evaluated as a comparator; it is not silently supplied as an incumbent to the three offline optimizers",
+  "retained_evidence": "All initial candidate evaluations, all optimizer evaluations, candidate exceptions, solver termination, selected theta/gain, finite-model feasibility, violation, penalized merit, mean log biomass, arithmetic mean biomass, model-call counts and separate offline elapsed cost",
+  "timing": "Sequential offline execution only after both campaign completion records exist; replay/preparation and every optimization arm recorded separately. Entire diagnostic excluded from main online controller times. No timing superiority inference from comparison with parallel primary timings",
+  "interpretation": "A larger local optimization budget and an alternative feasible-family start can diagnose search sensitivity. A feasible witness is not a global optimum, failure is not an infeasibility proof, and no selected action is executed in or fed back to the primary campaign",
+  "execution": "python -B audit/optimization_budget.py --execute"
+}

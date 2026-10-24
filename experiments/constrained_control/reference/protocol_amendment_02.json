@@ -1,0 +1,17 @@
+{
+  "amendment": 2,
+  "created_utc": "2026-10-22T11:16:05Z",
+  "timing": "Before data generation, model fitting, or test evaluation",
+  "changes": {
+    "methods": [
+      "direct_single_start",
+      "direct_multistart",
+      "database_warmstart",
+      "quadratic_ridge",
+      "mlp"
+    ],
+    "first_feasibility_endpoint": "First feasible under ordinary optimization ODE tolerances; final selected candidate alone receives tighter ODE verification.",
+    "cost_scope": "Archived refined-table construction is common pre-existing infrastructure, excluded for every arm. Database and both surrogate arms pay all development-label generation; learned arms additionally pay model selection/fitting. Test/audit labels and all tight/failure/direct evaluations logged separately as research-validation cost."
+  },
+  "reason": "Direct single start with same 300-call cap isolates warm-start quality from 3x100 allocation strategy. Clarifies verification and common offline cost."
+}

@@ -1,0 +1,777 @@
+{
+  "checks": [
+    {
+      "check": "1000 distinct controls",
+      "value": 1000.0,
+      "expected": 1000.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "split disjoint coverage",
+      "value": 1000.0,
+      "expected": 1000.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "all controls within bounds",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "log-ratio target matches terminal states",
+      "value": 0.0,
+      "expected": 0.0,
+      "absolute_tolerance": 1e-14,
+      "pass": true
+    },
+    {
+      "check": "volume identity all training trajectories",
+      "value": 3.552713678800501e-15,
+      "expected": 0.0,
+      "absolute_tolerance": 1e-12,
+      "pass": true
+    },
+    {
+      "check": "scaler learned training mean only",
+      "value": 0.0,
+      "expected": 0.0,
+      "absolute_tolerance": 1e-14,
+      "pass": true
+    },
+    {
+      "check": "test log RMSE",
+      "value": 0.007313562871901761,
+      "expected": 0.007313562871901761,
+      "absolute_tolerance": 1e-14,
+      "pass": true
+    },
+    {
+      "check": "test objective RMSE",
+      "value": 0.020942470833140627,
+      "expected": 0.020942470833140627,
+      "absolute_tolerance": 1e-14,
+      "pass": true
+    },
+    {
+      "check": "30 independently rerun dataset entries",
+      "value": 0.0,
+      "expected": 0.0,
+      "absolute_tolerance": 1e-10,
+      "pass": true
+    },
+    {
+      "check": "SLSQP repeat count",
+      "value": 5.0,
+      "expected": 5.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "SLSQP budget",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "SLSQP1701 objective rerun",
+      "value": 1.5694019877543716e-13,
+      "expected": 1.5694019877543716e-13,
+      "absolute_tolerance": 1e-13,
+      "pass": true
+    },
+    {
+      "check": "SLSQP1702 objective rerun",
+      "value": 2.0646339986990175e-13,
+      "expected": 2.0646339986990175e-13,
+      "absolute_tolerance": 1e-13,
+      "pass": true
+    },
+    {
+      "check": "SLSQP1703 objective rerun",
+      "value": 8.326658051358733e-12,
+      "expected": 8.326658051358733e-12,
+      "absolute_tolerance": 1e-13,
+      "pass": true
+    },
+    {
+      "check": "SLSQP1704 objective rerun",
+      "value": 6.46953069945407e-12,
+      "expected": 6.46953069945407e-12,
+      "absolute_tolerance": 1e-13,
+      "pass": true
+    },
+    {
+      "check": "SLSQP1705 objective rerun",
+      "value": 2.4395056602288202e-11,
+      "expected": 2.4395056602288202e-11,
+      "absolute_tolerance": 1e-13,
+      "pass": true
+    },
+    {
+      "check": "PSO repeat count",
+      "value": 5.0,
+      "expected": 5.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "PSO budget",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "PSO1701 objective rerun",
+      "value": 1.7788577310617458e-07,
+      "expected": 1.7788577310617458e-07,
+      "absolute_tolerance": 1e-13,
+      "pass": true
+    },
+    {
+      "check": "PSO1702 objective rerun",
+      "value": 5.501584201125417e-08,
+      "expected": 5.501584201125417e-08,
+      "absolute_tolerance": 1e-13,
+      "pass": true
+    },
+    {
+      "check": "PSO1703 objective rerun",
+      "value": 8.918799746348392e-08,
+      "expected": 8.918799746348392e-08,
+      "absolute_tolerance": 1e-13,
+      "pass": true
+    },
+    {
+      "check": "PSO1704 objective rerun",
+      "value": 4.80899383796894e-08,
+      "expected": 4.80899383796894e-08,
+      "absolute_tolerance": 1e-13,
+      "pass": true
+    },
+    {
+      "check": "PSO1705 objective rerun",
+      "value": 3.2906669230794554e-09,
+      "expected": 3.2906669230794554e-09,
+      "absolute_tolerance": 1e-13,
+      "pass": true
+    },
+    {
+      "check": "Secant-PSO repeat count",
+      "value": 5.0,
+      "expected": 5.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "Secant-PSO budget",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "Secant-PSO1701 objective rerun",
+      "value": 7.750951465998963e-10,
+      "expected": 7.750951465998963e-10,
+      "absolute_tolerance": 1e-13,
+      "pass": true
+    },
+    {
+      "check": "Secant-PSO1702 objective rerun",
+      "value": 7.397006489407819e-08,
+      "expected": 7.397006489407819e-08,
+      "absolute_tolerance": 1e-13,
+      "pass": true
+    },
+    {
+      "check": "Secant-PSO1703 objective rerun",
+      "value": 3.4545997867742047e-07,
+      "expected": 3.4545997867742047e-07,
+      "absolute_tolerance": 1e-13,
+      "pass": true
+    },
+    {
+      "check": "Secant-PSO1704 objective rerun",
+      "value": 4.158056623876972e-08,
+      "expected": 4.158056623876972e-08,
+      "absolute_tolerance": 1e-13,
+      "pass": true
+    },
+    {
+      "check": "Secant-PSO1705 objective rerun",
+      "value": 1.0535487002095652e-08,
+      "expected": 1.0535487002095652e-08,
+      "absolute_tolerance": 1e-13,
+      "pass": true
+    },
+    {
+      "check": "SC0.02 feasible KKT",
+      "value": 2.605051591109131e-13,
+      "expected": 0.0,
+      "absolute_tolerance": 1.1e-11,
+      "pass": true
+    },
+    {
+      "check": "SC0.02 positive primal dual",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "SC0.02 LP growth gap bound",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "SC0.2 feasible KKT",
+      "value": 2.77555493350153e-13,
+      "expected": 0.0,
+      "absolute_tolerance": 1.1e-11,
+      "pass": true
+    },
+    {
+      "check": "SC0.2 positive primal dual",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "SC0.2 LP growth gap bound",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "SC1.0 feasible KKT",
+      "value": 8.205267969836316e-13,
+      "expected": 0.0,
+      "absolute_tolerance": 1.1e-11,
+      "pass": true
+    },
+    {
+      "check": "SC1.0 positive primal dual",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "SC1.0 LP growth gap bound",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "SC20.0 feasible KKT",
+      "value": 1.4484579682268623e-12,
+      "expected": 0.0,
+      "absolute_tolerance": 1.1e-11,
+      "pass": true
+    },
+    {
+      "check": "SC20.0 positive primal dual",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "SC20.0 LP growth gap bound",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "SC60.0 feasible KKT",
+      "value": 1.1382984398816687e-13,
+      "expected": 0.0,
+      "absolute_tolerance": 1.1e-11,
+      "pass": true
+    },
+    {
+      "check": "SC60.0 positive primal dual",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "SC60.0 LP growth gap bound",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "KP0.02 feasible KKT",
+      "value": 5.672109552946653e-13,
+      "expected": 0.0,
+      "absolute_tolerance": 1.1e-11,
+      "pass": true
+    },
+    {
+      "check": "KP0.02 positive primal dual",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "KP0.02 LP growth gap bound",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "KP0.2 feasible KKT",
+      "value": 1.5333754788022628e-12,
+      "expected": 0.0,
+      "absolute_tolerance": 1.1e-11,
+      "pass": true
+    },
+    {
+      "check": "KP0.2 positive primal dual",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "KP0.2 LP growth gap bound",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "KP1.0 feasible KKT",
+      "value": 8.452583170280356e-12,
+      "expected": 0.0,
+      "absolute_tolerance": 1.1e-11,
+      "pass": true
+    },
+    {
+      "check": "KP1.0 positive primal dual",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "KP1.0 LP growth gap bound",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "KP20.0 feasible KKT",
+      "value": 1.3642420526593924e-12,
+      "expected": 0.0,
+      "absolute_tolerance": 1.1e-11,
+      "pass": true
+    },
+    {
+      "check": "KP20.0 positive primal dual",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "KP20.0 LP growth gap bound",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "KP60.0 feasible KKT",
+      "value": 1.7635522355603436e-12,
+      "expected": 0.0,
+      "absolute_tolerance": 1.1e-11,
+      "pass": true
+    },
+    {
+      "check": "KP60.0 positive primal dual",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    },
+    {
+      "check": "KP60.0 LP growth gap bound",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 0,
+      "pass": true
+    }
+  ],
+  "passed": 60,
+  "failed": [],
+  "dataset_reruns": [
+    {
+      "row": 143,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 472,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 107,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 266,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 856,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 154,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 658,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 520,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 842,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 687,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 563,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 743,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 306,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 229,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 629,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 572,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 457,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 376,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 405,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 799,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 832,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 999,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 492,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 539,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 630,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 50,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 43,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 328,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 956,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    },
+    {
+      "row": 765,
+      "max_absolute_terminal_difference": 0.0,
+      "log_ratio_difference": 0.0
+    }
+  ],
+  "baselines_refined": {
+    "no_feed": {
+      "objective": 0.26428167291175464,
+      "terminal": [
+        0.5,
+        4.690981693624108,
+        9.653881022927584,
+        6.348253710966782e-08
+      ],
+      "minimum_glucose": 6.348253710966782e-08,
+      "volume_analytic": 0.5
+    },
+    "constant_0.1": {
+      "objective": 0.48494798461246164,
+      "terminal": [
+        1.899999999999997,
+        30.505551510772037,
+        17.982712790043326,
+        0.10655068154843704
+      ],
+      "minimum_glucose": 0.10655068154843704,
+      "volume_analytic": 1.9
+    },
+    "constant_0.2": {
+      "objective": 1.8563033363819137,
+      "terminal": [
+        3.299999999999996,
+        36.66609296214023,
+        15.520287456788365,
+        0.13812173433018018
+      ],
+      "minimum_glucose": 0.13812173433018018,
+      "volume_analytic": 3.3
+    },
+    "late_feed": {
+      "objective": 0.2923671197726576,
+      "terminal": [
+        1.7000000000000008,
+        17.33301637865457,
+        37.73870527578556,
+        0.14209204967421526
+      ],
+      "minimum_glucose": 0.14209204967421526,
+      "volume_analytic": 1.7000000000000002
+    }
+  },
+  "biomass_objective_refined": {
+    "objective": 0.8080167051726027,
+    "terminal": [
+      1.165520763190632,
+      4.943117614327143,
+      48.89213751684943,
+      0.1814770011562405
+    ],
+    "minimum_glucose": 0.1814770011562405,
+    "volume_analytic": 1.1655207631906324
+  },
+  "flux_KKT_and_LP_checks": [
+    {
+      "species": "SC",
+      "S_g_L": 0.02,
+      "equality": 2.605051591109131e-13,
+      "stationarity": 3.0803425376315266e-15,
+      "lower_complementarity": 5.809798985217246e-18,
+      "upper_complementarity": 5.863162060894267e-18,
+      "minimum_slack": 2.87402547247834e-07,
+      "minimum_dual": 5.250491048726763e-10,
+      "lp_growth": 0.0035279545102825357,
+      "barrier_growth": 0.0024462865093602035,
+      "growth_gap": 0.0010816680009223321,
+      "barrier_duality_bound": 0.006986
+    },
+    {
+      "species": "SC",
+      "S_g_L": 0.2,
+      "equality": 2.77555493350153e-13,
+      "stationarity": 1.159780400419395e-14,
+      "lower_complementarity": 2.950470966313736e-14,
+      "upper_complementarity": 7.376420725998438e-15,
+      "minimum_slack": 2.898708714021093e-07,
+      "minimum_dual": 5.250491054127581e-10,
+      "lp_growth": 0.03419221617670224,
+      "barrier_growth": 0.03315130408232574,
+      "growth_gap": 0.0010409120943764977,
+      "barrier_duality_bound": 0.006986
+    },
+    {
+      "species": "SC",
+      "S_g_L": 1.0,
+      "equality": 8.205267969836316e-13,
+      "stationarity": 4.497451567775421e-15,
+      "lower_complementarity": 2.882697700269904e-14,
+      "upper_complementarity": 7.223365472319612e-15,
+      "minimum_slack": 2.903923818912104e-07,
+      "minimum_dual": 5.250491056131795e-10,
+      "lp_growth": 0.15367734291911506,
+      "barrier_growth": 0.15267752982375998,
+      "growth_gap": 0.0009998130953550732,
+      "barrier_duality_bound": 0.006986
+    },
+    {
+      "species": "SC",
+      "S_g_L": 20.0,
+      "equality": 1.0400217487063417e-12,
+      "stationarity": 4.655187602034981e-15,
+      "lower_complementarity": 1.4484579682268623e-12,
+      "upper_complementarity": 6.487897712119546e-13,
+      "minimum_slack": 2.906080476406544e-07,
+      "minimum_dual": 5.250491011133833e-10,
+      "lp_growth": 0.9065552298981568,
+      "barrier_growth": 0.9055156453781081,
+      "growth_gap": 0.0010395845200487086,
+      "barrier_duality_bound": 0.006986
+    },
+    {
+      "species": "SC",
+      "S_g_L": 60.0,
+      "equality": 1.1382984398816687e-13,
+      "stationarity": 7.937865078280007e-15,
+      "lower_complementarity": 3.3368382265885595e-15,
+      "upper_complementarity": 8.373096442945314e-16,
+      "minimum_slack": 2.906202799756351e-07,
+      "minimum_dual": 5.250491056660087e-10,
+      "lp_growth": 1.09476730209039,
+      "barrier_growth": 1.0937210599517946,
+      "growth_gap": 0.001046242138595499,
+      "barrier_duality_bound": 0.006986
+    },
+    {
+      "species": "KP",
+      "S_g_L": 0.02,
+      "equality": 5.672109552946653e-13,
+      "stationarity": 4.9132632396696005e-15,
+      "lower_complementarity": 8.62356224315175e-14,
+      "upper_complementarity": 1.7090136119837394e-14,
+      "minimum_slack": 3.0580187010865665e-07,
+      "minimum_dual": 5.098854164512036e-10,
+      "lp_growth": 0.046538254411382075,
+      "barrier_growth": 0.0463544634228348,
+      "growth_gap": 0.00018379098854727494,
+      "barrier_duality_bound": 0.0029479999999999997
+    },
+    {
+      "species": "KP",
+      "S_g_L": 0.2,
+      "equality": 1.5333754788022628e-12,
+      "stationarity": 3.3158422201850473e-15,
+      "lower_complementarity": 9.699988377895753e-16,
+      "upper_complementarity": 4.026218648842811e-16,
+      "minimum_slack": 3.0586388253301916e-07,
+      "minimum_dual": 5.098332342491408e-10,
+      "lp_growth": 0.3220889444070497,
+      "barrier_growth": 0.3219108242214997,
+      "growth_gap": 0.00017812018555002362,
+      "barrier_duality_bound": 0.0029479999999999997
+    },
+    {
+      "species": "KP",
+      "S_g_L": 1.0,
+      "equality": 2.417833961990954e-12,
+      "stationarity": 4.072416681711199e-15,
+      "lower_complementarity": 8.452583170280356e-12,
+      "upper_complementarity": 3.19000769373702e-12,
+      "minimum_slack": 3.058695663133151e-07,
+      "minimum_dual": 5.097649266813295e-10,
+      "lp_growth": 0.6802053646180232,
+      "barrier_growth": 0.6800291049764466,
+      "growth_gap": 0.00017625964157652607,
+      "barrier_duality_bound": 0.0029479999999999997
+    },
+    {
+      "species": "KP",
+      "S_g_L": 20.0,
+      "equality": 1.3642420526593924e-12,
+      "stationarity": 4.856026025129789e-15,
+      "lower_complementarity": 8.606476572166095e-14,
+      "upper_complementarity": 2.7431665769675896e-14,
+      "minimum_slack": 3.058708591584575e-07,
+      "minimum_dual": 5.097180420895314e-10,
+      "lp_growth": 0.9242858165828888,
+      "barrier_growth": 0.9241104564408448,
+      "growth_gap": 0.00017536014204400097,
+      "barrier_duality_bound": 0.0029479999999999997
+    },
+    {
+      "species": "KP",
+      "S_g_L": 60.0,
+      "equality": 1.7635522355603436e-12,
+      "stationarity": 4.136107122431991e-15,
+      "lower_complementarity": 7.975450473109678e-14,
+      "upper_complementarity": 2.5508375818981337e-14,
+      "minimum_slack": 3.0587090310225955e-07,
+      "minimum_dual": 5.097157712212289e-10,
+      "lp_growth": 0.9360716443972803,
+      "barrier_growth": 0.935896324586675,
+      "growth_gap": 0.0001753198106052567,
+      "barrier_duality_bound": 0.0029479999999999997
+    }
+  ]
+}

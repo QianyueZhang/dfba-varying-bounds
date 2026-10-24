@@ -1,0 +1,96 @@
+{
+  "name": "Nested action resolution and bounded ratio observation",
+  "root_ids": [
+    "analytic_v0.9_uniform",
+    "analytic_v1.3_uniform",
+    "analytic_v1.7_uniform",
+    "table_v0.9_uniform",
+    "table_v1.3_uniform",
+    "table_v1.7_uniform"
+  ],
+  "root_status": "Prescribed states copied unchanged; no prefix regeneration",
+  "grids": [
+    41,
+    81,
+    161
+  ],
+  "raw_action_formula": "i*(0.2/160), i=0..160; strides4,2,1",
+  "clipping": "clip to max(0,min(0.2,(1.8\u2212V\u22121e\u221211)/2)); deduplicate",
+  "horizon_intervals": 2,
+  "interval_hours": 2,
+  "affinity": [
+    [
+      1.0,
+      1.0
+    ],
+    [
+      0.975,
+      1.025
+    ],
+    [
+      1.025,
+      0.975
+    ]
+  ],
+  "inner_band": 0.00748,
+  "outer_band": 0.0075,
+  "actual_band": 0.009950330853168092,
+  "fixed_target_ratios": [
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    2.0
+  ],
+  "fixed_feasibility": "error<=inner band, no additional feasibility tolerance",
+  "information": "Known prescribed initial state and exact volume. Second decision receives measured z=log(M1/M2) only. No hidden scenario label or true biomass/substrate input.",
+  "epsilon": [
+    0.0,
+    0.001,
+    0.005,
+    0.01,
+    0.02
+  ],
+  "compatibility_pad": 1e-07,
+  "effective_observation_radius": "epsilon+1e\u22127; bounded support, not a probability model. Pad is a numerical guard, not a proved ODE error bound.",
+  "support": "Closed predicted-branch intervals. Enumerate every endpoint and every intervening open cell, then every distinct nonempty compatible branch subset. Endpoint coincidences are retained.",
+  "set_recursion": "Union over first feeds of intersection over realizable observation subsets C of union over shared second feeds of [max_(j in C,k) z_terminal\u2212inner,min_(j in C,k) z_terminal+inner].",
+  "comparators": [
+    "exact full-state branch observation",
+    "common open two-feed plan"
+  ],
+  "policy": "Minimax terminal log-ratio loss. Deterministic ascending feed-index ties. A common second action for every branch compatible with the measured ratio. Empty compatibility is explicitly out of support.",
+  "physical_checks": "Finite states; V>0 and V<=1.8+2e\u221212; sampled min substrate concentration>=\u22122e\u22127. No continuous-path enclosure claimed.",
+  "convergence": {
+    "pairs": [
+      [
+        41,
+        81
+      ],
+      [
+        81,
+        161
+      ]
+    ],
+    "relative_symmetric_difference_limit": 0.05,
+    "endpoint_hausdorff_limit": 0.001,
+    "definition": "length(A symmetric_difference B)/length(finer B); Hausdorff distance between all component endpoints",
+    "empty": "Both empty: vacuous descriptive pass, not positive convergence evidence. One empty: fail; Hausdorff undefined.",
+    "singleton": "If finer total length is zero, relative measure is undefined and length gate requires exact set equality; endpoint gate remains mandatory.",
+    "interpretation": "Descriptive stability gates only, not convergence proofs, continuous-control bounds or rigorous uncertainty intervals"
+  },
+  "integrator": {
+    "rtol": 2e-13,
+    "atol": 2e-15,
+    "maxstep_hours": 0.01
+  },
+  "gate": "Require audit/grid_observation_integrator_gate.json passed=true before tree outcome evaluation",
+  "source_sha256": {
+    "scripts/grid_observation.py": "d76a76993804ee86c91e88eb40dced45f096ab8fa678a9a9087f539cad3e5efc",
+    "scripts/engine.py": "4d04e127bc7180d7ec24c63a9fed4384df10b2fbd86e4fca6610c7b3420b561b",
+    "vendor/prior_kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6",
+    "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb",
+    "data/prescribed_roots.json": "16ac9df9afc4d5bc3debc3f75cc6bae59892efe2ca91d2c353985f065ff00e66"
+  }
+}

@@ -1,0 +1,1361 @@
+{
+  "complete": true,
+  "protocol_sha256": "7280a0a16d163a72a3e309e2cfd24a9bf1bb7491f59d809d6a029fcd37c5735a",
+  "inputs_unchanged": true,
+  "new_direct_statuses": {
+    "tight_pair": {
+      "case": "tight_pair",
+      "epsilon": 1e-06,
+      "mu": 1e-08,
+      "complete": true,
+      "protocol_sha256": "7280a0a16d163a72a3e309e2cfd24a9bf1bb7491f59d809d6a029fcd37c5735a",
+      "runtime": {
+        "python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+        "platform": "macOS-14.6.1-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.2.2",
+          "scipy": "1.15.1",
+          "highspy": "1.15.1"
+        }
+      },
+      "passed": true,
+      "checks": {
+        "complete_interval": true,
+        "finite_states": true,
+        "external_states": true,
+        "positive_slacks": true,
+        "equality": true,
+        "stationarity": true,
+        "output_growth_gap": true
+      },
+      "minimum_states": [
+        0.09856522231342883,
+        1.0067871985617201e-10,
+        0.22730440275683
+      ],
+      "accepted_steps": 310,
+      "maximum_equality": 2.3940689034854134e-12,
+      "maximum_stationarity": 1.996614696541242e-07,
+      "minimum_slack": 1.1460053594953036e-08,
+      "output_growth_gap_range": [
+        8.730014562752242e-06,
+        8.974915331694255e-06
+      ],
+      "elapsed_seconds": 1740.1625824999064,
+      "rhs_calls": 669,
+      "total_KKT_solves": 1209,
+      "total_Newton_steps": 8071,
+      "inputs_unchanged": true
+    },
+    "fixed_expansion_small_barrier": {
+      "case": "fixed_expansion_small_barrier",
+      "epsilon": 1e-05,
+      "mu": 1e-08,
+      "complete": true,
+      "protocol_sha256": "7280a0a16d163a72a3e309e2cfd24a9bf1bb7491f59d809d6a029fcd37c5735a",
+      "runtime": {
+        "python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+        "platform": "macOS-14.6.1-arm64-arm-64bit",
+        "packages": {
+          "numpy": "2.2.2",
+          "scipy": "1.15.1",
+          "highspy": "1.15.1"
+        }
+      },
+      "passed": true,
+      "checks": {
+        "complete_interval": true,
+        "finite_states": true,
+        "external_states": true,
+        "positive_slacks": true,
+        "equality": true,
+        "stationarity": true,
+        "output_growth_gap": true
+      },
+      "minimum_states": [
+        0.09856522231342883,
+        1.1064044047833908e-10,
+        0.22730440275683003
+      ],
+      "accepted_steps": 300,
+      "maximum_equality": 2.2962928623469422e-12,
+      "maximum_stationarity": 1.9135331831157185e-07,
+      "minimum_slack": 1.1637953531220898e-08,
+      "output_growth_gap_range": [
+        7.264074287506583e-06,
+        7.723910932011524e-06
+      ],
+      "elapsed_seconds": 1716.313541083131,
+      "rhs_calls": 652,
+      "total_KKT_solves": 1192,
+      "total_Newton_steps": 7944,
+      "inputs_unchanged": true
+    }
+  },
+  "LP_passed": true,
+  "summaries": [
+    {
+      "case": "archived_adopted",
+      "variable": "biomass_OD600",
+      "split": "all",
+      "n": 133,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.00550272083076031,
+          "RMS": 0.0023188354371400212,
+          "mean_signed": 0.0018940973222964788,
+          "maximum_over_archived_withheld_RMSE": 0.07975696481542588
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.002570407257519225,
+          "RMS": 0.0010451316075529465,
+          "mean_signed": -0.0008365310124449567,
+          "maximum_over_archived_withheld_RMSE": 0.03725572993877471
+        },
+        "total": {
+          "maximum_absolute": 0.0029323135732410854,
+          "RMS": 0.0012752341096851792,
+          "mean_signed": 0.0010575663098515223,
+          "maximum_over_archived_withheld_RMSE": 0.04250123487665117
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 3.262663805791988e-08,
+          "RMS": 1.4459393778702055e-08,
+          "mean_signed": -8.17239647905187e-09,
+          "maximum_over_archived_withheld_RMSE": 4.728936291088576e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 5.16555784813022e-08,
+          "RMS": 2.987826611045474e-08,
+          "mean_signed": -1.9223599423871568e-08,
+          "maximum_over_archived_withheld_RMSE": 7.4870092126488e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 1.417946153381422e-06,
+          "RMS": 7.685366693682027e-07,
+          "mean_signed": 5.911151268878423e-07,
+          "maximum_over_archived_withheld_RMSE": 2.0551847884637236e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.6367809923023293,
+      "opposite_signed_components": 133
+    },
+    {
+      "case": "archived_adopted",
+      "variable": "biomass_OD600",
+      "split": "calibration",
+      "n": 13,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.004085598593013717,
+          "RMS": 0.0020693437266285832,
+          "mean_signed": 0.001622260510186162,
+          "maximum_over_archived_withheld_RMSE": 0.05921705884322051
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.0018850053084205065,
+          "RMS": 0.0009299545416152894,
+          "mean_signed": -0.0007181949388667888,
+          "maximum_over_archived_withheld_RMSE": 0.027321448186171673
+        },
+        "total": {
+          "maximum_absolute": 0.002200593284593211,
+          "RMS": 0.0011403502596126927,
+          "mean_signed": 0.000904065571319373,
+          "maximum_over_archived_withheld_RMSE": 0.03189561065704884
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 2.1343826261954746e-08,
+          "RMS": 1.3117684445202723e-08,
+          "mean_signed": -7.853011356580179e-09,
+          "maximum_over_archived_withheld_RMSE": 3.0935947007983656e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 4.6739697889819354e-08,
+          "RMS": 2.838805393026483e-08,
+          "mean_signed": -1.826229926257165e-08,
+          "maximum_over_archived_withheld_RMSE": 6.774496753030602e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 1.2560894440127868e-06,
+          "RMS": 7.479744315345584e-07,
+          "mean_signed": 5.710367770711972e-07,
+          "maximum_over_archived_withheld_RMSE": 1.820588117629685e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.6314286928220784,
+      "opposite_signed_components": 13
+    },
+    {
+      "case": "archived_adopted",
+      "variable": "biomass_OD600",
+      "split": "withheld_series",
+      "n": 120,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.00550272083076031,
+          "RMS": 0.002344270178501106,
+          "mean_signed": 0.0019235463102750966,
+          "maximum_over_archived_withheld_RMSE": 0.07975696481542588
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.002570407257519225,
+          "RMS": 0.0010568558298557238,
+          "mean_signed": -0.0008493507537492582,
+          "maximum_over_archived_withheld_RMSE": 0.03725572993877471
+        },
+        "total": {
+          "maximum_absolute": 0.0029323135732410854,
+          "RMS": 0.001288999441748398,
+          "mean_signed": 0.0010741955565258384,
+          "maximum_over_archived_withheld_RMSE": 0.04250123487665117
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 3.262663805791988e-08,
+          "RMS": 1.459734385538331e-08,
+          "mean_signed": -8.206996533986303e-09,
+          "maximum_over_archived_withheld_RMSE": 4.728936291088576e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 5.16555784813022e-08,
+          "RMS": 3.003526727444916e-08,
+          "mean_signed": -1.932774027467906e-08,
+          "maximum_over_archived_withheld_RMSE": 7.4870092126488e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 1.417946153381422e-06,
+          "RMS": 7.707313121573347e-07,
+          "mean_signed": 5.932902814513123e-07,
+          "maximum_over_archived_withheld_RMSE": 2.0551847884637236e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.6367809923023293,
+      "opposite_signed_components": 120
+    },
+    {
+      "case": "archived_adopted",
+      "variable": "glucose",
+      "split": "all",
+      "n": 63,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.004012998906096882,
+          "RMS": 0.0015336175260017085,
+          "mean_signed": -0.0008064477702919249,
+          "maximum_over_archived_withheld_RMSE": 0.06690923493495408
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.0016699967018135309,
+          "RMS": 0.0006382628241860773,
+          "mean_signed": 0.00033568384926475415,
+          "maximum_over_archived_withheld_RMSE": 0.02784406481957372
+        },
+        "total": {
+          "maximum_absolute": 0.002343002204283351,
+          "RMS": 0.0008953548381408912,
+          "mean_signed": -0.00047076392102717084,
+          "maximum_over_archived_withheld_RMSE": 0.03906517011538037
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 5.108363387851256e-08,
+          "RMS": 1.0192202277142365e-08,
+          "mean_signed": 1.4656542769681302e-09,
+          "maximum_over_archived_withheld_RMSE": 8.517238455549332e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 5.059552221631236e-08,
+          "RMS": 9.77233165016907e-09,
+          "mean_signed": 1.4211133249712245e-09,
+          "maximum_over_archived_withheld_RMSE": 8.435854984871019e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 1.2539613219175738e-06,
+          "RMS": 4.439560856478291e-07,
+          "mean_signed": -8.625353818377776e-08,
+          "maximum_over_archived_withheld_RMSE": 2.090745466191338e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.5918728481783356,
+      "opposite_signed_components": 62
+    },
+    {
+      "case": "archived_adopted",
+      "variable": "glucose",
+      "split": "calibration",
+      "n": 16,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.00391261374584112,
+          "RMS": 0.0015835639402265475,
+          "mean_signed": -0.0008744976400883724,
+          "maximum_over_archived_withheld_RMSE": 0.06523550054610808
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.0016284691259494943,
+          "RMS": 0.0006591634558825866,
+          "mean_signed": 0.00036405602867557366,
+          "maximum_over_archived_withheld_RMSE": 0.027151670329870644
+        },
+        "total": {
+          "maximum_absolute": 0.002284144619891626,
+          "RMS": 0.0009244004969015038,
+          "mean_signed": -0.0005104416114127987,
+          "maximum_over_archived_withheld_RMSE": 0.03808383021623744
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 2.4930534914258118e-08,
+          "RMS": 7.161114278575135e-09,
+          "mean_signed": 1.6305319122758055e-09,
+          "maximum_over_archived_withheld_RMSE": 4.1566994077618146e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 2.081294714351145e-08,
+          "RMS": 6.608426254847505e-09,
+          "mean_signed": 1.484241146362459e-09,
+          "maximum_over_archived_withheld_RMSE": 3.470168825608869e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 9.672669800120381e-07,
+          "RMS": 4.420814114108771e-07,
+          "mean_signed": -1.092973560691567e-07,
+          "maximum_over_archived_withheld_RMSE": 1.6127363880444216e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.5907451715998573,
+      "opposite_signed_components": 15
+    },
+    {
+      "case": "archived_adopted",
+      "variable": "glucose",
+      "split": "withheld_series",
+      "n": 47,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.004012998906096882,
+          "RMS": 0.0015162391538415577,
+          "mean_signed": -0.0007832818571697302,
+          "maximum_over_archived_withheld_RMSE": 0.06690923493495408
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.0016699967018135309,
+          "RMS": 0.0006309897810373255,
+          "mean_signed": 0.0003260252349972411,
+          "maximum_over_archived_withheld_RMSE": 0.02784406481957372
+        },
+        "total": {
+          "maximum_absolute": 0.002343002204283351,
+          "RMS": 0.0008852495449443577,
+          "mean_signed": -0.00045725662217248916,
+          "maximum_over_archived_withheld_RMSE": 0.03906517011538037
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 5.108363387851256e-08,
+          "RMS": 1.1035722723966499e-08,
+          "mean_signed": 1.4095257202676454e-09,
+          "maximum_over_archived_withheld_RMSE": 8.517238455549332e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 5.059552221631236e-08,
+          "RMS": 1.0636811421766385e-08,
+          "mean_signed": 1.3996230027954853e-09,
+          "maximum_over_archived_withheld_RMSE": 8.435854984871019e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 1.2539613219175738e-06,
+          "RMS": 4.4459246909174076e-07,
+          "mean_signed": -7.840883422279769e-08,
+          "maximum_over_archived_withheld_RMSE": 2.090745466191338e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.5918728481783356,
+      "opposite_signed_components": 47
+    },
+    {
+      "case": "archived_adopted",
+      "variable": "ethanol",
+      "split": "all",
+      "n": 60,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.002212165855010717,
+          "RMS": 0.0008917320188798315,
+          "mean_signed": -0.000151518232924458,
+          "maximum_over_archived_withheld_RMSE": 0.015528929646032842
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.000817925294165911,
+          "RMS": 0.00033953594569040003,
+          "mean_signed": 6.297835363011928e-05,
+          "maximum_over_archived_withheld_RMSE": 0.005741660065877662
+        },
+        "total": {
+          "maximum_absolute": 0.001394240560844806,
+          "RMS": 0.0005532306731246747,
+          "mean_signed": -8.85398792943387e-05,
+          "maximum_over_archived_withheld_RMSE": 0.00978726958015518
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 5.8964507942960154e-08,
+          "RMS": 3.613820970722495e-08,
+          "mean_signed": 2.4040800161717614e-08,
+          "maximum_over_archived_withheld_RMSE": 4.139181939659479e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 6.40932656947868e-08,
+          "RMS": 3.380743889014776e-08,
+          "mean_signed": 2.2240945281766975e-08,
+          "maximum_over_archived_withheld_RMSE": 4.4992097292542857e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 2.650243315471812e-06,
+          "RMS": 1.3775052978576651e-06,
+          "mean_signed": -9.13966775533311e-07,
+          "maximum_over_archived_withheld_RMSE": 1.8604139421829747e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.6928098159876277,
+      "opposite_signed_components": 59
+    },
+    {
+      "case": "archived_adopted",
+      "variable": "ethanol",
+      "split": "calibration",
+      "n": 16,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.0013916277210850314,
+          "RMS": 0.0006852479173849492,
+          "mean_signed": 8.503563387864468e-05,
+          "maximum_over_archived_withheld_RMSE": 0.009768928005668804
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.0005382268482814201,
+          "RMS": 0.00026867510039533523,
+          "mean_signed": -2.376870647819579e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0037782369896165284
+        },
+        "total": {
+          "maximum_absolute": 0.0008534008728036113,
+          "RMS": 0.00041754188869897265,
+          "mean_signed": 6.12669274004489e-05,
+          "maximum_over_archived_withheld_RMSE": 0.005990691016052275
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 5.22369620892249e-08,
+          "RMS": 3.058323367243415e-08,
+          "mean_signed": 1.7787046641126736e-08,
+          "maximum_over_archived_withheld_RMSE": 3.666922655770439e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 4.936313424686034e-08,
+          "RMS": 2.700081434149051e-08,
+          "mean_signed": 1.5610392672948947e-08,
+          "maximum_over_archived_withheld_RMSE": 3.4651861075012163e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 2.0869161201364506e-06,
+          "RMS": 1.1185476194790194e-06,
+          "mean_signed": -6.495606566098155e-07,
+          "maximum_over_archived_withheld_RMSE": 1.4649703381582012e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.6808884153135089,
+      "opposite_signed_components": 15
+    },
+    {
+      "case": "archived_adopted",
+      "variable": "ethanol",
+      "split": "withheld_series",
+      "n": 44,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.002212165855010717,
+          "RMS": 0.000955820973600033,
+          "mean_signed": -0.00023753782085285895,
+          "maximum_over_archived_withheld_RMSE": 0.015528929646032842
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.000817925294165911,
+          "RMS": 0.00036187951761329485,
+          "mean_signed": 9.452273912405203e-05,
+          "maximum_over_archived_withheld_RMSE": 0.005741660065877662
+        },
+        "total": {
+          "maximum_absolute": 0.001394240560844806,
+          "RMS": 0.0005949482597837235,
+          "mean_signed": -0.00014301508172880693,
+          "maximum_over_archived_withheld_RMSE": 0.00978726958015518
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 5.8964507942960154e-08,
+          "RMS": 3.795717237911897e-08,
+          "mean_signed": 2.6314892351023387e-08,
+          "maximum_over_archived_withheld_RMSE": 4.139181939659479e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 6.40932656947868e-08,
+          "RMS": 3.596458859925661e-08,
+          "mean_signed": 2.4652055321337164e-08,
+          "maximum_over_archived_withheld_RMSE": 4.4992097292542857e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 2.650243315471812e-06,
+          "RMS": 1.4603305222455104e-06,
+          "mean_signed": -1.0101144551418548e-06,
+          "maximum_over_archived_withheld_RMSE": 1.8604139421829747e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.6928098159876277,
+      "opposite_signed_components": 44
+    },
+    {
+      "case": "tight_pair",
+      "variable": "biomass_OD600",
+      "split": "all",
+      "n": 133,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.0005510426079538,
+          "RMS": 0.00023217982660114612,
+          "mean_signed": 0.00018963457526476578,
+          "maximum_over_archived_withheld_RMSE": 0.007986864543208029
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.00026341522515105353,
+          "RMS": 0.00010802240614887384,
+          "mean_signed": -8.691760437073606e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0038179656010856045
+        },
+        "total": {
+          "maximum_absolute": 0.00028762738280274647,
+          "RMS": 0.0001242467999394144,
+          "mean_signed": 0.00010271697089402973,
+          "maximum_over_archived_withheld_RMSE": 0.004168898942122423
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 3.262663805791988e-08,
+          "RMS": 1.4459393778702055e-08,
+          "mean_signed": -8.17239647905187e-09,
+          "maximum_over_archived_withheld_RMSE": 4.728936291088576e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 3.27089235696576e-08,
+          "RMS": 1.6382447901189727e-08,
+          "mean_signed": -9.593681174459249e-09,
+          "maximum_over_archived_withheld_RMSE": 4.740862832278524e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 1.417946153381422e-06,
+          "RMS": 7.685366693682027e-07,
+          "mean_signed": 5.911151268878423e-07,
+          "maximum_over_archived_withheld_RMSE": 2.0551847884637236e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.6468480366794911,
+      "opposite_signed_components": 133
+    },
+    {
+      "case": "tight_pair",
+      "variable": "biomass_OD600",
+      "split": "calibration",
+      "n": 13,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.0004091411926614441,
+          "RMS": 0.0002072011872366984,
+          "mean_signed": 0.00016242338857079221,
+          "maximum_over_archived_withheld_RMSE": 0.005930131785938964
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.00019373822015822384,
+          "RMS": 9.61801713420983e-05,
+          "mean_signed": -7.456735957542687e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0028080603911770125
+        },
+        "total": {
+          "maximum_absolute": 0.00021540297250322027,
+          "RMS": 0.00011107706615989585,
+          "mean_signed": 8.785602899536535e-05,
+          "maximum_over_archived_withheld_RMSE": 0.003122071394761952
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 2.1343826261954746e-08,
+          "RMS": 1.3117684445202723e-08,
+          "mean_signed": -7.853011356580179e-09,
+          "maximum_over_archived_withheld_RMSE": 3.0935947007983656e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 2.4593757697033425e-08,
+          "RMS": 1.5070105583476603e-08,
+          "mean_signed": -9.192148939454533e-09,
+          "maximum_over_archived_withheld_RMSE": 3.564642887853682e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 1.2560894440127868e-06,
+          "RMS": 7.479744315345584e-07,
+          "mean_signed": 5.710367770711972e-07,
+          "maximum_over_archived_withheld_RMSE": 1.820588117629685e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.6427096896611875,
+      "opposite_signed_components": 13
+    },
+    {
+      "case": "tight_pair",
+      "variable": "biomass_OD600",
+      "split": "withheld_series",
+      "n": 120,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.0005510426079538,
+          "RMS": 0.00023472632014418632,
+          "mean_signed": 0.00019258245382327958,
+          "maximum_over_archived_withheld_RMSE": 0.007986864543208029
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.00026341522515105353,
+          "RMS": 0.00010922826331981077,
+          "mean_signed": -8.825554755689455e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0038179656010856045
+        },
+        "total": {
+          "maximum_absolute": 0.00028762738280274647,
+          "RMS": 0.0001255906399150503,
+          "mean_signed": 0.00010432690626638505,
+          "maximum_over_archived_withheld_RMSE": 0.004168898942122423
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 3.262663805791988e-08,
+          "RMS": 1.459734385538331e-08,
+          "mean_signed": -8.206996533986303e-09,
+          "maximum_over_archived_withheld_RMSE": 4.728936291088576e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 3.27089235696576e-08,
+          "RMS": 1.6518360145713187e-08,
+          "mean_signed": -9.637180499918093e-09,
+          "maximum_over_archived_withheld_RMSE": 4.740862832278524e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 1.417946153381422e-06,
+          "RMS": 7.707313121573347e-07,
+          "mean_signed": 5.932902814513123e-07,
+          "maximum_over_archived_withheld_RMSE": 2.0551847884637236e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.6468480366794911,
+      "opposite_signed_components": 120
+    },
+    {
+      "case": "tight_pair",
+      "variable": "glucose",
+      "split": "all",
+      "n": 63,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.0004018069116116796,
+          "RMS": 0.00015355361642562513,
+          "mean_signed": -8.074135095433012e-05,
+          "maximum_over_archived_withheld_RMSE": 0.006699377118361256
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.00017679117706193015,
+          "RMS": 6.754528904947967e-05,
+          "mean_signed": 3.550628431601008e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0029476615063343792
+        },
+        "total": {
+          "maximum_absolute": 0.00022501573454974944,
+          "RMS": 8.60083415753405e-05,
+          "mean_signed": -4.5235066638320035e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0037517156120268767
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 5.108363387851256e-08,
+          "RMS": 1.0192202277142365e-08,
+          "mean_signed": 1.4656542769681302e-09,
+          "maximum_over_archived_withheld_RMSE": 8.517238455549332e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 5.1063152595176575e-08,
+          "RMS": 1.015292347736563e-08,
+          "mean_signed": 1.4664583478623457e-09,
+          "maximum_over_archived_withheld_RMSE": 8.513823585447039e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 1.2539613219175738e-06,
+          "RMS": 4.439560856478291e-07,
+          "mean_signed": -8.625353818377776e-08,
+          "maximum_over_archived_withheld_RMSE": 2.090745466191338e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.6111018357050225,
+      "opposite_signed_components": 62
+    },
+    {
+      "case": "tight_pair",
+      "variable": "glucose",
+      "split": "calibration",
+      "n": 16,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.000391672108154828,
+          "RMS": 0.000158514592998707,
+          "mean_signed": -8.753807620082553e-05,
+          "maximum_over_archived_withheld_RMSE": 0.006530398267037917
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.00017233039046743448,
+          "RMS": 6.972627234330435e-05,
+          "mean_signed": 3.849428111282875e-05,
+          "maximum_over_archived_withheld_RMSE": 0.002873286251012892
+        },
+        "total": {
+          "maximum_absolute": 0.00021934171768739352,
+          "RMS": 8.878833510687768e-05,
+          "mean_signed": -4.904379508799678e-05,
+          "maximum_over_archived_withheld_RMSE": 0.003657112016025025
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 2.4930534914258118e-08,
+          "RMS": 7.161114278575135e-09,
+          "mean_signed": 1.6305319122758055e-09,
+          "maximum_over_archived_withheld_RMSE": 4.1566994077618146e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 2.4598703018963164e-08,
+          "RMS": 7.114004695340527e-09,
+          "mean_signed": 1.6191064987241946e-09,
+          "maximum_over_archived_withheld_RMSE": 4.1013726589618857e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 9.672669800120381e-07,
+          "RMS": 4.420814114108771e-07,
+          "mean_signed": -1.092973560691567e-07,
+          "maximum_over_archived_withheld_RMSE": 1.6127363880444216e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.6110979681416333,
+      "opposite_signed_components": 15
+    },
+    {
+      "case": "tight_pair",
+      "variable": "glucose",
+      "split": "withheld_series",
+      "n": 47,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.0004018069116116796,
+          "RMS": 0.00015182779349873994,
+          "mean_signed": -7.842757214701253e-05,
+          "maximum_over_archived_withheld_RMSE": 0.006699377118361256
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.00017679117706193015,
+          "RMS": 6.678657874261042e-05,
+          "mean_signed": 3.448909391709309e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0029476615063343792
+        },
+        "total": {
+          "maximum_absolute": 0.00022501573454974944,
+          "RMS": 8.504122885929203e-05,
+          "mean_signed": -4.393847822991944e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0037517156120268767
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 5.108363387851256e-08,
+          "RMS": 1.1035722723966499e-08,
+          "mean_signed": 1.4095257202676454e-09,
+          "maximum_over_archived_withheld_RMSE": 8.517238455549332e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 5.1063152595176575e-08,
+          "RMS": 1.0997496686878072e-08,
+          "mean_signed": 1.4144930199093753e-09,
+          "maximum_over_archived_withheld_RMSE": 8.513823585447039e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 1.2539613219175738e-06,
+          "RMS": 4.4459246909174076e-07,
+          "mean_signed": -7.840883422279769e-08,
+          "maximum_over_archived_withheld_RMSE": 2.090745466191338e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.6111018357050225,
+      "opposite_signed_components": 47
+    },
+    {
+      "case": "tight_pair",
+      "variable": "ethanol",
+      "split": "all",
+      "n": 60,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.00022222744375699488,
+          "RMS": 8.946473965512511e-05,
+          "mean_signed": -1.532565502010974e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0015599889726637948
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.0001095798241889101,
+          "RMS": 4.2085675112172655e-05,
+          "mean_signed": 1.0677702721439974e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0007692268536736767
+        },
+        "total": {
+          "maximum_absolute": 0.00011264761956808478,
+          "RMS": 4.7748803444271336e-05,
+          "mean_signed": -4.6479522986697665e-06,
+          "maximum_over_archived_withheld_RMSE": 0.0007907621189901181
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 5.8964507942960154e-08,
+          "RMS": 3.613820970722495e-08,
+          "mean_signed": 2.4040800161717614e-08,
+          "maximum_over_archived_withheld_RMSE": 4.139181939659479e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 6.010258901678611e-08,
+          "RMS": 3.6140383861947514e-08,
+          "mean_signed": 2.4028584415710284e-08,
+          "maximum_over_archived_withheld_RMSE": 4.2190727891041253e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 2.650243315471812e-06,
+          "RMS": 1.3775052978576651e-06,
+          "mean_signed": -9.13966775533311e-07,
+          "maximum_over_archived_withheld_RMSE": 1.8604139421829747e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.7122039988464066,
+      "opposite_signed_components": 59
+    },
+    {
+      "case": "tight_pair",
+      "variable": "ethanol",
+      "split": "calibration",
+      "n": 16,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.0001392762917613588,
+          "RMS": 6.865697525211492e-05,
+          "mean_signed": 8.427915265046132e-06,
+          "maximum_over_archived_withheld_RMSE": 0.0009776896841724404
+        },
+        "barrier_difference": {
+          "maximum_absolute": 5.718965871137627e-05,
+          "RMS": 3.0615666301218874e-05,
+          "mean_signed": -7.601933781839487e-07,
+          "maximum_over_archived_withheld_RMSE": 0.00040145913318298136
+        },
+        "total": {
+          "maximum_absolute": 8.208663304998254e-05,
+          "RMS": 3.8403272190030495e-05,
+          "mean_signed": 7.667721886862183e-06,
+          "maximum_over_archived_withheld_RMSE": 0.000576230550989459
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 5.22369620892249e-08,
+          "RMS": 3.058323367243415e-08,
+          "mean_signed": 1.7787046641126736e-08,
+          "maximum_over_archived_withheld_RMSE": 3.666922655770439e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 5.2330656696852884e-08,
+          "RMS": 3.0396078842365843e-08,
+          "mean_signed": 1.7674213544094375e-08,
+          "maximum_over_archived_withheld_RMSE": 3.673499816188913e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 2.0869161201364506e-06,
+          "RMS": 1.1185476194790194e-06,
+          "mean_signed": -6.495606566098155e-07,
+          "maximum_over_archived_withheld_RMSE": 1.4649703381582012e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.7087947749946296,
+      "opposite_signed_components": 15
+    },
+    {
+      "case": "tight_pair",
+      "variable": "ethanol",
+      "split": "withheld_series",
+      "n": 44,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.00022222744375699488,
+          "RMS": 9.591851353211302e-05,
+          "mean_signed": -2.3963316941984604e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0015599889726637948
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.0001095798241889101,
+          "RMS": 4.554596544594949e-05,
+          "mean_signed": 1.4836937666757764e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0007692268536736767
+        },
+        "total": {
+          "maximum_absolute": 0.00011264761956808478,
+          "RMS": 5.072203949493983e-05,
+          "mean_signed": -9.12637927522684e-06,
+          "maximum_over_archived_withheld_RMSE": 0.0007907621189901181
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 5.8964507942960154e-08,
+          "RMS": 3.795717237911897e-08,
+          "mean_signed": 2.6314892351023387e-08,
+          "maximum_over_archived_withheld_RMSE": 4.139181939659479e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 6.010258901678611e-08,
+          "RMS": 3.8014618897768617e-08,
+          "mean_signed": 2.633926473266152e-08,
+          "maximum_over_archived_withheld_RMSE": 4.2190727891041253e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 2.650243315471812e-06,
+          "RMS": 1.4603305222455104e-06,
+          "mean_signed": -1.0101144551418548e-06,
+          "maximum_over_archived_withheld_RMSE": 1.8604139421829747e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.7122039988464066,
+      "opposite_signed_components": 44
+    },
+    {
+      "case": "fixed_expansion_small_barrier",
+      "variable": "biomass_OD600",
+      "split": "all",
+      "n": 133,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.00550272083076031,
+          "RMS": 0.0023188354371400212,
+          "mean_signed": 0.0018940973222964788,
+          "maximum_over_archived_withheld_RMSE": 0.07975696481542588
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.00021956279349577557,
+          "RMS": 9.09799560357287e-05,
+          "mean_signed": -7.36400436111234e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0031823642402007165
+        },
+        "total": {
+          "maximum_absolute": 0.005283158037264535,
+          "RMS": 0.002227871502469645,
+          "mean_signed": 0.0018204572786853555,
+          "maximum_over_archived_withheld_RMSE": 0.07657460057522517
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 3.262663805791988e-08,
+          "RMS": 1.4459393778702055e-08,
+          "mean_signed": -8.17239647905187e-09,
+          "maximum_over_archived_withheld_RMSE": 4.728936291088576e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 5.16555784813022e-08,
+          "RMS": 2.987826611045474e-08,
+          "mean_signed": -1.9223599423871568e-08,
+          "maximum_over_archived_withheld_RMSE": 7.4870092126488e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 1.417946153381422e-06,
+          "RMS": 7.685366693682027e-07,
+          "mean_signed": 5.911151268878423e-07,
+          "maximum_over_archived_withheld_RMSE": 2.0551847884637236e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.07673957039286716,
+      "opposite_signed_components": 133
+    },
+    {
+      "case": "fixed_expansion_small_barrier",
+      "variable": "biomass_OD600",
+      "split": "calibration",
+      "n": 13,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.004085598593013717,
+          "RMS": 0.0020693437266285832,
+          "mean_signed": 0.001622260510186162,
+          "maximum_over_archived_withheld_RMSE": 0.05921705884322051
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.0001620686094172541,
+          "RMS": 8.108344381844189e-05,
+          "mean_signed": -6.313643498996495e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0023490380080195593
+        },
+        "total": {
+          "maximum_absolute": 0.003923529983596463,
+          "RMS": 0.001988270361632064,
+          "mean_signed": 0.001559124075196197,
+          "maximum_over_archived_withheld_RMSE": 0.05686802083520095
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 2.1343826261954746e-08,
+          "RMS": 1.3117684445202723e-08,
+          "mean_signed": -7.853011356580179e-09,
+          "maximum_over_archived_withheld_RMSE": 3.0935947007983656e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 4.6739697889819354e-08,
+          "RMS": 2.838805393026483e-08,
+          "mean_signed": -1.826229926257165e-08,
+          "maximum_over_archived_withheld_RMSE": 6.774496753030602e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 1.2560894440127868e-06,
+          "RMS": 7.479744315345584e-07,
+          "mean_signed": 5.710367770711972e-07,
+          "maximum_over_archived_withheld_RMSE": 1.820588117629685e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.07630946667596794,
+      "opposite_signed_components": 13
+    },
+    {
+      "case": "fixed_expansion_small_barrier",
+      "variable": "biomass_OD600",
+      "split": "withheld_series",
+      "n": 120,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.00550272083076031,
+          "RMS": 0.002344270178501106,
+          "mean_signed": 0.0019235463102750966,
+          "maximum_over_archived_withheld_RMSE": 0.07975696481542588
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.00021956279349577557,
+          "RMS": 9.198818067357152e-05,
+          "mean_signed": -7.477793454508224e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0031823642402007165
+        },
+        "total": {
+          "maximum_absolute": 0.005283158037264535,
+          "RMS": 0.0022522985906798204,
+          "mean_signed": 0.0018487683757300144,
+          "maximum_over_archived_withheld_RMSE": 0.07657460057522517
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 3.262663805791988e-08,
+          "RMS": 1.459734385538331e-08,
+          "mean_signed": -8.206996533986303e-09,
+          "maximum_over_archived_withheld_RMSE": 4.728936291088576e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 5.16555784813022e-08,
+          "RMS": 3.003526727444916e-08,
+          "mean_signed": -1.932774027467906e-08,
+          "maximum_over_archived_withheld_RMSE": 7.4870092126488e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 1.417946153381422e-06,
+          "RMS": 7.707313121573347e-07,
+          "mean_signed": 5.932902814513123e-07,
+          "maximum_over_archived_withheld_RMSE": 2.0551847884637236e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.07673957039286716,
+      "opposite_signed_components": 120
+    },
+    {
+      "case": "fixed_expansion_small_barrier",
+      "variable": "glucose",
+      "split": "all",
+      "n": 63,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.004012998906096882,
+          "RMS": 0.0015336175260017085,
+          "mean_signed": -0.0008064477702919249,
+          "maximum_over_archived_withheld_RMSE": 0.06690923493495408
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.00015225263765461516,
+          "RMS": 5.8168859138294716e-05,
+          "mean_signed": 3.057920456852577e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0025385273558938635
+        },
+        "total": {
+          "maximum_absolute": 0.0038607462684422666,
+          "RMS": 0.0014754486877685846,
+          "mean_signed": -0.0007758685657233991,
+          "maximum_over_archived_withheld_RMSE": 0.06437070757906023
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 5.108363387851256e-08,
+          "RMS": 1.0192202277142365e-08,
+          "mean_signed": 1.4656542769681302e-09,
+          "maximum_over_archived_withheld_RMSE": 8.517238455549332e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 5.059552221631236e-08,
+          "RMS": 9.77233165016907e-09,
+          "mean_signed": 1.4211133249712245e-09,
+          "maximum_over_archived_withheld_RMSE": 8.435854984871019e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 1.2539613219175738e-06,
+          "RMS": 4.439560856478291e-07,
+          "mean_signed": -8.625353818377776e-08,
+          "maximum_over_archived_withheld_RMSE": 2.090745466191338e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.07312516082377052,
+      "opposite_signed_components": 62
+    },
+    {
+      "case": "fixed_expansion_small_barrier",
+      "variable": "glucose",
+      "split": "calibration",
+      "n": 16,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.00391261374584112,
+          "RMS": 0.0015835639402265475,
+          "mean_signed": -0.0008744976400883724,
+          "maximum_over_archived_withheld_RMSE": 0.06523550054610808
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.00014847567735737366,
+          "RMS": 6.007771299737538e-05,
+          "mean_signed": 3.316511748110556e-05,
+          "maximum_over_archived_withheld_RMSE": 0.002475553622339094
+        },
+        "total": {
+          "maximum_absolute": 0.0037641380684837467,
+          "RMS": 0.0015234862375434475,
+          "mean_signed": -0.0008413325226072668,
+          "maximum_over_archived_withheld_RMSE": 0.06275994692376899
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 2.4930534914258118e-08,
+          "RMS": 7.161114278575135e-09,
+          "mean_signed": 1.6305319122758055e-09,
+          "maximum_over_archived_withheld_RMSE": 4.1566994077618146e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 2.081294714351145e-08,
+          "RMS": 6.608426254847505e-09,
+          "mean_signed": 1.484241146362459e-09,
+          "maximum_over_archived_withheld_RMSE": 3.470168825608869e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 9.672669800120381e-07,
+          "RMS": 4.420814114108771e-07,
+          "mean_signed": -1.092973560691567e-07,
+          "maximum_over_archived_withheld_RMSE": 1.6127363880444216e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.0731211071143737,
+      "opposite_signed_components": 15
+    },
+    {
+      "case": "fixed_expansion_small_barrier",
+      "variable": "glucose",
+      "split": "withheld_series",
+      "n": 47,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.004012998906096882,
+          "RMS": 0.0015162391538415577,
+          "mean_signed": -0.0007832818571697302,
+          "maximum_over_archived_withheld_RMSE": 0.06690923493495408
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.00015225263765461516,
+          "RMS": 5.750458137964731e-05,
+          "mean_signed": 2.9698893789775203e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0025385273558938635
+        },
+        "total": {
+          "maximum_absolute": 0.0038607462684422666,
+          "RMS": 0.0014587345962595178,
+          "mean_signed": -0.0007535829633799548,
+          "maximum_over_archived_withheld_RMSE": 0.06437070757906023
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 5.108363387851256e-08,
+          "RMS": 1.1035722723966499e-08,
+          "mean_signed": 1.4095257202676454e-09,
+          "maximum_over_archived_withheld_RMSE": 8.517238455549332e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 5.059552221631236e-08,
+          "RMS": 1.0636811421766385e-08,
+          "mean_signed": 1.3996230027954853e-09,
+          "maximum_over_archived_withheld_RMSE": 8.435854984871019e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 1.2539613219175738e-06,
+          "RMS": 4.4459246909174076e-07,
+          "mean_signed": -7.840883422279769e-08,
+          "maximum_over_archived_withheld_RMSE": 2.090745466191338e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.07312516082377052,
+      "opposite_signed_components": 47
+    },
+    {
+      "case": "fixed_expansion_small_barrier",
+      "variable": "ethanol",
+      "split": "all",
+      "n": 60,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.002212165855010717,
+          "RMS": 0.0008917320188798315,
+          "mean_signed": -0.000151518232924458,
+          "maximum_over_archived_withheld_RMSE": 0.015528929646032842
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.0001379519346641489,
+          "RMS": 4.8964960743973764e-05,
+          "mean_signed": 1.6776598896938813e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0009683929815123691
+        },
+        "total": {
+          "maximum_absolute": 0.002074213920346568,
+          "RMS": 0.000844283204302013,
+          "mean_signed": -0.00013474163402751917,
+          "maximum_over_archived_withheld_RMSE": 0.014560536664520474
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 5.8964507942960154e-08,
+          "RMS": 3.613820970722495e-08,
+          "mean_signed": 2.4040800161717614e-08,
+          "maximum_over_archived_withheld_RMSE": 4.139181939659479e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 6.40932656947868e-08,
+          "RMS": 3.380743889014776e-08,
+          "mean_signed": 2.2240945281766975e-08,
+          "maximum_over_archived_withheld_RMSE": 4.4992097292542857e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 2.650243315471812e-06,
+          "RMS": 1.3775052978576651e-06,
+          "mean_signed": -9.13966775533311e-07,
+          "maximum_over_archived_withheld_RMSE": 1.8604139421829747e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.12157454553790292,
+      "opposite_signed_components": 59
+    },
+    {
+      "case": "fixed_expansion_small_barrier",
+      "variable": "ethanol",
+      "split": "calibration",
+      "n": 16,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.0013916277210850314,
+          "RMS": 0.0006852479173849492,
+          "mean_signed": 8.503563387864468e-05,
+          "maximum_over_archived_withheld_RMSE": 0.009768928005668804
+        },
+        "barrier_difference": {
+          "maximum_absolute": 5.935806373980057e-05,
+          "RMS": 3.137888616813109e-05,
+          "mean_signed": 2.668514040368372e-06,
+          "maximum_over_archived_withheld_RMSE": 0.00041668087121597426
+        },
+        "total": {
+          "maximum_absolute": 0.0013417044028249947,
+          "RMS": 0.0006551005358156416,
+          "mean_signed": 8.770414791901306e-05,
+          "maximum_over_archived_withheld_RMSE": 0.00941847702334277
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 5.22369620892249e-08,
+          "RMS": 3.058323367243415e-08,
+          "mean_signed": 1.7787046641126736e-08,
+          "maximum_over_archived_withheld_RMSE": 3.666922655770439e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 4.936313424686034e-08,
+          "RMS": 2.700081434149051e-08,
+          "mean_signed": 1.5610392672948947e-08,
+          "maximum_over_archived_withheld_RMSE": 3.4651861075012163e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 2.0869161201364506e-06,
+          "RMS": 1.1185476194790194e-06,
+          "mean_signed": -6.495606566098155e-07,
+          "maximum_over_archived_withheld_RMSE": 1.4649703381582012e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.12133912226515664,
+      "opposite_signed_components": 15
+    },
+    {
+      "case": "fixed_expansion_small_barrier",
+      "variable": "ethanol",
+      "split": "withheld_series",
+      "n": 44,
+      "metrics": {
+        "expansion": {
+          "maximum_absolute": 0.002212165855010717,
+          "RMS": 0.000955820973600033,
+          "mean_signed": -0.00023753782085285895,
+          "maximum_over_archived_withheld_RMSE": 0.015528929646032842
+        },
+        "barrier_difference": {
+          "maximum_absolute": 0.0001379519346641489,
+          "RMS": 5.395703064920629e-05,
+          "mean_signed": 2.1906811572055338e-05,
+          "maximum_over_archived_withheld_RMSE": 0.0009683929815123691
+        },
+        "total": {
+          "maximum_absolute": 0.002074213920346568,
+          "RMS": 0.000903306305035882,
+          "mean_signed": -0.00021563100928080362,
+          "maximum_over_archived_withheld_RMSE": 0.014560536664520474
+        },
+        "lp0_refinement": {
+          "maximum_absolute": 5.8964507942960154e-08,
+          "RMS": 3.795717237911897e-08,
+          "mean_signed": 2.6314892351023387e-08,
+          "maximum_over_archived_withheld_RMSE": 4.139181939659479e-07
+        },
+        "expanded_lp_refinement": {
+          "maximum_absolute": 6.40932656947868e-08,
+          "RMS": 3.596458859925661e-08,
+          "mean_signed": 2.4652055321337164e-08,
+          "maximum_over_archived_withheld_RMSE": 4.4992097292542857e-07
+        },
+        "archived_direct_refinement": {
+          "maximum_absolute": 2.650243315471812e-06,
+          "RMS": 1.4603305222455104e-06,
+          "mean_signed": -1.0101144551418548e-06,
+          "maximum_over_archived_withheld_RMSE": 1.8604139421829747e-05
+        }
+      },
+      "maximum_cancellation_fraction": 0.12157454553790292,
+      "opposite_signed_components": 44
+    }
+  ],
+  "maximum_decomposition_identity_error": 2.5849394142282115e-26,
+  "identity_passed": true,
+  "archived_withheld_RMSE": {
+    "biomass_OD600": 0.06899360881516423,
+    "glucose": 0.05997675672122278,
+    "ethanol": 0.14245449657091186
+  },
+  "scope": "Fresh LP fine/coarse differences for each epsilon. Existing adopted direct coarse/fine difference separately; it is not a refinement estimate for the two new pairs. Finite-minus-LP differences also include residual integration/solver errors.",
+  "runtime_limitations": "Archived adopted pair was generated under its recorded older NumPy/SciPy environment. Fresh runs use the recorded current environment; cross-runtime comparisons are numerical diagnostics, not pure analytical error bounds.",
+  "input_sha256": {
+    "paper1_improvement_2026-10-24/numerical/results/lp/eps_0_fine.csv": "71295982b1b9b32a26e73479f41618e307e4373985eaf0c99096a26ff4b8c376",
+    "paper1_improvement_2026-10-24/numerical/results/lp/eps_1e-5_fine.csv": "e6bfdf529d47f3c9d8570ca4c6e7b4fb59672ff5ec84defac79ce251f0754791",
+    "research_completion/runs/figure11_zampar_2026-10-21/trajectory_direct_barrier.csv": "315d25a37cde10600d45793890a2b6a8bc2c7e5ee272c37793eb33310f33ab23",
+    "paper1_improvement_2026-10-24/numerical/results/lp/eps_0_coarse.csv": "d329e884fff9fe101ec4d7cdcb7907cebd3852963fc88722dda2a85465b55b17",
+    "paper1_improvement_2026-10-24/numerical/results/lp/eps_1e-5_coarse.csv": "d95e43ed45ca06b3ec0dec9425bc03b85cd37c6eaead86e2f30b4f819a1301dd",
+    "research_completion/runs/figure11_zampar_2026-10-21/numerical_refinement/coarse/trajectory_direct_barrier.csv": "1bd4d47a9af1dfe4a363d4e4799cf3d3f87795d6390d7a61872b0d46affea6b2",
+    "paper1_improvement_2026-10-24/numerical/results/lp/eps_1e-6_fine.csv": "c88ce04bff5292719f3cf253cc86c3d3a221cf4aa8e3f85dbde8ab8a28160c2f",
+    "paper1_improvement_2026-10-24/numerical/results/tight_pair/trajectory.csv": "0aa69eccf38807727eaaa4ba4e159ef43891f95c9ff42dc5528916c6527b06ba",
+    "paper1_improvement_2026-10-24/numerical/results/lp/eps_1e-6_coarse.csv": "bc73e8ce9dda269b1fc071c72780ce43796a3878bf1f8e1a522297f5e89b270a",
+    "paper1_improvement_2026-10-24/numerical/results/fixed_expansion_small_barrier/trajectory.csv": "2976a55120ffca6706e86a2053a3ede356801cb00bac98d64bb05a31cce981bf"
+  }
+}

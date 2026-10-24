@@ -1,0 +1,2103 @@
+{
+  "status": "Post hoc verification declared before its integrations",
+  "declared_utc": "2026-10-24T03:56:40.862926+00:00",
+  "source_input_sha256": {
+    "PROTOCOL.json": "27108441b375d9179db5f7d02eec340edc4b144fa69adc06f065f94269551cfe",
+    "scripts/engine.py": "28843ca0c1064667a7990c569185d27b63557900809b597732a6d488e9905898",
+    "scripts/policies.py": "58c38af9e71e39f528dce0378c4971edfe552c690b293f6af55a54cdd25c1fa0",
+    "scripts/campaign.py": "3f218c425ba702d49aab14a0e1075464a6e91e53bab026c57c502ff7f48f5d17",
+    "scripts/continuous_baseline.py": "62e258ced1779db954105e3fe9534ec43e4c86cdba4600b8b2eb31ef68f54ea4",
+    "vendor/prior_kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6",
+    "audit/independent_amount_model.py": "b0b42a3ab3bab1a014367fad97d9bdf71152ba7e209c8877eb4ad118c5b0995e",
+    "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb",
+    "audit/design_lock.json": "4e2f1c4c0667a1174c1673d45ebc43d54bf786cc89b1a3df13896476ad9053db",
+    "audit/verify_refined_targets.py": "2966a47eaf273028037043d1e1373902537be7ac353356ad0f1d979f3a5df344",
+    "results/roots.json": "16ac9df9afc4d5bc3debc3f75cc6bae59892efe2ca91d2c353985f065ff00e66",
+    "results/primary_design.json": "726b2a74047de6fedbfb66017c332f56689f7ebdc7df6f741d5e67600892a5b7",
+    "results/target_set_sensitivity.json": "ebbc715d0497640797cf52b3ed2a6df4f4132c63b63b4aa48d02e65e95810c06",
+    "EXPLORATORY_TARGET_SET_PROTOCOL.md": "4c71b3bc22b120f27fdb013be1a05385823985efccf9828af5adbb4ad6497ec1",
+    "EXPLORATORY_REFINEMENT_AMENDMENT.md": "327cb310a3ca28175bd0882f3fdbaa272839ba02203de244a19d9d70ed888771"
+  },
+  "cases": [
+    {
+      "id": "analytic_v0.9_uniform__component_0",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 0,
+      "log_interval": [
+        0.2828821351187624,
+        0.28330172974785733
+      ],
+      "target": 1.3272271714321755
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_1",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 1,
+      "log_interval": [
+        0.2837033462933973,
+        0.28427619671283405
+      ],
+      "target": 1.328419342950193
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_2",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 2,
+      "log_interval": [
+        0.2848239447290923,
+        0.28553654393825517
+      ],
+      "target": 1.3300017317941426
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_3",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 3,
+      "log_interval": [
+        0.28622148243473394,
+        0.2870680105629669
+      ],
+      "target": 1.331950949178199
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_4",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 4,
+      "log_interval": [
+        0.28788160988221473,
+        0.28883619861392723
+      ],
+      "target": 1.3342360811981537
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_5",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 5,
+      "log_interval": [
+        0.2897906579021942,
+        0.2907368566478133
+      ],
+      "target": 1.3367800269882681
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_6",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 6,
+      "log_interval": [
+        0.2919356003356108,
+        0.29287802768376486
+      ],
+      "target": 1.339647894331506
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_7",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 7,
+      "log_interval": [
+        0.2943040196811328,
+        0.29524711273888055
+      ],
+      "target": 1.342824949571617
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_8",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 8,
+      "log_interval": [
+        0.2968840753864163,
+        0.30106297696868173
+      ],
+      "target": 1.3484739237411216
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_9",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 9,
+      "log_interval": [
+        0.3011023192995645,
+        0.30468574139054266
+      ],
+      "target": 1.353770998195333
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_10",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 10,
+      "log_interval": [
+        0.30497263288273063,
+        0.30685280521615993
+      ],
+      "target": 1.3578637857337204
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_11",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 11,
+      "log_interval": [
+        0.30725185546983774,
+        0.30917965558513877
+      ],
+      "target": 1.36099459936967
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_12",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 12,
+      "log_interval": [
+        0.30974442401641217,
+        0.31166591075923195
+      ],
+      "target": 1.3643868961271952
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_13",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 13,
+      "log_interval": [
+        0.3120101356264728,
+        0.4080364026607664
+      ],
+      "target": 1.4333627672963851
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_14",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 14,
+      "log_interval": [
+        0.4095118985688872,
+        0.4239990001186705
+      ],
+      "target": 1.5170314765252426
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_15",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 15,
+      "log_interval": [
+        0.4272130606556878,
+        0.4404070141732824
+      ],
+      "target": 1.5431257041237438
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_16",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 16,
+      "log_interval": [
+        0.44534573959883444,
+        0.45727764262228004
+      ],
+      "target": 1.5703706763994265
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_17",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 17,
+      "log_interval": [
+        0.4639479380951867,
+        0.47462920806600667
+      ],
+      "target": 1.5988563190825542
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_18",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 18,
+      "log_interval": [
+        0.4829308127146216,
+        0.4924812568439861
+      ],
+      "target": 1.6285760348850156
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_19",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 19,
+      "log_interval": [
+        0.5023670857986492,
+        0.5108546689442334
+      ],
+      "target": 1.6596568719727547
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_20",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 20,
+      "log_interval": [
+        0.5222602889442106,
+        0.5297717803869925
+      ],
+      "target": 1.692177286018091
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_21",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 21,
+      "log_interval": [
+        0.5574006737646019,
+        0.5574289296552276
+      ],
+      "target": 1.7461525097950457
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_22",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 22,
+      "log_interval": [
+        0.5617659582065758,
+        0.5619261886208381
+      ],
+      "target": 1.7539073552261522
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_23",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 23,
+      "log_interval": [
+        0.5666548808700705,
+        0.5669604935111477
+      ],
+      "target": 1.7626311903769303
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_24",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 24,
+      "log_interval": [
+        0.5720949439158104,
+        0.5725600097418838
+      ],
+      "target": 1.7723874452236317
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_25",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 25,
+      "log_interval": [
+        0.5743534786966823,
+        0.5744213891070692
+      ],
+      "target": 1.7760422503560016
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_26",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 26,
+      "log_interval": [
+        0.5781152170575431,
+        0.5787545017697647
+      ],
+      "target": 1.7832452159704448
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_27",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 27,
+      "log_interval": [
+        0.5847464652141033,
+        0.5855754639476521
+      ],
+      "target": 1.7952799388665766
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_28",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 28,
+      "log_interval": [
+        0.5920212923698324,
+        0.593056268268695
+      ],
+      "target": 1.8085741643245268
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_29",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 29,
+      "log_interval": [
+        0.5956439360595481,
+        0.5958063048879229
+      ],
+      "target": 1.8143460875786572
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_30",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 30,
+      "log_interval": [
+        0.5999743042786793,
+        0.6009094026883898
+      ],
+      "target": 1.8229240878263029
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_31",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 31,
+      "log_interval": [
+        0.6086422931251915,
+        0.6088687628567236
+      ],
+      "target": 1.83814245797808
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_32",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 32,
+      "log_interval": [
+        0.8408223000572473,
+        0.8409127341268706
+      ],
+      "target": 2.318377336609606
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_33",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 33,
+      "log_interval": [
+        0.8478162220710127,
+        0.8482117514752597
+      ],
+      "target": 2.335004893353191
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_34",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 34,
+      "log_interval": [
+        0.8561308013366827,
+        0.8570401923869045
+      ],
+      "target": 2.3551054342815836
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_35",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 35,
+      "log_interval": [
+        0.8664803866533642,
+        0.8679402579938377
+      ],
+      "target": 2.380261420799985
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_36",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 36,
+      "log_interval": [
+        0.8845590323371534,
+        0.8869470868071713
+      ],
+      "target": 2.424809730282923
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_37",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 37,
+      "log_interval": [
+        0.8940252949001298,
+        0.896960230052069
+      ],
+      "target": 2.448542041879329
+    },
+    {
+      "id": "analytic_v0.9_uniform__component_38",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 38,
+      "log_interval": [
+        0.9236140174086646,
+        0.9281414602951396
+      ],
+      "target": 2.5240827738497313
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_0",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 0,
+      "log_interval": [
+        0.7483527821921953,
+        0.7486609559695537
+      ],
+      "target": 2.1138414171201885
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_1",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 1,
+      "log_interval": [
+        0.7599529756072997,
+        0.7607348859915438
+      ],
+      "target": 2.139011766027849
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_2",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 2,
+      "log_interval": [
+        0.7718257454937626,
+        0.7730858654725646
+      ],
+      "target": 2.1650767376820963
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_3",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 3,
+      "log_interval": [
+        0.7839059612975713,
+        0.785708936703282
+      ],
+      "target": 2.191984831225414
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_4",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 4,
+      "log_interval": [
+        0.7962604487115327,
+        0.7985995753388314
+      ],
+      "target": 2.219828658445493
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_5",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 5,
+      "log_interval": [
+        0.8088233475603391,
+        0.8118348228380493
+      ],
+      "target": 2.2486478616583128
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_6",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 6,
+      "log_interval": [
+        0.821658725804142,
+        0.8254114624842454
+      ],
+      "target": 2.278540472038863
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_7",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 7,
+      "log_interval": [
+        0.8347288021753038,
+        0.8393241494829721
+      ],
+      "target": 2.3094894339245204
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_8",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 8,
+      "log_interval": [
+        0.8400529251196512,
+        0.8402002669857772
+      ],
+      "target": 2.316660238259471
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_9",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 9,
+      "log_interval": [
+        0.8480495409158532,
+        0.8527757632715985
+      ],
+      "target": 2.3406125113250007
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_10",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 10,
+      "log_interval": [
+        0.8528537836053608,
+        0.8535839728923106
+      ],
+      "target": 2.3471900240509416
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_11",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 11,
+      "log_interval": [
+        0.8542272742357017,
+        0.8545620898289846
+      ],
+      "target": 2.3499514821101024
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_12",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 12,
+      "log_interval": [
+        0.8616375811792333,
+        0.8682026244061233
+      ],
+      "target": 2.37481633720377
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_13",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 13,
+      "log_interval": [
+        0.8687611333924768,
+        0.8692884287979109
+      ],
+      "target": 2.3845842276050186
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_14",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 14,
+      "log_interval": [
+        0.8704442638640894,
+        0.870552997814721
+      ],
+      "target": 2.3881013376681426
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_15",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 15,
+      "log_interval": [
+        0.8754627787334833,
+        0.8831924432183297
+      ],
+      "target": 2.4092791887866127
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_16",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 16,
+      "log_interval": [
+        0.8836670248683546,
+        0.8843919164148434
+      ],
+      "target": 2.420633954767081
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_17",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 17,
+      "log_interval": [
+        0.8854719112408015,
+        0.8857726479875673
+      ],
+      "target": 2.42449263450363
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_18",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 18,
+      "log_interval": [
+        0.8895431492814067,
+        0.898566465068312
+      ],
+      "target": 2.445023678101071
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_19",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 19,
+      "log_interval": [
+        0.8989581796340721,
+        0.899885903969201
+      ],
+      "target": 2.458181974092604
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_20",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 20,
+      "log_interval": [
+        0.9008914891273495,
+        0.9013892989390254
+      ],
+      "target": 2.462409627832202
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_21",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 21,
+      "log_interval": [
+        0.90303501889432,
+        0.9030837166456783
+      ],
+      "target": 2.4671394640015256
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_22",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 22,
+      "log_interval": [
+        0.9039315525748318,
+        0.9143384759447127
+      ],
+      "target": 2.4821745589368724
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_23",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 23,
+      "log_interval": [
+        0.9146485921056074,
+        0.91578451739361
+      ],
+      "target": 2.4973159989929554
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_24",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 24,
+      "log_interval": [
+        0.9165893463456715,
+        0.91659758642687
+      ],
+      "target": 2.5007569508520815
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_25",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 25,
+      "log_interval": [
+        0.9167173575439619,
+        0.9174174303863721
+      ],
+      "target": 2.5019424094277745
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_26",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 26,
+      "log_interval": [
+        0.9179300877322693,
+        0.9179704259443414
+      ],
+      "target": 2.50415225684437
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_27",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 27,
+      "log_interval": [
+        0.9186663747707359,
+        1.0335492447958068
+      ],
+      "target": 2.65410582736948
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_28",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 28,
+      "log_interval": [
+        1.0335888634082926,
+        1.0372121902345823
+      ],
+      "target": 2.8162339870088897
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_29",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 29,
+      "log_interval": [
+        1.037219124299858,
+        1.0432340716494009
+      ],
+      "target": 2.829858181837682
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_30",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 30,
+      "log_interval": [
+        1.0446253697670829,
+        1.0496155159522933
+      ],
+      "target": 2.8494341846240996
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_31",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 31,
+      "log_interval": [
+        1.0524530241004928,
+        1.0563715360155357
+      ],
+      "target": 2.8702877327446146
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_32",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 32,
+      "log_interval": [
+        1.0569676702711164,
+        1.0571411228344416
+      ],
+      "target": 2.8778813945601165
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_33",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 33,
+      "log_interval": [
+        1.060720140358937,
+        1.063517932018519
+      ],
+      "target": 2.8924937987846717
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_34",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 34,
+      "log_interval": [
+        1.0694457771725088,
+        1.0710713512955439
+      ],
+      "target": 2.9161334103072276
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_35",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 35,
+      "log_interval": [
+        1.0782218628323508,
+        1.079093470593809
+      ],
+      "target": 2.940729461446332
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_36",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 36,
+      "log_interval": [
+        1.0871830496198214,
+        1.0874704883305981
+      ],
+      "target": 2.9663337686979387
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_37",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 37,
+      "log_interval": [
+        1.13509776329754,
+        1.1352107395406377
+      ],
+      "target": 3.1116534828539093
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_38",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 38,
+      "log_interval": [
+        1.135428852324625,
+        1.135580326862146
+      ],
+      "target": 3.1127438048336904
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_39",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 39,
+      "log_interval": [
+        1.1366887219650403,
+        1.1368351992404768
+      ],
+      "target": 3.1166601402808496
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_40",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 40,
+      "log_interval": [
+        1.1467304249722379,
+        1.1480653464482475
+      ],
+      "target": 3.1499856135818605
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_41",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 41,
+      "log_interval": [
+        1.1586253309054861,
+        1.1615976766442182
+      ],
+      "target": 3.1902889855491017
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_42",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 42,
+      "log_interval": [
+        1.1711425805984408,
+        1.1733902353068604
+      ],
+      "target": 3.2293032695746953
+    },
+    {
+      "id": "analytic_v1.3_uniform__component_43",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 43,
+      "log_interval": [
+        1.1843132019082698,
+        1.1873369298177925
+      ],
+      "target": 3.2733864670505715
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_0",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 0,
+      "log_interval": [
+        1.2009843488158733,
+        1.2014461612187664
+      ],
+      "target": 3.3241541641270547
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_1",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 1,
+      "log_interval": [
+        1.20682605820483,
+        1.2069253724879385
+      ],
+      "target": 3.3430237618223053
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_2",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 2,
+      "log_interval": [
+        1.2078860269565996,
+        1.2081453326363059
+      ],
+      "target": 3.346836863053508
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_3",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 3,
+      "log_interval": [
+        1.2105718520276192,
+        1.2120023468116956
+      ],
+      "target": 3.3578036996243883
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_4",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 4,
+      "log_interval": [
+        1.2162793535621257,
+        1.2173620864555492
+      ],
+      "target": 3.3764360158504796
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_5",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 5,
+      "log_interval": [
+        1.217678782037716,
+        1.2189127213989257
+      ],
+      "target": 3.3814200409327664
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_6",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 6,
+      "log_interval": [
+        1.220546593654605,
+        1.2229778935791404
+      ],
+      "target": 3.393162046135001
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_7",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 7,
+      "log_interval": [
+        1.2232147097360417,
+        1.2240966554496435
+      ],
+      "target": 3.3995928776772097
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_8",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 8,
+      "log_interval": [
+        1.2261300076341495,
+        1.2300672530009409
+      ],
+      "target": 3.4147306944809346
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_9",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 9,
+      "log_interval": [
+        1.2309019039361278,
+        1.2352176348068837
+      ],
+      "target": 3.4317137410824676
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_10",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 10,
+      "log_interval": [
+        1.2363709421252123,
+        1.2416032344539245
+      ],
+      "target": 3.4521150055317693
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_11",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 11,
+      "log_interval": [
+        1.2416317475923166,
+        1.246591415707598
+      ],
+      "target": 3.4698507504982334
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_12",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 12,
+      "log_interval": [
+        1.246995747681231,
+        1.2809813980198366
+      ],
+      "target": 3.539510967576914
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_13",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 13,
+      "log_interval": [
+        1.281145361663511,
+        1.2867720440826453
+      ],
+      "target": 3.6109059728704933
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_14",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 14,
+      "log_interval": [
+        1.2872127613893498,
+        1.28748098320047
+      ],
+      "target": 3.623161083544768
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_15",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 15,
+      "log_interval": [
+        1.2882197803889757,
+        1.2937052500097128
+      ],
+      "target": 3.636284851339953
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_16",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 16,
+      "log_interval": [
+        1.2951051241120253,
+        1.2997622091244756
+      ],
+      "target": 3.6598921018806796
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_17",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 17,
+      "log_interval": [
+        1.301822987644315,
+        1.305854287087241
+      ],
+      "target": 3.683408835332117
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_18",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 18,
+      "log_interval": [
+        1.308384340134413,
+        1.3121203111532445
+      ],
+      "target": 3.7071089928709586
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_19",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 19,
+      "log_interval": [
+        1.3151687692459386,
+        1.318217927057589
+      ],
+      "target": 3.7310636286910017
+    },
+    {
+      "id": "analytic_v1.7_uniform__component_20",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "component_midpoints",
+      "component": 20,
+      "log_interval": [
+        1.3222499571788455,
+        1.3247588428487476
+      ],
+      "target": 3.756562836202442
+    },
+    {
+      "id": "table_v0.9_uniform__component_0",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 0,
+      "log_interval": [
+        -0.03111064080699573,
+        -0.031089298242143723
+      ],
+      "target": 0.969378659908166
+    },
+    {
+      "id": "table_v0.9_uniform__component_1",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 1,
+      "log_interval": [
+        -0.02770476969491871,
+        -0.02759800376895176
+      ],
+      "target": 0.9727274133822602
+    },
+    {
+      "id": "table_v0.9_uniform__component_2",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 2,
+      "log_interval": [
+        -0.02403434800546418,
+        -0.0238836982510066
+      ],
+      "target": 0.9763257157118975
+    },
+    {
+      "id": "table_v0.9_uniform__component_3",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 3,
+      "log_interval": [
+        -0.006329049233947017,
+        -0.006169805145866889
+      ],
+      "target": 0.9937700598647522
+    },
+    {
+      "id": "table_v0.9_uniform__component_4",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 4,
+      "log_interval": [
+        -0.0028328256365569146,
+        -0.002501190035317056
+      ],
+      "target": 0.9973365454698614
+    },
+    {
+      "id": "table_v0.9_uniform__component_5",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 5,
+      "log_interval": [
+        0.004730200391368442,
+        0.004856155747062842
+      ],
+      "target": 1.0048046837227542
+    },
+    {
+      "id": "table_v0.9_uniform__component_6",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 6,
+      "log_interval": [
+        0.00808362601667649,
+        0.008370459959574486
+      ],
+      "target": 1.0082609781043395
+    },
+    {
+      "id": "table_v0.9_uniform__component_7",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 7,
+      "log_interval": [
+        0.015640288875090988,
+        0.015747861544448252
+      ],
+      "target": 1.0158178739960466
+    },
+    {
+      "id": "table_v0.9_uniform__component_8",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 8,
+      "log_interval": [
+        0.018952325779576437,
+        0.019238223760686804
+      ],
+      "target": 1.019278755540549
+    },
+    {
+      "id": "table_v0.9_uniform__component_9",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 9,
+      "log_interval": [
+        0.027204619703909902,
+        0.027270944578774728
+      ],
+      "target": 1.0276121215257448
+    },
+    {
+      "id": "table_v0.9_uniform__component_10",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 10,
+      "log_interval": [
+        0.030347705135786704,
+        0.030597660785342498
+      ],
+      "target": 1.0309417273882997
+    },
+    {
+      "id": "table_v0.9_uniform__component_11",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 11,
+      "log_interval": [
+        0.038230699875161964,
+        0.03827871919616428
+      ],
+      "target": 1.03899584132622
+    },
+    {
+      "id": "table_v0.9_uniform__component_12",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 12,
+      "log_interval": [
+        0.04134778000975518,
+        0.04158046112196197
+      ],
+      "target": 1.042335762763195
+    },
+    {
+      "id": "table_v0.9_uniform__component_13",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 13,
+      "log_interval": [
+        0.05325891190294445,
+        0.053445036282343164
+      ],
+      "target": 1.0548008423590272
+    },
+    {
+      "id": "table_v0.9_uniform__component_14",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 14,
+      "log_interval": [
+        0.06438077889677644,
+        0.06454989000698703
+      ],
+      "target": 1.0665886037252168
+    },
+    {
+      "id": "table_v0.9_uniform__component_15",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 15,
+      "log_interval": [
+        0.07683676510128172,
+        0.07694671380268565
+      ],
+      "target": 1.0799251567745345
+    },
+    {
+      "id": "table_v0.9_uniform__component_16",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 16,
+      "log_interval": [
+        0.08808809050965498,
+        0.08818089448491302
+      ],
+      "target": 1.0921349961142435
+    },
+    {
+      "id": "table_v0.9_uniform__component_17",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 17,
+      "log_interval": [
+        0.10112587905113261,
+        0.10113418299109196
+      ],
+      "target": 1.1064205013976895
+    },
+    {
+      "id": "table_v0.9_uniform__component_18",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 18,
+      "log_interval": [
+        0.6158485631030391,
+        0.6159053684275769
+      ],
+      "target": 1.85127939653841
+    },
+    {
+      "id": "table_v0.9_uniform__component_19",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 19,
+      "log_interval": [
+        0.6401970009153662,
+        0.6405664531396534
+      ],
+      "target": 1.897204955504673
+    },
+    {
+      "id": "table_v0.9_uniform__component_20",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 20,
+      "log_interval": [
+        0.6573455447201947,
+        0.6581495364182496
+      ],
+      "target": 1.9304391976342903
+    },
+    {
+      "id": "table_v0.9_uniform__component_21",
+      "root": "table_v0.9_uniform",
+      "cohort": "component_midpoints",
+      "component": 21,
+      "log_interval": [
+        0.7033818715715238,
+        0.7049741443484184
+      ],
+      "target": 2.0221837825969713
+    },
+    {
+      "id": "table_v1.3_uniform__component_0",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 0,
+      "log_interval": [
+        0.561439247282503,
+        0.5617846948885038
+      ],
+      "target": 1.753496809487572
+    },
+    {
+      "id": "table_v1.3_uniform__component_1",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 1,
+      "log_interval": [
+        0.5619546549280315,
+        0.5619613067822619
+      ],
+      "target": 1.75410364149354
+    },
+    {
+      "id": "table_v1.3_uniform__component_2",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 2,
+      "log_interval": [
+        0.5720917249021943,
+        0.572436325406969
+      ],
+      "target": 1.7722749878406274
+    },
+    {
+      "id": "table_v1.3_uniform__component_3",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 3,
+      "log_interval": [
+        0.5726150408353538,
+        0.5727779080231764
+      ],
+      "target": 1.773041572616227
+    },
+    {
+      "id": "table_v1.3_uniform__component_4",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 4,
+      "log_interval": [
+        0.5733313442809155,
+        0.5733372026308382
+      ],
+      "target": 1.7741727775077265
+    },
+    {
+      "id": "table_v1.3_uniform__component_5",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 5,
+      "log_interval": [
+        0.5824475748578376,
+        0.5830410673517193
+      ],
+      "target": 1.7909466254602682
+    },
+    {
+      "id": "table_v1.3_uniform__component_6",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 6,
+      "log_interval": [
+        0.5832741341800946,
+        0.5833845779496801
+      ],
+      "target": 1.7919946983976127
+    },
+    {
+      "id": "table_v1.3_uniform__component_7",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 7,
+      "log_interval": [
+        0.5932296496377673,
+        0.59415602569076
+      ],
+      "target": 1.810662567459545
+    },
+    {
+      "id": "table_v1.3_uniform__component_8",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 8,
+      "log_interval": [
+        0.594369163946357,
+        0.5946597264763346
+      ],
+      "target": 1.8121508327914835
+    },
+    {
+      "id": "table_v1.3_uniform__component_9",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 9,
+      "log_interval": [
+        0.5952828051507916,
+        0.5953859903230895
+      ],
+      "target": 1.8136373197846885
+    },
+    {
+      "id": "table_v1.3_uniform__component_10",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 10,
+      "log_interval": [
+        0.6040215154677796,
+        0.6048817457486687
+      ],
+      "target": 1.8302482815124774
+    },
+    {
+      "id": "table_v1.3_uniform__component_11",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 11,
+      "log_interval": [
+        0.6051758135209276,
+        0.6053882292020186
+      ],
+      "target": 1.8317687339590525
+    },
+    {
+      "id": "table_v1.3_uniform__component_12",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 12,
+      "log_interval": [
+        0.6060917681894123,
+        0.6061138656386674
+      ],
+      "target": 1.83327285879426
+    },
+    {
+      "id": "table_v1.3_uniform__component_13",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 13,
+      "log_interval": [
+        0.6152706534484708,
+        0.6164721473095284
+      ],
+      "target": 1.8512690934820737
+    },
+    {
+      "id": "table_v1.3_uniform__component_14",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 14,
+      "log_interval": [
+        0.6167551782640374,
+        0.6171469348228248
+      ],
+      "target": 1.8532689069320745
+    },
+    {
+      "id": "table_v1.3_uniform__component_15",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 15,
+      "log_interval": [
+        0.6178492714070997,
+        0.6180494720963544
+      ],
+      "target": 1.8551199772890348
+    },
+    {
+      "id": "table_v1.3_uniform__component_16",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 16,
+      "log_interval": [
+        0.6261884517992803,
+        0.6273257994328135
+      ],
+      "target": 1.8715315860468422
+    },
+    {
+      "id": "table_v1.3_uniform__component_17",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 17,
+      "log_interval": [
+        0.6276898199992275,
+        0.6280043202220135
+      ],
+      "target": 1.873572563669583
+    },
+    {
+      "id": "table_v1.3_uniform__component_18",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 18,
+      "log_interval": [
+        0.6287872377214155,
+        0.6289071710976305
+      ],
+      "target": 1.8754473252023753
+    },
+    {
+      "id": "table_v1.3_uniform__component_19",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 19,
+      "log_interval": [
+        0.6379332826823229,
+        0.6394087416981188
+      ],
+      "target": 1.8939621533836148
+    },
+    {
+      "id": "table_v1.3_uniform__component_20",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 20,
+      "log_interval": [
+        0.6397836588572102,
+        0.6402645552272029
+      ],
+      "target": 1.8965265984006265
+    },
+    {
+      "id": "table_v1.3_uniform__component_21",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 21,
+      "log_interval": [
+        0.6410692302813598,
+        0.6413537419966352
+      ],
+      "target": 1.8987798318965217
+    },
+    {
+      "id": "table_v1.3_uniform__component_22",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 22,
+      "log_interval": [
+        0.6426087755991922,
+        0.6426861066179267
+      ],
+      "target": 1.9015083527799552
+    },
+    {
+      "id": "table_v1.3_uniform__component_23",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 23,
+      "log_interval": [
+        0.6489848308953073,
+        0.6497579886875274
+      ],
+      "target": 1.9143371171650136
+    },
+    {
+      "id": "table_v1.3_uniform__component_24",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 24,
+      "log_interval": [
+        0.649804393699741,
+        0.6503980193763702
+      ],
+      "target": 1.9157347040802513
+    },
+    {
+      "id": "table_v1.3_uniform__component_25",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 25,
+      "log_interval": [
+        0.6508543545234767,
+        0.6512586724012367
+      ],
+      "target": 1.9175656931472018
+    },
+    {
+      "id": "table_v1.3_uniform__component_26",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 26,
+      "log_interval": [
+        0.6521443759818616,
+        0.6523492673300452
+      ],
+      "target": 1.9198495462784089
+    },
+    {
+      "id": "table_v1.3_uniform__component_27",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 27,
+      "log_interval": [
+        0.6615555163078978,
+        0.6621851769460835
+      ],
+      "target": 1.9384144529713252
+    },
+    {
+      "id": "table_v1.3_uniform__component_28",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 28,
+      "log_interval": [
+        0.6625452482740403,
+        0.663003033003262
+      ],
+      "target": 1.9401671722753342
+    },
+    {
+      "id": "table_v1.3_uniform__component_29",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 29,
+      "log_interval": [
+        0.6637744400655216,
+        0.664050709830016
+      ],
+      "target": 1.942377182886941
+    },
+    {
+      "id": "table_v1.3_uniform__component_30",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 30,
+      "log_interval": [
+        0.6652533671804767,
+        0.6653378524934651
+      ],
+      "target": 1.94506541683103
+    },
+    {
+      "id": "table_v1.3_uniform__component_31",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 31,
+      "log_interval": [
+        0.6727414556099097,
+        0.6733089611453876
+      ],
+      "target": 1.9601582472530075
+    },
+    {
+      "id": "table_v1.3_uniform__component_32",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 32,
+      "log_interval": [
+        0.6737437445767812,
+        0.6741363007653652
+      ],
+      "target": 1.9619522484988452
+    },
+    {
+      "id": "table_v1.3_uniform__component_33",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 33,
+      "log_interval": [
+        0.6749823042872772,
+        0.6751900855444738
+      ],
+      "target": 1.9642022729231512
+    },
+    {
+      "id": "table_v1.3_uniform__component_34",
+      "root": "table_v1.3_uniform",
+      "cohort": "component_midpoints",
+      "component": 34,
+      "log_interval": [
+        0.6764670838444858,
+        0.6764798937323743
+      ],
+      "target": 1.9669290897116138
+    },
+    {
+      "id": "analytic_v0.9_uniform__fixed_0.5",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "fixed_targets",
+      "target": 0.5
+    },
+    {
+      "id": "analytic_v0.9_uniform__fixed_0.75",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "fixed_targets",
+      "target": 0.75
+    },
+    {
+      "id": "analytic_v0.9_uniform__fixed_1",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "fixed_targets",
+      "target": 1.0
+    },
+    {
+      "id": "analytic_v0.9_uniform__fixed_1.25",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "fixed_targets",
+      "target": 1.25
+    },
+    {
+      "id": "analytic_v0.9_uniform__fixed_1.5",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "fixed_targets",
+      "target": 1.5
+    },
+    {
+      "id": "analytic_v0.9_uniform__fixed_2",
+      "root": "analytic_v0.9_uniform",
+      "cohort": "fixed_targets",
+      "target": 2.0
+    },
+    {
+      "id": "analytic_v1.3_uniform__fixed_0.5",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "fixed_targets",
+      "target": 0.5
+    },
+    {
+      "id": "analytic_v1.3_uniform__fixed_0.75",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "fixed_targets",
+      "target": 0.75
+    },
+    {
+      "id": "analytic_v1.3_uniform__fixed_1",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "fixed_targets",
+      "target": 1.0
+    },
+    {
+      "id": "analytic_v1.3_uniform__fixed_1.25",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "fixed_targets",
+      "target": 1.25
+    },
+    {
+      "id": "analytic_v1.3_uniform__fixed_1.5",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "fixed_targets",
+      "target": 1.5
+    },
+    {
+      "id": "analytic_v1.3_uniform__fixed_2",
+      "root": "analytic_v1.3_uniform",
+      "cohort": "fixed_targets",
+      "target": 2.0
+    },
+    {
+      "id": "analytic_v1.7_uniform__fixed_0.5",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "fixed_targets",
+      "target": 0.5
+    },
+    {
+      "id": "analytic_v1.7_uniform__fixed_0.75",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "fixed_targets",
+      "target": 0.75
+    },
+    {
+      "id": "analytic_v1.7_uniform__fixed_1",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "fixed_targets",
+      "target": 1.0
+    },
+    {
+      "id": "analytic_v1.7_uniform__fixed_1.25",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "fixed_targets",
+      "target": 1.25
+    },
+    {
+      "id": "analytic_v1.7_uniform__fixed_1.5",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "fixed_targets",
+      "target": 1.5
+    },
+    {
+      "id": "analytic_v1.7_uniform__fixed_2",
+      "root": "analytic_v1.7_uniform",
+      "cohort": "fixed_targets",
+      "target": 2.0
+    },
+    {
+      "id": "table_v0.9_uniform__fixed_0.5",
+      "root": "table_v0.9_uniform",
+      "cohort": "fixed_targets",
+      "target": 0.5
+    },
+    {
+      "id": "table_v0.9_uniform__fixed_0.75",
+      "root": "table_v0.9_uniform",
+      "cohort": "fixed_targets",
+      "target": 0.75
+    },
+    {
+      "id": "table_v0.9_uniform__fixed_1",
+      "root": "table_v0.9_uniform",
+      "cohort": "fixed_targets",
+      "target": 1.0
+    },
+    {
+      "id": "table_v0.9_uniform__fixed_1.25",
+      "root": "table_v0.9_uniform",
+      "cohort": "fixed_targets",
+      "target": 1.25
+    },
+    {
+      "id": "table_v0.9_uniform__fixed_1.5",
+      "root": "table_v0.9_uniform",
+      "cohort": "fixed_targets",
+      "target": 1.5
+    },
+    {
+      "id": "table_v0.9_uniform__fixed_2",
+      "root": "table_v0.9_uniform",
+      "cohort": "fixed_targets",
+      "target": 2.0
+    },
+    {
+      "id": "table_v1.3_uniform__fixed_0.5",
+      "root": "table_v1.3_uniform",
+      "cohort": "fixed_targets",
+      "target": 0.5
+    },
+    {
+      "id": "table_v1.3_uniform__fixed_0.75",
+      "root": "table_v1.3_uniform",
+      "cohort": "fixed_targets",
+      "target": 0.75
+    },
+    {
+      "id": "table_v1.3_uniform__fixed_1",
+      "root": "table_v1.3_uniform",
+      "cohort": "fixed_targets",
+      "target": 1.0
+    },
+    {
+      "id": "table_v1.3_uniform__fixed_1.25",
+      "root": "table_v1.3_uniform",
+      "cohort": "fixed_targets",
+      "target": 1.25
+    },
+    {
+      "id": "table_v1.3_uniform__fixed_1.5",
+      "root": "table_v1.3_uniform",
+      "cohort": "fixed_targets",
+      "target": 1.5
+    },
+    {
+      "id": "table_v1.3_uniform__fixed_2",
+      "root": "table_v1.3_uniform",
+      "cohort": "fixed_targets",
+      "target": 2.0
+    },
+    {
+      "id": "table_v1.7_uniform__fixed_0.5",
+      "root": "table_v1.7_uniform",
+      "cohort": "fixed_targets",
+      "target": 0.5
+    },
+    {
+      "id": "table_v1.7_uniform__fixed_0.75",
+      "root": "table_v1.7_uniform",
+      "cohort": "fixed_targets",
+      "target": 0.75
+    },
+    {
+      "id": "table_v1.7_uniform__fixed_1",
+      "root": "table_v1.7_uniform",
+      "cohort": "fixed_targets",
+      "target": 1.0
+    },
+    {
+      "id": "table_v1.7_uniform__fixed_1.25",
+      "root": "table_v1.7_uniform",
+      "cohort": "fixed_targets",
+      "target": 1.25
+    },
+    {
+      "id": "table_v1.7_uniform__fixed_1.5",
+      "root": "table_v1.7_uniform",
+      "cohort": "fixed_targets",
+      "target": 1.5
+    },
+    {
+      "id": "table_v1.7_uniform__fixed_2",
+      "root": "table_v1.7_uniform",
+      "cohort": "fixed_targets",
+      "target": 2.0
+    }
+  ],
+  "expected": {
+    "component_midpoints": 161,
+    "midpoint_episodes": 1449,
+    "fixed_targets": 36,
+    "fixed_target_episodes": 324,
+    "total_problems": 197,
+    "total_episodes": 1773
+  },
+  "paths": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "grid": {
+    "count": 41,
+    "lower": 0.0,
+    "upper": 0.2
+  },
+  "K": [
+    [
+      1,
+      1
+    ],
+    [
+      0.975,
+      1.025
+    ],
+    [
+      1.025,
+      0.975
+    ]
+  ],
+  "method": "recovery_economic",
+  "construction": "Rebuild every uniform-root grid-41 tree and save it; first action uses that tree. At the independent actual next state, recompute the grid-41 one-step economic/minimax decision from exact full-state observation.",
+  "cache": "Exact state bytes, family, feed and kappa for matched plant transitions; family and exact observed state bytes for one-step controller maps. No rounding, disturbance labels or hidden parameters enter controller decisions.",
+  "thresholds": {
+    "inner": 0.00748,
+    "outer": 0.0075,
+    "actual": 0.009950330853168092,
+    "comparison_tolerance": 1e-10,
+    "physical_substrate_min": -2e-07,
+    "volume_cap": 1.8,
+    "feed_max": 0.2
+  },
+  "numerics": {
+    "amount_absolute_g": 2e-07,
+    "amount_relative": 2e-08,
+    "log_ratio_absolute": 1e-07,
+    "volume_absolute_L": 2e-13,
+    "independent_rtol": 2e-13,
+    "independent_atol": 2e-14,
+    "independent_maxstep_h": 0.025,
+    "engine_rtol": 2e-11,
+    "engine_atol": 2e-13,
+    "engine_maxstep_h": 0.05
+  },
+  "classification": "Inner includes only declared 1e-10 comparison tolerance; outer and actual bands have no added comparison tolerance. Numerical and label mismatches remain visible; optimizer/map values do not replace deployed outcomes.",
+  "midpoint_rule": "Retain inner-band witness failures as qualifications and outer-band witness failures as hard failures. Fixed-target nonrecovery is an outcome, not an audit implementation error.",
+  "scope": "All component midpoints are outcome-selected consistency witnesses, not interval-edge verification or a prospective efficacy denominator. Grid-41 fixed targets are a separate post hoc sensitivity comparison; primary grid-21 outcomes unchanged.",
+  "timing": "Offline cached verification only, no online speed inference"
+}

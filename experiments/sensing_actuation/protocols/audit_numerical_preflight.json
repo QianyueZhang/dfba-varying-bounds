@@ -1,0 +1,65 @@
+{
+  "declared_utc": "2026-10-24T07:25:47.312857+00:00",
+  "status": "Frozen before preflight integrations and controller outcome evaluation",
+  "source_sha256": {
+    "scripts/engine.py": "4d04e127bc7180d7ec24c63a9fed4384df10b2fbd86e4fca6610c7b3420b561b",
+    "audit/independent_amount_model.py": "b0b42a3ab3bab1a014367fad97d9bdf71152ba7e209c8877eb4ad118c5b0995e",
+    "vendor/prior_kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6",
+    "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb",
+    "data/prescribed_roots.json": "16ac9df9afc4d5bc3debc3f75cc6bae59892efe2ca91d2c353985f065ff00e66",
+    "audit/grid_observation_preflight.py": "11c095f4f9e474611bdac0f151f7b80bf0a52cf723d76c1e478794ac3275daf1"
+  },
+  "root_ids": [
+    "analytic_v0.9_uniform",
+    "analytic_v1.3_uniform",
+    "analytic_v1.7_uniform",
+    "table_v0.9_uniform",
+    "table_v1.3_uniform",
+    "table_v1.7_uniform"
+  ],
+  "roots_are_prescribed": true,
+  "engine": {
+    "rtol": 2e-13,
+    "atol": 2e-15,
+    "maxstep_h": 0.01
+  },
+  "independent_DOP853": {
+    "requested_rtol": 2e-14,
+    "effective_rtol": 2.220446049250313e-14,
+    "atol": 2e-15,
+    "maxstep_h": 0.005
+  },
+  "thresholds": {
+    "amount_absolute_g": 2e-07,
+    "amount_relative": 2e-08,
+    "log_ratio_absolute": 1e-07,
+    "volume_absolute_L": 2e-13,
+    "physical_substrate_min_g_L": -2e-07,
+    "volume_cap_L": 1.8
+  },
+  "affinities": [
+    [
+      1.0,
+      1.0
+    ],
+    [
+      0.975,
+      1.025
+    ],
+    [
+      1.025,
+      0.975
+    ]
+  ],
+  "feed_fractions_of_current_cap": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "primary_rule": "All six prescribed uniform-history roots, all three feed fractions of clipped capacity, and all three affinities: 54 matched intervals.",
+  "second_state_rule": "For each root take (a) the lowest-substrate endpoint among the three nominal-affinity primary feeds, ties by feed fraction index, and (b) the nominal-affinity full-capacity-feed endpoint. Use the independent endpoint as the COMMON input to both solvers. At each selected second state test all three current-cap feed fractions and all three affinities:108 additional logical comparisons. Retain both labels if states coincide; do not count them as independent biological replicates.",
+  "expected_logical_comparisons": 162,
+  "comparison_rule": "Absolute amount error <=2e-7+2e-8*abs(reference amount), log(M1/M2) error<=1e-7, volume error<=2e-13. All endpoints and sampled substrate minima must meet physical checks. Feed cap max(0,min(.2,(1.8-V-1e-11)/2)).",
+  "gate_rule": "Pass only if all162 comparisons complete and pass, inputs and protocol remain unchanged, and no physical or numerical failure occurs. Preserve every failure. A pass establishes sampled consistency only, not a continuous-domain certificate.",
+  "failure_rule": "Do not retune models, roots, tolerances, case selection or thresholds after seeing outcomes. Any additional diagnosis gets its own frozen record and does not overwrite this result."
+}

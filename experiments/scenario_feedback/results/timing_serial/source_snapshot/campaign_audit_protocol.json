@@ -1,0 +1,50 @@
+{
+  "version": "1.0",
+  "declared_before_frozen_campaign": true,
+  "purpose": "Independent chained physical-amount replay of every saved executed episode, plus a fixed subset of selected causal policy tails.",
+  "numerics": {
+    "method": "DOP853",
+    "rtol": 2e-13,
+    "atol": 2e-14,
+    "max_step_h": 0.025,
+    "volume": "Analytic within every interval and at every endpoint"
+  },
+  "tolerances": {
+    "log_state_atol": 2e-7,
+    "amount_atol_g": 2e-7,
+    "amount_rtol": 2e-8,
+    "volume_replay_atol_L": 2e-13,
+    "saved_arithmetic_atol": 2e-12,
+    "policy_z_logB_atol": 2e-6,
+    "policy_feed_atol": 2e-6,
+    "policy_state_atol": 5e-6,
+    "cost_sum_atol_s": 1e-5
+  },
+  "physical_constraints": {
+    "feed_min_L_h": 0.0,
+    "feed_max_L_h": 0.2,
+    "volume_max_L": 1.8,
+    "volume_guard_L": 1e-11,
+    "substrate_min_g_L": -2e-7,
+    "interval_h": 2.0,
+    "terminal_log_ratio_tolerance": 0.009950330853168092,
+    "design_log_ratio_tolerance": 0.0075,
+    "inner_optimization_band": 0.007498,
+    "inner_gate_slack": 1e-9
+  },
+  "selected_tail_subset": {
+    "case_index_modulus": 10,
+    "case_index_remainder": 0,
+    "methods": "all assigned methods",
+    "stages": [0, 3, 6],
+    "scenarios": "all saved finite scenarios at each selected stage",
+    "selection": "Manifest order only; no outcome-based inclusion or exclusion"
+  },
+  "classification": {
+    "actual": "Recompute exact terminal and physical classifications using declared physical tolerances; classify operational success separately from controller failure.",
+    "inner_gate": "Retain every inner optimization-band label discrepancy as an audit qualification, including numerical boundary flips.",
+    "design": "Independently test the stated outer design band; an inner-band flip is not itself an outer-band violation.",
+    "failed_episodes": "Retain failures in the assigned denominator and replay available completed prefix without relabelling the episode successful.",
+    "overall": "passed requires no failures and no qualifications; numerical assurance is empirical, not a rigorous enclosure or a continuous-uncertainty proof."
+  }
+}

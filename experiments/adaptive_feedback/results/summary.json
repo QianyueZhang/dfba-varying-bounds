@@ -1,0 +1,1455 @@
+{
+  "scope": "Synthetic closed-loop computational stress study; no experimental cultures",
+  "condition_clusters": 6,
+  "cases": 24,
+  "episodes": 144,
+  "failed_episodes": [],
+  "regimes": {
+    "nominal": {
+      "open_loop": {
+        "n": 6,
+        "feasible": 6,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 0.7967969111620676,
+          "median": 0.7968015001692641,
+          "min": 0.7967585128113464,
+          "max": 0.7968137555752319,
+          "sum": 4.780781466972406
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 5.027810201592122,
+          "median": 3.8959090830758214,
+          "min": 2.0366706256754696,
+          "max": 9.587913874536753,
+          "sum": 30.166861209552735
+        },
+        "final_model_pass_actual_fail": 0
+      },
+      "nominal_mpc": {
+        "n": 6,
+        "feasible": 6,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 0.7967970118052725,
+          "median": 0.7968018020988787,
+          "min": 0.7967585128113464,
+          "max": 0.7968137555752319,
+          "sum": 4.780782070831635
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 5.969625729834661,
+          "median": 4.782018749974668,
+          "min": 2.9534474182873964,
+          "max": 10.552652124781162,
+          "sum": 35.817754379007965
+        },
+        "final_model_pass_actual_fail": 0
+      },
+      "adaptive_direct_mpc": {
+        "n": 6,
+        "feasible": 6,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 0.7967436458463761,
+          "median": 0.7967800841637229,
+          "min": 0.7965768424174846,
+          "max": 0.796806240240111,
+          "sum": 4.780461875078257
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 6.248599527481322,
+          "median": 5.072674062801525,
+          "min": 3.115518540609628,
+          "max": 10.757784166838974,
+          "sum": 37.491597164887935
+        },
+        "final_model_pass_actual_fail": 0
+      },
+      "adaptive_limited_direct": {
+        "n": 6,
+        "feasible": 6,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 0.7966678790656729,
+          "median": 0.7966551901870234,
+          "min": 0.7965643347049745,
+          "max": 0.7967829776240443,
+          "sum": 4.780007274394038
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 4.160653826314956,
+          "median": 4.355592791456729,
+          "min": 3.1116729169152677,
+          "max": 4.627532251179218,
+          "sum": 24.963922957889736
+        },
+        "final_model_pass_actual_fail": 0
+      },
+      "adaptive_ungated": {
+        "n": 6,
+        "feasible": 6,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 0.7973339456231096,
+          "median": 0.7968107590345885,
+          "min": 0.7967307132335066,
+          "max": 0.8000289670902605,
+          "sum": 4.784003673738657
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 1.2052626742515713,
+          "median": 1.2156317713670433,
+          "min": 1.1433639181777835,
+          "max": 1.2454184177331626,
+          "sum": 7.231576045509428
+        },
+        "final_model_pass_actual_fail": 0
+      },
+      "adaptive_verified": {
+        "n": 6,
+        "feasible": 6,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 0.7978368787619207,
+          "median": 0.7967927103484151,
+          "min": 0.7967014814076911,
+          "max": 0.8031579047113269,
+          "sum": 4.787021272571524
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 6.50119079160504,
+          "median": 5.833540917374194,
+          "min": 3.577378208283335,
+          "max": 11.086494872812182,
+          "sum": 39.00714474963024
+        },
+        "final_model_pass_actual_fail": 0
+      }
+    },
+    "constant_mismatch": {
+      "open_loop": {
+        "n": 6,
+        "feasible": 0,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 20.235559448465242,
+          "median": 17.845695719006045,
+          "min": 13.279270253969667,
+          "max": 31.986316027670526,
+          "sum": 121.41335669079145
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 5.025376493654524,
+          "median": 3.8484209589660168,
+          "min": 2.0285006258636713,
+          "max": 9.633274375461042,
+          "sum": 30.152258961927146
+        },
+        "final_model_pass_actual_fail": 0
+      },
+      "nominal_mpc": {
+        "n": 6,
+        "feasible": 0,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 7.756713523220188,
+          "median": 4.10522871575597,
+          "min": 1.832789517072475,
+          "max": 21.268029817594638,
+          "sum": 46.540281139321124
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 35.3946447292498,
+          "median": 12.154334666673094,
+          "min": 7.400068706832826,
+          "max": 153.03256108332425,
+          "sum": 212.3678683754988
+        },
+        "final_model_pass_actual_fail": 2
+      },
+      "adaptive_direct_mpc": {
+        "n": 6,
+        "feasible": 6,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 0.7977488842962713,
+          "median": 0.7967880618989287,
+          "min": 0.7964337260603416,
+          "max": 0.803079393296402,
+          "sum": 4.786493305777628
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 13.937431513719881,
+          "median": 10.296378895873204,
+          "min": 6.161163791082799,
+          "max": 31.23331129271537,
+          "sum": 83.62458908231929
+        },
+        "final_model_pass_actual_fail": 0
+      },
+      "adaptive_limited_direct": {
+        "n": 6,
+        "feasible": 6,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 0.7978084424948148,
+          "median": 0.7967636206310691,
+          "min": 0.796723131067667,
+          "max": 0.8030842916515235,
+          "sum": 4.786850654968888
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 4.822879180389767,
+          "median": 4.492865604581311,
+          "min": 3.6859715399332345,
+          "max": 6.1726119592785835,
+          "sum": 28.9372750823386
+        },
+        "final_model_pass_actual_fail": 0
+      },
+      "adaptive_ungated": {
+        "n": 6,
+        "feasible": 6,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 0.7973230206358539,
+          "median": 0.7967963119907107,
+          "min": 0.7967853580931994,
+          "max": 0.79993305724948,
+          "sum": 4.7839381238151235
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 1.2323015831255664,
+          "median": 1.2455470201093704,
+          "min": 1.169347126968205,
+          "max": 1.2573944977484643,
+          "sum": 7.393809498753399
+        },
+        "final_model_pass_actual_fail": 0
+      },
+      "adaptive_verified": {
+        "n": 6,
+        "feasible": 6,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 0.7978200903008362,
+          "median": 0.79680887988402,
+          "min": 0.7965117638784047,
+          "max": 0.803165192761579,
+          "sum": 4.786920541805017
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 8.552194638410583,
+          "median": 7.783907124772668,
+          "min": 3.42174204159528,
+          "max": 14.320186456665397,
+          "sum": 51.3131678304635
+        },
+        "final_model_pass_actual_fail": 0
+      }
+    },
+    "step_mismatch": {
+      "open_loop": {
+        "n": 6,
+        "feasible": 0,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 9.220907754195268,
+          "median": 9.325172424244776,
+          "min": 4.703063405657071,
+          "max": 14.871327306097681,
+          "sum": 55.325446525171614
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 5.006466035187866,
+          "median": 3.804921811912209,
+          "min": 2.0263181272894144,
+          "max": 9.558062083553523,
+          "sum": 30.038796211127192
+        },
+        "final_model_pass_actual_fail": 0
+      },
+      "nominal_mpc": {
+        "n": 6,
+        "feasible": 0,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 5.161947668030422,
+          "median": 3.7251075993696703,
+          "min": 2.1961736076719807,
+          "max": 9.54077088208689,
+          "sum": 30.97168600818253
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 23.78043633326888,
+          "median": 8.40998529177159,
+          "min": 3.2195612899959087,
+          "max": 106.74870987422764,
+          "sum": 142.68261799961329
+        },
+        "final_model_pass_actual_fail": 2
+      },
+      "adaptive_direct_mpc": {
+        "n": 6,
+        "feasible": 2,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 4.2791295170875765,
+          "median": 2.903535667300561,
+          "min": 0.796581322683465,
+          "max": 9.270666180957265,
+          "sum": 25.67477710252546
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 28.13841081294231,
+          "median": 8.993827937403694,
+          "min": 3.443669874686748,
+          "max": 128.9644537921995,
+          "sum": 168.83046487765387
+        },
+        "final_model_pass_actual_fail": 0
+      },
+      "adaptive_limited_direct": {
+        "n": 6,
+        "feasible": 3,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 3.2761246039516045,
+          "median": 2.2410960509442415,
+          "min": 0.7966465798439848,
+          "max": 9.270647363807715,
+          "sum": 19.656747623709627
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 5.118482902723675,
+          "median": 5.12587858363986,
+          "min": 3.2175864139571786,
+          "max": 6.488043084740639,
+          "sum": 30.71089741634205
+        },
+        "final_model_pass_actual_fail": 0
+      },
+      "adaptive_ungated": {
+        "n": 6,
+        "feasible": 3,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 3.799095927894939,
+          "median": 2.345706249239182,
+          "min": 0.7965113522771072,
+          "max": 12.157702495589806,
+          "sum": 22.794575567369634
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 1.3588460478931665,
+          "median": 1.3337642087135464,
+          "min": 1.2471387493424118,
+          "max": 1.490705372299999,
+          "sum": 8.153076287359
+        },
+        "final_model_pass_actual_fail": 0
+      },
+      "adaptive_verified": {
+        "n": 6,
+        "feasible": 2,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 4.90315101278242,
+          "median": 3.6633194427042937,
+          "min": 0.7965667717753422,
+          "max": 11.495291681670672,
+          "sum": 29.41890607669452
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 6.847912562622999,
+          "median": 5.870624918257818,
+          "min": 4.081494916696101,
+          "max": 11.195718166884035,
+          "sum": 41.087475375737995
+        },
+        "final_model_pass_actual_fail": 0
+      }
+    },
+    "noisy_mismatch": {
+      "open_loop": {
+        "n": 6,
+        "feasible": 0,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 20.235559448465242,
+          "median": 17.845695719006045,
+          "min": 13.279270253969667,
+          "max": 31.986316027670526,
+          "sum": 121.41335669079145
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 5.071179610987504,
+          "median": 3.8080695618409663,
+          "min": 2.0251812916249037,
+          "max": 9.83951370883733,
+          "sum": 30.427077665925026
+        },
+        "final_model_pass_actual_fail": 0
+      },
+      "nominal_mpc": {
+        "n": 6,
+        "feasible": 0,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 7.884689890819465,
+          "median": 4.425613866994038,
+          "min": 1.4125208867730943,
+          "max": 21.595033285687105,
+          "sum": 47.30813934491679
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 45.620504298402615,
+          "median": 12.825149458134547,
+          "min": 8.218185373581946,
+          "max": 208.42321141716093,
+          "sum": 273.7230257904157
+        },
+        "final_model_pass_actual_fail": 2
+      },
+      "adaptive_direct_mpc": {
+        "n": 6,
+        "feasible": 3,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 1.2453497753664886,
+          "median": 0.9156263230770345,
+          "min": 0.46547732438743106,
+          "max": 2.4105000875249805,
+          "sum": 7.472098652198932
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 38.326185492798686,
+          "median": 12.75016679149121,
+          "min": 7.064842040184885,
+          "max": 150.1513586253859,
+          "sum": 229.95711295679212
+        },
+        "final_model_pass_actual_fail": 2
+      },
+      "adaptive_limited_direct": {
+        "n": 6,
+        "feasible": 5,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 0.8482754263124984,
+          "median": 0.7074823817526776,
+          "min": 0.18411439973297083,
+          "max": 2.2343021940006036,
+          "sum": 5.089652557874991
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 5.687839834019542,
+          "median": 5.569940794026479,
+          "min": 4.902043874375522,
+          "max": 6.504862249828875,
+          "sum": 34.12703900411725
+        },
+        "final_model_pass_actual_fail": 1
+      },
+      "adaptive_ungated": {
+        "n": 6,
+        "feasible": 5,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 0.7008435576497071,
+          "median": 0.5855147286342122,
+          "min": 0.01766696937063328,
+          "max": 2.12630653402357,
+          "sum": 4.205061345898242
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 1.4564474998041987,
+          "median": 1.4486003743950278,
+          "min": 1.399559791199863,
+          "max": 1.5513180424459279,
+          "sum": 8.738684998825192
+        },
+        "final_model_pass_actual_fail": 0
+      },
+      "adaptive_verified": {
+        "n": 6,
+        "feasible": 3,
+        "ratio_error_percent": {
+          "n": 6,
+          "mean": 1.2349757557197396,
+          "median": 0.9546358752506423,
+          "min": 0.43914956616032397,
+          "max": 2.402114158825708,
+          "sum": 7.409854534318438
+        },
+        "controller_seconds": {
+          "n": 6,
+          "mean": 13.98174981190823,
+          "median": 12.094441311433911,
+          "min": 4.184028124436736,
+          "max": 30.67993554007262,
+          "sum": 83.89049887144938
+        },
+        "final_model_pass_actual_fail": 2
+      }
+    }
+  },
+  "methods": {
+    "open_loop": {
+      "n": 24,
+      "feasible": 6,
+      "controller_seconds": {
+        "n": 24,
+        "mean": 5.032708085355504,
+        "median": 3.8422737079672515,
+        "min": 2.0251812916249037,
+        "max": 9.83951370883733,
+        "sum": 120.7849940485321
+      },
+      "estimator_seconds": {
+        "n": 24,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "sum": 0.0
+      },
+      "decision_seconds": {
+        "n": 168,
+        "mean": 0.7189582979079292,
+        "median": 1.2498348951339722e-06,
+        "min": 7.916241884231567e-07,
+        "max": 9.83950079092756,
+        "sum": 120.7849940485321
+      },
+      "model_calls": 592,
+      "fallback_stages": 0,
+      "accepted_proposals": 0,
+      "accepted_after_correction": 0,
+      "rejected_proposals": 0,
+      "observation_clips": 1
+    },
+    "nominal_mpc": {
+      "n": 24,
+      "feasible": 6,
+      "controller_seconds": {
+        "n": 24,
+        "mean": 27.69130277268899,
+        "median": 9.522458187304437,
+        "min": 2.9534474182873964,
+        "max": 208.42321141716093,
+        "sum": 664.5912665445358
+      },
+      "estimator_seconds": {
+        "n": 24,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "sum": 0.0
+      },
+      "decision_seconds": {
+        "n": 168,
+        "mean": 3.955900396098427,
+        "median": 0.5577706042677164,
+        "min": 0.025798582937568426,
+        "max": 74.16920433426276,
+        "sum": 664.5912665445358
+      },
+      "model_calls": 3912,
+      "fallback_stages": 0,
+      "accepted_proposals": 0,
+      "accepted_after_correction": 0,
+      "rejected_proposals": 0,
+      "observation_clips": 1
+    },
+    "adaptive_direct_mpc": {
+      "n": 24,
+      "feasible": 17,
+      "controller_seconds": {
+        "n": 24,
+        "mean": 21.66265683673555,
+        "median": 9.784627813147381,
+        "min": 3.115518540609628,
+        "max": 150.1513586253859,
+        "sum": 519.9037640816532
+      },
+      "estimator_seconds": {
+        "n": 24,
+        "mean": 0.21379583660745993,
+        "median": 0.16859904094599187,
+        "min": 0.099909707903862,
+        "max": 0.3728454173542559,
+        "sum": 5.131100078579038
+      },
+      "decision_seconds": {
+        "n": 168,
+        "mean": 3.094665262390793,
+        "median": 0.37842831248417497,
+        "min": 0.10456508258357644,
+        "max": 72.03714150004089,
+        "sum": 519.9037640816532
+      },
+      "model_calls": 6436,
+      "fallback_stages": 0,
+      "accepted_proposals": 0,
+      "accepted_after_correction": 0,
+      "rejected_proposals": 0,
+      "observation_clips": 1
+    },
+    "adaptive_limited_direct": {
+      "n": 24,
+      "feasible": 20,
+      "controller_seconds": {
+        "n": 24,
+        "mean": 4.947463935861985,
+        "median": 4.911708708386868,
+        "min": 3.1116729169152677,
+        "max": 6.504862249828875,
+        "sum": 118.73913446068764
+      },
+      "estimator_seconds": {
+        "n": 24,
+        "mean": 0.24464286299189553,
+        "median": 0.19635129161179066,
+        "min": 0.12800720939412713,
+        "max": 0.5241700010374188,
+        "sum": 5.871428711805493
+      },
+      "decision_seconds": {
+        "n": 168,
+        "mean": 0.7067805622659978,
+        "median": 0.8348145415075123,
+        "min": 0.10601708386093378,
+        "max": 3.0288917501457036,
+        "sum": 118.73913446068764
+      },
+      "model_calls": 4199,
+      "fallback_stages": 0,
+      "accepted_proposals": 0,
+      "accepted_after_correction": 0,
+      "rejected_proposals": 0,
+      "observation_clips": 0
+    },
+    "adaptive_ungated": {
+      "n": 24,
+      "feasible": 20,
+      "controller_seconds": {
+        "n": 24,
+        "mean": 1.3132144512686257,
+        "median": 1.2548335627652705,
+        "min": 1.1433639181777835,
+        "max": 1.5513180424459279,
+        "sum": 31.517146830447018
+      },
+      "estimator_seconds": {
+        "n": 24,
+        "mean": 0.24447403793844083,
+        "median": 0.20489535410888493,
+        "min": 0.1298163328319788,
+        "max": 0.4677992924116552,
+        "sum": 5.86737691052258
+      },
+      "decision_seconds": {
+        "n": 168,
+        "mean": 0.18760206446694655,
+        "median": 0.18881010403856635,
+        "min": 0.1036963751539588,
+        "max": 0.3658847501501441,
+        "sum": 31.517146830447018
+      },
+      "model_calls": 3685,
+      "fallback_stages": 0,
+      "accepted_proposals": 0,
+      "accepted_after_correction": 0,
+      "rejected_proposals": 0,
+      "observation_clips": 1
+    },
+    "adaptive_verified": {
+      "n": 24,
+      "feasible": 17,
+      "controller_seconds": {
+        "n": 24,
+        "mean": 8.970761951136714,
+        "median": 6.543352667009458,
+        "min": 3.42174204159528,
+        "max": 30.67993554007262,
+        "sum": 215.29828682728112
+      },
+      "estimator_seconds": {
+        "n": 24,
+        "mean": 0.23637263727141544,
+        "median": 0.2089762280229479,
+        "min": 0.10383245721459389,
+        "max": 0.46474045934155583,
+        "sum": 5.672943294513971
+      },
+      "decision_seconds": {
+        "n": 168,
+        "mean": 1.281537421590959,
+        "median": 0.3884449580218643,
+        "min": 0.10453341715037823,
+        "max": 14.962230291683227,
+        "sum": 215.29828682728112
+      },
+      "model_calls": 4691,
+      "fallback_stages": 58,
+      "accepted_proposals": 110,
+      "accepted_after_correction": 18,
+      "rejected_proposals": 199,
+      "observation_clips": 1
+    }
+  },
+  "paired": {
+    "adaptive_limited_direct__vs__adaptive_direct_mpc": {
+      "jointly_feasible": 17,
+      "biomass_difference_percent": {
+        "n": 17,
+        "mean": -0.05412168477177044,
+        "median": -0.08298083308517779,
+        "min": -2.487093850525468,
+        "max": 2.9062689795430474,
+        "sum": -0.9200686411200976
+      },
+      "time_ratio": {
+        "n": 17,
+        "mean": 0.6099206025825722,
+        "median": 0.6149889877704638,
+        "min": 0.13092722013247415,
+        "max": 0.998765655333379,
+        "sum": 10.368650243903728
+      },
+      "within_quality_and_faster": 15,
+      "pairs": [
+        {
+          "case": "cluster_0_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.04336719061798222,
+          "time_ratio": 0.8737404564570915,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_0_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": -0.07795573450724014,
+          "time_ratio": 0.13092722013247415,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_0_step_mismatch",
+          "regime": "step_mismatch",
+          "biomass_difference_percent": 2.9062689795430474,
+          "time_ratio": 0.7841209133577418,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_1_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.06136343091897034,
+          "time_ratio": 0.9072432199968504,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_1_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": -0.0869960767868827,
+          "time_ratio": 0.7418897744906658,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_1_noisy_mismatch",
+          "regime": "noisy_mismatch",
+          "biomass_difference_percent": -1.8027573257503482,
+          "time_ratio": 0.5722253258439316,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_2_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.08298083308517779,
+          "time_ratio": 0.49297499885247037,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_2_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": -0.0870220223769258,
+          "time_ratio": 0.3651420139978044,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_2_step_mismatch",
+          "regime": "step_mismatch",
+          "biomass_difference_percent": 1.353494538311173,
+          "time_ratio": 0.6149889877704638,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_2_noisy_mismatch",
+          "regime": "noisy_mismatch",
+          "biomass_difference_percent": -2.487093850525468,
+          "time_ratio": 0.47290001240440743,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_3_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -5.136691066942589e-05,
+          "time_ratio": 0.998765655333379,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_3_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": 5.75863363661e-06,
+          "time_ratio": 0.6874954901044505,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_3_noisy_mismatch",
+          "regime": "noisy_mismatch",
+          "biomass_difference_percent": 0.025501926119742002,
+          "time_ratio": 0.6938646110546637,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_4_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.09926471546995996,
+          "time_ratio": 0.8120788450932465,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_4_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": -0.1931754112165729,
+          "time_ratio": 0.4086713357266149,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_5_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.09098827385547459,
+          "time_ratio": 0.43015663629352724,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_5_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": -0.09232361170602443,
+          "time_ratio": 0.3814647469939446,
+          "within_quality_and_faster": true
+        }
+      ]
+    },
+    "adaptive_ungated__vs__adaptive_direct_mpc": {
+      "jointly_feasible": 17,
+      "biomass_difference_percent": {
+        "n": 17,
+        "mean": -0.8372658916877551,
+        "median": -0.07918349046575068,
+        "min": -6.860186580539462,
+        "max": 2.8658425267970022,
+        "sum": -14.233520158691837
+      },
+      "time_ratio": {
+        "n": 17,
+        "mean": 0.16648814361482417,
+        "median": 0.13858457775342783,
+        "min": 0.04009413590656164,
+        "max": 0.3989118185391535,
+        "sum": 2.830298441452011
+      },
+      "within_quality_and_faster": 12,
+      "pairs": [
+        {
+          "case": "cluster_0_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.07363729616856052,
+          "time_ratio": 0.24379262769593224,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_0_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": -0.09202003812408543,
+          "time_ratio": 0.04009413590656164,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_0_step_mismatch",
+          "regime": "step_mismatch",
+          "biomass_difference_percent": 2.8658425267970022,
+          "time_ratio": 0.1830616356392611,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_1_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.07255675505428716,
+          "time_ratio": 0.24137300336768763,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_1_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": -0.06440661211657428,
+          "time_ratio": 0.20408392641148765,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_1_noisy_mismatch",
+          "regime": "noisy_mismatch",
+          "biomass_difference_percent": -0.8490541802352869,
+          "time_ratio": 0.13858457775342783,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_2_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.05131719904701848,
+          "time_ratio": 0.13563822915186272,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_2_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": -0.05571187521168364,
+          "time_ratio": 0.07238827353011143,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_2_step_mismatch",
+          "regime": "step_mismatch",
+          "biomass_difference_percent": 1.4828264029886684,
+          "time_ratio": 0.12293618999551739,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_2_noisy_mismatch",
+          "regime": "noisy_mismatch",
+          "biomass_difference_percent": -1.2881871630095465,
+          "time_ratio": 0.1127799933865102,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_3_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -3.9268814299802224,
+          "time_ratio": 0.3989118185391535,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_3_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": -4.832019887817696,
+          "time_ratio": 0.14319253839278276,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_3_noisy_mismatch",
+          "regime": "noisy_mismatch",
+          "biomass_difference_percent": -6.860186580539462,
+          "time_ratio": 0.19830635635520874,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_4_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.0803035265321661,
+          "time_ratio": 0.25028232069650136,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_4_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": -0.18039696586344967,
+          "time_ratio": 0.13755246809697308,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_5_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.07632608831171783,
+          "time_ratio": 0.10628247420153858,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_5_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": -0.07918349046575068,
+          "time_ratio": 0.10103787233149301,
+          "within_quality_and_faster": true
+        }
+      ]
+    },
+    "adaptive_ungated__vs__adaptive_limited_direct": {
+      "jointly_feasible": 20,
+      "biomass_difference_percent": {
+        "n": 20,
+        "mean": -0.6634307721507382,
+        "median": 0.013029004976106151,
+        "min": -6.883932971158757,
+        "max": 1.2294851367450343,
+        "sum": -13.268615443014763
+      },
+      "time_ratio": {
+        "n": 20,
+        "mean": 0.2670078203984355,
+        "median": 0.2654596094055892,
+        "min": 0.19824690327349373,
+        "max": 0.3994048217507042,
+        "sum": 5.34015640796871
+      },
+      "within_quality_and_faster": 17,
+      "pairs": [
+        {
+          "case": "cluster_0_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.030283238540362856,
+          "time_ratio": 0.27902179176237407,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_0_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": -0.014075276101710443,
+          "time_ratio": 0.3062322400643181,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_0_step_mismatch",
+          "regime": "step_mismatch",
+          "biomass_difference_percent": -0.03928473274459332,
+          "time_ratio": 0.233460978429155,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_0_noisy_mismatch",
+          "regime": "noisy_mismatch",
+          "biomass_difference_percent": -0.052125118538726145,
+          "time_ratio": 0.25668633829769594,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_1_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.011200196960436948,
+          "time_ratio": 0.26605104127262097,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_1_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": 0.022609133729645237,
+          "time_ratio": 0.2750865875616073,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_1_noisy_mismatch",
+          "regime": "noisy_mismatch",
+          "biomass_difference_percent": 0.9712117362386419,
+          "time_ratio": 0.24218532716817454,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_2_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": 0.031689930606582095,
+          "time_ratio": 0.2751422069427386,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_2_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": 0.03133741761982556,
+          "time_ratio": 0.19824690327349373,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_2_step_mismatch",
+          "regime": "step_mismatch",
+          "biomass_difference_percent": 0.1276047414710657,
+          "time_ratio": 0.19989982331423736,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_2_noisy_mismatch",
+          "regime": "noisy_mismatch",
+          "biomass_difference_percent": 1.2294851367450343,
+          "time_ratio": 0.23848591758983656,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_3_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -3.9268320801618795,
+          "time_ratio": 0.3994048217507042,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_3_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": -4.832025368192694,
+          "time_ratio": 0.2082814221385331,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_3_noisy_mismatch",
+          "regime": "noisy_mismatch",
+          "biomass_difference_percent": -6.883932971158757,
+          "time_ratio": 0.2857997845628502,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_4_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": 0.01898002940998733,
+          "time_ratio": 0.3081995328517182,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_4_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": 0.012803177944764599,
+          "time_ratio": 0.33658457560378124,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_4_step_mismatch",
+          "regime": "step_mismatch",
+          "biomass_difference_percent": 0.034688687103678895,
+          "time_ratio": 0.2501257098403558,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_4_noisy_mismatch",
+          "regime": "noisy_mismatch",
+          "biomass_difference_percent": 0.012905746066893542,
+          "time_ratio": 0.26931468676263703,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_5_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": 0.014675538562958224,
+          "time_ratio": 0.2470785412433212,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_5_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": 0.01315226388531876,
+          "time_ratio": 0.26486817753855746,
+          "within_quality_and_faster": true
+        }
+      ]
+    },
+    "adaptive_verified__vs__adaptive_direct_mpc": {
+      "jointly_feasible": 17,
+      "biomass_difference_percent": {
+        "n": 17,
+        "mean": -0.30151861387562484,
+        "median": -0.012951241937053659,
+        "min": -3.862239632993314,
+        "max": 2.966125219289739,
+        "sum": -5.125816435885622
+      },
+      "time_ratio": {
+        "n": 17,
+        "mean": 0.8680453447588645,
+        "median": 0.7463666892107902,
+        "min": 0.3418381903079224,
+        "max": 2.324266476634065,
+        "sum": 14.756770860900698
+      },
+      "within_quality_and_faster": 9,
+      "pairs": [
+        {
+          "case": "cluster_0_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.04859797095759788,
+          "time_ratio": 0.8903014158483505,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_0_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": -0.012951241937053659,
+          "time_ratio": 0.3914012474128915,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_0_step_mismatch",
+          "regime": "step_mismatch",
+          "biomass_difference_percent": 2.966125219289739,
+          "time_ratio": 0.6366516351631527,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_1_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.06728061393179718,
+          "time_ratio": 1.6137266922496543,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_1_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": -0.06216189433193575,
+          "time_ratio": 2.324266476634065,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_1_noisy_mismatch",
+          "regime": "noisy_mismatch",
+          "biomass_difference_percent": -0.7941761484347332,
+          "time_ratio": 0.9959522658081952,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_2_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -3.8532741142294213e-05,
+          "time_ratio": 0.6644345227810867,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_2_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": -0.00020847494861531146,
+          "time_ratio": 0.3418381903079224,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_2_step_mismatch",
+          "regime": "step_mismatch",
+          "biomass_difference_percent": -7.423355442570667e-05,
+          "time_ratio": 0.5495266466424287,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_2_noisy_mismatch",
+          "regime": "noisy_mismatch",
+          "biomass_difference_percent": 0.006093516670979682,
+          "time_ratio": 0.4476002498792873,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_3_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.5111587437253484,
+          "time_ratio": 1.1482448785502437,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_3_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": -2.7211271308059004,
+          "time_ratio": 0.39183238244475743,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_3_noisy_mismatch",
+          "regime": "noisy_mismatch",
+          "biomass_difference_percent": -3.862239632993314,
+          "time_ratio": 0.5922323670703388,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_4_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -4.78893539823666e-05,
+          "time_ratio": 1.223512930301774,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_4_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": 0.0006181805683569408,
+          "time_ratio": 0.7683266560867366,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_5_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.018633138816792627,
+          "time_ratio": 1.0305556145090236,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_5_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": 4.229411794121063e-05,
+          "time_ratio": 0.7463666892107902,
+          "within_quality_and_faster": true
+        }
+      ]
+    },
+    "adaptive_verified__vs__adaptive_limited_direct": {
+      "jointly_feasible": 17,
+      "biomass_difference_percent": {
+        "n": 17,
+        "mean": -0.24149588078324905,
+        "median": 0.06505520683450783,
+        "min": -3.8867503629070432,
+        "max": 2.5567768059078455,
+        "sum": -4.105429973315234
+      },
+      "time_ratio": {
+        "n": 17,
+        "mean": 1.5240394860141349,
+        "median": 1.3478057190075232,
+        "min": 0.5699417495600251,
+        "max": 3.1329000028740897,
+        "sum": 25.908671262240293
+      },
+      "within_quality_and_faster": 3,
+      "pairs": [
+        {
+          "case": "cluster_0_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.00523304976628447,
+          "time_ratio": 1.018954094741603,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_0_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": 0.06505520683450783,
+          "time_ratio": 2.9894566387101613,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_0_step_mismatch",
+          "regime": "step_mismatch",
+          "biomass_difference_percent": 0.05816578556412377,
+          "time_ratio": 0.8119304361324836,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_1_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.005920816228799364,
+          "time_ratio": 1.7787145240448934,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_1_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": 0.024855806031043315,
+          "time_ratio": 3.1329000028740897,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_1_noisy_mismatch",
+          "regime": "noisy_mismatch",
+          "biomass_difference_percent": 1.027097248200115,
+          "time_ratio": 1.74048966521945,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_2_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": 0.08301118371583094,
+          "time_ratio": 1.3478057190075232,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_2_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": 0.086889160132686,
+          "time_ratio": 0.9361787392397356,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_2_step_mismatch",
+          "regime": "step_mismatch",
+          "biomass_difference_percent": -1.3354929477581656,
+          "time_ratio": 0.8935552628911982,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_2_noisy_mismatch",
+          "regime": "noisy_mismatch",
+          "biomass_difference_percent": 2.5567768059078455,
+          "time_ratio": 0.9465008207623292,
+          "within_quality_and_faster": true
+        },
+        {
+          "case": "cluster_3_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": -0.5111076393548908,
+          "time_ratio": 1.149663960127834,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_3_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": -2.721132732739473,
+          "time_ratio": 0.5699417495600251,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_3_noisy_mismatch",
+          "regime": "noisy_mismatch",
+          "biomass_difference_percent": -3.8867503629070432,
+          "time_ratio": 0.8535272697798416,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_4_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": 0.09931541127639054,
+          "time_ratio": 1.5066430281917822,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_4_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": 0.19416867792696468,
+          "time_ratio": 1.8800600602943118,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_5_nominal",
+          "regime": "nominal",
+          "biomass_difference_percent": 0.07242102968350039,
+          "time_ratio": 2.3957682563934695,
+          "within_quality_and_faster": false
+        },
+        {
+          "case": "cluster_5_constant_mismatch",
+          "regime": "constant_mismatch",
+          "biomass_difference_percent": 0.09245126016641514,
+          "time_ratio": 1.9565810342695655,
+          "within_quality_and_faster": false
+        }
+      ]
+    }
+  }
+}

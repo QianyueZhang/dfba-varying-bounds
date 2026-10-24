@@ -1,0 +1,27 @@
+{
+  "original_protocol_sha256": "85c65574fc427873a7dcbcdaeb978a5a099cf94df93757465a46254b43c5ca52",
+  "reason": "Pre-outcome addition requested by coordinating investigator; no tree outcomes evaluated before amendment.",
+  "utc": "2026-10-24T07:51:35Z",
+  "primary_grids": [
+    41,
+    81,
+    161
+  ],
+  "adaptive_grid": 321,
+  "adaptive_trigger": "Every root failing either descriptive gate for81\u2192161 in ANY full/open/ratio mode, without selecting by direction or positivity of effect.",
+  "adaptive_budget_seconds": 3600,
+  "budget_scope": "One total additional wall-clock budget across all adaptive roots, after the complete161-phase result is saved. All triggered roots start concurrently; deadline checked between first-action subtrees. Incomplete roots and partial caches remain unresolved.",
+  "reuse": "161-point transitions reused exactly for nested321 actions; compute missing transitions only.",
+  "action_formula": "i*(0.2/320), i=0..320; strides8,4,2,1 for41,81,161,321.",
+  "workers": 6,
+  "threads_per_worker": 1,
+  "original_source_snapshot": "protocols/frozen_grid_observation_v1.py",
+  "secondary_sensing_frontier": "For each fixed root-target at finest completed grid, enumerate all7 nonempty branch subsets. A subset lacking a common feasible second action prevents recovery once closed observation intervals intersect, at effective radius span(predicted z)/2. For each first action take the smallest such critical radius, then maximize over first actions. Subtract pad for epsilon supremum; finite limiting boundary excluded. If all3 have a feasible shared action, unbounded sensing error is allowed in the finite model. Descriptive finite-model sensing budget, not calibrated assay accuracy.",
+  "source_sha256": {
+    "scripts/grid_observation.py": "222d54ad3d53dd3bb9dda809b05866ff02445826d4cdadc324f172e664876ef3",
+    "scripts/engine.py": "4d04e127bc7180d7ec24c63a9fed4384df10b2fbd86e4fca6610c7b3420b561b",
+    "vendor/prior_kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6",
+    "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb",
+    "data/prescribed_roots.json": "16ac9df9afc4d5bc3debc3f75cc6bae59892efe2ca91d2c353985f065ff00e66"
+  }
+}

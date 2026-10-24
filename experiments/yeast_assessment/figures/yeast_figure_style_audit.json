@@ -1,0 +1,172 @@
+{
+  "input_hashes_before": {
+    "paper1_improvement_2026-10-24/numerical/results/observation_decomposition.csv": "b35a39e7cabeb05086d384a29ff40d5f0390486e36ae048614b82da4944b4f7e",
+    "paper1_improvement_2026-10-24/external/recalibration/results.csv": "816f6d8dcd8f7dbe469e25a6d73fdc74ae65b21676667a5de92c40fb321f8147",
+    "paper1_improvement_2026-10-24/external/observations.json": "0f2fc5ba4d2bafd4fc17295dd1a9ba3672cf871db14311a7536dc93b2a8670a4",
+    "paper1_improvement_2026-10-24/scripts/render_empirical_figures.py": "eb2495fb2c808e5ead7a362bcbb40399801e34ac7c163a5f5b85c8fc0a3b388c"
+  },
+  "input_hashes_after": {
+    "paper1_improvement_2026-10-24/numerical/results/observation_decomposition.csv": "b35a39e7cabeb05086d384a29ff40d5f0390486e36ae048614b82da4944b4f7e",
+    "paper1_improvement_2026-10-24/external/recalibration/results.csv": "816f6d8dcd8f7dbe469e25a6d73fdc74ae65b21676667a5de92c40fb321f8147",
+    "paper1_improvement_2026-10-24/external/observations.json": "0f2fc5ba4d2bafd4fc17295dd1a9ba3672cf871db14311a7536dc93b2a8670a4",
+    "paper1_improvement_2026-10-24/scripts/render_empirical_figures.py": "eb2495fb2c808e5ead7a362bcbb40399801e34ac7c163a5f5b85c8fc0a3b388c"
+  },
+  "source_inputs_unchanged": true,
+  "renderer_origin": "/Users/qzhang/Documents/ChatGPT/Thesis/research_completion/review_2026-10-25/public_integration/main_staging/experiments/yeast_assessment/payload/paper1_improvement_2026-10-24/scripts/render_empirical_figures.py",
+  "array_checks": [
+    {
+      "name": "biomass_OD600:expansion:time",
+      "passed": true
+    },
+    {
+      "name": "biomass_OD600:expansion:signed",
+      "passed": true
+    },
+    {
+      "name": "biomass_OD600:expansion:maxima",
+      "passed": true
+    },
+    {
+      "name": "biomass_OD600:barrier_difference:time",
+      "passed": true
+    },
+    {
+      "name": "biomass_OD600:barrier_difference:signed",
+      "passed": true
+    },
+    {
+      "name": "biomass_OD600:barrier_difference:maxima",
+      "passed": true
+    },
+    {
+      "name": "biomass_OD600:total:time",
+      "passed": true
+    },
+    {
+      "name": "biomass_OD600:total:signed",
+      "passed": true
+    },
+    {
+      "name": "biomass_OD600:total:maxima",
+      "passed": true
+    },
+    {
+      "name": "glucose:expansion:time",
+      "passed": true
+    },
+    {
+      "name": "glucose:expansion:signed",
+      "passed": true
+    },
+    {
+      "name": "glucose:expansion:maxima",
+      "passed": true
+    },
+    {
+      "name": "glucose:barrier_difference:time",
+      "passed": true
+    },
+    {
+      "name": "glucose:barrier_difference:signed",
+      "passed": true
+    },
+    {
+      "name": "glucose:barrier_difference:maxima",
+      "passed": true
+    },
+    {
+      "name": "glucose:total:time",
+      "passed": true
+    },
+    {
+      "name": "glucose:total:signed",
+      "passed": true
+    },
+    {
+      "name": "glucose:total:maxima",
+      "passed": true
+    },
+    {
+      "name": "ethanol:expansion:time",
+      "passed": true
+    },
+    {
+      "name": "ethanol:expansion:signed",
+      "passed": true
+    },
+    {
+      "name": "ethanol:expansion:maxima",
+      "passed": true
+    },
+    {
+      "name": "ethanol:barrier_difference:time",
+      "passed": true
+    },
+    {
+      "name": "ethanol:barrier_difference:signed",
+      "passed": true
+    },
+    {
+      "name": "ethanol:barrier_difference:maxima",
+      "passed": true
+    },
+    {
+      "name": "ethanol:total:time",
+      "passed": true
+    },
+    {
+      "name": "ethanol:total:signed",
+      "passed": true
+    },
+    {
+      "name": "ethanol:total:maxima",
+      "passed": true
+    },
+    {
+      "name": "original:growth",
+      "passed": true
+    },
+    {
+      "name": "original:ethanol",
+      "passed": true
+    },
+    {
+      "name": "single_condition_recalibration:growth",
+      "passed": true
+    },
+    {
+      "name": "single_condition_recalibration:ethanol",
+      "passed": true
+    },
+    {
+      "name": "nominal_dilution_rate",
+      "passed": true
+    },
+    {
+      "name": "ethanol_observation_means",
+      "passed": true
+    },
+    {
+      "name": "ethanol_SEM_endpoints",
+      "passed": true
+    }
+  ],
+  "all_array_checks_passed": true,
+  "scientific_changes": "None: same selected observation rows, signed difference arrays, maxima, growth/ethanol values and SEM conversion. Nominal 0.1 h^-1 is correctly labelled as the dilution-rate reference.",
+  "presentation_changes": [
+    "distinct solid/dashed/dash-dot decomposition curves",
+    "hatches on decomposition bars",
+    "shared legends outside plot panels",
+    "nominal dilution-rate label",
+    "external-case annotation in empty upper-left space, without a leader to an invented zero",
+    "consistent panel headings and units"
+  ],
+  "outputs": {
+    "yeast_decomposition.svg": "3efac7809c10fc2d6c23aff6c0b41471b43610203179f6c6350bba79daa2beb9",
+    "yeast_decomposition.png": "da2aef3fb1335733de2a0196eb82b3a8c3a8132b5d34355f3603ff93aa58aa89",
+    "yeast_decomposition.pdf": "c15ee23363dc7ee499cde1707f5c6b67ee555e70b3418f4d153ede8909bbc4b8",
+    "yeast_external.png": "715868a7334a2232f846e92368bcb52841d7f86e23e0171aa53eefc87c0eed87",
+    "yeast_external.pdf": "058e4331bb89680a47a10eb0550bdc705e118c8dd812de4dcaabb928f5d0d42a",
+    "yeast_external.svg": "73a91c71ed566fa238843805b18a22844912c0d7f133e6b0410dd9668db40403"
+  }
+}

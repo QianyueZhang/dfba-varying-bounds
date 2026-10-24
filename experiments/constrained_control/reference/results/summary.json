@@ -1,0 +1,964 @@
+{
+  "status": "Completed computational study, full design coverage",
+  "conditions": [
+    [
+      0.7635149132489033,
+      18.653308873272927
+    ],
+    [
+      0.524492881402522,
+      24.086515751419412
+    ],
+    [
+      1.6423498066651971,
+      21.118890894532328
+    ],
+    [
+      1.2504547089749691,
+      16.073524292330397
+    ]
+  ],
+  "test_condition_clusters": 4,
+  "target_cases": 12,
+  "algorithm_seeds_per_case": 3,
+  "policy_runs": 180,
+  "method_summary": [
+    {
+      "method": "direct_single_start",
+      "runs": 36,
+      "verified_feasible": 36,
+      "median_actual_calls": 300.0,
+      "total_actual_calls": 8454,
+      "median_first_ordinary_feasible_call": 25.0,
+      "median_online_seconds": 5.2821638125460595,
+      "mean_online_seconds": 4.443786752293818,
+      "sum_online_seconds": 159.97632308257744,
+      "offline_seconds_required_by_method": 0,
+      "offline_seconds_conservative_full_development_bundle": 0,
+      "total_seconds_for_recorded_36_decisions": 159.97632308257744,
+      "final_tight_seconds": 1.764590502716601,
+      "failed_mechanistic_attempts": 0,
+      "proposal_seconds": 0,
+      "margin_selection_fallbacks": 0,
+      "total_prespecified_seconds_for_recorded_36_decisions": 159.97632308257744,
+      "total_required_seconds_for_recorded_36_decisions": 159.97632308257744,
+      "estimated_reuse_break_even_vs_single_start": null,
+      "break_even_scope": "Mean recorded online cost extrapolation only; excludes common pre-existing table and separately reported research validation."
+    },
+    {
+      "method": "direct_multistart",
+      "runs": 36,
+      "verified_feasible": 36,
+      "median_actual_calls": 280.5,
+      "total_actual_calls": 9892,
+      "median_first_ordinary_feasible_call": 25.0,
+      "median_online_seconds": 5.312146708602086,
+      "mean_online_seconds": 5.292483337909086,
+      "sum_online_seconds": 190.52940016472712,
+      "offline_seconds_required_by_method": 0,
+      "offline_seconds_conservative_full_development_bundle": 0,
+      "total_seconds_for_recorded_36_decisions": 190.52940016472712,
+      "final_tight_seconds": 1.780096834525466,
+      "failed_mechanistic_attempts": 0,
+      "proposal_seconds": 0,
+      "margin_selection_fallbacks": 0,
+      "total_prespecified_seconds_for_recorded_36_decisions": 190.52940016472712,
+      "total_required_seconds_for_recorded_36_decisions": 190.52940016472712,
+      "estimated_reuse_break_even_vs_single_start": null,
+      "break_even_scope": "Mean recorded online cost extrapolation only; excludes common pre-existing table and separately reported research validation."
+    },
+    {
+      "method": "database_warmstart",
+      "runs": 36,
+      "verified_feasible": 36,
+      "median_actual_calls": 282.5,
+      "total_actual_calls": 7740,
+      "median_first_ordinary_feasible_call": 17.0,
+      "median_online_seconds": 4.972510166466236,
+      "mean_online_seconds": 4.114602603018284,
+      "sum_online_seconds": 148.12569370865822,
+      "offline_seconds_required_by_method": 21.720556041691452,
+      "offline_seconds_conservative_full_development_bundle": 25.304566083475947,
+      "total_seconds_for_recorded_36_decisions": 169.84624975034967,
+      "final_tight_seconds": 1.7630850789137185,
+      "failed_mechanistic_attempts": 0,
+      "proposal_seconds": 0,
+      "margin_selection_fallbacks": 0,
+      "total_prespecified_seconds_for_recorded_36_decisions": 173.43025979213417,
+      "total_required_seconds_for_recorded_36_decisions": 169.84624975034967,
+      "estimated_reuse_break_even_vs_single_start": 65.98299489660695,
+      "break_even_scope": "Mean recorded online cost extrapolation only; excludes common pre-existing table and separately reported research validation."
+    },
+    {
+      "method": "quadratic_ridge",
+      "runs": 36,
+      "verified_feasible": 36,
+      "median_actual_calls": 295.5,
+      "total_actual_calls": 8065,
+      "median_first_ordinary_feasible_call": 9.0,
+      "median_online_seconds": 4.987441124627367,
+      "mean_online_seconds": 4.2828708403200535,
+      "sum_online_seconds": 154.18335025152192,
+      "offline_seconds_required_by_method": 25.3190402504988,
+      "offline_seconds_conservative_full_development_bundle": 25.3190402504988,
+      "total_seconds_for_recorded_36_decisions": 179.50239050202072,
+      "final_tight_seconds": 1.7640180829912424,
+      "failed_mechanistic_attempts": 0,
+      "proposal_seconds": 2.4722451232373714,
+      "margin_selection_fallbacks": 0,
+      "total_prespecified_seconds_for_recorded_36_decisions": 179.50239050202072,
+      "total_required_seconds_for_recorded_36_decisions": 179.50239050202072,
+      "estimated_reuse_break_even_vs_single_start": 157.3432977506092,
+      "break_even_scope": "Mean recorded online cost extrapolation only; excludes common pre-existing table and separately reported research validation."
+    },
+    {
+      "method": "mlp",
+      "runs": 36,
+      "verified_feasible": 36,
+      "median_actual_calls": 295.0,
+      "total_actual_calls": 7864,
+      "median_first_ordinary_feasible_call": 9.0,
+      "median_online_seconds": 4.88045758404769,
+      "mean_online_seconds": 4.151982631935324,
+      "sum_online_seconds": 149.47137474967167,
+      "offline_seconds_required_by_method": 26.463188249617815,
+      "offline_seconds_conservative_full_development_bundle": 26.463188249617815,
+      "total_seconds_for_recorded_36_decisions": 175.93456299928948,
+      "final_tight_seconds": 1.7538569597527385,
+      "failed_mechanistic_attempts": 0,
+      "proposal_seconds": 2.191757457330823,
+      "margin_selection_fallbacks": 0,
+      "total_prespecified_seconds_for_recorded_36_decisions": 175.93456299928948,
+      "total_required_seconds_for_recorded_36_decisions": 175.93456299928948,
+      "estimated_reuse_break_even_vs_single_start": 90.68819253513851,
+      "break_even_scope": "Mean recorded online cost extrapolation only; excludes common pre-existing table and separately reported research validation."
+    }
+  ],
+  "case_summary": [
+    {
+      "case_id": "condition_0_target_0.5",
+      "condition_id": 0,
+      "target_ratio": 0.5,
+      "method": "direct_single_start",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 99.47046030566845,
+      "max_feasible_biomass_gDW": 99.47046195640203,
+      "best_pooled_recorded_biomass_gDW": 99.47046305872074,
+      "median_gap_to_best_pooled_percent": 2.767708323698622e-06
+    },
+    {
+      "case_id": "condition_0_target_0.5",
+      "condition_id": 0,
+      "target_ratio": 0.5,
+      "method": "direct_multistart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 99.47046181776116,
+      "max_feasible_biomass_gDW": 99.47046195640203,
+      "best_pooled_recorded_biomass_gDW": 99.47046305872074,
+      "median_gap_to_best_pooled_percent": 1.247565899178821e-06
+    },
+    {
+      "case_id": "condition_0_target_0.5",
+      "condition_id": 0,
+      "target_ratio": 0.5,
+      "method": "database_warmstart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 99.47046210808186,
+      "max_feasible_biomass_gDW": 99.47046305872074,
+      "best_pooled_recorded_biomass_gDW": 99.47046305872074,
+      "median_gap_to_best_pooled_percent": 9.556996605895852e-07
+    },
+    {
+      "case_id": "condition_0_target_0.5",
+      "condition_id": 0,
+      "target_ratio": 0.5,
+      "method": "quadratic_ridge",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 99.47046045581061,
+      "max_feasible_biomass_gDW": 99.47046085253021,
+      "best_pooled_recorded_biomass_gDW": 99.47046305872074,
+      "median_gap_to_best_pooled_percent": 2.6167668764906097e-06
+    },
+    {
+      "case_id": "condition_0_target_0.5",
+      "condition_id": 0,
+      "target_ratio": 0.5,
+      "method": "mlp",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 99.47046141153847,
+      "max_feasible_biomass_gDW": 99.47046175125979,
+      "best_pooled_recorded_biomass_gDW": 99.47046305872074,
+      "median_gap_to_best_pooled_percent": 1.6559511462947301e-06
+    },
+    {
+      "case_id": "condition_0_target_1",
+      "condition_id": 0,
+      "target_ratio": 1.0,
+      "method": "direct_single_start",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 91.3187997724672,
+      "max_feasible_biomass_gDW": 91.31880022922037,
+      "best_pooled_recorded_biomass_gDW": 91.31880041325365,
+      "median_gap_to_best_pooled_percent": 7.017026618092391e-07
+    },
+    {
+      "case_id": "condition_0_target_1",
+      "condition_id": 0,
+      "target_ratio": 1.0,
+      "method": "direct_multistart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 91.28772155249234,
+      "max_feasible_biomass_gDW": 91.2886806001786,
+      "best_pooled_recorded_biomass_gDW": 91.31880041325365,
+      "median_gap_to_best_pooled_percent": 0.034033365112844036
+    },
+    {
+      "case_id": "condition_0_target_1",
+      "condition_id": 0,
+      "target_ratio": 1.0,
+      "method": "database_warmstart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 91.31879809195932,
+      "max_feasible_biomass_gDW": 91.31879870810494,
+      "best_pooled_recorded_biomass_gDW": 91.31880041325365,
+      "median_gap_to_best_pooled_percent": 2.5419676138530466e-06
+    },
+    {
+      "case_id": "condition_0_target_1",
+      "condition_id": 0,
+      "target_ratio": 1.0,
+      "method": "quadratic_ridge",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 91.31879230260164,
+      "max_feasible_biomass_gDW": 91.31880041325365,
+      "best_pooled_recorded_biomass_gDW": 91.31880041325365,
+      "median_gap_to_best_pooled_percent": 8.881689183104627e-06
+    },
+    {
+      "case_id": "condition_0_target_1",
+      "condition_id": 0,
+      "target_ratio": 1.0,
+      "method": "mlp",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 91.29949334118413,
+      "max_feasible_biomass_gDW": 91.31879435835454,
+      "best_pooled_recorded_biomass_gDW": 91.31880041325365,
+      "median_gap_to_best_pooled_percent": 0.021142494187561676
+    },
+    {
+      "case_id": "condition_0_target_2",
+      "condition_id": 0,
+      "target_ratio": 2.0,
+      "method": "direct_single_start",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 84.42479584465426,
+      "max_feasible_biomass_gDW": 84.44030957828377,
+      "best_pooled_recorded_biomass_gDW": 84.46464832998055,
+      "median_gap_to_best_pooled_percent": 0.04718244391499722
+    },
+    {
+      "case_id": "condition_0_target_2",
+      "condition_id": 0,
+      "target_ratio": 2.0,
+      "method": "direct_multistart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 84.42167971819042,
+      "max_feasible_biomass_gDW": 84.42409466391435,
+      "best_pooled_recorded_biomass_gDW": 84.46464832998055,
+      "median_gap_to_best_pooled_percent": 0.05087171099353073
+    },
+    {
+      "case_id": "condition_0_target_2",
+      "condition_id": 0,
+      "target_ratio": 2.0,
+      "method": "database_warmstart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 84.42438955291036,
+      "max_feasible_biomass_gDW": 84.42675247274178,
+      "best_pooled_recorded_biomass_gDW": 84.46464832998055,
+      "median_gap_to_best_pooled_percent": 0.04766346378772881
+    },
+    {
+      "case_id": "condition_0_target_2",
+      "condition_id": 0,
+      "target_ratio": 2.0,
+      "method": "quadratic_ridge",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 84.46461503017974,
+      "max_feasible_biomass_gDW": 84.46464832998055,
+      "best_pooled_recorded_biomass_gDW": 84.46464832998055,
+      "median_gap_to_best_pooled_percent": 3.942454205776679e-05
+    },
+    {
+      "case_id": "condition_0_target_2",
+      "condition_id": 0,
+      "target_ratio": 2.0,
+      "method": "mlp",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 84.4646182269115,
+      "max_feasible_biomass_gDW": 84.46462718079668,
+      "best_pooled_recorded_biomass_gDW": 84.46464832998055,
+      "median_gap_to_best_pooled_percent": 3.563984417861968e-05
+    },
+    {
+      "case_id": "condition_1_target_0.5",
+      "condition_id": 1,
+      "target_ratio": 0.5,
+      "method": "direct_single_start",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 101.41663277783717,
+      "max_feasible_biomass_gDW": 101.4166344931228,
+      "best_pooled_recorded_biomass_gDW": 101.41665117376144,
+      "median_gap_to_best_pooled_percent": 1.8138958503339966e-05
+    },
+    {
+      "case_id": "condition_1_target_0.5",
+      "condition_id": 1,
+      "target_ratio": 0.5,
+      "method": "direct_multistart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 101.4100977256294,
+      "max_feasible_biomass_gDW": 101.41185676708245,
+      "best_pooled_recorded_biomass_gDW": 101.41665117376144,
+      "median_gap_to_best_pooled_percent": 0.006461905472317457
+    },
+    {
+      "case_id": "condition_1_target_0.5",
+      "condition_id": 1,
+      "target_ratio": 0.5,
+      "method": "database_warmstart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 101.41662268071535,
+      "max_feasible_biomass_gDW": 101.41664431139122,
+      "best_pooled_recorded_biomass_gDW": 101.41665117376144,
+      "median_gap_to_best_pooled_percent": 2.809503741062769e-05
+    },
+    {
+      "case_id": "condition_1_target_0.5",
+      "condition_id": 1,
+      "target_ratio": 0.5,
+      "method": "quadratic_ridge",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 101.41662157941029,
+      "max_feasible_biomass_gDW": 101.41664064217153,
+      "best_pooled_recorded_biomass_gDW": 101.41665117376144,
+      "median_gap_to_best_pooled_percent": 2.9180958752780016e-05
+    },
+    {
+      "case_id": "condition_1_target_0.5",
+      "condition_id": 1,
+      "target_ratio": 0.5,
+      "method": "mlp",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 101.4166253164461,
+      "max_feasible_biomass_gDW": 101.41665117376144,
+      "best_pooled_recorded_biomass_gDW": 101.41665117376144,
+      "median_gap_to_best_pooled_percent": 2.5496124193348806e-05
+    },
+    {
+      "case_id": "condition_1_target_1",
+      "condition_id": 1,
+      "target_ratio": 1.0,
+      "method": "direct_single_start",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 93.10318014304478,
+      "max_feasible_biomass_gDW": 93.10318074059364,
+      "best_pooled_recorded_biomass_gDW": 93.1031840447062,
+      "median_gap_to_best_pooled_percent": 4.190685265297432e-06
+    },
+    {
+      "case_id": "condition_1_target_1",
+      "condition_id": 1,
+      "target_ratio": 1.0,
+      "method": "direct_multistart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 93.0856834535591,
+      "max_feasible_biomass_gDW": 93.0867200653692,
+      "best_pooled_recorded_biomass_gDW": 93.1031840447062,
+      "median_gap_to_best_pooled_percent": 0.018796984578630684
+    },
+    {
+      "case_id": "condition_1_target_1",
+      "condition_id": 1,
+      "target_ratio": 1.0,
+      "method": "database_warmstart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 93.06123846973917,
+      "max_feasible_biomass_gDW": 93.10318319937666,
+      "best_pooled_recorded_biomass_gDW": 93.1031840447062,
+      "median_gap_to_best_pooled_percent": 0.04505278245574197
+    },
+    {
+      "case_id": "condition_1_target_1",
+      "condition_id": 1,
+      "target_ratio": 1.0,
+      "method": "quadratic_ridge",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 93.10318098266247,
+      "max_feasible_biomass_gDW": 93.1031840447062,
+      "best_pooled_recorded_biomass_gDW": 93.1031840447062,
+      "median_gap_to_best_pooled_percent": 3.2888711195856504e-06
+    },
+    {
+      "case_id": "condition_1_target_1",
+      "condition_id": 1,
+      "target_ratio": 1.0,
+      "method": "mlp",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 93.08166488431185,
+      "max_feasible_biomass_gDW": 93.10318096943955,
+      "best_pooled_recorded_biomass_gDW": 93.1031840447062,
+      "median_gap_to_best_pooled_percent": 0.023113237871666175
+    },
+    {
+      "case_id": "condition_1_target_2",
+      "condition_id": 1,
+      "target_ratio": 2.0,
+      "method": "direct_single_start",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 86.06749296561826,
+      "max_feasible_biomass_gDW": 86.06771745019176,
+      "best_pooled_recorded_biomass_gDW": 86.11188936341007,
+      "median_gap_to_best_pooled_percent": 0.051556641156080614
+    },
+    {
+      "case_id": "condition_1_target_2",
+      "condition_id": 1,
+      "target_ratio": 2.0,
+      "method": "direct_multistart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 86.07081171682194,
+      "max_feasible_biomass_gDW": 86.11171446052853,
+      "best_pooled_recorded_biomass_gDW": 86.11188936341007,
+      "median_gap_to_best_pooled_percent": 0.04770264233174504
+    },
+    {
+      "case_id": "condition_1_target_2",
+      "condition_id": 1,
+      "target_ratio": 2.0,
+      "method": "database_warmstart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 86.06770924710018,
+      "max_feasible_biomass_gDW": 86.11184807704556,
+      "best_pooled_recorded_biomass_gDW": 86.11188936341007,
+      "median_gap_to_best_pooled_percent": 0.051305477834122815
+    },
+    {
+      "case_id": "condition_1_target_2",
+      "condition_id": 1,
+      "target_ratio": 2.0,
+      "method": "quadratic_ridge",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 86.11188065278898,
+      "max_feasible_biomass_gDW": 86.11188936341007,
+      "best_pooled_recorded_biomass_gDW": 86.11188936341007,
+      "median_gap_to_best_pooled_percent": 1.0115468552391372e-05
+    },
+    {
+      "case_id": "condition_1_target_2",
+      "condition_id": 1,
+      "target_ratio": 2.0,
+      "method": "mlp",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 86.11134107574169,
+      "max_feasible_biomass_gDW": 86.11186410776163,
+      "best_pooled_recorded_biomass_gDW": 86.11188936341007,
+      "median_gap_to_best_pooled_percent": 0.0006367154087934487
+    },
+    {
+      "case_id": "condition_2_target_0.5",
+      "condition_id": 2,
+      "target_ratio": 0.5,
+      "method": "direct_single_start",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 80.45898758089264,
+      "max_feasible_biomass_gDW": 80.45898767483236,
+      "best_pooled_recorded_biomass_gDW": 80.45899154762304,
+      "median_gap_to_best_pooled_percent": 4.930126922304266e-06
+    },
+    {
+      "case_id": "condition_2_target_0.5",
+      "condition_id": 2,
+      "target_ratio": 0.5,
+      "method": "direct_multistart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 80.45898767483236,
+      "max_feasible_biomass_gDW": 80.45898823401328,
+      "best_pooled_recorded_biomass_gDW": 80.45899154762304,
+      "median_gap_to_best_pooled_percent": 4.81337214273328e-06
+    },
+    {
+      "case_id": "condition_2_target_0.5",
+      "condition_id": 2,
+      "target_ratio": 0.5,
+      "method": "database_warmstart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 80.45898674969455,
+      "max_feasible_biomass_gDW": 80.45898684694602,
+      "best_pooled_recorded_biomass_gDW": 80.45899154762304,
+      "median_gap_to_best_pooled_percent": 5.963197406381874e-06
+    },
+    {
+      "case_id": "condition_2_target_0.5",
+      "condition_id": 2,
+      "target_ratio": 0.5,
+      "method": "quadratic_ridge",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 80.45898847759622,
+      "max_feasible_biomass_gDW": 80.45898904049879,
+      "best_pooled_recorded_biomass_gDW": 80.45899154762304,
+      "median_gap_to_best_pooled_percent": 3.815641685477383e-06
+    },
+    {
+      "case_id": "condition_2_target_0.5",
+      "condition_id": 2,
+      "target_ratio": 0.5,
+      "method": "mlp",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 80.45898823357565,
+      "max_feasible_biomass_gDW": 80.45899154762304,
+      "best_pooled_recorded_biomass_gDW": 80.45899154762304,
+      "median_gap_to_best_pooled_percent": 4.1189273275055145e-06
+    },
+    {
+      "case_id": "condition_2_target_1",
+      "condition_id": 2,
+      "target_ratio": 1.0,
+      "method": "direct_single_start",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 91.98094002859717,
+      "max_feasible_biomass_gDW": 91.98094626591674,
+      "best_pooled_recorded_biomass_gDW": 91.98094626591674,
+      "median_gap_to_best_pooled_percent": 6.781099587159648e-06
+    },
+    {
+      "case_id": "condition_2_target_1",
+      "condition_id": 2,
+      "target_ratio": 1.0,
+      "method": "direct_multistart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 91.9463295232018,
+      "max_feasible_biomass_gDW": 91.96651447577841,
+      "best_pooled_recorded_biomass_gDW": 91.98094626591674,
+      "median_gap_to_best_pooled_percent": 0.03763468861786697
+    },
+    {
+      "case_id": "condition_2_target_1",
+      "condition_id": 2,
+      "target_ratio": 1.0,
+      "method": "database_warmstart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 91.98094035271636,
+      "max_feasible_biomass_gDW": 91.98094157397449,
+      "best_pooled_recorded_biomass_gDW": 91.98094626591674,
+      "median_gap_to_best_pooled_percent": 6.428723146187147e-06
+    },
+    {
+      "case_id": "condition_2_target_1",
+      "condition_id": 2,
+      "target_ratio": 1.0,
+      "method": "quadratic_ridge",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 91.98093952119171,
+      "max_feasible_biomass_gDW": 91.98093956610658,
+      "best_pooled_recorded_biomass_gDW": 91.98094626591674,
+      "median_gap_to_best_pooled_percent": 7.332741509176754e-06
+    },
+    {
+      "case_id": "condition_2_target_1",
+      "condition_id": 2,
+      "target_ratio": 1.0,
+      "method": "mlp",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 91.98093835140345,
+      "max_feasible_biomass_gDW": 91.98094006907542,
+      "best_pooled_recorded_biomass_gDW": 91.98094626591674,
+      "median_gap_to_best_pooled_percent": 8.604513881814198e-06
+    },
+    {
+      "case_id": "condition_2_target_2",
+      "condition_id": 2,
+      "target_ratio": 2.0,
+      "method": "direct_single_start",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 85.02396948803094,
+      "max_feasible_biomass_gDW": 85.02397412716783,
+      "best_pooled_recorded_biomass_gDW": 85.02398756349935,
+      "median_gap_to_best_pooled_percent": 2.1259257442286538e-05
+    },
+    {
+      "case_id": "condition_2_target_2",
+      "condition_id": 2,
+      "target_ratio": 2.0,
+      "method": "direct_multistart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 84.97519110974879,
+      "max_feasible_biomass_gDW": 84.99991653610012,
+      "best_pooled_recorded_biomass_gDW": 85.02398756349935,
+      "median_gap_to_best_pooled_percent": 0.057391396415172345
+    },
+    {
+      "case_id": "condition_2_target_2",
+      "condition_id": 2,
+      "target_ratio": 2.0,
+      "method": "database_warmstart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 85.01188358372755,
+      "max_feasible_biomass_gDW": 85.02398424349273,
+      "best_pooled_recorded_biomass_gDW": 85.02398756349935,
+      "median_gap_to_best_pooled_percent": 0.014235958720183966
+    },
+    {
+      "case_id": "condition_2_target_2",
+      "condition_id": 2,
+      "target_ratio": 2.0,
+      "method": "quadratic_ridge",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 85.02398705509563,
+      "max_feasible_biomass_gDW": 85.02398756349935,
+      "best_pooled_recorded_biomass_gDW": 85.02398756349935,
+      "median_gap_to_best_pooled_percent": 5.979532719415825e-07
+    },
+    {
+      "case_id": "condition_2_target_2",
+      "condition_id": 2,
+      "target_ratio": 2.0,
+      "method": "mlp",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 85.02398277074272,
+      "max_feasible_biomass_gDW": 85.02398579832085,
+      "best_pooled_recorded_biomass_gDW": 85.02398756349935,
+      "median_gap_to_best_pooled_percent": 5.6369464247323185e-06
+    },
+    {
+      "case_id": "condition_3_target_0.5",
+      "condition_id": 3,
+      "target_ratio": 0.5,
+      "method": "direct_single_start",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 94.63671098798791,
+      "max_feasible_biomass_gDW": 94.63671146637705,
+      "best_pooled_recorded_biomass_gDW": 94.63672188721577,
+      "median_gap_to_best_pooled_percent": 1.1516911873579588e-05
+    },
+    {
+      "case_id": "condition_3_target_0.5",
+      "condition_id": 3,
+      "target_ratio": 0.5,
+      "method": "direct_multistart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 94.63671098798791,
+      "max_feasible_biomass_gDW": 94.63671781435521,
+      "best_pooled_recorded_biomass_gDW": 94.63672188721577,
+      "median_gap_to_best_pooled_percent": 1.1516911873579588e-05
+    },
+    {
+      "case_id": "condition_3_target_0.5",
+      "condition_id": 3,
+      "target_ratio": 0.5,
+      "method": "database_warmstart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 94.63670960208047,
+      "max_feasible_biomass_gDW": 94.63671671492385,
+      "best_pooled_recorded_biomass_gDW": 94.63672188721577,
+      "median_gap_to_best_pooled_percent": 1.2981361836502858e-05
+    },
+    {
+      "case_id": "condition_3_target_0.5",
+      "condition_id": 3,
+      "target_ratio": 0.5,
+      "method": "quadratic_ridge",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 94.63671061217049,
+      "max_feasible_biomass_gDW": 94.63672188721577,
+      "best_pooled_recorded_biomass_gDW": 94.63672188721577,
+      "median_gap_to_best_pooled_percent": 1.1914027722620908e-05
+    },
+    {
+      "case_id": "condition_3_target_0.5",
+      "condition_id": 3,
+      "target_ratio": 0.5,
+      "method": "mlp",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 94.63670941508326,
+      "max_feasible_biomass_gDW": 94.63671992346802,
+      "best_pooled_recorded_biomass_gDW": 94.63672188721577,
+      "median_gap_to_best_pooled_percent": 1.3178956605903486e-05
+    },
+    {
+      "case_id": "condition_3_target_1",
+      "condition_id": 3,
+      "target_ratio": 1.0,
+      "method": "direct_single_start",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 90.43649574727839,
+      "max_feasible_biomass_gDW": 90.43649994426075,
+      "best_pooled_recorded_biomass_gDW": 90.43649994426075,
+      "median_gap_to_best_pooled_percent": 4.6408058278004256e-06
+    },
+    {
+      "case_id": "condition_3_target_1",
+      "condition_id": 3,
+      "target_ratio": 1.0,
+      "method": "direct_multistart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 90.38647306206799,
+      "max_feasible_biomass_gDW": 90.42401004321995,
+      "best_pooled_recorded_biomass_gDW": 90.43649994426075,
+      "median_gap_to_best_pooled_percent": 0.055317136580458975
+    },
+    {
+      "case_id": "condition_3_target_1",
+      "condition_id": 3,
+      "target_ratio": 1.0,
+      "method": "database_warmstart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 90.43433710960294,
+      "max_feasible_biomass_gDW": 90.43649679359416,
+      "best_pooled_recorded_biomass_gDW": 90.43649994426075,
+      "median_gap_to_best_pooled_percent": 0.0023915506008556123
+    },
+    {
+      "case_id": "condition_3_target_1",
+      "condition_id": 3,
+      "target_ratio": 1.0,
+      "method": "quadratic_ridge",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 90.43649578056424,
+      "max_feasible_biomass_gDW": 90.43649612826114,
+      "best_pooled_recorded_biomass_gDW": 90.43649994426075,
+      "median_gap_to_best_pooled_percent": 4.604000049551314e-06
+    },
+    {
+      "case_id": "condition_3_target_1",
+      "condition_id": 3,
+      "target_ratio": 1.0,
+      "method": "mlp",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 90.4364968762452,
+      "max_feasible_biomass_gDW": 90.43649706049185,
+      "best_pooled_recorded_biomass_gDW": 90.43649994426075,
+      "median_gap_to_best_pooled_percent": 3.3924527669890585e-06
+    },
+    {
+      "case_id": "condition_3_target_2",
+      "condition_id": 3,
+      "target_ratio": 2.0,
+      "method": "direct_single_start",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 83.66887206799201,
+      "max_feasible_biomass_gDW": 83.67015421841718,
+      "best_pooled_recorded_biomass_gDW": 83.67531820075817,
+      "median_gap_to_best_pooled_percent": 0.007703744550683009
+    },
+    {
+      "case_id": "condition_3_target_2",
+      "condition_id": 3,
+      "target_ratio": 2.0,
+      "method": "direct_multistart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 83.50765624168034,
+      "max_feasible_biomass_gDW": 83.51080891173207,
+      "best_pooled_recorded_biomass_gDW": 83.67531820075817,
+      "median_gap_to_best_pooled_percent": 0.20037206034349306
+    },
+    {
+      "case_id": "condition_3_target_2",
+      "condition_id": 3,
+      "target_ratio": 2.0,
+      "method": "database_warmstart",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 83.50612384152271,
+      "max_feasible_biomass_gDW": 83.67152041267083,
+      "best_pooled_recorded_biomass_gDW": 83.67531820075817,
+      "median_gap_to_best_pooled_percent": 0.20220342494488278
+    },
+    {
+      "case_id": "condition_3_target_2",
+      "condition_id": 3,
+      "target_ratio": 2.0,
+      "method": "quadratic_ridge",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 83.67021446644613,
+      "max_feasible_biomass_gDW": 83.67084694532369,
+      "best_pooled_recorded_biomass_gDW": 83.67531820075817,
+      "median_gap_to_best_pooled_percent": 0.006099450138688442
+    },
+    {
+      "case_id": "condition_3_target_2",
+      "condition_id": 3,
+      "target_ratio": 2.0,
+      "method": "mlp",
+      "feasible_repeats": 3,
+      "median_feasible_biomass_gDW": 83.67525774774492,
+      "max_feasible_biomass_gDW": 83.67531820075817,
+      "best_pooled_recorded_biomass_gDW": 83.67531820075817,
+      "median_gap_to_best_pooled_percent": 7.224712680830217e-05
+    }
+  ],
+  "prediction_metrics": {
+    "quadratic_ridge": {
+      "log_ratio_rmse": 0.054546993053437486,
+      "log_biomass_amount_rmse": 0.03441229058605996,
+      "biomass_amount_rmse_gDW": 1.6094916718791907
+    },
+    "mlp": {
+      "log_ratio_rmse": 0.007518888265432017,
+      "log_biomass_amount_rmse": 0.004856117540831673,
+      "biomass_amount_rmse_gDW": 0.2300927906196463
+    }
+  },
+  "selection": {
+    "quadratic_ridge": {
+      "selected": {
+        "setting": 1e-06,
+        "validation_joint_standardized_mse": 0.010005159814676772,
+        "seconds": 0.011946874670684338,
+        "warnings": []
+      },
+      "candidates": [
+        {
+          "setting": 1e-06,
+          "validation_joint_standardized_mse": 0.010005159814676772,
+          "seconds": 0.011946874670684338,
+          "warnings": []
+        },
+        {
+          "setting": 0.001,
+          "validation_joint_standardized_mse": 0.010005166043322857,
+          "seconds": 0.0012851669453084469,
+          "warnings": []
+        },
+        {
+          "setting": 1.0,
+          "validation_joint_standardized_mse": 0.010013835602405572,
+          "seconds": 0.0010409997776150703,
+          "warnings": []
+        }
+      ]
+    },
+    "mlp": {
+      "selected": {
+        "setting": 733,
+        "validation_joint_standardized_mse": 0.00023527469916905278,
+        "seconds": 0.3914272910915315,
+        "warnings": [
+          "lbfgs failed to converge (status=1):\nSTOP: TOTAL NO. OF ITERATIONS REACHED LIMIT.\n\nIncrease the number of iterations (max_iter) or scale the data as shown in:\n    https://scikit-learn.org/stable/modules/preprocessing.html"
+        ]
+      },
+      "candidates": [
+        {
+          "setting": 733,
+          "validation_joint_standardized_mse": 0.00023527469916905278,
+          "seconds": 0.3914272910915315,
+          "warnings": [
+            "lbfgs failed to converge (status=1):\nSTOP: TOTAL NO. OF ITERATIONS REACHED LIMIT.\n\nIncrease the number of iterations (max_iter) or scale the data as shown in:\n    https://scikit-learn.org/stable/modules/preprocessing.html"
+          ]
+        },
+        {
+          "setting": 734,
+          "validation_joint_standardized_mse": 0.00023589770280487075,
+          "seconds": 0.3815412912517786,
+          "warnings": [
+            "lbfgs failed to converge (status=1):\nSTOP: TOTAL NO. OF ITERATIONS REACHED LIMIT.\n\nIncrease the number of iterations (max_iter) or scale the data as shown in:\n    https://scikit-learn.org/stable/modules/preprocessing.html"
+          ]
+        },
+        {
+          "setting": 735,
+          "validation_joint_standardized_mse": 0.0002924648034573812,
+          "seconds": 0.385364375077188,
+          "warnings": [
+            "lbfgs failed to converge (status=1):\nSTOP: TOTAL NO. OF ITERATIONS REACHED LIMIT.\n\nIncrease the number of iterations (max_iter) or scale the data as shown in:\n    https://scikit-learn.org/stable/modules/preprocessing.html"
+          ]
+        }
+      ]
+    }
+  },
+  "common_offline_costs": {
+    "training_seconds": 21.720556041691452,
+    "validation_seconds": 3.584010041784495,
+    "test_audit_label_seconds": 4.816789667122066,
+    "fit": {
+      "quadratic_ridge": 0.01447416702285409,
+      "mlp": 1.1586221661418676
+    },
+    "table_construction": "pre-existing shared table, excluded equally"
+  },
+  "cost_interpretation": "The prespecified amendment02 allocation charges training+validation generation to all reuse methods. Also report an explicitly labeled necessary-cost alternative: database requires training labels only, while learned families need validation and all fitting/selection. Both measured totals are retained; no policy/data changes. Research test/audit/sensitivity/direct costs are separate from deployment costs.",
+  "campaign": {
+    "completed_runs": 180,
+    "expected_runs": 180,
+    "campaign_seconds": 803.2613241253421,
+    "total_script_seconds": 834.5653027920052,
+    "costs": {
+      "data": {
+        "training": {
+          "seconds": 21.720556041691452,
+          "successful_evaluations": 1152,
+          "failures": []
+        },
+        "validation": {
+          "seconds": 3.584010041784495,
+          "successful_evaluations": 192,
+          "failures": []
+        },
+        "test": {
+          "seconds": 4.816789667122066,
+          "successful_evaluations": 256,
+          "failures": []
+        }
+      },
+      "fit": {
+        "quadratic_ridge": 0.01447416702285409,
+        "mlp": 1.1586221661418676
+      },
+      "test_label_seconds": 0.0,
+      "common_archived_response_table_build": "Not rerun; pre-existing shared infrastructure excluded equally"
+    },
+    "selection_lock_model_sha256": "985ecab78ae43b8c6d5b744ddf1b625cc89ffd618985f4bf3bf020211810a107"
+  },
+  "sensitivity": [
+    {
+      "method": "direct_single_start",
+      "perturbations": 48,
+      "nominal_tolerance_passes": 9,
+      "max_relative_ratio_error_percent": 9.693196259281578,
+      "scope": "48 prescribed perturbations:12cases x4corners, seed3101 only; correlated deterministic sensitivity, not a robustness probability"
+    },
+    {
+      "method": "direct_multistart",
+      "perturbations": 48,
+      "nominal_tolerance_passes": 9,
+      "max_relative_ratio_error_percent": 9.184755154667211,
+      "scope": "48 prescribed perturbations:12cases x4corners, seed3101 only; correlated deterministic sensitivity, not a robustness probability"
+    },
+    {
+      "method": "database_warmstart",
+      "perturbations": 48,
+      "nominal_tolerance_passes": 10,
+      "max_relative_ratio_error_percent": 9.184752835517585,
+      "scope": "48 prescribed perturbations:12cases x4corners, seed3101 only; correlated deterministic sensitivity, not a robustness probability"
+    },
+    {
+      "method": "quadratic_ridge",
+      "perturbations": 48,
+      "nominal_tolerance_passes": 11,
+      "max_relative_ratio_error_percent": 9.693139493227608,
+      "scope": "48 prescribed perturbations:12cases x4corners, seed3101 only; correlated deterministic sensitivity, not a robustness probability"
+    },
+    {
+      "method": "mlp",
+      "perturbations": 48,
+      "nominal_tolerance_passes": 11,
+      "max_relative_ratio_error_percent": 9.658556198814727,
+      "scope": "48 prescribed perturbations:12cases x4corners, seed3101 only; correlated deterministic sensitivity, not a robustness probability"
+    }
+  ],
+  "caveats": [
+    "One model pair;4 unseen initial-condition clusters, not independent biological replicates",
+    "No global optimum reference; pooled best recorded results are descriptive",
+    "No feedback; fixed-policy initial-condition perturbations are sensitivity tests",
+    "Direct KKT uses same intracellular solver/matrices, separate amount balances",
+    "No experimental validation or assumed neural advantage"
+  ]
+}

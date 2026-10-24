@@ -1,0 +1,600 @@
+{
+  "passed": true,
+  "reports": [
+    {
+      "name": "analytic_interior",
+      "case": {
+        "name": "analytic_interior",
+        "family": "analytic",
+        "state": [
+          0.7,
+          0.3,
+          0.25,
+          2.8
+        ],
+        "base": [
+          0.05,
+          0.045,
+          0.04
+        ],
+        "gain": 0.8,
+        "basis": [
+          0,
+          -0.1,
+          0.12
+        ],
+        "offset": [
+          0,
+          0.035,
+          -0.025
+        ],
+        "kappas": [
+          [
+            1,
+            1
+          ],
+          [
+            1.1,
+            0.9
+          ],
+          [
+            0.95,
+            1.05
+          ]
+        ],
+        "expected": [
+          "interior",
+          "interior",
+          "interior"
+        ]
+      },
+      "reference": [
+        0.18232155679395445,
+        -0.003412538552244909,
+        -0.3413785104599977
+      ],
+      "independent_branches": [
+        "interior",
+        "interior",
+        "interior"
+      ],
+      "checks": {
+        "expected_branches": true,
+        "ordinary_states": true,
+        "ordinary_tangents": true,
+        "ordinary_feeds": true,
+        "ordinary_volume": true,
+        "ordinary_branches": true,
+        "tight_states": true,
+        "tight_tangents": true,
+        "tight_feeds": true,
+        "tight_volume": true,
+        "tight_branches": true,
+        "fd_stable_branch": true,
+        "independent_amount_tangent_vs_fd": true
+      },
+      "comparisons": {
+        "ordinary": {
+          "z": 4.3520742565306136e-13,
+          "logB": 7.429168391581698e-12,
+          "jz": 5.623920884545441e-09,
+          "jlogB": 2.168125234902618e-09,
+          "feeds": 8.850212229738474e-13,
+          "V": 3.257949465762522e-12
+        },
+        "tight": {
+          "z": 1.1324274851176597e-14,
+          "logB": 4.440892098500626e-15,
+          "jz": 5.019984428145108e-12,
+          "jlogB": 2.0623502905436908e-12,
+          "feeds": 9.506284648352903e-16,
+          "V": 1.887379141862766e-15
+        },
+        "fd_max_abs": 3.937062231784694e-09
+      }
+    },
+    {
+      "name": "analytic_fixed_upper_lower",
+      "case": {
+        "name": "analytic_fixed_upper_lower",
+        "family": "analytic",
+        "state": [
+          0.5,
+          0.2,
+          0.15,
+          2.5
+        ],
+        "base": [
+          0.04,
+          0.18,
+          0.02
+        ],
+        "gain": 1.0,
+        "basis": [
+          0,
+          0.25,
+          0.25
+        ],
+        "offset": [
+          0,
+          0.25,
+          -0.3
+        ],
+        "kappas": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "expected": [
+          "interior",
+          "upper",
+          "lower"
+        ]
+      },
+      "reference": [
+        0.287682072451781,
+        0.3862569502845278,
+        -0.04626532308777137
+      ],
+      "independent_branches": [
+        "interior",
+        "upper",
+        "lower"
+      ],
+      "checks": {
+        "expected_branches": true,
+        "ordinary_states": true,
+        "ordinary_tangents": true,
+        "ordinary_feeds": true,
+        "ordinary_volume": true,
+        "ordinary_branches": true,
+        "tight_states": true,
+        "tight_tangents": true,
+        "tight_feeds": true,
+        "tight_volume": true,
+        "tight_branches": true,
+        "fd_stable_branch": true,
+        "independent_amount_tangent_vs_fd": true
+      },
+      "comparisons": {
+        "ordinary": {
+          "z": 9.115476984344895e-10,
+          "logB": 5.333133934470879e-10,
+          "jz": 2.515174735151504e-09,
+          "jlogB": 4.324550051393317e-09,
+          "feeds": 0.0,
+          "V": 0.0
+        },
+        "tight": {
+          "z": 8.790190797469677e-14,
+          "logB": 4.884981308350689e-15,
+          "jz": 2.6556534749033744e-13,
+          "jlogB": 2.398081733190338e-14,
+          "feeds": 0.0,
+          "V": 0.0
+        },
+        "fd_max_abs": 3.068589826682455e-09
+      }
+    },
+    {
+      "name": "analytic_volume_guard",
+      "case": {
+        "name": "analytic_volume_guard",
+        "family": "analytic",
+        "state": [
+          1.5,
+          5.0,
+          4.0,
+          4.5
+        ],
+        "base": [
+          0.05,
+          0.12
+        ],
+        "gain": 0.6,
+        "basis": [
+          0,
+          0.1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "kappas": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "expected": [
+          "interior",
+          "volume"
+        ]
+      },
+      "reference": [
+        0.2231435513142097,
+        -0.30269135047614415
+      ],
+      "independent_branches": [
+        "interior",
+        "volume"
+      ],
+      "checks": {
+        "expected_branches": true,
+        "ordinary_states": true,
+        "ordinary_tangents": true,
+        "ordinary_feeds": true,
+        "ordinary_volume": true,
+        "ordinary_branches": true,
+        "tight_states": true,
+        "tight_tangents": true,
+        "tight_feeds": true,
+        "tight_volume": true,
+        "tight_branches": true,
+        "fd_stable_branch": true,
+        "independent_amount_tangent_vs_fd": true,
+        "volume_gradient_zero": true,
+        "volume_cap": true
+      },
+      "comparisons": {
+        "ordinary": {
+          "z": 3.8147041081515454e-11,
+          "logB": 4.643396778192255e-12,
+          "jz": 3.0615183721494077e-09,
+          "jlogB": 5.420671828071377e-10,
+          "feeds": 0.0,
+          "V": 0.0
+        },
+        "tight": {
+          "z": 1.5543122344752192e-15,
+          "logB": 1.7763568394002505e-15,
+          "jz": 7.527312106958561e-14,
+          "jlogB": 2.942091015256665e-15,
+          "feeds": 0.0,
+          "V": 0.0
+        },
+        "fd_max_abs": 1.4959682381743278e-09
+      }
+    },
+    {
+      "name": "table_interior",
+      "case": {
+        "name": "table_interior",
+        "family": "table",
+        "state": [
+          1.1,
+          5.0,
+          4.0,
+          3.3
+        ],
+        "base": [
+          0.05,
+          0.1,
+          0.03
+        ],
+        "gain": 0.6,
+        "basis": [
+          0,
+          -0.08,
+          0.1
+        ],
+        "offset": [
+          0,
+          0.03,
+          -0.03
+        ],
+        "kappas": [
+          [
+            1,
+            1
+          ],
+          [
+            1.1,
+            0.9
+          ],
+          [
+            0.95,
+            1.05
+          ]
+        ],
+        "expected": [
+          "interior",
+          "interior",
+          "interior"
+        ]
+      },
+      "reference": [
+        0.2231435513142097,
+        -0.6109116213008217,
+        -1.3640493856269844
+      ],
+      "independent_branches": [
+        "interior",
+        "interior",
+        "interior"
+      ],
+      "checks": {
+        "expected_branches": true,
+        "ordinary_states": true,
+        "ordinary_tangents": true,
+        "ordinary_feeds": true,
+        "ordinary_volume": true,
+        "ordinary_branches": true,
+        "tight_states": true,
+        "tight_tangents": true,
+        "tight_feeds": true,
+        "tight_volume": true,
+        "tight_branches": true
+      },
+      "comparisons": {
+        "ordinary": {
+          "z": 1.1020011569939925e-09,
+          "logB": 1.815774197666542e-09,
+          "jz": 4.712847312404733e-08,
+          "jlogB": 1.1052432746794238e-08,
+          "feeds": 6.391779119874208e-11,
+          "V": 9.289236047038685e-11
+        },
+        "tight": {
+          "z": 1.2079226507921703e-13,
+          "logB": 2.6645352591003757e-15,
+          "jz": 5.629334332013514e-09,
+          "jlogB": 1.8276269386774402e-10,
+          "feeds": 6.512151928816934e-15,
+          "V": 1.199040866595169e-14
+        }
+      }
+    },
+    {
+      "name": "analytic_inhibition",
+      "case": {
+        "name": "analytic_inhibition",
+        "family": "analytic",
+        "inhibition": [
+          30.0,
+          20.0
+        ],
+        "state": [
+          0.7,
+          0.3,
+          0.25,
+          2.8
+        ],
+        "base": [
+          0.05,
+          0.045,
+          0.04
+        ],
+        "gain": 0.8,
+        "basis": [
+          0,
+          -0.1,
+          0.12
+        ],
+        "offset": [
+          0,
+          0.035,
+          -0.025
+        ],
+        "kappas": [
+          [
+            1,
+            1
+          ],
+          [
+            1.1,
+            0.9
+          ],
+          [
+            0.95,
+            1.05
+          ]
+        ],
+        "expected": [
+          "interior",
+          "interior",
+          "interior"
+        ]
+      },
+      "reference": [
+        0.18232155679395445,
+        0.2511665292709764,
+        0.3402178267109418
+      ],
+      "independent_branches": [
+        "interior",
+        "interior",
+        "interior"
+      ],
+      "checks": {
+        "expected_branches": true,
+        "ordinary_states": true,
+        "ordinary_tangents": true,
+        "ordinary_feeds": true,
+        "ordinary_volume": true,
+        "ordinary_branches": true,
+        "tight_states": true,
+        "tight_tangents": true,
+        "tight_feeds": true,
+        "tight_volume": true,
+        "tight_branches": true,
+        "fd_stable_branch": true,
+        "independent_amount_tangent_vs_fd": true
+      },
+      "comparisons": {
+        "ordinary": {
+          "z": 5.94221893912561e-12,
+          "logB": 6.913669636787745e-11,
+          "jz": 8.327832645704802e-09,
+          "jlogB": 1.1099970720351848e-08,
+          "feeds": 6.307995792376175e-12,
+          "V": 1.2386536241137946e-11
+        },
+        "tight": {
+          "z": 8.798517470154366e-15,
+          "logB": 4.440892098500626e-16,
+          "jz": 4.810374321095878e-12,
+          "jlogB": 1.3589129821411916e-13,
+          "feeds": 6.245004513516506e-17,
+          "V": 1.1102230246251565e-16
+        },
+        "fd_max_abs": 1.8642911214783453e-08
+      }
+    },
+    {
+      "name": "table_inhibition",
+      "case": {
+        "name": "table_inhibition",
+        "family": "table",
+        "inhibition": [
+          35.0,
+          45.0
+        ],
+        "state": [
+          1.1,
+          5.0,
+          4.0,
+          3.3
+        ],
+        "base": [
+          0.05,
+          0.1,
+          0.03
+        ],
+        "gain": 0.6,
+        "basis": [
+          0,
+          -0.08,
+          0.1
+        ],
+        "offset": [
+          0,
+          0.03,
+          -0.03
+        ],
+        "kappas": [
+          [
+            1,
+            1
+          ],
+          [
+            1.1,
+            0.9
+          ],
+          [
+            0.95,
+            1.05
+          ]
+        ],
+        "expected": [
+          "interior",
+          "interior",
+          "interior"
+        ]
+      },
+      "reference": [
+        0.2231435513142097,
+        -0.5952678112942165,
+        -1.3498692983708913
+      ],
+      "independent_branches": [
+        "interior",
+        "interior",
+        "interior"
+      ],
+      "checks": {
+        "expected_branches": true,
+        "ordinary_states": true,
+        "ordinary_tangents": true,
+        "ordinary_feeds": true,
+        "ordinary_volume": true,
+        "ordinary_branches": true,
+        "tight_states": true,
+        "tight_tangents": true,
+        "tight_feeds": true,
+        "tight_volume": true,
+        "tight_branches": true
+      },
+      "comparisons": {
+        "ordinary": {
+          "z": 1.5030865441190144e-11,
+          "logB": 2.113500485734221e-10,
+          "jz": 7.539974378190095e-08,
+          "jlogB": 5.6168536488598875e-09,
+          "feeds": 5.959260862553606e-13,
+          "V": 2.90878432451791e-13
+        },
+        "tight": {
+          "z": 1.1668443988810395e-12,
+          "logB": 7.72715225139109e-14,
+          "jz": 3.070269327665187e-08,
+          "jlogB": 2.319259007066421e-09,
+          "feeds": 5.389091950469549e-14,
+          "V": 2.6201263381153694e-14
+        }
+      }
+    }
+  ],
+  "volume_guard": [
+    {
+      "initial_volume": 1.799999999999,
+      "feed": 0.0,
+      "final_volume": 1.799999999999,
+      "zero_feed": true,
+      "volume_unchanged": true,
+      "initial_state_valid": true,
+      "already_invalid_stays_invalid": true
+    },
+    {
+      "initial_volume": 1.8,
+      "feed": 0.0,
+      "final_volume": 1.8,
+      "zero_feed": true,
+      "volume_unchanged": true,
+      "initial_state_valid": true,
+      "already_invalid_stays_invalid": true
+    },
+    {
+      "initial_volume": 1.80001,
+      "feed": 0.0,
+      "final_volume": 1.80001,
+      "zero_feed": true,
+      "volume_unchanged": true,
+      "initial_state_valid": false,
+      "already_invalid_stays_invalid": true
+    }
+  ],
+  "kink_convention": [
+    {
+      "feed": 0.0,
+      "jz": 14.441895264946176,
+      "inward_fd": 14.442783547119475,
+      "absolute_error": 0.0008882821732996149,
+      "pass": true,
+      "gain_has_no_effect": true
+    },
+    {
+      "feed": 0.2,
+      "jz": 0.6386916840226223,
+      "inward_fd": 0.6386963845583793,
+      "absolute_error": 4.7005357569629425e-06,
+      "pass": true,
+      "gain_has_no_effect": true
+    }
+  ],
+  "elapsed_seconds": 15.255009584128857,
+  "protocol_sha256": "7429a229ecce1e548696fcaa8f65f0cc2f1476221e6b4596310108135f2701c3"
+}

@@ -1,0 +1,508 @@
+{
+  "scope": "Numerical/formulation verification on a synthetic two-flux convex problem; no biological validation, solver superiority or new sensitivity-theory claim.",
+  "protocol": {
+    "horizon_h": 12.0,
+    "output_times": 601,
+    "objective": "max 0.7 v1 + 0.3 v2",
+    "equality": "v1-v2=0",
+    "lower": ".35+.25 sin(.8 t)",
+    "upper": "1.65+.30 cos(.6 t+.2)",
+    "bounds_for_both_fluxes": true,
+    "primary_mu": 0.2,
+    "physical_bound_relaxation": 0.0,
+    "initialisation": "closed-form finite-barrier solution; identical for complete and faulty derivatives",
+    "seed": null,
+    "seed_note": "Entire calculation is deterministic; no sampling or training.",
+    "faults": "Omitted-bound terms are deliberately incorrect diagnostic formulas, not alternative dFBA methods.",
+    "fault_stop": "Terminate at minimum slack 1e-6, before leaving the strict interior; no state clipping.",
+    "units": "Flux, objective and bound scales are nondimensional; t is a chosen synthetic time coordinate expressed in h."
+  },
+  "environment": {
+    "python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "platform": "macOS-14.6.1-arm64-arm-64bit",
+    "numpy": "2.2.2",
+    "scipy": "1.15.1"
+  },
+  "primary": {
+    "mu": 0.2,
+    "rtol": 1e-10,
+    "atol": 1e-12,
+    "max_step_h": 0.2,
+    "method": "DOP853",
+    "diagnostic": "complete",
+    "solver_success": true,
+    "solver_message": "The solver successfully reached the end of the integration interval.",
+    "terminal_time_h": 12.0,
+    "reached_horizon": true,
+    "interior_guard_event_time_h": [],
+    "nfev": 917,
+    "accepted_steps": 61,
+    "wall_seconds": 0.02700804080814123,
+    "max_abs_flux_error": 1.0658141036401503e-14,
+    "max_abs_multiplier_error": 8.326672684688674e-17,
+    "max_equality_residual": 0.0,
+    "max_stationarity_residual": 3.452793606584237e-14,
+    "minimum_output_slack": 0.2602802244118101
+  },
+  "independent_root_max_errors": [
+    1.5543122344752192e-15,
+    1.5543122344752192e-15,
+    4.163336342344337e-15
+  ],
+  "finite_difference_sensitivity": [
+    {
+      "step": 0.01,
+      "lower_sensitivity_max_abs_error": 4.59394426510773e-06,
+      "upper_sensitivity_max_abs_error": 4.5939442752107595e-06
+    },
+    {
+      "step": 0.001,
+      "lower_sensitivity_max_abs_error": 4.5938526427313775e-08,
+      "upper_sensitivity_max_abs_error": 4.5938636450415515e-08
+    },
+    {
+      "step": 0.0001,
+      "lower_sensitivity_max_abs_error": 4.6068271419841267e-10,
+      "upper_sensitivity_max_abs_error": 4.5973880258287636e-10
+    },
+    {
+      "step": 1e-05,
+      "lower_sensitivity_max_abs_error": 1.830466334062919e-11,
+      "upper_sensitivity_max_abs_error": 1.7742918245744477e-11
+    },
+    {
+      "step": 1e-06,
+      "lower_sensitivity_max_abs_error": 1.41371497841547e-10,
+      "upper_sensitivity_max_abs_error": 2.4186030955775095e-10
+    }
+  ],
+  "fault_diagnostics": [
+    {
+      "mu": 0.2,
+      "rtol": 1e-10,
+      "atol": 1e-12,
+      "max_step_h": 0.2,
+      "method": "DOP853",
+      "diagnostic": "omit_lower",
+      "solver_success": true,
+      "solver_message": "The solver successfully reached the end of the integration interval.",
+      "terminal_time_h": 12.0,
+      "reached_horizon": true,
+      "interior_guard_event_time_h": [],
+      "nfev": 917,
+      "accepted_steps": 61,
+      "wall_seconds": 0.024354124907404184,
+      "max_abs_flux_error": 0.03659127781336524,
+      "max_abs_multiplier_error": 1.1102230246251565e-16,
+      "max_equality_residual": 0.0,
+      "max_stationarity_residual": 0.10810154987213527,
+      "minimum_output_slack": 0.2475648435268094
+    },
+    {
+      "mu": 0.2,
+      "rtol": 1e-10,
+      "atol": 1e-12,
+      "max_step_h": 0.2,
+      "method": "DOP853",
+      "diagnostic": "omit_upper",
+      "solver_success": true,
+      "solver_message": "A termination event occurred.",
+      "terminal_time_h": 2.290947185100124,
+      "reached_horizon": false,
+      "interior_guard_event_time_h": [
+        2.290947185100124
+      ],
+      "nfev": 197,
+      "accepted_steps": 13,
+      "wall_seconds": 0.005569083150476217,
+      "max_abs_flux_error": 0.26573291191997894,
+      "max_abs_multiplier_error": 0.0,
+      "max_equality_residual": 0.0,
+      "max_stationarity_residual": 199999.31087263484,
+      "minimum_output_slack": 9.999999999177334e-07
+    }
+  ],
+  "tolerance_refinement": [
+    {
+      "mu": 0.2,
+      "rtol": 1e-05,
+      "atol": 1.0000000000000001e-07,
+      "max_step_h": 2.0,
+      "method": "DOP853",
+      "diagnostic": "complete",
+      "solver_success": true,
+      "solver_message": "The solver successfully reached the end of the integration interval.",
+      "terminal_time_h": 12.0,
+      "reached_horizon": true,
+      "interior_guard_event_time_h": [],
+      "nfev": 107,
+      "accepted_steps": 7,
+      "wall_seconds": 0.002958499826490879,
+      "max_abs_flux_error": 7.819281391263644e-07,
+      "max_abs_multiplier_error": 7.771561172376096e-16,
+      "max_equality_residual": 0.0,
+      "max_stationarity_residual": 2.5237152436741184e-06,
+      "minimum_output_slack": 0.2602808098654623
+    },
+    {
+      "mu": 0.2,
+      "rtol": 1e-07,
+      "atol": 1e-09,
+      "max_step_h": 2.0,
+      "method": "DOP853",
+      "diagnostic": "complete",
+      "solver_success": true,
+      "solver_message": "The solver successfully reached the end of the integration interval.",
+      "terminal_time_h": 12.0,
+      "reached_horizon": true,
+      "interior_guard_event_time_h": [],
+      "nfev": 134,
+      "accepted_steps": 8,
+      "wall_seconds": 0.0038417079485952854,
+      "max_abs_flux_error": 2.2238461516721486e-07,
+      "max_abs_multiplier_error": 6.938893903907228e-16,
+      "max_equality_residual": 0.0,
+      "max_stationarity_residual": 7.111994808628452e-07,
+      "minimum_output_slack": 0.26028017721683305
+    },
+    {
+      "mu": 0.2,
+      "rtol": 1e-09,
+      "atol": 1.0000000000000001e-11,
+      "max_step_h": 2.0,
+      "method": "DOP853",
+      "diagnostic": "complete",
+      "solver_success": true,
+      "solver_message": "The solver successfully reached the end of the integration interval.",
+      "terminal_time_h": 12.0,
+      "reached_horizon": true,
+      "interior_guard_event_time_h": [],
+      "nfev": 272,
+      "accepted_steps": 14,
+      "wall_seconds": 0.007280000019818544,
+      "max_abs_flux_error": 2.510237573360996e-09,
+      "max_abs_multiplier_error": 1.1102230246251565e-16,
+      "max_equality_residual": 0.0,
+      "max_stationarity_residual": 6.3619541856851924e-09,
+      "minimum_output_slack": 0.26028022456701616
+    },
+    {
+      "mu": 0.2,
+      "rtol": 1e-11,
+      "atol": 9.999999999999999e-14,
+      "max_step_h": 2.0,
+      "method": "DOP853",
+      "diagnostic": "complete",
+      "solver_success": true,
+      "solver_message": "The solver successfully reached the end of the integration interval.",
+      "terminal_time_h": 12.0,
+      "reached_horizon": true,
+      "interior_guard_event_time_h": [],
+      "nfev": 404,
+      "accepted_steps": 22,
+      "wall_seconds": 0.01085258275270462,
+      "max_abs_flux_error": 4.814304510603051e-11,
+      "max_abs_multiplier_error": 1.6653345369377348e-16,
+      "max_equality_residual": 0.0,
+      "max_stationarity_residual": 1.194094823020464e-10,
+      "minimum_output_slack": 0.26028022441394816
+    }
+  ],
+  "barrier_refinement": [
+    {
+      "mu": 0.2,
+      "physical_bound_relaxation": 0.0,
+      "nominal_primal_dual_gap_bound": 0.8,
+      "maximum_LP_objective_gap": 0.3052561423550224,
+      "minimum_LP_objective_gap": 0.2602802244118103,
+      "maximum_gap_divided_by_bound": 0.381570177943778,
+      "maximum_flux_error": 1.0658141036401503e-14,
+      "maximum_stationarity_residual": 3.452793606584237e-14,
+      "minimum_output_slack": 0.2602802244118101,
+      "reached_horizon": true,
+      "nfev": 917,
+      "wall_seconds": 0.024241666309535503
+    },
+    {
+      "mu": 0.05,
+      "physical_bound_relaxation": 0.0,
+      "nominal_primal_dual_gap_bound": 0.2,
+      "maximum_LP_objective_gap": 0.09375105030412545,
+      "minimum_LP_objective_gap": 0.09015049075685422,
+      "maximum_gap_divided_by_bound": 0.46875525152062725,
+      "maximum_flux_error": 1.7763568394002505e-15,
+      "maximum_stationarity_residual": 1.099120794378905e-14,
+      "minimum_output_slack": 0.09015049075685444,
+      "reached_horizon": true,
+      "nfev": 917,
+      "wall_seconds": 0.02380312466993928
+    },
+    {
+      "mu": 0.01,
+      "physical_bound_relaxation": 0.0,
+      "nominal_primal_dual_gap_bound": 0.04,
+      "maximum_LP_objective_gap": 0.01974910160682919,
+      "minimum_LP_objective_gap": 0.019602317369883382,
+      "maximum_gap_divided_by_bound": 0.49372754017072973,
+      "maximum_flux_error": 1.9984014443252818e-15,
+      "maximum_stationarity_residual": 5.1736392947532295e-14,
+      "minimum_output_slack": 0.019602317369882938,
+      "reached_horizon": true,
+      "nfev": 917,
+      "wall_seconds": 0.023753624875098467
+    },
+    {
+      "mu": 0.002,
+      "physical_bound_relaxation": 0.0,
+      "nominal_primal_dual_gap_bound": 0.008,
+      "maximum_LP_objective_gap": 0.003989962547824355,
+      "minimum_LP_objective_gap": 0.003984086654765351,
+      "maximum_gap_divided_by_bound": 0.4987453184780444,
+      "maximum_flux_error": 6.661338147750939e-16,
+      "maximum_stationarity_residual": 1.0480505352461478e-13,
+      "minimum_output_slack": 0.003984086654765573,
+      "reached_horizon": true,
+      "nfev": 917,
+      "wall_seconds": 0.023473583161830902
+    },
+    {
+      "mu": 0.0004,
+      "physical_bound_relaxation": 0.0,
+      "nominal_primal_dual_gap_bound": 0.0016,
+      "maximum_LP_objective_gap": 0.0007995984994859651,
+      "minimum_LP_objective_gap": 0.0007993634565188756,
+      "maximum_gap_divided_by_bound": 0.49974906217872817,
+      "maximum_flux_error": 1.1102230246251565e-15,
+      "maximum_stationarity_residual": 7.425171588693047e-13,
+      "minimum_output_slack": 0.0007993634565188756,
+      "reached_horizon": true,
+      "nfev": 917,
+      "wall_seconds": 0.02336233388632536
+    }
+  ],
+  "checks": [
+    {
+      "check": "Equality matrix has full row rank",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Analytical all-time bound-width guarantee",
+      "passed": true,
+      "detail": {
+        "lower_range": [
+          0.1,
+          0.6
+        ],
+        "upper_range": [
+          1.35,
+          1.95
+        ],
+        "minimum_guaranteed_width": 0.75
+      }
+    },
+    {
+      "check": "Analytic solution has positive slacks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Analytic equality residual",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Analytic stationarity residual",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Independent scalar root agrees with closed form",
+      "passed": true,
+      "detail": [
+        1.5543122344752192e-15,
+        1.5543122344752192e-15,
+        4.163336342344337e-15
+      ]
+    },
+    {
+      "check": "Complete derivative reaches full horizon",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Complete derivative retains positive output slacks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Complete derivative equality residual",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Complete derivative flux error",
+      "passed": true,
+      "detail": 1.0658141036401503e-14
+    },
+    {
+      "check": "Complete derivative stationarity residual",
+      "passed": true,
+      "detail": 3.452793606584237e-14
+    },
+    {
+      "check": "Complete derivative multiplier error",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Both bound sensitivities agree with central differences",
+      "passed": true,
+      "detail": {
+        "step": 1e-05,
+        "lower_sensitivity_max_abs_error": 1.830466334062919e-11,
+        "upper_sensitivity_max_abs_error": 1.7742918245744477e-11
+      }
+    },
+    {
+      "check": "Both bound sensitivities are positive and sum to one",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "KKT rate equals partial-sensitivity chain rule",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "omit_lower is detected as an incorrect formula",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "omit_upper is detected as an incorrect formula",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Fault cases are explicitly labelled diagnostics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Tolerance run full horizon 1e-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Tolerance run full horizon 1e-07",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Tolerance run full horizon 1e-09",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Tolerance run full horizon 1e-11",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Tighter integration reduces error in this sweep",
+      "passed": true,
+      "detail": [
+        7.819281391263644e-07,
+        2.2238461516721486e-07,
+        2.510237573360996e-09,
+        4.814304510603051e-11
+      ]
+    },
+    {
+      "check": "Central-path objective certificate 0.2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Barrier-refinement full horizon and positive slacks 0.2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Barrier-refinement flux error 0.2",
+      "passed": true,
+      "detail": 1.0658141036401503e-14
+    },
+    {
+      "check": "Central-path objective certificate 0.05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Barrier-refinement full horizon and positive slacks 0.05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Barrier-refinement flux error 0.05",
+      "passed": true,
+      "detail": 1.7763568394002505e-15
+    },
+    {
+      "check": "Central-path objective certificate 0.01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Barrier-refinement full horizon and positive slacks 0.01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Barrier-refinement flux error 0.01",
+      "passed": true,
+      "detail": 1.9984014443252818e-15
+    },
+    {
+      "check": "Central-path objective certificate 0.002",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Barrier-refinement full horizon and positive slacks 0.002",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Barrier-refinement flux error 0.002",
+      "passed": true,
+      "detail": 6.661338147750939e-16
+    },
+    {
+      "check": "Central-path objective certificate 0.0004",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Barrier-refinement full horizon and positive slacks 0.0004",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Barrier-refinement flux error 0.0004",
+      "passed": true,
+      "detail": 1.1102230246251565e-15
+    },
+    {
+      "check": "Barrier refinement reduces the LP objective gap",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "checks_passed": 39,
+  "checks_total": 39,
+  "passed": true,
+  "elapsed_seconds": 0.30967479199171066,
+  "script_sha256": "6e6dbb72b9289e62ecc643bc67bb862f8647ab631ba6eddb9e305e938a866cc2"
+}

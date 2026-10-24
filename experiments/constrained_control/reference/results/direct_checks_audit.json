@@ -1,0 +1,282 @@
+{
+  "status": "passed",
+  "passed_checks": 43,
+  "checks": [
+    {
+      "check": "both processes exited successfully",
+      "passed": true
+    },
+    {
+      "check": "thread limits all one",
+      "passed": true
+    },
+    {
+      "check": "verifier unchanged since launch",
+      "passed": true
+    },
+    {
+      "check": "backend source unchanged flux_model.py",
+      "passed": true
+    },
+    {
+      "check": "backend source unchanged primal_dual.py",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart input hash",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart CSV hash",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart prospective identity",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart unchanged controls",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart unchanged initial",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart trajectory endpoints",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart saved terminal",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart terminal amounts",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart biomass amount arithmetic",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart analytic volume all rows",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart feed bounds",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart protocol volume tolerance",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart ratio arithmetic",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart ratio nominal feasibility",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart all stored states positive",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart RHS stage positivity",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart KKT/RHS count consistency",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart primal dual stopping",
+      "passed": true
+    },
+    {
+      "check": "direct_multistart nominal feasible",
+      "passed": true
+    },
+    {
+      "check": "mlp input hash",
+      "passed": true
+    },
+    {
+      "check": "mlp CSV hash",
+      "passed": true
+    },
+    {
+      "check": "mlp prospective identity",
+      "passed": true
+    },
+    {
+      "check": "mlp unchanged controls",
+      "passed": true
+    },
+    {
+      "check": "mlp unchanged initial",
+      "passed": true
+    },
+    {
+      "check": "mlp trajectory endpoints",
+      "passed": true
+    },
+    {
+      "check": "mlp saved terminal",
+      "passed": true
+    },
+    {
+      "check": "mlp terminal amounts",
+      "passed": true
+    },
+    {
+      "check": "mlp biomass amount arithmetic",
+      "passed": true
+    },
+    {
+      "check": "mlp analytic volume all rows",
+      "passed": true
+    },
+    {
+      "check": "mlp feed bounds",
+      "passed": true
+    },
+    {
+      "check": "mlp protocol volume tolerance",
+      "passed": true
+    },
+    {
+      "check": "mlp ratio arithmetic",
+      "passed": true
+    },
+    {
+      "check": "mlp ratio nominal feasibility",
+      "passed": true
+    },
+    {
+      "check": "mlp all stored states positive",
+      "passed": true
+    },
+    {
+      "check": "mlp RHS stage positivity",
+      "passed": true
+    },
+    {
+      "check": "mlp KKT/RHS count consistency",
+      "passed": true
+    },
+    {
+      "check": "mlp primal dual stopping",
+      "passed": true
+    },
+    {
+      "check": "mlp nominal feasible",
+      "passed": true
+    }
+  ],
+  "comparisons": [
+    {
+      "method": "direct_multistart",
+      "condition_id": 0,
+      "target_ratio": 1.0,
+      "seed": 3101,
+      "policy_selection": "prospective protocol regardless of method ranking",
+      "terminal_direct": [
+        1.8000000009509478,
+        25.246736960037065,
+        25.46823607611139,
+        0.04329898717292485
+      ],
+      "terminal_tight_table": [
+        1.8000000009509463,
+        25.246499833545133,
+        25.46861319502093,
+        0.04329840426264192
+      ],
+      "terminal_direct_minus_tight_table": [
+        1.5543122344752192e-15,
+        0.00023712649193186053,
+        -0.00037711890954028604,
+        5.829102829313371e-07
+      ],
+      "biomass_direct_gDW": 91.28695151329451,
+      "biomass_tight_table_gDW": 91.28720349964627,
+      "biomass_difference_gDW": -0.0002519863517562726,
+      "biomass_relative_difference_percent": -0.0002760368836951521,
+      "absolute_log_ratio_error_direct": 0.008735113565796046,
+      "absolute_log_ratio_error_tight_table": 0.008759313283861123,
+      "signed_log_ratio_direct_minus_tight_table": 2.419971806507694e-05,
+      "nominal_ratio_log_margin": 0.0012152172873720456,
+      "optimization_ratio_log_margin": 0.00026488643420395294,
+      "volume_raw_margin_L": -9.509477649771725e-10,
+      "volume_acceptance_margin_L": 9.049052235022828e-09,
+      "volume_strict_pass": false,
+      "nominal_feasible": true,
+      "rhs_evaluations": 1190,
+      "KKT_solve_attempts": 2380,
+      "failed_KKT_attempts": 0,
+      "max_equality_residual": 3.5829850789064774e-12,
+      "max_primal_dual_residual": 9.88016328111143e-12,
+      "max_explicit_barrier_stationarity_residual": 3.7035809485589815e-06,
+      "minimum_slack": 2.885046529112478e-07,
+      "wall_seconds_under_concurrency": 572.4444285421632,
+      "result_sha256": "cb9c5d2e76130ee3f208a47dc588d2d5674d0780d0e272dc5e344af8c4661f67",
+      "trajectory_sha256": "469e79ed2cef58ebefc836063e6ef3234012171025f04b9ef7460f2723d27652",
+      "policy_source_sha256": "c2f5be8b081ee58242c2b4e9f89c7cd77807b24edf41508a36a1f624b1e2e6b0"
+    },
+    {
+      "method": "mlp",
+      "condition_id": 0,
+      "target_ratio": 1.0,
+      "seed": 3101,
+      "policy_selection": "prospective protocol regardless of method ranking",
+      "terminal_direct": [
+        1.7999999999999636,
+        25.22240738531664,
+        25.449829312653147,
+        0.0955064725894351
+      ],
+      "terminal_tight_table": [
+        1.799999999999962,
+        25.222183406842404,
+        25.450202663315313,
+        0.09550845095625221
+      ],
+      "terminal_direct_minus_tight_table": [
+        1.5543122344752192e-15,
+        0.00022397847423505368,
+        -0.00037335066216570567,
+        -1.9783668171041713e-06
+      ],
+      "biomass_direct_gDW": 91.21002605634376,
+      "biomass_tight_table_gDW": 91.21029492628196,
+      "biomass_difference_gDW": -0.00026886993819630334,
+      "biomass_relative_difference_percent": -0.0002947802530517407,
+      "absolute_log_ratio_error_direct": 0.008976254815765828,
+      "absolute_log_ratio_error_tight_table": 0.008999804951690952,
+      "signed_log_ratio_direct_minus_tight_table": 2.355013592512424e-05,
+      "nominal_ratio_log_margin": 0.0009740760374022644,
+      "optimization_ratio_log_margin": 2.3745184234171685e-05,
+      "volume_raw_margin_L": 3.6415315207705135e-14,
+      "volume_acceptance_margin_L": 1.0000036415315208e-08,
+      "volume_strict_pass": true,
+      "nominal_feasible": true,
+      "rhs_evaluations": 1418,
+      "KKT_solve_attempts": 2836,
+      "failed_KKT_attempts": 0,
+      "max_equality_residual": 3.705970722673599e-12,
+      "max_primal_dual_residual": 9.995991104933273e-12,
+      "max_explicit_barrier_stationarity_residual": 1.5302801599569242e-06,
+      "minimum_slack": 2.893302861851379e-07,
+      "wall_seconds_under_concurrency": 649.571974999737,
+      "result_sha256": "81de5600fa4be5a10a9ee7623364ea99f583c882a93d881a7716a77e934d4882",
+      "trajectory_sha256": "7e6bfd891b8c2c4204e494788594b720b9f76f8be4a85fe694dcbc326b757948",
+      "policy_source_sha256": "f843d2af5f5ddf31d848c47404217db377a0d239277bef166d1468980ed52f4e"
+    }
+  ],
+  "common_launch_to_detected_completion_seconds": 650.6091168331914,
+  "completion_detection_poll_interval_seconds": 5,
+  "timing_interpretation": "Two concurrent verification jobs, never optimization-method timing comparisons. Per-check internal wall time is in each result; common wall time includes launch and completion detection (up to5s polling delay).",
+  "scientific_scope": "Prospectively selected two policies at one held-out condition and target; checks same finite-barrier backend without flux-table interpolation. Differences also include amount-versus-concentration integration and solver tolerance. Not independent biological validation, a full-test-set direct guarantee, or global optimality evidence. Explicit eliminated-barrier stationarity is reported separately from the primal-dual stopping residual."
+}

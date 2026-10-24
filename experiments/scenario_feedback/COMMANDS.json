@@ -1,0 +1,71 @@
+{
+  "working_directory": "the newly prepared study directory",
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "commands": [
+    [
+      "python",
+      "-B",
+      "scripts/validate_kernel.py"
+    ],
+    [
+      "python",
+      "-B",
+      "audit/probe_policy_sensitivities.py"
+    ],
+    [
+      "python",
+      "-B",
+      "audit/test_failure_routing.py"
+    ],
+    [
+      "python",
+      "-B",
+      "scripts/run_parallel.py"
+    ],
+    [
+      "python",
+      "-B",
+      "scripts/run_parallel.py",
+      "--timing"
+    ],
+    [
+      "python",
+      "-B",
+      "scripts/summarize.py",
+      "--label",
+      "locked"
+    ],
+    [
+      "python",
+      "-B",
+      "scripts/summarize_timing.py"
+    ],
+    [
+      "python",
+      "-B",
+      "audit/replay_campaign.py",
+      "--results",
+      "results/locked"
+    ],
+    [
+      "python",
+      "-B",
+      "audit/forecast_transport.py",
+      "--results",
+      "results/locked",
+      "--output",
+      "audit/forecast_transport_results.json"
+    ],
+    [
+      "python",
+      "-B",
+      "audit/optimization_budget.py",
+      "--execute"
+    ]
+  ],
+  "scope": "Long study commands; not executed by preparation or package verification. Inspect scientific audit flags rather than treating a nonzero audit status as permission to loosen tolerances."
+}

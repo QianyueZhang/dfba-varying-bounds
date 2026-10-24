@@ -1,0 +1,80 @@
+{
+  "mode": "pilot",
+  "hashes": {
+    "scripts/run_study.py": "7382866d600897b317d54c81dd6b58567d76e20e9a8035ce2651f405a5f89f9a",
+    "scripts/kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6",
+    "scripts/controllers.py": "ad4ccfb43b430ef52d584fc9152979be074d747bd8ccd34dffac2e821cc819ad",
+    "scripts/base_model.py": "4aa2ce6ee5246ce0f2335aa16a8e37855c01381a8d55307d781201ecd3a5d9a4",
+    "scripts/model.py": "293a7441d5d4f6cb891490d10e8a33136c0266253c61524a46ae2c26fd5ecf68",
+    "scripts/freeze_protocol.py": "ed353d052ae8f84ada1936a883cd1922c448017b98505fb1f50d981797c5ff0b",
+    "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb"
+  },
+  "cases": [
+    {
+      "id": "dev_nominal",
+      "family": "table",
+      "initial_ratio": 1.0,
+      "initial_glucose": 20.0,
+      "target_ratio": 1.0,
+      "kappa_before": [
+        1.0,
+        1.0
+      ],
+      "kappa_after": [
+        1.0,
+        1.0
+      ],
+      "change_stage": 99
+    },
+    {
+      "id": "dev_shift",
+      "family": "table",
+      "initial_ratio": 1.0,
+      "initial_glucose": 20.0,
+      "target_ratio": 1.0,
+      "kappa_before": [
+        1.0,
+        1.0
+      ],
+      "kappa_after": [
+        1.15,
+        0.85
+      ],
+      "change_stage": 3
+    },
+    {
+      "id": "dev_analytic",
+      "family": "analytic",
+      "initial_ratio": 1.0,
+      "initial_glucose": 20.0,
+      "target_ratio": 1.0,
+      "kappa_before": [
+        1.0,
+        1.0
+      ],
+      "kappa_after": [
+        1.15,
+        0.85
+      ],
+      "change_stage": 3
+    }
+  ],
+  "methods": [
+    "ce_limited",
+    "ce_direct",
+    "scenario_open",
+    "scenario_feedback",
+    "scenario_managed"
+  ],
+  "python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "scipy": "1.15.1",
+  "numpy": "2.2.2",
+  "platform": "macOS-14.6.1-arm64-arm-64bit",
+  "native_rhs": true,
+  "native_initialization_seconds": 0.11741187516599894,
+  "native_versions": {
+    "numba": "0.68.0",
+    "llvmlite": "0.50.0"
+  },
+  "started_utc": "2026-10-24T02:18:12Z"
+}

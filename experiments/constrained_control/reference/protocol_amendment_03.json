@@ -1,0 +1,11 @@
+{
+  "amendment": 3,
+  "created_utc": "2026-10-22T11:20:58Z",
+  "timing": "Before any study data generation or model/test evaluation",
+  "changes": {
+    "policy_selection": "Choose largest biomass among ordinary evaluations satisfying optimization log-ratio tolerance0.009+1e-7 and volume<=1.8+1e-8. If none, label acceptance-only or least-violation fallback explicitly.",
+    "failure_accounting": "Cache failed simulator attempts by exact control; each distinct attempted control consumes budget. Report successful and failed counts, failure-only run rows, proposal/tight-check errors and elapsed costs; continue prespecified cases.",
+    "timing_controls": "Defer expensive direct KKT trajectories until completion of the tabulated campaign to avoid avoidable load confounding."
+  },
+  "reason": "Independent review before evaluation identified selection-margin and failed-budget edge cases."
+}

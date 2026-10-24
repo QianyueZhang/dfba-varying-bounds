@@ -1,0 +1,132 @@
+{
+  "study": "Stronger continuous minimax common-open and causal comparisons",
+  "frozen_before_evaluation": true,
+  "frozen_utc": "2026-10-24T08:29:08.408026+00:00",
+  "roots": [
+    "analytic_v0.9_uniform",
+    "analytic_v1.3_uniform",
+    "analytic_v1.7_uniform",
+    "table_v0.9_uniform",
+    "table_v1.3_uniform",
+    "table_v1.7_uniform"
+  ],
+  "targets": [
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    2.0
+  ],
+  "design": "Development-derived six uniform prescribed roots and six fixed targets;36 problems, not new biological replicates.",
+  "methods": [
+    "Continuous common-open committed plan",
+    "Continuous causal first action with observation-only second-action reoptimization"
+  ],
+  "objective": "Minimize worst absolute terminal log-ratio error over nine independent K\u00d7K paths; ties worst log biomass then insertion order; no economic objective switch.",
+  "uncertainty": [
+    [
+      1,
+      1
+    ],
+    [
+      0.975,
+      1.025
+    ],
+    [
+      1.025,
+      0.975
+    ]
+  ],
+  "horizon_h": 4,
+  "interval_h": 2,
+  "feed_max_L_h": 0.2,
+  "volume_cap_L": 1.8,
+  "volume_guard_L": 1e-11,
+  "labels": {
+    "inner": 0.00748,
+    "outer": 0.0075,
+    "actual": "log(1.01)",
+    "comparison": "exact <= threshold; no numerical comparison tolerance added to labels"
+  },
+  "optimizer": {
+    "parameterization": "[0,1]^2 open / [0,1]^4 causal, stage-two bound accounts for selected first feed",
+    "de_seeds": [
+      20261024,
+      20261025
+    ],
+    "de_population": 24,
+    "de_max_generations": 24,
+    "de_tol": 0,
+    "de_atol": 0,
+    "polish": false,
+    "local_starts": 5,
+    "local_rule": "41grid, bothDEendpoints, midpoint, best retained",
+    "local_maxiter": 100,
+    "local_ftol": 1e-11,
+    "local_fd_eps": 1e-06,
+    "preserved": "Every evaluated feed candidate and metrics, selected complete states, all solver statuses including failures and budget exhaustion"
+  },
+  "incumbents": {
+    "grid": 41,
+    "rule": "Re-evaluate exact saved open/causal feed values; retain them without encode/decode alteration. No81/161grid initial seeding.",
+    "causal_embedding": "Retain exact best-found open plan in causal class. Shared open optimization is prerequisite cost, not free information.",
+    "costs": "Count41tree construction once per root as shared offline prerequisite; retain per-root seconds/transitions and no division implying online cost."
+  },
+  "causality": "Reject candidate if exactly identical predicted full states receive different controls. Planned tree objective remains distinct from independently deployed policy.",
+  "deployed_second": {
+    "common_open": "Commit saved second feed",
+    "causal": "Observed independently integrated full state only; all selected three second feeds supplied as common seeds to every state.",
+    "scan_points": 161,
+    "local_rule": "Refine every discrete local minimum bracket with bounded minimize_scalar",
+    "local_maxiter": 64,
+    "xatol": 1e-11,
+    "selection": "Minimum error of all evaluated physical candidates; worstlogB then feed tie break",
+    "limit": "Best evaluated continuation, not scalar global optimum or uncertain-observation controller"
+  },
+  "audit": {
+    "preflight_gate": "audit/grid_observation_integrator_gate.json mustpass with source hashes unchanged",
+    "independent_model": "Physical amounts DOP853, independent rate/interpolation assembly; shared scientific tables",
+    "rtol_effective": 2.220446049250313e-14,
+    "atol": 2e-15,
+    "max_step_h": 0.005,
+    "all_assigned_paths_per_method": 324,
+    "amount_allowance": "2e-7 +2e-8 abs(referenceamount)",
+    "volume_abs_allowance": 2e-13,
+    "log_ratio_abs_allowance": 1e-07,
+    "substrate_floor": -2e-07,
+    "records": "Matched interval and cumulative same-feed chain comparisons distinct. Planned-vs-deployed objectives distinct. Physical/label/numerical failures all retained."
+  },
+  "runtime": "Single native thread per process;three root workers requested; cumulative per-method CPU-like elapsed sums and total wall separately. Offline construction is not real-time controller latency.",
+  "limitations": [
+    "Best-found continuous candidates, not globally certified optimum",
+    "Same finite K uncertainty and two related mathematical families",
+    "Exact full-state observation",
+    "Only36 prespecified roots-targets; no new experimental validation"
+  ],
+  "source_sha256": {
+    "scripts/continuous_solver.py": "df179249e9e3b8aea5ce9bbf1217c488611a78da8be973b3f6281d11bbcce33c",
+    "scripts/continuous_audit.py": "9e8d0422fb2eb184ba33d05cc815fb75845721311acb7168acf2e6345609f267",
+    "scripts/continuous_run.py": "dfdf744064d2943b39c3e800f76c7d8a1eff9a3e7930c895661ef59ad7bd2a31",
+    "scripts/engine.py": "4d04e127bc7180d7ec24c63a9fed4384df10b2fbd86e4fca6610c7b3420b561b",
+    "audit/independent_amount_model.py": "b0b42a3ab3bab1a014367fad97d9bdf71152ba7e209c8877eb4ad118c5b0995e",
+    "vendor/prior_kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6"
+  },
+  "input_sha256": {
+    "data/prescribed_roots.json": "16ac9df9afc4d5bc3debc3f75cc6bae59892efe2ca91d2c353985f065ff00e66",
+    "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb",
+    "audit/grid_observation_integrator_gate.json": "04b1268496421fb7935ce54b85e42a5eaf259a28b5967da4e1ffa10f3b746a36",
+    "results/grid_observation_analytic_v0.9_uniform_grid41.json": "380ad5a9e4540922fa1cd8cdfaa9e687cc997c0a3e25e5d253785a166d0ef869",
+    "results/trees/analytic_v0.9_uniform_41.json": "8edc52b88a502e0d31bf16302edb650e621a86a20838ef0693200355a07fb01a",
+    "results/grid_observation_analytic_v1.3_uniform_grid41.json": "24039f1a6b116583f3c6a96bdbad86adcc6c8aca93c02412a50a7728ceaef1c2",
+    "results/trees/analytic_v1.3_uniform_41.json": "ca25bcb5138eb489d547a49395d2664a3e4cf69923fb8840fffc0e81a43c1463",
+    "results/grid_observation_analytic_v1.7_uniform_grid41.json": "a0f4de5d9fc8610d370f129fe444fe5cf637688b231b51ec738f16f61621545a",
+    "results/trees/analytic_v1.7_uniform_41.json": "d6c66a2c9d2120ef76e95a53b3c15bf57464a4705731cf2151dac729c0ae77b0",
+    "results/grid_observation_table_v0.9_uniform_grid41.json": "e47ca7eb552576df30caa979fc41acf430ab34ad4d92284a4fe96ef691761f61",
+    "results/trees/table_v0.9_uniform_41.json": "50653d9e7c72d51523a5a5232abae9a502a39c63cca2f8fa419ce1c01f9ce4b7",
+    "results/grid_observation_table_v1.3_uniform_grid41.json": "5bdc2d14fd38b20722132ac2fe85e4ff47b5da5899152fdd888971cbdcbddd03",
+    "results/trees/table_v1.3_uniform_41.json": "7a07851387ac4d7b744b9dba3ea37f0bf94e98fe3ff36299ccd871a4fc295833",
+    "results/grid_observation_table_v1.7_uniform_grid41.json": "c3253659165ac9bf4c387f3aefa58dfdf3de7506c473d65c09262947b04d6f44",
+    "results/trees/table_v1.7_uniform_41.json": "4c4450d34009c2f46e2b7705b76a01a136882d77627a96d2a1a9fc00ac743a77"
+  }
+}

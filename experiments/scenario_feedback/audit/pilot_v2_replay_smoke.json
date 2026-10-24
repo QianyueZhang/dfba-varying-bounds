@@ -1,0 +1,350 @@
+{
+  "passed": true,
+  "hard_checks_passed": true,
+  "development_smoke": true,
+  "assigned_episodes": 6,
+  "replayed_episodes": 1,
+  "missing": [
+    "dev_nominal__scenario_feedback.json",
+    "dev_nominal__scenario_managed.json",
+    "dev_shift__ce_limited.json",
+    "dev_shift__scenario_feedback.json",
+    "dev_shift__scenario_managed.json"
+  ],
+  "failures": [],
+  "qualifications": [],
+  "maxima": {
+    "actual_volume_absolute_error": 0.0,
+    "actual_log_SC_absolute_error": 3.496533930447132e-10,
+    "actual_log_KP_absolute_error": 4.725193569754538e-10,
+    "actual_glucose_amount_absolute_error": 1.3345977656342711e-09,
+    "policy_z_absolute_error": 1.1197012726726907e-09,
+    "policy_logB_absolute_error": 1.210968214593322e-09,
+    "policy_feed_absolute_error": 0.0,
+    "policy_state_absolute_error": 1.7729182566483814e-09
+  },
+  "episodes": [
+    {
+      "case": "dev_nominal",
+      "method": "ce_limited",
+      "completed": true,
+      "completed_stages": 7,
+      "physical_valid": true,
+      "terminal_feasible": true,
+      "operational_success": true,
+      "log_ratio_error": 0.007497981816624762,
+      "biomass_amount_gDW": 91.67569298867662,
+      "minimum_substrate": 0.07693658956534558,
+      "trajectory": [
+        {
+          "stage": 0,
+          "amount_state": [
+            0.5145719310977227,
+            0.003136424350078204,
+            0.003180133158146145,
+            11.449103020921653
+          ],
+          "state": [
+            0.5145719310977227,
+            -5.764671869934608,
+            -5.750832209435864,
+            11.449103020921653
+          ],
+          "feed": 0.007285965548861358,
+          "true_kappa": [
+            1.0,
+            1.0
+          ],
+          "min_S": 20.0,
+          "max_S": 22.24976204298121
+        },
+        {
+          "stage": 1,
+          "amount_state": [
+            0.5145719310977227,
+            0.02012462930042944,
+            0.020259630193580614,
+            11.397191838883382
+          ],
+          "state": [
+            0.5145719310977227,
+            -3.9058108757015955,
+            -3.8991250333597476,
+            11.397191838883382
+          ],
+          "feed": 0.0,
+          "true_kappa": [
+            1.0,
+            1.0
+          ],
+          "min_S": 22.1488797777408,
+          "max_S": 22.24976204298121
+        },
+        {
+          "stage": 2,
+          "amount_state": [
+            0.5145719310984151,
+            0.12836486492612828,
+            0.12901310579805328,
+            11.06651765151508
+          ],
+          "state": [
+            0.5145719310984151,
+            -2.052878562818864,
+            -2.047841284447175,
+            11.06651765151508
+          ],
+          "feed": 3.462481609445929e-13,
+          "true_kappa": [
+            1.0,
+            1.0
+          ],
+          "min_S": 21.506259830170446,
+          "max_S": 22.1488797777408
+        },
+        {
+          "stage": 3,
+          "amount_state": [
+            0.8115689142904339,
+            0.9884751229384348,
+            0.8316052117255727,
+            38.324057306769966
+          ],
+          "state": [
+            0.8115689142904339,
+            -0.011591803164186221,
+            -0.1843974559116492,
+            38.324057306769966
+          ],
+          "feed": 0.14849849159600936,
+          "true_kappa": [
+            1.0,
+            1.0
+          ],
+          "min_S": 21.506259830170446,
+          "max_S": 47.22218487172741
+        },
+        {
+          "stage": 4,
+          "amount_state": [
+            1.2115689142904338,
+            8.471200533756535,
+            5.394078078887801,
+            58.85551268126743
+          ],
+          "state": [
+            1.2115689142904338,
+            2.1366722381424794,
+            1.6853016997495562,
+            58.85551268126743
+          ],
+          "feed": 0.2,
+          "true_kappa": [
+            1.0,
+            1.0
+          ],
+          "min_S": 47.22218487172741,
+          "max_S": 52.70959852692329
+        },
+        {
+          "stage": 5,
+          "amount_state": [
+            1.6115689142904337,
+            44.26174594073887,
+            31.690051701887246,
+            0.5733300797254418
+          ],
+          "state": [
+            1.6115689142904337,
+            3.7901207812181,
+            3.4560028051905247,
+            0.5733300797254418
+          ],
+          "feed": 0.2,
+          "true_kappa": [
+            1.0,
+            1.0
+          ],
+          "min_S": 0.35575895926106044,
+          "max_S": 48.577932288512606
+        },
+        {
+          "stage": 6,
+          "amount_state": [
+            1.7999999996384244,
+            45.666001629663,
+            46.00969135901361,
+            0.13848586118980363
+          ],
+          "state": [
+            1.7999999996384244,
+            3.821354074199881,
+            3.8288520560165056,
+            0.13848586118980363
+          ],
+          "feed": 0.09421554267399539,
+          "true_kappa": [
+            1.0,
+            1.0
+          ],
+          "min_S": 0.07693658956534558,
+          "max_S": 0.35575895926106044
+        }
+      ],
+      "selected_tails": [
+        {
+          "stage": 0,
+          "rows": [
+            {
+              "scenario": "center",
+              "z": -0.09795716125059839,
+              "logB": 4.529124410889775,
+              "V": 1.79999999999,
+              "min_S": 0.10664261166521861,
+              "feeds": [
+                0.007285965548861358,
+                0.007855063523231169,
+                0.04898931530173716,
+                0.08977182248808359,
+                0.1670672685084973,
+                0.19999999742492805,
+                0.12903056719966144
+              ],
+              "branches": [
+                "interior",
+                "interior",
+                "interior",
+                "interior",
+                "interior",
+                "interior",
+                "volume"
+              ],
+              "outer_design_feasible": false
+            }
+          ],
+          "inner_gate_feasible": false,
+          "outer_design_feasible": false,
+          "maximum_log_ratio_error": 0.09795716125059839
+        },
+        {
+          "stage": 3,
+          "rows": [
+            {
+              "scenario": "center",
+              "z": -0.007497980659434359,
+              "logB": 4.518257273223528,
+              "V": 1.7999999999899987,
+              "min_S": 0.0769365896582596,
+              "feeds": [
+                0.14849849159600936,
+                0.19999999999999984,
+                0.19999999999999984,
+                0.09421554284978277
+              ],
+              "branches": [
+                "interior",
+                "interior",
+                "interior",
+                "interior"
+              ],
+              "outer_design_feasible": true
+            }
+          ],
+          "inner_gate_feasible": true,
+          "outer_design_feasible": true,
+          "maximum_log_ratio_error": 0.007497980659434359
+        },
+        {
+          "stage": 6,
+          "rows": [
+            {
+              "scenario": "center",
+              "z": -0.007498000126087348,
+              "logB": 4.518257275682118,
+              "V": 1.7999999996384244,
+              "min_S": 0.0769365677402833,
+              "feeds": [
+                0.09421554267399539
+              ],
+              "branches": [
+                "interior"
+              ],
+              "outer_design_feasible": true
+            }
+          ],
+          "inner_gate_feasible": true,
+          "outer_design_feasible": true,
+          "maximum_log_ratio_error": 0.007498000126087348
+        }
+      ]
+    }
+  ],
+  "interrupted_attempt_ledger": [],
+  "elapsed_seconds": 2.7640241249464452,
+  "source_result_dir": "study-archive/control_robust_2026-10-24/results/pilot_v2",
+  "audit_protocol": {
+    "version": "1.0",
+    "declared_before_frozen_campaign": true,
+    "purpose": "Independent chained physical-amount replay of every saved executed episode, plus a fixed subset of selected causal policy tails.",
+    "numerics": {
+      "method": "DOP853",
+      "rtol": 2e-13,
+      "atol": 2e-14,
+      "max_step_h": 0.025,
+      "volume": "Analytic within every interval and at every endpoint"
+    },
+    "tolerances": {
+      "log_state_atol": 2e-07,
+      "amount_atol_g": 2e-07,
+      "amount_rtol": 2e-08,
+      "volume_replay_atol_L": 2e-13,
+      "saved_arithmetic_atol": 2e-12,
+      "policy_z_logB_atol": 2e-06,
+      "policy_feed_atol": 2e-06,
+      "policy_state_atol": 5e-06,
+      "cost_sum_atol_s": 1e-05
+    },
+    "physical_constraints": {
+      "feed_min_L_h": 0.0,
+      "feed_max_L_h": 0.2,
+      "volume_max_L": 1.8,
+      "volume_guard_L": 1e-11,
+      "substrate_min_g_L": -2e-07,
+      "interval_h": 2.0,
+      "terminal_log_ratio_tolerance": 0.009950330853168092,
+      "design_log_ratio_tolerance": 0.0075,
+      "inner_optimization_band": 0.007498,
+      "inner_gate_slack": 1e-09
+    },
+    "selected_tail_subset": {
+      "case_index_modulus": 10,
+      "case_index_remainder": 0,
+      "methods": "all assigned methods",
+      "stages": [
+        0,
+        3,
+        6
+      ],
+      "scenarios": "all saved finite scenarios at each selected stage",
+      "selection": "Manifest order only; no outcome-based inclusion or exclusion"
+    },
+    "classification": {
+      "actual": "Recompute exact terminal and physical classifications using declared physical tolerances; classify operational success separately from controller failure.",
+      "inner_gate": "Retain every inner optimization-band label discrepancy as an audit qualification, including numerical boundary flips.",
+      "design": "Independently test the stated outer design band; an inner-band flip is not itself an outer-band violation.",
+      "failed_episodes": "Retain failures in the assigned denominator and replay available completed prefix without relabelling the episode successful.",
+      "overall": "passed requires no failures and no qualifications; numerical assurance is empirical, not a rigorous enclosure or a continuous-uncertainty proof."
+    }
+  },
+  "audit_protocol_sha256": "a4d6034726ba049ae51ec799e4a444eae1f8c7dae1d8f6e2dfb9044aae785072",
+  "auditor_source_sha256": {
+    "replay_campaign.py": "0d5d4b869fda258a38f9c593f37a012a43da0f5a5a15e49aeca5f0e491b867fd",
+    "independent_amount_model.py": "b0b42a3ab3bab1a014367fad97d9bdf71152ba7e209c8877eb4ad118c5b0995e"
+  },
+  "runtime": {
+    "python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "numpy": "2.2.2",
+    "platform": "macOS-14.6.1-arm64-arm-64bit"
+  },
+  "scope": "Numerical replay of supplied inputs. Tail selection is deterministic and prespecified. No plant-setting oracle is supplied to controllers; this retrospective auditor is allowed saved truth."
+}

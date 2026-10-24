@@ -1,0 +1,158 @@
+{
+  "date": "2026-10-21",
+  "parameters": {
+    "qGmax_mmol_gDW_h": 11.005414756123924,
+    "qOmax_mmol_gDW_h": 3.919072884652486,
+    "qEmax_mmol_gDW_h": 10.0,
+    "ATP_maintenance_mmol_gDW_h": 5.565032869183548
+  },
+  "fixed_parameters": {
+    "qEmax_mmol_gDW_h": 10.0,
+    "KG_g_L": 0.01,
+    "KE_g_L": 0.1,
+    "glucose_repression_scale_g_L": 0.05,
+    "glucose_repression_exponent": 4,
+    "OD_gDW_L_per_OD": 0.486,
+    "MWG_g_mmol": 0.18,
+    "MWE_g_mmol": 0.046,
+    "growth_scaling": 1
+  },
+  "initial": {
+    "time_h": -6.8,
+    "X_gDW_L": 0.09856522231342883,
+    "G_g_L": 4.84384260862773,
+    "E_g_L": 0.22730440275683,
+    "OD600": 0.2028090994103474,
+    "biomass_rule": "log-linear interpolation between Biomass_Exp1 at -7.5 and -6.5h; not a culture pairing claim"
+  },
+  "calibration": {
+    "selection": "All Exp1-labelled series samples with t >= -6.8h, label is workbook-specific",
+    "withheld": "All other workbook series with t >= -6.8h; no claim of cross-variable replicate matching or statistically independent biological validation",
+    "residual_scales": [
+      2.0,
+      5.0,
+      2.0
+    ],
+    "objective": "sum over variables of mean squared residual divided by fixed scale squared",
+    "parameters_fitted": 3,
+    "evaluations": 20,
+    "optimiser_success": true,
+    "optimiser_message": "`xtol` termination condition is satisfied.",
+    "cost": 0.004028777671777699
+  },
+  "metrics": {
+    "calibration": {
+      "biomass_OD600": {
+        "n": 13,
+        "rmse": 0.07470123878101699,
+        "mae": 0.060781409832419295,
+        "range_normalised_rmse_percent": 3.3119591567730873,
+        "mean_bias": -0.023448910134484666,
+        "observed_range": [
+          0.2245,
+          2.48
+        ]
+      },
+      "glucose": {
+        "n": 16,
+        "rmse": 0.07651145348248829,
+        "mae": 0.04878766675369503,
+        "range_normalised_rmse_percent": 1.5795610977575536,
+        "mean_bias": 0.04409767306196387,
+        "observed_range": [
+          0.0,
+          4.84384260862773
+        ]
+      },
+      "ethanol": {
+        "n": 16,
+        "rmse": 0.09797002106522652,
+        "mae": 0.07907013853724357,
+        "range_normalised_rmse_percent": 6.413380231340957,
+        "mean_bias": 0.03838785115111227,
+        "observed_range": [
+          0.22730440275683,
+          1.75489231320795
+        ]
+      }
+    },
+    "withheld_series": {
+      "biomass_OD600": {
+        "n": 120,
+        "rmse": 0.06881620078176522,
+        "mae": 0.052480495280003654,
+        "range_normalised_rmse_percent": 2.671436365751756,
+        "mean_bias": 0.004856474698370349,
+        "observed_range": [
+          0.264,
+          2.8399999999999994
+        ]
+      },
+      "glucose": {
+        "n": 47,
+        "rmse": 0.06035857371419502,
+        "mae": 0.041010772330103,
+        "range_normalised_rmse_percent": 1.264388022583476,
+        "mean_bias": 0.013305997471490482,
+        "observed_range": [
+          0.0,
+          4.773738175
+        ]
+      },
+      "ethanol": {
+        "n": 44,
+        "rmse": 0.14230028236801945,
+        "mae": 0.11641639585678058,
+        "range_normalised_rmse_percent": 9.499876766749557,
+        "mean_bias": 0.03548009843006405,
+        "observed_range": [
+          0.314752862,
+          1.812670002
+        ]
+      }
+    }
+  },
+  "numerics": {
+    "method": "HiGHS simplex with reusable basis + adaptive RK45",
+    "highs_version": "1.15.1",
+    "LP_tolerance": 1e-09,
+    "final_rtol": 2e-08,
+    "final_atol": 2e-10,
+    "max_step_h": 0.25,
+    "max_equality_residual": 7.193954182360685e-10,
+    "max_bound_violation": 1.9538030847265508e-10,
+    "lp_calls": 13367,
+    "elapsed_seconds": 26.625822125002742,
+    "epsilon": 0
+  },
+  "model_identity": {
+    "metadata_source": "recovered/local/Downloads/One drive/research_MATLAB/Ta's work/Problem_3/SCerevisiae_Model.mat",
+    "S_exactly_equal": true,
+    "growth_id": "r_2111",
+    "biomass_assembly_id": "r_4041",
+    "glucose_id": "r_1714",
+    "ethanol_exchange_id": "r_1761",
+    "ethanol_transport_id": "r_1762",
+    "oxygen_id": "r_1992",
+    "biomass_normalization": "biomass-normalized growth flux used directly; kappa=1; no .56 multiplier"
+  },
+  "source_data": {
+    "doi": "10.1038/msb.2013.11",
+    "path": "research_completion/runs/figure11_source_review_2026-10-21/candidates/zampar2013/zampar2013_observations.csv",
+    "sha256": "07529687404d471e25363590939322397d1fae08b6c28dede451b8142036ade0",
+    "eligible_observations": 256,
+    "all_observations": 266,
+    "excluded": "Before representative initialization at -6.8h, not omitted based on residual"
+  },
+  "environment": {
+    "python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "numpy": "1.26.4",
+    "scipy": "1.12.0",
+    "platform": "macOS-14.6.1-arm64-arm-64bit"
+  },
+  "terminal": {
+    "X_gDW_L": 1.3525143119206011,
+    "G_g_L": -7.543082225890943e-12,
+    "E_g_L": 0.588542491593417
+  }
+}

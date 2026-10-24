@@ -1,0 +1,68 @@
+{
+  "control": [
+    0.05087925952727067,
+    0.05853909113004813,
+    0.12260040694581889,
+    0.06639461516345388,
+    0.07779414617133448,
+    0.08956904754758922,
+    0.19600764042868085
+  ],
+  "terminal": [
+    1.8235684138283923,
+    25.49111833748934,
+    25.49047814734735,
+    0.19328028600259228
+  ],
+  "objective": 6.307568864233746e-10,
+  "absolute_ratio_error_percent": 0.0025114873808629312,
+  "minimum_glucose": 0.17040530405867874,
+  "refined_table": {
+    "objective": 5.126263830182819e-12,
+    "terminal": [
+      1.8235684138283943,
+      25.490900472990212,
+      25.490842758525634,
+      0.19327871914732636
+    ],
+    "minimum_glucose": 0.17040101638036637,
+    "volume_analytic": 1.8235684138283923
+  },
+  "terminal_relative_difference_from_table": [
+    -1.095874127436681e-15,
+    8.546682661902661e-06,
+    -1.4303818711308812e-05,
+    8.106648113615817e-06
+  ],
+  "max_residuals": {
+    "equality": 3.70968581955641e-12,
+    "stationarity": 4.4650052431841374e-14,
+    "lower_complementarity": 9.976499584244674e-12,
+    "upper_complementarity": 6.487897712119546e-13
+  },
+  "minimum_slack": 2.8977427675724103e-07,
+  "rhs_evaluations": 1718,
+  "wall_seconds": 878.1275102500804,
+  "protocol": "Amount balances dM_i/dt=g_i M_i; d(VS)/dt=F Sin+0.18 sum(vGi Mi); analytic volume, DOP853 rtol5e-8,atol5e-11,maxstep0.25,KKTtol1e-11. Independent balance implementation; same KKT solver/matrices.",
+  "previous_direct_result": {
+    "terminal": [
+      1.8235684138283916,
+      25.491118332118358,
+      25.490478136226276,
+      0.19328028843479575
+    ],
+    "objective": 6.307682177468182e-10,
+    "minimum_glucose": 0.1704053070307701,
+    "seconds": 462.07670545903966,
+    "rhs_evaluations": 1034,
+    "rtol": 2e-07,
+    "atol": 2e-09,
+    "KKT_tolerance": 1e-10
+  },
+  "previous_terminal_difference": [
+    6.661338147750939e-16,
+    5.370981881469561e-09,
+    1.1121073839603923e-08,
+    -2.4322034664070458e-09
+  ]
+}

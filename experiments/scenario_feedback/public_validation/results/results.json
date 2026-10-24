@@ -1,0 +1,154 @@
+{
+  "protocol_sha256": "47409ea7562af8b9665c12761654a3c7b020701766baa386e34e9dffc927dada",
+  "script_sha256": "49d48bec22de83025d07e1bd84d70ab41ea6906b60573264014e1dc975f2991d",
+  "source_sha256": "dd451bc6a2ecc27e9a690da6793396ca314e93b0a5e5eb2b18247ee6b14eb280",
+  "training_fit_sha256_before_holdout_evaluation": "4354fc4d20a203709423995558c126fdcd609be3211cea8eb5703afeed2d1ba4",
+  "train_trajectories": 6,
+  "holdout_trajectories": 8,
+  "training_composition_points": 286,
+  "holdout_composition_points": 1079,
+  "dose_training_observations": 18,
+  "summaries": [
+    {
+      "model": "linear",
+      "mode": "free_run",
+      "window": "full",
+      "trajectories": 8,
+      "macro_rmse": 0.4031138432907273,
+      "macro_mae": 0.37687518013874116,
+      "macro_baseline_rmse": 0.1938088469065515,
+      "better_than_baseline_count": 0,
+      "max_trajectory_rmse": 0.6238817439028587
+    },
+    {
+      "model": "linear",
+      "mode": "free_run",
+      "window": "through40h",
+      "trajectories": 8,
+      "macro_rmse": 0.42624494460373247,
+      "macro_mae": 0.3893255881070119,
+      "macro_baseline_rmse": 0.19562403945437754,
+      "better_than_baseline_count": 0,
+      "max_trajectory_rmse": 0.6483030836840903
+    },
+    {
+      "model": "linear",
+      "mode": "free_run",
+      "window": "after40h",
+      "trajectories": 8,
+      "macro_rmse": 0.36850579528595584,
+      "macro_mae": 0.36397084023211207,
+      "macro_baseline_rmse": 0.1743368852376591,
+      "better_than_baseline_count": 3,
+      "max_trajectory_rmse": 0.5897489464084705
+    },
+    {
+      "model": "linear",
+      "mode": "one_step",
+      "window": "full",
+      "trajectories": 8,
+      "macro_rmse": 0.032335010749101854,
+      "macro_mae": 0.029022480853261954,
+      "macro_baseline_rmse": 0.013839229018152321,
+      "better_than_baseline_count": 0,
+      "max_trajectory_rmse": 0.037845745892147765
+    },
+    {
+      "model": "linear",
+      "mode": "one_step",
+      "window": "through40h",
+      "trajectories": 8,
+      "macro_rmse": 0.03640400995979429,
+      "macro_mae": 0.033553530394384044,
+      "macro_baseline_rmse": 0.016991582852859677,
+      "better_than_baseline_count": 1,
+      "max_trajectory_rmse": 0.04374835208167324
+    },
+    {
+      "model": "linear",
+      "mode": "one_step",
+      "window": "after40h",
+      "trajectories": 8,
+      "macro_rmse": 0.025732123792030596,
+      "macro_mae": 0.023878916900415673,
+      "macro_baseline_rmse": 0.006422197951432625,
+      "better_than_baseline_count": 0,
+      "max_trajectory_rmse": 0.039455808953790014
+    },
+    {
+      "model": "dose_informed",
+      "mode": "free_run",
+      "window": "full",
+      "trajectories": 8,
+      "macro_rmse": 0.33269132681775887,
+      "macro_mae": 0.2903958359974564,
+      "macro_baseline_rmse": 0.1938088469065515,
+      "better_than_baseline_count": 1,
+      "max_trajectory_rmse": 0.6086368212217169
+    },
+    {
+      "model": "dose_informed",
+      "mode": "free_run",
+      "window": "through40h",
+      "trajectories": 8,
+      "macro_rmse": 0.31143368660515125,
+      "macro_mae": 0.2689416220125698,
+      "macro_baseline_rmse": 0.19562403945437754,
+      "better_than_baseline_count": 2,
+      "max_trajectory_rmse": 0.6228374479351315
+    },
+    {
+      "model": "dose_informed",
+      "mode": "free_run",
+      "window": "after40h",
+      "trajectories": 8,
+      "macro_rmse": 0.3579454417473296,
+      "macro_mae": 0.33044857921700277,
+      "macro_baseline_rmse": 0.1743368852376591,
+      "better_than_baseline_count": 3,
+      "max_trajectory_rmse": 0.5891704662282226
+    },
+    {
+      "model": "dose_informed",
+      "mode": "one_step",
+      "window": "full",
+      "trajectories": 8,
+      "macro_rmse": 0.020827436284402714,
+      "macro_mae": 0.01805738445110822,
+      "macro_baseline_rmse": 0.013839229018152321,
+      "better_than_baseline_count": 2,
+      "max_trajectory_rmse": 0.030651084676571773
+    },
+    {
+      "model": "dose_informed",
+      "mode": "one_step",
+      "window": "through40h",
+      "trajectories": 8,
+      "macro_rmse": 0.01863577914130842,
+      "macro_mae": 0.01580713245064412,
+      "macro_baseline_rmse": 0.016991582852859677,
+      "better_than_baseline_count": 2,
+      "max_trajectory_rmse": 0.03254955000595165
+    },
+    {
+      "model": "dose_informed",
+      "mode": "one_step",
+      "window": "after40h",
+      "trajectories": 8,
+      "macro_rmse": 0.023134805212617997,
+      "macro_mae": 0.02163205429471634,
+      "macro_baseline_rmse": 0.006422197951432625,
+      "better_than_baseline_count": 0,
+      "max_trajectory_rmse": 0.032214506615664155
+    }
+  ],
+  "self_test": {
+    "exact_step_vs_solve_ivp_max_errors": [
+      7.216449660063518e-15,
+      2.9032332093947844e-14
+    ],
+    "passed": true
+  },
+  "elapsed_seconds": 1.5558228329755366,
+  "statement": "All predeclared models reported; no selection or refit using heldout targets or outcomes."
+}

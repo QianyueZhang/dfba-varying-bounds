@@ -1,0 +1,31 @@
+{
+  "training_sizes": [
+    175,
+    350,
+    700
+  ],
+  "network_hidden": [
+    15
+  ],
+  "activation": "logistic",
+  "alpha": 0.0001,
+  "max_iter": 1500,
+  "tol": 1e-07,
+  "initialisation_seeds": [
+    733,
+    734,
+    735
+  ],
+  "selection": "Minimum validation log-ratio RMSE; independent audit data never used for selection.",
+  "audit_seed": 2731,
+  "audit_samples": 200,
+  "surrogate_search_seeds": [
+    736,
+    737,
+    738,
+    739,
+    740
+  ],
+  "polish_method": "SLSQP on refined mechanistic response table; rtol=1e-9,atol=1e-11,ftol=1e-12,FD step=1e-5,bounds=[0,0.2]^7",
+  "source_dataset_sha256": "78ca130c7e4c30dcdbb380cb66d1285c020e6aee4fcd91732583489db0f35034"
+}

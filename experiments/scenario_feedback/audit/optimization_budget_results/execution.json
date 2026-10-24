@@ -1,0 +1,95 @@
+{
+  "protocol": {
+    "prepared_date": "2026-10-24",
+    "status": "Post hoc diagnostic specified during the primary campaign; not a prespecified primary endpoint; do not execute until primary and serial timing campaigns complete",
+    "primary_protocol_sha256": "0e1f3450616b890ba48bed1c374a0d53ff33c2d0be98bd570d9c1dac2a48adf5",
+    "source_campaign": "locked",
+    "required_completed_campaigns": [
+      "locked",
+      "timing_serial"
+    ],
+    "source_method": "scenario_feedback",
+    "source_stage": 0,
+    "zero_based_case_ordinals": [
+      0,
+      22,
+      44,
+      66
+    ],
+    "case_ids": [
+      "table_0_nominal",
+      "table_2_nominal",
+      "analytic_0_nominal",
+      "analytic_2_nominal"
+    ],
+    "selection_scope": "Four fixed stage-zero decisions, two target/initial-condition blocks in each mathematical family; no representative sampling or universal optimizer claim",
+    "information": "Only observed state, declared model family, target, saved fixed reference/basis, saved controller scenario list, and the first recorded theta; actual hidden process parameters and future observations are not optimizer inputs",
+    "comparison": "Saved 12-iteration scenario-feedback incumbent versus three offline direct optimizations with maxiter=60 and the exact frozen objective, constraints, numerics, merit and candidate selection",
+    "offline_arms": [
+      {
+        "id": "gain_zero_60",
+        "gain_enabled": false,
+        "start": "saved first trace theta, whose gain must be zero",
+        "retain": [
+          "original_zero_gain"
+        ]
+      },
+      {
+        "id": "gain_original_60",
+        "gain_enabled": true,
+        "start": "saved first trace theta",
+        "retain": [
+          "original_zero_gain"
+        ]
+      },
+      {
+        "id": "gain_seeded_60",
+        "gain_enabled": true,
+        "start": "selected gain_zero_60 theta",
+        "retain": [
+          "original_zero_gain",
+          "gain_zero_60_selected"
+        ]
+      }
+    ],
+    "saved_incumbent_policy": "The saved 12-iteration candidate is reported and independently re-evaluated as a comparator; it is not silently supplied as an incumbent to the three offline optimizers",
+    "retained_evidence": "All initial candidate evaluations, all optimizer evaluations, candidate exceptions, solver termination, selected theta/gain, finite-model feasibility, violation, penalized merit, mean log biomass, arithmetic mean biomass, model-call counts and separate offline elapsed cost",
+    "timing": "Sequential offline execution only after both campaign completion records exist; replay/preparation and every optimization arm recorded separately. Entire diagnostic excluded from main online controller times. No timing superiority inference from comparison with parallel primary timings",
+    "interpretation": "A larger local optimization budget and an alternative feasible-family start can diagnose search sensitivity. A feasible witness is not a global optimum, failure is not an infeasibility proof, and no selected action is executed in or fed back to the primary campaign",
+    "execution": "python -B audit/optimization_budget.py --execute"
+  },
+  "protocol_sha256": "6945f2efefe8f5d7cb437d16bf425b8a2bc5789575db3fef371d7b6cb3ab18b3",
+  "script_sha256": "00bbadfb83c549e1cb6aa5e39ae915bb57fadbe9223dca2bc3e9ea4655edd30f",
+  "primary_lock": {
+    "hashes": {
+      "scripts/base_model.py": "4aa2ce6ee5246ce0f2335aa16a8e37855c01381a8d55307d781201ecd3a5d9a4",
+      "scripts/model.py": "293a7441d5d4f6cb891490d10e8a33136c0266253c61524a46ae2c26fd5ecf68",
+      "scripts/controllers.py": "ad4ccfb43b430ef52d584fc9152979be074d747bd8ccd34dffac2e821cc819ad",
+      "scripts/run_study.py": "d0718d1e096da60465a4766f3b35a025c0a8fa48329dfd73f3c6abc83a0fd3cd",
+      "scripts/freeze_protocol.py": "299c1fad453a87f755f09564aa2cb5126df7a7039d5e49d6c190193f68ebc726",
+      "scripts/kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6",
+      "scripts/run_parallel.py": "fc7d9dd83c5ea4e12dfbc0b6bae1d882d174d6a41ee59ba811fbbddff6587608",
+      "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb",
+      "audit/campaign_audit_protocol.json": "a4d6034726ba049ae51ec799e4a444eae1f8c7dae1d8f6e2dfb9044aae785072",
+      "audit/independent_amount_model.py": "b0b42a3ab3bab1a014367fad97d9bdf71152ba7e209c8877eb4ad118c5b0995e",
+      "audit/replay_campaign.py": "0d5d4b869fda258a38f9c593f37a012a43da0f5a5a15e49aeca5f0e491b867fd",
+      "protocol.json": "0e1f3450616b890ba48bed1c374a0d53ff33c2d0be98bd570d9c1dac2a48adf5"
+    },
+    "created_utc": "2026-10-24T02:23:01Z"
+  },
+  "completed_campaigns": {
+    "locked": {
+      "path": "results/locked/complete.json",
+      "sha256": "5ec5655ea14d0197428e7e1599a4b92136aea4d94bc4b897dcd4623443934073",
+      "episodes": 440
+    },
+    "timing_serial": {
+      "path": "results/timing_serial/complete.json",
+      "sha256": "bb90ae8607fa45e10cc3a0ab99cb10ae731d898aaebd91d8691f77838532ad08",
+      "episodes": 40
+    }
+  },
+  "native_kernel_available": true,
+  "started_utc": "2026-10-24T02:54:06Z",
+  "scope": "Post hoc, offline, no main-action modification, no global optimality claim"
+}

@@ -1,0 +1,299 @@
+{
+  "title": "Repeated constrained composition design with surrogate proposals and mechanistic correction",
+  "status": "Completed computational study design; three amendments specified before data generation.",
+  "created_utc": "2026-10-22T11:11:17Z",
+  "study_limits": {
+    "one_simulated_species_pair": true,
+    "no_experimental_data": true,
+    "no_feedback_or_global_optimality_claim": true
+  },
+  "operating_domain": {
+    "initial_ratio_range": [
+      0.5,
+      2.0
+    ],
+    "initial_glucose_g_L": [
+      15.0,
+      25.0
+    ],
+    "initial_total_biomass_gDW_L": 0.002,
+    "initial_volume_L": 0.5,
+    "horizon_h": 14.0,
+    "feed_intervals": 7,
+    "feed_bounds_L_h": [
+      0.0,
+      0.2
+    ],
+    "terminal_volume_cap_L": 1.8,
+    "objective": "maximize V(tf)*(X_SC(tf)+X_KP(tf))",
+    "target_ratios": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "optimization_log_ratio_tolerance": 0.009,
+    "acceptance_log_ratio_tolerance": 0.009950330853168092,
+    "acceptance_volume_slack_L": 1e-08
+  },
+  "conditions": {
+    "training": [
+      [
+        1.9122613633239058,
+        21.71619717081593
+      ],
+      [
+        0.8889175377507574,
+        19.026632756803142
+      ],
+      [
+        1.242904777114915,
+        19.82225830555309
+      ],
+      [
+        0.5209854230604168,
+        22.44618925247838
+      ],
+      [
+        1.782068860995983,
+        21.497775414391384
+      ],
+      [
+        1.644539881863989,
+        20.845129665260977
+      ],
+      [
+        0.9579332597525233,
+        23.853159709456612
+      ],
+      [
+        1.0682930735683813,
+        20.075476226210473
+      ],
+      [
+        0.666488960688198,
+        19.298830498748103
+      ],
+      [
+        0.6114759966193883,
+        18.108891640661493
+      ],
+      [
+        0.7507582652800929,
+        20.659001109585134
+      ],
+      [
+        1.696431870699355,
+        15.171818912353109
+      ],
+      [
+        0.7007751239293318,
+        24.82728415473098
+      ],
+      [
+        0.5345754779885054,
+        23.06580124946182
+      ],
+      [
+        0.5632588145531667,
+        22.598981040709326
+      ],
+      [
+        0.9193825082251893,
+        15.812590379248448
+      ],
+      [
+        1.0181540040617942,
+        17.112871852145897
+      ],
+      [
+        1.3792044010100346,
+        23.383529444130577
+      ],
+      [
+        1.3322232682833002,
+        16.296299452156568
+      ],
+      [
+        0.8334859963745239,
+        18.33334516956637
+      ],
+      [
+        1.1665607672878873,
+        15.833772287968271
+      ],
+      [
+        1.507673530453015,
+        24.33561389485075
+      ],
+      [
+        0.736008757709526,
+        17.691244306320208
+      ],
+      [
+        1.4892553439731866,
+        16.745352195039523
+      ]
+    ],
+    "validation": [
+      [
+        0.7113829319135491,
+        16.406235094152947
+      ],
+      [
+        1.858539554571366,
+        18.87591745975006
+      ],
+      [
+        1.021735212436695,
+        23.314757842466854
+      ],
+      [
+        0.6234422886613983,
+        24.606558557915463
+      ],
+      [
+        1.331402252728156,
+        18.22740075435431
+      ],
+      [
+        0.8087770852767674,
+        20.03839220708045
+      ]
+    ],
+    "test": [
+      [
+        0.7635149132489033,
+        18.653308873272927
+      ],
+      [
+        0.524492881402522,
+        24.086515751419412
+      ],
+      [
+        1.6423498066651971,
+        21.118890894532328
+      ],
+      [
+        1.2504547089749691,
+        16.073524292330397
+      ]
+    ]
+  },
+  "feeds_per_condition": {
+    "training": 48,
+    "validation": 32,
+    "test": 64
+  },
+  "data_feed_seeds": {
+    "training": 2026102211,
+    "validation": 2026102212,
+    "test": 2026102213
+  },
+  "features": "7 feed components, log(initial ratio), initial glucose",
+  "targets": [
+    "terminal log biomass ratio",
+    "log terminal total biomass amount"
+  ],
+  "surrogates": {
+    "quadratic_ridge": {
+      "degree": 2,
+      "alphas": [
+        1e-06,
+        0.001,
+        1.0
+      ]
+    },
+    "mlp": {
+      "hidden": [
+        15
+      ],
+      "activation": "logistic",
+      "alpha": 0.0001,
+      "solver": "lbfgs",
+      "max_iter": 1500,
+      "tol": 1e-07,
+      "initialization_seeds": [
+        733,
+        734,
+        735
+      ]
+    }
+  },
+  "model_selection": "Training-only input/output standardization. Select each family by validation MSE averaged over two training-standardized outputs. No test labels or outcomes used for selection.",
+  "methods": [
+    "direct_multistart",
+    "database_warmstart",
+    "quadratic_ridge",
+    "mlp"
+  ],
+  "repeat_seeds": [
+    3101,
+    3102,
+    3103
+  ],
+  "mechanistic_evaluation_cap": 300,
+  "direct_multistart_count": 3,
+  "direct_subbudget": 100,
+  "mechanistic_ode": {
+    "rtol": 1e-07,
+    "atol": 1e-09,
+    "max_step_h": 0.25
+  },
+  "final_ode": {
+    "rtol": 1e-09,
+    "atol": 1e-11
+  },
+  "slsqp": {
+    "ftol": 1e-08,
+    "eps": 1e-05,
+    "maxiter": 100
+  },
+  "surrogate_proposal": {
+    "starts": 3,
+    "maxiter_per_start": 80,
+    "ftol": 1e-09,
+    "eps": 1e-06
+  },
+  "database_selection": "Nearest training condition after standardizing log initial ratio/glucose; pick repeat-index-ranked control among top three stored controls by predicted target violation then biomass. No test responses used.",
+  "primary_endpoints": [
+    "refined-final feasibility fraction",
+    "best feasible biomass amount",
+    "unique mechanistic evaluations to first verified-within-run feasible point",
+    "wall seconds with offline and online costs separated",
+    "offline-cost amortization across decisions"
+  ],
+  "reference_search": {
+    "method": "direct multistart",
+    "total_evaluation_cap": 1200,
+    "starts": 4,
+    "seed": 4901,
+    "scope": "best found feasible reference, not proof of optimum"
+  },
+  "sensitivity": {
+    "run_after_primary_results": true,
+    "initial_ratio_multipliers": [
+      0.95,
+      1.05
+    ],
+    "initial_glucose_multipliers": [
+      0.95,
+      1.05
+    ],
+    "purpose": "four-corner open-loop sensitivity, not probability or robust-control guarantee"
+  },
+  "direct_verification_selection": {
+    "condition_index": 0,
+    "target_ratio": 1.0,
+    "repeat_seed": 3101,
+    "methods": [
+      "direct_multistart",
+      "mlp"
+    ],
+    "rule": "Both regardless of performance; if no feasible policy exists, check the least violating recorded candidate and report failure."
+  },
+  "source_table": "data/flux_table_eps1e-06.json",
+  "source_table_sha256": "ea3584f0d9e65098119d437362422d8d8cb965f2d2e3379543a7a5f85b6c4de4",
+  "budget_scope": "300 unique evaluations per method/case/repeat; final tighter evaluation separate and included in complete cost. Multi-start shares cap equally. Surrogate proposal work and shared data generation counted separately.",
+  "execution_time_limit_seconds": 2400,
+  "execution_note": "Time cap is a practical compute budget, not a convergence test. If reached, checkpoint and report completed coverage; do not silently compare unequal case sets."
+}

@@ -1,0 +1,13 @@
+{
+  "status": "Secondary post hoc author-model verification after negative primary results. No model or parameter selection using holdout scores.",
+  "source_doi": "10.1038/s41467-022-32392-z",
+  "software_sha256": "a4d4e43459abf1c73c7d8ddb185ea0cd6a94fa5b93393ccff9678e5c996d5c70",
+  "model": "SupplementarySoftwareFile/Co-Culture_Model; define_parameters.m uses opt_params.mat x, not p_var; fixed params from p_fix_struct; active bJAG235 line in main.m gives 1.58369475/60 per minute",
+  "initialization": "get_init_cond.m assumption: zero internal state integrated 100000 min under published ambient L0; actual initial internal states unmeasured; measured fraction only initializes logit fraction",
+  "inputs": "Recorded LightInput[k], left held over interval k; hours converted to minutes; setpoint not used by model",
+  "holdouts": "All eight original frozen trajectories; no exclusions",
+  "metrics": "Run macro RMSE, full, (0,40h], >40h. Free-run baseline initial composition; one-step baseline persistence. Exclude initial observation. Internal states are not corrected from observations.",
+  "integrator": "BDF rtol 1e-9, atol 1e-10; rtol/atol tenfold smaller for all-eight numerical sensitivity; nonnegative extension only for fractional-power trial operands, accepted state minimum checked.",
+  "references": "Archived OL_Simulation_0L.mat and OL_Simulation_800L.mat numerical references from their exact saved initial state; do not classify as measured biology.",
+  "fitting": "None. No optimization or data-tuned correction. No new biological or controller validation claim."
+}

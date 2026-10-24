@@ -1,0 +1,127 @@
+{
+  "protocol_and_inputs_unchanged": true,
+  "full_20_case_domain": true,
+  "solver_calls": 72,
+  "successful_vectors_independently_checked": 71,
+  "retained_infeasible_calls": [
+    {
+      "sequence": 1,
+      "tag": "calibration_upper_bound",
+      "condition_id": "o2_20.9percent",
+      "semantics": "capacity",
+      "maintenance_mmol_gDW_h": 20.0,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    }
+  ],
+  "fit_calls": 12,
+  "all_fit_calls_only20p9_capacity": true,
+  "selected_maintenance": 1.0160643809357977,
+  "positive_oxygen_3condition_growth_MAE": {
+    "original": 0.04728558988781567,
+    "single_condition_recalibration": 0.009637226566615429
+  },
+  "max_equality": 5.343281372915953e-12,
+  "max_bound_violation": 3.2442341496168516e-12,
+  "max_FVA_growth_face_violation": 0.0,
+  "measured_inputs_vs_realized_recalibrated": [
+    {
+      "condition": "o2_20.9percent",
+      "semantics": "capacity",
+      "input_glucose": 1.0999999999999999,
+      "realized_glucose": 1.0999999999999999,
+      "input_oxygen": 2.7,
+      "realized_oxygen": 2.320635124567929,
+      "growth": 0.0999999999990711
+    },
+    {
+      "condition": "o2_2.8percent",
+      "semantics": "capacity",
+      "input_glucose": 1.3333333333333333,
+      "realized_glucose": 1.3333333333333333,
+      "input_oxygen": 2.5,
+      "realized_oxygen": 2.5,
+      "growth": 0.1148944506185261
+    },
+    {
+      "condition": "o2_1.0percent",
+      "semantics": "capacity",
+      "input_glucose": 1.9000000000000001,
+      "realized_glucose": 1.9000000000000001,
+      "input_oxygen": 1.7,
+      "realized_oxygen": 1.7,
+      "growth": 0.09794432480290015
+    },
+    {
+      "condition": "o2_0.5percent",
+      "semantics": "capacity",
+      "input_glucose": 2.3833333333333333,
+      "realized_glucose": 2.3833333333333333,
+      "input_oxygen": 1.2,
+      "realized_oxygen": 1.2,
+      "growth": 0.08803844611577967
+    },
+    {
+      "condition": "o2_0percent",
+      "semantics": "capacity",
+      "input_glucose": 6.183333333333334,
+      "realized_glucose": 6.183333333333334,
+      "input_oxygen": 0.0,
+      "realized_oxygen": 0.0,
+      "growth": 0.0
+    },
+    {
+      "condition": "o2_20.9percent",
+      "semantics": "prescribed",
+      "input_glucose": 1.0999999999999999,
+      "realized_glucose": 1.0999999999999999,
+      "input_oxygen": 2.7,
+      "realized_oxygen": 2.7,
+      "growth": 0.09114867389252565
+    },
+    {
+      "condition": "o2_2.8percent",
+      "semantics": "prescribed",
+      "input_glucose": 1.3333333333333333,
+      "realized_glucose": 1.3333333333333333,
+      "input_oxygen": 2.5,
+      "realized_oxygen": 2.5,
+      "growth": 0.11489445061853003
+    },
+    {
+      "condition": "o2_1.0percent",
+      "semantics": "prescribed",
+      "input_glucose": 1.9000000000000001,
+      "realized_glucose": 1.9000000000000001,
+      "input_oxygen": 1.7,
+      "realized_oxygen": 1.7,
+      "growth": 0.09794432480285081
+    },
+    {
+      "condition": "o2_0.5percent",
+      "semantics": "prescribed",
+      "input_glucose": 2.3833333333333333,
+      "realized_glucose": 2.3833333333333333,
+      "input_oxygen": 1.2,
+      "realized_oxygen": 1.2,
+      "growth": 0.08803844611542207
+    },
+    {
+      "condition": "o2_0percent",
+      "semantics": "prescribed",
+      "input_glucose": 6.183333333333334,
+      "realized_glucose": 6.183333333333334,
+      "input_oxygen": 0.0,
+      "realized_oxygen": 0.0,
+      "growth": 0.0
+    }
+  ],
+  "scope": "Retrospective one-condition effective-maintenance attribution check, not physiological parameter identification or a fair separately calibrated comparison of capacity vs prescribed semantics. All successful primal/FVA vectors verified; no independent dual optimality proof.",
+  "source_sha256": {
+    "results.json": "8cdc2669c33ccb099ceb58e76c89eb7b75d59c183282a60f877f8a535e61b8ea",
+    "flux_vectors.npz": "7d8d853f199cfe1f5ddf58aae6afad69f524a0387ed09456757203eee0e2306c",
+    "protocol.json": "c7e6214f204f1d5c5a3ae9847b3fde3cd7621f574fb5f461469d11ad63988107",
+    "run_recalibration.py": "0d0b7d199889cc74cec4cd2c80b05a6e73cbc669d9832fa3dda688203036e4c5"
+  }
+}

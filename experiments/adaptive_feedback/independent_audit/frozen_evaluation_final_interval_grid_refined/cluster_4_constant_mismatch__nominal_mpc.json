@@ -1,0 +1,244 @@
+{
+  "case_id": "cluster_4_constant_mismatch",
+  "cluster": 4,
+  "regime": "constant_mismatch",
+  "method": "nominal_mpc",
+  "status": "completed",
+  "diagnostic_interpretable": true,
+  "original_failure_reasons": [
+    "terminal_composition"
+  ],
+  "preceding_path_valid": true,
+  "target_ratio": 1.0,
+  "saved_true_state": [
+    1.8000000000017076,
+    3.6266830729155806,
+    3.7517820702173026,
+    19.400640496049046
+  ],
+  "late_state": {
+    "volume_L": 1.8000000000017076,
+    "biomass_amount_gDW": 80.18485829614067,
+    "ratio": 0.8824095420967591,
+    "glucose_g_L": 10.778133608905913,
+    "remaining_volume_L": -1.7075230118734908e-12,
+    "admissible_constant_feed_upper_L_h": 0.0
+  },
+  "offline_true_kappa": [
+    0.8240209416617441,
+    1.0859873607575168
+  ],
+  "actual_feed_L_h": 0.0,
+  "actual_feed_within_scan_interval": true,
+  "actual_feed_replay": {
+    "feed_L_h": 0.0,
+    "status": "completed",
+    "z": -0.23912088456010983,
+    "ratio": 0.7873197018240536,
+    "B_gDW": 94.44271754215526,
+    "V_L": 1.8000000000017076,
+    "minimum_substrate_g_L": 3.069119649680517e-08,
+    "terminal_state": [
+      1.8000000000017076,
+      3.7281554781868156,
+      3.9672763627469254,
+      5.524415369430171e-08
+    ],
+    "absolute_log_ratio_error": 0.23912088456010983,
+    "ratio_relative_error_percent": 21.268029817594638,
+    "physical_valid": true,
+    "terminal_feasible": false,
+    "purposes": [
+      "actual_executed_feed_replay",
+      "uniform_grid"
+    ],
+    "seconds": 0.09587812516838312
+  },
+  "actual_feed_z_replay_error": 0.0,
+  "actual_feed_replay_errors": {
+    "log_ratio_absolute": 0.0,
+    "biomass_relative": 0.0,
+    "volume_absolute_L": 0.0,
+    "glucose_amount_absolute_g": 0.0
+  },
+  "actual_feed_replay_consistent": true,
+  "feed_interval_L_h": [
+    0.0,
+    0.0
+  ],
+  "requested_grid_points": 101,
+  "unique_grid_points": 1,
+  "zero_remaining_feed_authority": true,
+  "valid_grid_predictions": 1,
+  "failed_grid_predictions": 0,
+  "feasible_grid_points": 0,
+  "minimum_sampled_log_ratio_error": 0.23912088456010983,
+  "best_sampled_feed_L_h": 0.0,
+  "refinement": {
+    "requested": true,
+    "performed": false,
+    "scope": "Local bounded refinement in the neighbor cell around the best grid sample; no global guarantee"
+  },
+  "minimum_observed_alternative_log_ratio_error": 0.23912088456010983,
+  "best_observed_alternative_feed_L_h": 0.0,
+  "feasible_recovery_found": false,
+  "conclusion": "No sampled feasible recovery from this late state; this does not prove physical unreachability.",
+  "evaluations": [
+    {
+      "feed_L_h": 0.0,
+      "status": "completed",
+      "z": -0.23912088456010983,
+      "ratio": 0.7873197018240536,
+      "B_gDW": 94.44271754215526,
+      "V_L": 1.8000000000017076,
+      "minimum_substrate_g_L": 3.069119649680517e-08,
+      "terminal_state": [
+        1.8000000000017076,
+        3.7281554781868156,
+        3.9672763627469254,
+        5.524415369430171e-08
+      ],
+      "absolute_log_ratio_error": 0.23912088456010983,
+      "ratio_relative_error_percent": 21.268029817594638,
+      "physical_valid": true,
+      "terminal_feasible": false,
+      "purposes": [
+        "actual_executed_feed_replay",
+        "uniform_grid"
+      ],
+      "seconds": 0.09587812516838312
+    }
+  ],
+  "diagnostic_model_calls": 1,
+  "diagnostic_model_seconds": 0.09586162492632866,
+  "diagnostic_wall_seconds": 0.09594754129648209,
+  "episode_sha256": "f116412c62a6bdf874186a4685f5405ee42711ec01bbac959a0eb14d908d26db",
+  "same_case_policy_context": [
+    {
+      "method": "open_loop",
+      "status": "completed",
+      "terminal_feasible": false,
+      "terminal_ratio": 0.6801368397232948,
+      "terminal_log_ratio_error": 0.38546126616981047,
+      "terminal_biomass_gDW": 96.08272390511203,
+      "final_interval_true_state": {
+        "volume_L": 1.756582822666617,
+        "biomass_amount_gDW": 76.74329258998343,
+        "ratio": 0.809763012773782,
+        "glucose_g_L": 12.218726133656295,
+        "remaining_volume_L": 0.04341717733338313,
+        "admissible_constant_feed_upper_L_h": 0.021708588666691564
+      },
+      "final_interval_actual_feed_L_h": 0.02170858866670434,
+      "final_interval_estimated_kappa": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "method": "nominal_mpc",
+      "status": "completed",
+      "terminal_feasible": false,
+      "terminal_ratio": 0.7873197018240536,
+      "terminal_log_ratio_error": 0.23912088456010983,
+      "terminal_biomass_gDW": 94.44271754215526,
+      "final_interval_true_state": {
+        "volume_L": 1.8000000000017076,
+        "biomass_amount_gDW": 80.18485829614067,
+        "ratio": 0.8824095420967591,
+        "glucose_g_L": 10.778133608905913,
+        "remaining_volume_L": -1.7075230118734908e-12,
+        "admissible_constant_feed_upper_L_h": 0.0
+      },
+      "final_interval_actual_feed_L_h": 0.0,
+      "final_interval_estimated_kappa": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "method": "adaptive_direct_mpc",
+      "status": "completed",
+      "terminal_feasible": true,
+      "terminal_ratio": 0.9920311937294153,
+      "terminal_log_ratio_error": 0.008000726899907828,
+      "terminal_biomass_gDW": 91.74380201673615,
+      "final_interval_true_state": {
+        "volume_L": 1.7999999999999974,
+        "biomass_amount_gDW": 87.8213629474424,
+        "ratio": 1.0502333652034983,
+        "glucose_g_L": 2.800739725343786,
+        "remaining_volume_L": 2.6645352591003757e-15,
+        "admissible_constant_feed_upper_L_h": 1.3322676295501878e-15
+      },
+      "final_interval_actual_feed_L_h": 0.0,
+      "final_interval_estimated_kappa": [
+        0.8240234063916116,
+        1.0860316612338663
+      ]
+    },
+    {
+      "method": "adaptive_limited_direct",
+      "status": "completed",
+      "terminal_feasible": true,
+      "terminal_ratio": 0.9920323084553155,
+      "terminal_log_ratio_error": 0.007999603220248286,
+      "terminal_biomass_gDW": 91.56657554992461,
+      "final_interval_true_state": {
+        "volume_L": 1.708944497060434,
+        "biomass_amount_gDW": 83.73110463077523,
+        "ratio": 1.1735944306733614,
+        "glucose_g_L": 0.2509895950203287,
+        "remaining_volume_L": 0.0910555029395661,
+        "admissible_constant_feed_upper_L_h": 0.04552775146978305
+      },
+      "final_interval_actual_feed_L_h": 0.04552775146976859,
+      "final_interval_estimated_kappa": [
+        0.8240230526510471,
+        1.08598730529693
+      ]
+    },
+    {
+      "method": "adaptive_ungated",
+      "status": "completed",
+      "terminal_feasible": true,
+      "terminal_ratio": 0.992032146419068,
+      "terminal_log_ratio_error": 0.007999766557933441,
+      "terminal_biomass_gDW": 91.5782989815302,
+      "final_interval_true_state": {
+        "volume_L": 1.7266029250602999,
+        "biomass_amount_gDW": 85.20379592079973,
+        "ratio": 1.1361101264084128,
+        "glucose_g_L": 0.2502638134465352,
+        "remaining_volume_L": 0.07339707493970016,
+        "admissible_constant_feed_upper_L_h": 0.03669853746985008
+      },
+      "final_interval_actual_feed_L_h": 0.03669823985851473,
+      "final_interval_estimated_kappa": [
+        0.8240219631514942,
+        1.0860008415212625
+      ]
+    },
+    {
+      "method": "adaptive_verified",
+      "status": "completed",
+      "terminal_feasible": true,
+      "terminal_ratio": 0.9920320240257455,
+      "terminal_log_ratio_error": 0.007999889934308335,
+      "terminal_biomass_gDW": 91.74436915909288,
+      "final_interval_true_state": {
+        "volume_L": 1.800000000000001,
+        "biomass_amount_gDW": 87.8099535059491,
+        "ratio": 1.0503691828373276,
+        "glucose_g_L": 2.8097666425690586,
+        "remaining_volume_L": -8.881784197001252e-16,
+        "admissible_constant_feed_upper_L_h": 0.0
+      },
+      "final_interval_actual_feed_L_h": 0.0,
+      "final_interval_estimated_kappa": [
+        0.8240227549179319,
+        1.086013156897855
+      ]
+    }
+  ]
+}

@@ -1,0 +1,519 @@
+{
+  "complete": true,
+  "problems": 36,
+  "policy_executions": 72,
+  "elapsed_wall_seconds": 2338.637164375279,
+  "protocol_sha256": "1e14e431d1c05e75ad47284df6daa3e018ee7b0d5e2abd633b26bbcbb4806f4e",
+  "methods": {
+    "open": {
+      "problems": 36,
+      "planned": {
+        "inner": 1,
+        "outer": 1,
+        "actual": 2
+      },
+      "deployed": {
+        "inner": 1,
+        "outer": 1,
+        "actual": 2
+      },
+      "completed_paths": 324,
+      "physical_problem_failures": 0,
+      "matched_numerical_problem_failures": 0,
+      "chained_numerical_problem_failures": 0,
+      "label_problem_disagreements": 0,
+      "optimizer_calls": 252,
+      "optimizer_nonconvergence": 120,
+      "optimization_transitions": 824892,
+      "continuation_transitions": 0,
+      "optimization_seconds": 2874.5367604149505,
+      "deployment_seconds": 116.5335291204974,
+      "max_matched_log_ratio_error": 1.0811558315282355e-09,
+      "max_chained_log_ratio_error": 9.452751914551527e-10
+    },
+    "causal": {
+      "problems": 36,
+      "planned": {
+        "inner": 9,
+        "outer": 9,
+        "actual": 12
+      },
+      "deployed": {
+        "inner": 9,
+        "outer": 9,
+        "actual": 12
+      },
+      "completed_paths": 324,
+      "physical_problem_failures": 0,
+      "matched_numerical_problem_failures": 0,
+      "chained_numerical_problem_failures": 0,
+      "label_problem_disagreements": 0,
+      "optimizer_calls": 252,
+      "optimizer_nonconvergence": 98,
+      "optimization_transitions": 873552,
+      "continuation_transitions": 54639,
+      "optimization_seconds": 2921.466030917596,
+      "deployment_seconds": 288.549124290701,
+      "max_matched_log_ratio_error": 1.1365801633189676e-09,
+      "max_chained_log_ratio_error": 9.676726087093357e-10
+    }
+  },
+  "shared_grid41_construction": [
+    {
+      "root": {
+        "id": "analytic_v0.9_uniform",
+        "family": "analytic",
+        "volume": 0.9,
+        "timing": "uniform",
+        "feeds": [
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04
+        ],
+        "state": [
+          0.8999999999999998,
+          2.462538059456019,
+          1.4449754279121425,
+          16.637018112979753
+        ],
+        "knots": [
+          [
+            0.5,
+            -7.600902459542082,
+            -7.600902459542082,
+            10.0
+          ],
+          [
+            0.58,
+            -5.665276929226069,
+            -5.80337825406569,
+            17.9888943639493
+          ],
+          [
+            0.6599999999999999,
+            -3.6539127725863705,
+            -3.994237767272392,
+            25.91161722136272
+          ],
+          [
+            0.7399999999999999,
+            -1.6072665599388427,
+            -2.1799510712825945,
+            33.356938771103955
+          ],
+          [
+            0.8199999999999998,
+            0.45386576781800975,
+            -0.3635950490533313,
+            37.29207645205957
+          ],
+          [
+            0.8999999999999998,
+            2.462538059456019,
+            1.4449754279121425,
+            16.637018112979753
+          ]
+        ]
+      },
+      "raw_grid": 41,
+      "complete": true,
+      "completed_first_actions": 41,
+      "total_first_actions": 41,
+      "new_transitions": 15252,
+      "reused_transitions": 0,
+      "accepted_steps": 10970706,
+      "rejected_steps": 30813,
+      "seconds": 21.302428542170674,
+      "source_sha256": {
+        "scripts/grid_observation.py": "222d54ad3d53dd3bb9dda809b05866ff02445826d4cdadc324f172e664876ef3",
+        "scripts/engine.py": "4d04e127bc7180d7ec24c63a9fed4384df10b2fbd86e4fca6610c7b3420b561b",
+        "vendor/prior_kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6",
+        "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb",
+        "data/prescribed_roots.json": "16ac9df9afc4d5bc3debc3f75cc6bae59892efe2ca91d2c353985f065ff00e66"
+      },
+      "npz_sha256": "2ae6e3e8edc1fb08bd07b76a47540fa439c9c49b4e606470b175580a2ab7c016"
+    },
+    {
+      "root": {
+        "id": "analytic_v1.3_uniform",
+        "family": "analytic",
+        "volume": 1.3,
+        "timing": "uniform",
+        "feeds": [
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08
+        ],
+        "state": [
+          1.3,
+          2.7010327555414757,
+          1.4795712827368388,
+          49.48974826089247
+        ],
+        "knots": [
+          [
+            0.5,
+            -7.600902459542082,
+            -7.600902459542082,
+            10.0
+          ],
+          [
+            0.66,
+            -5.627252820855597,
+            -5.79754721461276,
+            25.988569819352687
+          ],
+          [
+            0.8200000000000001,
+            -3.5684500636599275,
+            -3.981530831081229,
+            41.90615945730225
+          ],
+          [
+            0.9800000000000001,
+            -1.4802324682245966,
+            -2.16137727048123,
+            57.29399226479823
+          ],
+          [
+            1.1400000000000001,
+            0.6199202073972818,
+            -0.3395742255311808,
+            68.64253288601836
+          ],
+          [
+            1.3,
+            2.7010327555414757,
+            1.4795712827368388,
+            49.48974826089247
+          ]
+        ]
+      },
+      "raw_grid": 41,
+      "complete": true,
+      "completed_first_actions": 41,
+      "total_first_actions": 41,
+      "new_transitions": 11067,
+      "reused_transitions": 0,
+      "accepted_steps": 6808695,
+      "rejected_steps": 24657,
+      "seconds": 13.8523058751598,
+      "source_sha256": {
+        "scripts/grid_observation.py": "222d54ad3d53dd3bb9dda809b05866ff02445826d4cdadc324f172e664876ef3",
+        "scripts/engine.py": "4d04e127bc7180d7ec24c63a9fed4384df10b2fbd86e4fca6610c7b3420b561b",
+        "vendor/prior_kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6",
+        "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb",
+        "data/prescribed_roots.json": "16ac9df9afc4d5bc3debc3f75cc6bae59892efe2ca91d2c353985f065ff00e66"
+      },
+      "npz_sha256": "20fa9825a7f82f0612d6d5df4ea5948fd38c851c09475ece4189d9f3349323cc"
+    },
+    {
+      "root": {
+        "id": "analytic_v1.7_uniform",
+        "family": "analytic",
+        "volume": 1.7,
+        "timing": "uniform",
+        "feeds": [
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ],
+        "state": [
+          1.7,
+          2.8080085441643297,
+          1.4946809647413422,
+          85.70993550964435
+        ],
+        "knots": [
+          [
+            0.5,
+            -7.600902459542082,
+            -7.600902459542082,
+            10.0
+          ],
+          [
+            0.74,
+            -5.60240140873301,
+            -5.793829060377978,
+            33.988352041930696
+          ],
+          [
+            0.98,
+            -3.5199179190892593,
+            -3.9744775106488386,
+            57.90286634307261
+          ],
+          [
+            1.22,
+            -1.4133693205634454,
+            -2.1517987605083886,
+            81.25772812092347
+          ],
+          [
+            1.46,
+            0.7026876964257245,
+            -0.32782408623323167,
+            100.27826750561715
+          ],
+          [
+            1.7,
+            2.8080085441643297,
+            1.4946809647413422,
+            85.70993550964435
+          ]
+        ]
+      },
+      "raw_grid": 41,
+      "complete": true,
+      "completed_first_actions": 11,
+      "total_first_actions": 11,
+      "new_transitions": 636,
+      "reused_transitions": 0,
+      "accepted_steps": 364415,
+      "rejected_steps": 1133,
+      "seconds": 2.4463518750853837,
+      "source_sha256": {
+        "scripts/grid_observation.py": "222d54ad3d53dd3bb9dda809b05866ff02445826d4cdadc324f172e664876ef3",
+        "scripts/engine.py": "4d04e127bc7180d7ec24c63a9fed4384df10b2fbd86e4fca6610c7b3420b561b",
+        "vendor/prior_kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6",
+        "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb",
+        "data/prescribed_roots.json": "16ac9df9afc4d5bc3debc3f75cc6bae59892efe2ca91d2c353985f065ff00e66"
+      },
+      "npz_sha256": "6f7e019541c476314fd9577605fb829cd207109413d7050e9dc9e0e225d0c9b4"
+    },
+    {
+      "root": {
+        "id": "table_v0.9_uniform",
+        "family": "table",
+        "volume": 0.9,
+        "timing": "uniform",
+        "feeds": [
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04
+        ],
+        "state": [
+          0.8999999999999998,
+          2.616187922968265,
+          1.7167586283866694,
+          17.582232001876775
+        ],
+        "knots": [
+          [
+            0.5,
+            -7.600902459542082,
+            -7.600902459542082,
+            10.0
+          ],
+          [
+            0.58,
+            -5.6835801346419785,
+            -5.745242255041283,
+            17.991385616709653
+          ],
+          [
+            0.6599999999999999,
+            -3.6452631428787203,
+            -3.881835345448837,
+            25.928199766923004
+          ],
+          [
+            0.7399999999999999,
+            -1.5482485233622505,
+            -2.014986706208068,
+            33.44410055632728
+          ],
+          [
+            0.8199999999999998,
+            0.5740452615461393,
+            -0.14670689646573273,
+            37.6332628049839
+          ],
+          [
+            0.8999999999999998,
+            2.616187922968265,
+            1.7167586283866694,
+            17.582232001876775
+          ]
+        ]
+      },
+      "raw_grid": 41,
+      "complete": true,
+      "completed_first_actions": 41,
+      "total_first_actions": 41,
+      "new_transitions": 15252,
+      "reused_transitions": 0,
+      "accepted_steps": 14930870,
+      "rejected_steps": 1996120,
+      "seconds": 85.50593795906752,
+      "source_sha256": {
+        "scripts/grid_observation.py": "222d54ad3d53dd3bb9dda809b05866ff02445826d4cdadc324f172e664876ef3",
+        "scripts/engine.py": "4d04e127bc7180d7ec24c63a9fed4384df10b2fbd86e4fca6610c7b3420b561b",
+        "vendor/prior_kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6",
+        "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb",
+        "data/prescribed_roots.json": "16ac9df9afc4d5bc3debc3f75cc6bae59892efe2ca91d2c353985f065ff00e66"
+      },
+      "npz_sha256": "97cf6f342e0058f0ef4b688044a85b32d7d5fe0ba0cf52bf6af2e7a49d976b10"
+    },
+    {
+      "root": {
+        "id": "table_v1.3_uniform",
+        "family": "table",
+        "volume": 1.3,
+        "timing": "uniform",
+        "feeds": [
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08
+        ],
+        "state": [
+          1.3,
+          2.9978659988858416,
+          1.738830211597892,
+          45.34158241079406
+        ],
+        "knots": [
+          [
+            0.5,
+            -7.600902459542082,
+            -7.600902459542082,
+            10.0
+          ],
+          [
+            0.66,
+            -5.622880786923205,
+            -5.7413567654644595,
+            25.99096652245608
+          ],
+          [
+            0.8200000000000001,
+            -3.5057652254976253,
+            -3.873381263945182,
+            41.92056273944821
+          ],
+          [
+            0.9800000000000001,
+            -1.3384845595925716,
+            -2.002658755085875,
+            57.34780185961819
+          ],
+          [
+            1.1400000000000001,
+            0.8493543441713023,
+            -0.13084540226934746,
+            68.54690984558617
+          ],
+          [
+            1.3,
+            2.9978659988858416,
+            1.738830211597892,
+            45.34158241079406
+          ]
+        ]
+      },
+      "raw_grid": 41,
+      "complete": true,
+      "completed_first_actions": 41,
+      "total_first_actions": 41,
+      "new_transitions": 11067,
+      "reused_transitions": 0,
+      "accepted_steps": 9370537,
+      "rejected_steps": 1010441,
+      "seconds": 50.91684179101139,
+      "source_sha256": {
+        "scripts/grid_observation.py": "222d54ad3d53dd3bb9dda809b05866ff02445826d4cdadc324f172e664876ef3",
+        "scripts/engine.py": "4d04e127bc7180d7ec24c63a9fed4384df10b2fbd86e4fca6610c7b3420b561b",
+        "vendor/prior_kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6",
+        "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb",
+        "data/prescribed_roots.json": "16ac9df9afc4d5bc3debc3f75cc6bae59892efe2ca91d2c353985f065ff00e66"
+      },
+      "npz_sha256": "65f289b5441270570c153d1c1d62494695c61ecfde4516d2cdbaed57b11f271a"
+    },
+    {
+      "root": {
+        "id": "table_v1.7_uniform",
+        "family": "table",
+        "volume": 1.7,
+        "timing": "uniform",
+        "feeds": [
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ],
+        "state": [
+          1.7,
+          3.178676400325189,
+          1.748824423925997,
+          77.7190651911548
+        ],
+        "knots": [
+          [
+            0.5,
+            -7.600902459542082,
+            -7.600902459542082,
+            10.0
+          ],
+          [
+            0.74,
+            -5.582485435988377,
+            -5.738880893801858,
+            33.99067404117261
+          ],
+          [
+            0.98,
+            -3.4251360312611894,
+            -3.8686959472276983,
+            57.91565503734048
+          ],
+          [
+            1.22,
+            -1.226248782723424,
+            -1.996306435573754,
+            81.2875585186979
+          ],
+          [
+            1.46,
+            0.9889821060697279,
+            -0.12307165991404366,
+            99.87250945235132
+          ],
+          [
+            1.7,
+            3.178676400325189,
+            1.748824423925997,
+            77.7190651911548
+          ]
+        ]
+      },
+      "raw_grid": 41,
+      "complete": true,
+      "completed_first_actions": 11,
+      "total_first_actions": 11,
+      "new_transitions": 636,
+      "reused_transitions": 0,
+      "accepted_steps": 399598,
+      "rejected_steps": 37641,
+      "seconds": 3.979803584050387,
+      "source_sha256": {
+        "scripts/grid_observation.py": "222d54ad3d53dd3bb9dda809b05866ff02445826d4cdadc324f172e664876ef3",
+        "scripts/engine.py": "4d04e127bc7180d7ec24c63a9fed4384df10b2fbd86e4fca6610c7b3420b561b",
+        "vendor/prior_kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6",
+        "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb",
+        "data/prescribed_roots.json": "16ac9df9afc4d5bc3debc3f75cc6bae59892efe2ca91d2c353985f065ff00e66"
+      },
+      "npz_sha256": "526ffcd93e64b91e885098ee5a2766e96f980769d0a5344a224a134acdf1a5d2"
+    }
+  ]
+}

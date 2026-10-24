@@ -1,0 +1,95 @@
+{
+  "working_directory": "the newly prepared study directory",
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "commands": [
+    [
+      "python",
+      "-B",
+      "audit/check_engine.py",
+      "--declare"
+    ],
+    [
+      "python",
+      "-B",
+      "audit/check_engine.py",
+      "--execute"
+    ],
+    [
+      "python",
+      "-B",
+      "scripts/campaign.py"
+    ],
+    [
+      "python",
+      "-B",
+      "scripts/target_sets.py"
+    ],
+    [
+      "python",
+      "-B",
+      "audit/check_target_algebra.py"
+    ],
+    [
+      "python",
+      "-B",
+      "audit/deploy_policies.py",
+      "--declare"
+    ],
+    [
+      "python",
+      "-B",
+      "audit/deploy_policies.py",
+      "--execute"
+    ],
+    [
+      "python",
+      "-B",
+      "audit/verify_refined_targets.py",
+      "--declare"
+    ],
+    [
+      "python",
+      "-B",
+      "audit/verify_refined_targets.py",
+      "--execute"
+    ],
+    [
+      "python",
+      "-B",
+      "scripts/test_continuous_baseline_development.py"
+    ],
+    [
+      "python",
+      "-B",
+      "scripts/run_continuous.py",
+      "--execute"
+    ],
+    [
+      "python",
+      "-B",
+      "audit/verify_continuous_minima.py",
+      "--declare"
+    ],
+    [
+      "python",
+      "-B",
+      "audit/verify_continuous_minima.py",
+      "--execute"
+    ],
+    [
+      "python",
+      "-B",
+      "scripts/analyze_maps.py"
+    ],
+    [
+      "python",
+      "-B",
+      "scripts/analyze_deployment.py"
+    ]
+  ],
+  "scope": "Long study commands; not executed by preparation or package verification. Inspect scientific audit flags rather than treating a nonzero audit status as permission to loosen tolerances."
+}

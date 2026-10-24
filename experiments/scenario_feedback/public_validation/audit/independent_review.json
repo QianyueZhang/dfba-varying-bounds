@@ -1,0 +1,25 @@
+{
+  "reviewer": "Independent subagent /root/methods_paper/public_data_audit",
+  "reported_utc": "2026-10-24T02:25:11.267954+00:00",
+  "scope": "Read-only independent audit; no model fitting; no output modification",
+  "hash_checks": [
+    "primary protocol",
+    "primary script",
+    "primary training fit",
+    "source data ZIP",
+    "secondary protocol",
+    "secondary script",
+    "software ZIP"
+  ],
+  "hash_checks_passed": 7,
+  "rmse_baseline_recalculation": "All primary and secondary per-run RMSE and baseline calculations recomputed from exported CSV using standard-library Python",
+  "maximum_metric_discrepancy": 3.3306690738754696e-16,
+  "unique_trajectory_fingerprints": 14,
+  "training_composition_points": 286,
+  "holdout_composition_points": 1079,
+  "dose_observations": 18,
+  "original_mat_array_check": "All 8 holdout time/fraction/light/setpoint arrays match exactly",
+  "source_mapping_check": "Published supplementary captions confirm figures6,9,10,11,13; figure6.mat pointer correctly not double-counted",
+  "conclusion": "No discrepancies. Negative primary conclusion supported. Secondary only improves aggregate one-step through40h, not complete-trajectory free-run or one-step.",
+  "status": "passed"
+}

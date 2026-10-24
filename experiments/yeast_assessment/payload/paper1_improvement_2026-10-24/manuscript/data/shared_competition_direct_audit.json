@@ -1,0 +1,474 @@
+{
+  "case": "shared_competition",
+  "case_definition": {
+    "folder": "\u5df2\u89e3\u51b307_01_Competition_coculture_medium_simu",
+    "vmax": [
+      10.0,
+      5.0
+    ],
+    "initial_substrate": [
+      20.0
+    ],
+    "feed_substrate": [
+      20.0
+    ],
+    "duration_h": 5.0,
+    "shared": true,
+    "figures": [
+      18
+    ],
+    "parameter_basis": "Current main_competition.m: 5 h; README separately states 10 h."
+  },
+  "original_requested_horizon_h": 5.0,
+  "reported_terminal_time_h": 5.0,
+  "full_horizon_completed": true,
+  "terminal_state_V_X_G": [
+    10.0,
+    8.122923856553847,
+    1.808935707136849,
+    0.14005455923913088
+  ],
+  "minimum_state_V_X_G": [
+    5.0,
+    1.0,
+    1.0,
+    0.14005455923913088
+  ],
+  "integrations": [
+    {
+      "formulation": "concentrations with integrated volume",
+      "method": "RK45",
+      "rtol": 1e-08,
+      "atol": 1e-10,
+      "max_step_h": 0.01,
+      "terminal_time_h": 5.0,
+      "complete_horizon": true,
+      "event_times": [
+        [],
+        []
+      ],
+      "RHS_evaluations": 3008,
+      "event_bracketing_below_guard_evaluations": 0,
+      "elapsed_s": 4.479687583167106,
+      "models": [
+        {
+          "KKT_calls": 3008,
+          "Newton_steps": 3481,
+          "cold_retries": 0,
+          "max_processed_equality_residual": 1.7053025658242404e-13,
+          "max_full_model_equality_residual": 1.7053025658242404e-13,
+          "max_primal_dual_residual": 9.748014195210588e-12,
+          "max_reciprocal_slack_stationarity_residual": 7.216946780018398e-07,
+          "minimum_slack": 1.0181923653008248e-05
+        },
+        {
+          "KKT_calls": 3008,
+          "Newton_steps": 3335,
+          "cold_retries": 0,
+          "max_processed_equality_residual": 1.7053025658242404e-13,
+          "max_full_model_equality_residual": 1.7053025658242404e-13,
+          "max_primal_dual_residual": 9.904854965338603e-12,
+          "max_reciprocal_slack_stationarity_residual": 3.5411120674252175e-07,
+          "minimum_slack": 1.017762754902595e-05
+        }
+      ]
+    },
+    {
+      "formulation": "amounts with analytic volume",
+      "method": "DOP853",
+      "rtol": 1e-10,
+      "atol": 1e-12,
+      "max_step_h": 0.005,
+      "terminal_time_h": 5.0,
+      "complete_horizon": true,
+      "event_times": [
+        [],
+        []
+      ],
+      "RHS_evaluations": 15017,
+      "event_bracketing_below_guard_evaluations": 0,
+      "elapsed_s": 20.683206749614328,
+      "models": [
+        {
+          "KKT_calls": 15017,
+          "Newton_steps": 15963,
+          "cold_retries": 0,
+          "max_processed_equality_residual": 1.794120407794253e-13,
+          "max_full_model_equality_residual": 1.794120407794253e-13,
+          "max_primal_dual_residual": 9.992765630786941e-12,
+          "max_reciprocal_slack_stationarity_residual": 8.763569413139919e-07,
+          "minimum_slack": 1.0181923653883632e-05
+        },
+        {
+          "KKT_calls": 15017,
+          "Newton_steps": 15395,
+          "cold_retries": 0,
+          "max_processed_equality_residual": 1.7674750552032492e-13,
+          "max_full_model_equality_residual": 1.7674750552032492e-13,
+          "max_primal_dual_residual": 9.965085339459664e-12,
+          "max_reciprocal_slack_stationarity_residual": 9.26547382410576e-07,
+          "minimum_slack": 1.0177627549526065e-05
+        }
+      ]
+    }
+  ],
+  "numerical": {
+    "mu": 1e-06,
+    "source_mu": 1e-06,
+    "source_finite_bound_margin": 0.0001,
+    "KKT_tolerance": 1e-11,
+    "positive_LP_growth_guard": 1e-05,
+    "reason_for_mu": "The source finite-barrier parameter1e-6 is retained; the substrate-supported operating condition avoids the low-substrate feasibility boundary."
+  },
+  "boundary_supply_and_demand": [
+    {
+      "species": 1,
+      "ATPM_lower_bound": 8.3899,
+      "minimum_glucose_for_relaxed_active_LP_g_L": 0.050166717978115886,
+      "zero_LP_growth_glucose_g_L": 0.05028341898061177,
+      "positive_growth_guard_g_L": 0.05029509050741603,
+      "guard_maximum_growth_h_inv": 1e-05,
+      "terminal_pool_g_L": 0.14005455923913088,
+      "gross_metabolic_glucose_demand_g_h": 19.961915999380558,
+      "feed_available_at_constant_concentration_g_h": 19.859945440760868,
+      "pool_concentration_derivative_g_L_h": -0.010197055861969062,
+      "terminal_species_glucose_uptake_mmol_gDW_h": 1.2284792120791548
+    },
+    {
+      "species": 2,
+      "ATPM_lower_bound": 8.3899,
+      "minimum_glucose_for_relaxed_active_LP_g_L": 0.10563268086653559,
+      "zero_LP_growth_glucose_g_L": 0.10589142063127627,
+      "positive_growth_guard_g_L": 0.1059173012684259,
+      "guard_maximum_growth_h_inv": 1e-05,
+      "terminal_pool_g_L": 0.14005455923913088,
+      "gross_metabolic_glucose_demand_g_h": 19.961915999380558,
+      "feed_available_at_constant_concentration_g_h": 19.859945440760868,
+      "pool_concentration_derivative_g_L_h": -0.010197055861969062,
+      "terminal_species_glucose_uptake_mmol_gDW_h": 0.61423423150268
+    }
+  ],
+  "validation": {
+    "independent_formulation_max_difference_V_X_G": [
+      4.618527782440651e-14,
+      6.536282626257162e-10,
+      1.914903791089273e-10,
+      3.8859596096507687e-10
+    ],
+    "event_time_difference_h": 0.0,
+    "integrated_pool_balance_max_error_g": [
+      3.0619951019161817e-13
+    ],
+    "analytic_volume_max_error_L": 8.881784197001252e-16,
+    "maximum_active_bound_excess": 0.0,
+    "sampled_model_metrics": [
+      {
+        "KKT_calls": 501,
+        "Newton_steps": 743,
+        "cold_retries": 0,
+        "max_processed_equality_residual": 1.7053025658242404e-13,
+        "max_full_model_equality_residual": 1.7053025658242404e-13,
+        "max_primal_dual_residual": 9.49138842899865e-12,
+        "max_reciprocal_slack_stationarity_residual": 3.972828882484879e-09,
+        "minimum_slack": 1.018192365394306e-05
+      },
+      {
+        "KKT_calls": 501,
+        "Newton_steps": 661,
+        "cold_retries": 0,
+        "max_processed_equality_residual": 1.7053025658242404e-13,
+        "max_full_model_equality_residual": 1.7053025658242404e-13,
+        "max_primal_dual_residual": 9.902269490652492e-12,
+        "max_reciprocal_slack_stationarity_residual": 1.0823908397103188e-07,
+        "minimum_slack": 1.0177627580251595e-05
+      }
+    ],
+    "LP_gap_checks": [
+      {
+        "time_h": 0.0,
+        "species": 1,
+        "LP_growth": 0.8303374481225733,
+        "KKT_growth": 0.830307030805503,
+        "objective_gap": 3.0417317070208227e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 0.0,
+        "species": 2,
+        "LP_growth": 0.393838655860169,
+        "KKT_growth": 0.3938082363937067,
+        "objective_gap": 3.0419466462261457e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 0.5,
+        "species": 1,
+        "LP_growth": 0.8272346560474101,
+        "KKT_growth": 0.827204238722764,
+        "objective_gap": 3.041732464603708e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 0.5,
+        "species": 2,
+        "LP_growth": 0.39228725982258744,
+        "KKT_growth": 0.3922568403403079,
+        "objective_gap": 3.0419482279553378e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 1.0,
+        "species": 1,
+        "LP_growth": 0.8228204914016634,
+        "KKT_growth": 0.8227900740661499,
+        "objective_gap": 3.0417335513455157e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 1.0,
+        "species": 2,
+        "LP_growth": 0.39008017749971385,
+        "KKT_growth": 0.39004975799472125,
+        "objective_gap": 3.0419504992607038e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 1.5,
+        "species": 1,
+        "LP_growth": 0.8158969067887121,
+        "KKT_growth": 0.8158664894359214,
+        "objective_gap": 3.0417352790634844e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 1.5,
+        "species": 2,
+        "LP_growth": 0.3866183851932384,
+        "KKT_growth": 0.38658796565211034,
+        "objective_gap": 3.041954112803502e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 2.0,
+        "species": 1,
+        "LP_growth": 0.8035782859322821,
+        "KKT_growth": 0.8035478685480673,
+        "objective_gap": 3.0417384214831422e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 2.0,
+        "species": 2,
+        "LP_growth": 0.3804590747650233,
+        "KKT_growth": 0.3804286551579891,
+        "objective_gap": 3.041960703414892e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 2.5,
+        "species": 1,
+        "LP_growth": 0.7768120215245559,
+        "KKT_growth": 0.7767816040688348,
+        "objective_gap": 3.041745572107679e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 2.5,
+        "species": 2,
+        "LP_growth": 0.3670759425611603,
+        "KKT_growth": 0.36704552280338076,
+        "objective_gap": 3.041975777950956e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 3.0,
+        "species": 1,
+        "LP_growth": 0.6898211315565999,
+        "KKT_growth": 0.6897907138325663,
+        "objective_gap": 3.0417724033560134e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 3.0,
+        "species": 2,
+        "LP_growth": 0.32358049757718244,
+        "KKT_growth": 0.32355007724366946,
+        "objective_gap": 3.0420333512970466e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 3.5,
+        "species": 1,
+        "LP_growth": 0.2125611603872082,
+        "KKT_growth": 0.21253073746733156,
+        "objective_gap": 3.0422919876649246e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 3.5,
+        "species": 2,
+        "LP_growth": 0.08490014374242577,
+        "KKT_growth": 0.084870522926627,
+        "objective_gap": 2.962081579876985e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 4.0,
+        "species": 1,
+        "LP_growth": 0.07797448811987141,
+        "KKT_growth": 0.07794499641279432,
+        "objective_gap": 2.9491707077097806e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 4.0,
+        "species": 2,
+        "LP_growth": 0.01674022594097629,
+        "KKT_growth": 0.016710690540628733,
+        "objective_gap": 2.953540034755786e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 4.5,
+        "species": 1,
+        "LP_growth": 0.0734946466231192,
+        "KKT_growth": 0.07346517557118043,
+        "objective_gap": 2.947105193877586e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 4.5,
+        "species": 2,
+        "LP_growth": 0.014500305192600196,
+        "KKT_growth": 0.014470750854745114,
+        "objective_gap": 2.9554337855081797e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 5.0,
+        "species": 1,
+        "LP_growth": 0.06968905171166728,
+        "KKT_growth": 0.06965958974566058,
+        "objective_gap": 2.9461966006699702e-05,
+        "bound_2nmu": 0.00018999999999999998
+      },
+      {
+        "time_h": 5.0,
+        "species": 2,
+        "LP_growth": 0.012597507736874227,
+        "KKT_growth": 0.012567932015682055,
+        "objective_gap": 2.957572119217239e-05,
+        "bound_2nmu": 0.00018999999999999998
+      }
+    ],
+    "passed": true
+  },
+  "adoption_ready": false,
+  "scope": "Direct-KKT check of an explicitly specified substrate-supported operating condition. Same source models, kinetics, initial states and original duration; common feed changed from0.1to1L/h using the conservative substrate/maintenance budget. No dormancy extension or claim of same-input reproduction.",
+  "source_files": [
+    {
+      "path": "new_model copy/07_coculture_medium/\u5df2\u89e3\u51b307_01_Competition_coculture_medium_simu/Model_Creator_S2_competition.m",
+      "sha256": "c2afa8411fe233eaa42eee31f662ed049f4ef4ba4333ed7240b495b42c71c996"
+    },
+    {
+      "path": "new_model copy/07_coculture_medium/\u5df2\u89e3\u51b307_01_Competition_coculture_medium_simu/Model_Creator_S1_competition.m",
+      "sha256": "5fa4ba68aa2c6a42a5a9736bba6782f4d1325566da1f86704ceb445c220e2e9b"
+    },
+    {
+      "path": "new_model copy/07_coculture_medium/\u5df2\u89e3\u51b307_01_Competition_coculture_medium_simu/e_coli_core.mat",
+      "sha256": "a70628fd2f32341aa877c65b9e992a1caa63deef7ef58bd953d8a4a1957347b2"
+    },
+    {
+      "path": "new_model copy/07_coculture_medium/\u5df2\u89e3\u51b307_01_Competition_coculture_medium_simu/S2_Model.mat",
+      "sha256": "1152fc8d8118a8099288194400b4637cbfc699c04d5a0b888ac775d7268d6708"
+    },
+    {
+      "path": "new_model copy/07_coculture_medium/\u5df2\u89e3\u51b307_01_Competition_coculture_medium_simu/S1_Model.mat",
+      "sha256": "7d68bd24c0a233abd4ea8eaa94acac59708ec25af66bcfa4b53e022e1a66b005"
+    },
+    {
+      "path": "new_model copy/07_coculture_medium/\u5df2\u89e3\u51b307_01_Competition_coculture_medium_simu/README.txt",
+      "sha256": "2f78b13e7b5c5970b6b80c60a65cf64d69d70dbddff5cf4d0f8e403e3374c615"
+    },
+    {
+      "path": "new_model copy/07_coculture_medium/\u5df2\u89e3\u51b307_01_Competition_coculture_medium_simu/ODEsimu_competition.m",
+      "sha256": "4c429fba202cfd1d3eeca53b511f4822b44584a822eb654ad154a2c7fd2ca3f3"
+    },
+    {
+      "path": "new_model copy/07_coculture_medium/\u5df2\u89e3\u51b307_01_Competition_coculture_medium_simu/main_competition.m",
+      "sha256": "d4cd4a138d84bee2f8a3989cec9d4a1626c4a1157d34edb4a65e09fbc6bea40c"
+    }
+  ],
+  "script_sha256": "2bd8020a842270c21951276c6b81374a71827eaa08ac423d5d0407b07b4070dd",
+  "environment": {
+    "python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "numpy": "1.26.4",
+    "scipy": "1.12.0",
+    "platform": "macOS-14.6.1-arm64-arm-64bit"
+  },
+  "physical_parameters": {
+    "V0_L": 5.0,
+    "F_L_h": 1.0,
+    "initial_biomass_gDW_L": [
+      1.0,
+      1.0
+    ],
+    "glucose_MW_g_mmol": 0.18,
+    "biomass_death_rate_h_inv": 0.0
+  },
+  "operating_condition_design": {
+    "chosen_common_feed_L_h": 1.0,
+    "unchanged_source_feed_L_h": 0.1,
+    "basis": "Bound on inward substrate derivative at the larger active threshold over the full5h shared-resource horizon; includes both species in one mass budget. The10h independent pool bound is weaker.",
+    "yield_LP_certificates": [
+      {
+        "case": "independent_identical",
+        "species": "S1",
+        "yield_bound_gDW_g": 0.5,
+        "max_growth_minus_Y_glucose_mass_uptake_h_inv": -0.02601267265118612
+      },
+      {
+        "case": "independent_identical",
+        "species": "S2",
+        "yield_bound_gDW_g": 0.5,
+        "max_growth_minus_Y_glucose_mass_uptake_h_inv": -0.02601267265118612
+      },
+      {
+        "case": "independent_different",
+        "species": "S1",
+        "yield_bound_gDW_g": 0.5,
+        "max_growth_minus_Y_glucose_mass_uptake_h_inv": -0.03433640452671072
+      },
+      {
+        "case": "independent_different",
+        "species": "S2",
+        "yield_bound_gDW_g": 0.5,
+        "max_growth_minus_Y_glucose_mass_uptake_h_inv": -0.02601267265118612
+      },
+      {
+        "case": "shared_competition",
+        "species": "S1",
+        "yield_bound_gDW_g": 0.5,
+        "max_growth_minus_Y_glucose_mass_uptake_h_inv": -0.02601267265118623
+      },
+      {
+        "case": "shared_competition",
+        "species": "S2",
+        "yield_bound_gDW_g": 0.5,
+        "max_growth_minus_Y_glucose_mass_uptake_h_inv": -0.03433640452671072
+      }
+    ],
+    "shared_threshold_glucose_g_L": 0.10591730126842593,
+    "maximum_per_biomass_glucose_consumption_g_gDW_h": 0.17239186154742342,
+    "conservative_feed_lower_bound_L_h": 0.9096941796858127,
+    "shared_parameters": {
+      "B0_total_gDW": 10.0,
+      "initial_total_glucose_g": 100.0,
+      "inlet_glucose_g_L": 20.0,
+      "horizon_h": 5.0
+    },
+    "formula": "F >= c [B0+Y(NG0\u2212V0 G*)] / [(Gin\u2212G*) (1\u2212c Y tf)], c=MW vmax_high G*/(Ks+G*)",
+    "interpretation": "For any feasible active trajectory, Btotal<=B0+Y(NG0+F Gin t\u2212V(t)G). At G=G*, total metabolic glucose demand<=c Btotal. The chosen feed makes F(Gin\u2212G*) exceed that demand bound through tf. This is an operating specification, not a biological parameter change or a claim of matching source inputs."
+  },
+  "supported_runner_sha256": "fd4489ea37e72f54a671d1e63c3fde59d025b1bc19f783572616d984991e5c2d"
+}

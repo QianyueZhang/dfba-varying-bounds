@@ -1,0 +1,1522 @@
+{
+  "title": "Model-relative local-surrogate management in adaptive coculture feed control",
+  "status": "Scenario identities and methods fixed after three development scenarios and before evaluation outcomes; not public preregistration",
+  "created_utc": "2026-10-23T08:38:30Z",
+  "design": {
+    "new_initial_condition_clusters": 6,
+    "regimes_per_cluster": 4,
+    "controller_methods": 6,
+    "episodes": 144,
+    "feedback_intervals_per_episode": 7,
+    "independence": "Six condition clusters, one deterministic noise sequence per noisy case; not 144 independent biological systems or reliability trials"
+  },
+  "seeds": {
+    "conditions": 2026102307,
+    "mismatch": 2026102308,
+    "noise": 2026102309
+  },
+  "methods": [
+    "open_loop",
+    "nominal_mpc",
+    "adaptive_direct_mpc",
+    "adaptive_limited_direct",
+    "adaptive_ungated",
+    "adaptive_verified"
+  ],
+  "cases": [
+    {
+      "id": "cluster_0_nominal",
+      "cluster": 0,
+      "regime": "nominal",
+      "initial_ratio": 1.1044723700021342,
+      "initial_glucose": 18.00057257422846,
+      "target_ratio": 0.7,
+      "kappa_before": [
+        1.0,
+        1.0
+      ],
+      "kappa_after": [
+        1.0,
+        1.0
+      ],
+      "change_stage": 99,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "cluster_0_constant_mismatch",
+      "cluster": 0,
+      "regime": "constant_mismatch",
+      "initial_ratio": 1.1044723700021342,
+      "initial_glucose": 18.00057257422846,
+      "target_ratio": 0.7,
+      "kappa_before": [
+        0.8964686028123313,
+        1.13043040459471
+      ],
+      "kappa_after": [
+        0.8964686028123313,
+        1.13043040459471
+      ],
+      "change_stage": 99,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "cluster_0_step_mismatch",
+      "cluster": 0,
+      "regime": "step_mismatch",
+      "initial_ratio": 1.1044723700021342,
+      "initial_glucose": 18.00057257422846,
+      "target_ratio": 0.7,
+      "kappa_before": [
+        1.0,
+        1.0
+      ],
+      "kappa_after": [
+        0.8964686028123313,
+        1.13043040459471
+      ],
+      "change_stage": 3,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "cluster_0_noisy_mismatch",
+      "cluster": 0,
+      "regime": "noisy_mismatch",
+      "initial_ratio": 1.1044723700021342,
+      "initial_glucose": 18.00057257422846,
+      "target_ratio": 0.7,
+      "kappa_before": [
+        0.8964686028123313,
+        1.13043040459471
+      ],
+      "kappa_after": [
+        0.8964686028123313,
+        1.13043040459471
+      ],
+      "change_stage": 99,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0027808077470896746,
+          0.00015329799532615482,
+          0.0030563021601940805
+        ],
+        [
+          -0.0005331013084745093,
+          0.001240773120749242,
+          -0.019871049899497627
+        ],
+        [
+          -0.002339231349380141,
+          -0.002950834022459653,
+          -0.04824429406912433
+        ],
+        [
+          0.0006194763914374028,
+          -0.004048342272513394,
+          -0.010562493569127036
+        ],
+        [
+          0.0031262472943229,
+          -0.0025675772169786904,
+          -0.15695547837491708
+        ],
+        [
+          8.969475550740394e-05,
+          -0.0023587368690240864,
+          -0.03728765266630959
+        ],
+        [
+          0.0008999810143520164,
+          -0.002195597921804501,
+          -0.02548809538927573
+        ]
+      ]
+    },
+    {
+      "id": "cluster_1_nominal",
+      "cluster": 1,
+      "regime": "nominal",
+      "initial_ratio": 1.4868005510020232,
+      "initial_glucose": 17.05346546117114,
+      "target_ratio": 1.0,
+      "kappa_before": [
+        1.0,
+        1.0
+      ],
+      "kappa_after": [
+        1.0,
+        1.0
+      ],
+      "change_stage": 99,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "cluster_1_constant_mismatch",
+      "cluster": 1,
+      "regime": "constant_mismatch",
+      "initial_ratio": 1.4868005510020232,
+      "initial_glucose": 17.05346546117114,
+      "target_ratio": 1.0,
+      "kappa_before": [
+        1.0919393113799198,
+        0.9250669287098601
+      ],
+      "kappa_after": [
+        1.0919393113799198,
+        0.9250669287098601
+      ],
+      "change_stage": 99,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "cluster_1_step_mismatch",
+      "cluster": 1,
+      "regime": "step_mismatch",
+      "initial_ratio": 1.4868005510020232,
+      "initial_glucose": 17.05346546117114,
+      "target_ratio": 1.0,
+      "kappa_before": [
+        1.0,
+        1.0
+      ],
+      "kappa_after": [
+        1.0919393113799198,
+        0.9250669287098601
+      ],
+      "change_stage": 4,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "cluster_1_noisy_mismatch",
+      "cluster": 1,
+      "regime": "noisy_mismatch",
+      "initial_ratio": 1.4868005510020232,
+      "initial_glucose": 17.05346546117114,
+      "target_ratio": 1.0,
+      "kappa_before": [
+        1.0919393113799198,
+        0.9250669287098601
+      ],
+      "kappa_after": [
+        1.0919393113799198,
+        0.9250669287098601
+      ],
+      "change_stage": 99,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.005317311752590783,
+          0.004099583119178918,
+          -0.02171129585193723
+        ],
+        [
+          0.0011476880726445644,
+          0.0036557308697598885,
+          -0.047497533914044224
+        ],
+        [
+          0.0102613422452497,
+          0.0016971954343533906,
+          0.047598979101971944
+        ],
+        [
+          0.009017376496918953,
+          0.0002487149776443884,
+          -0.005049496458092111
+        ],
+        [
+          -0.0031011050435785547,
+          0.01005637547373645,
+          -0.025473357021071275
+        ],
+        [
+          -0.0003494905132085443,
+          0.005098215349233308,
+          -0.023473298533965025
+        ],
+        [
+          0.005808892773151681,
+          -0.003922712163464446,
+          0.0398364463327015
+        ]
+      ]
+    },
+    {
+      "id": "cluster_2_nominal",
+      "cluster": 2,
+      "regime": "nominal",
+      "initial_ratio": 1.287540558486398,
+      "initial_glucose": 23.957441130524494,
+      "target_ratio": 1.4,
+      "kappa_before": [
+        1.0,
+        1.0
+      ],
+      "kappa_after": [
+        1.0,
+        1.0
+      ],
+      "change_stage": 99,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "cluster_2_constant_mismatch",
+      "cluster": 2,
+      "regime": "constant_mismatch",
+      "initial_ratio": 1.287540558486398,
+      "initial_glucose": 23.957441130524494,
+      "target_ratio": 1.4,
+      "kappa_before": [
+        0.8835987058049584,
+        1.1566759305387557
+      ],
+      "kappa_after": [
+        0.8835987058049584,
+        1.1566759305387557
+      ],
+      "change_stage": 99,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "cluster_2_step_mismatch",
+      "cluster": 2,
+      "regime": "step_mismatch",
+      "initial_ratio": 1.287540558486398,
+      "initial_glucose": 23.957441130524494,
+      "target_ratio": 1.4,
+      "kappa_before": [
+        1.0,
+        1.0
+      ],
+      "kappa_after": [
+        0.8835987058049584,
+        1.1566759305387557
+      ],
+      "change_stage": 3,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "cluster_2_noisy_mismatch",
+      "cluster": 2,
+      "regime": "noisy_mismatch",
+      "initial_ratio": 1.287540558486398,
+      "initial_glucose": 23.957441130524494,
+      "target_ratio": 1.4,
+      "kappa_before": [
+        0.8835987058049584,
+        1.1566759305387557
+      ],
+      "kappa_after": [
+        0.8835987058049584,
+        1.1566759305387557
+      ],
+      "change_stage": 99,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0012626094002965763,
+          -0.002698581770756033,
+          0.10361930348872528
+        ],
+        [
+          0.002755499138953936,
+          0.0008663433150342024,
+          0.07645550348323105
+        ],
+        [
+          0.00487088248948962,
+          0.006505056866479454,
+          -0.020712594460878864
+        ],
+        [
+          -0.0050419667973883135,
+          0.006767287055400702,
+          -0.04912402999701019
+        ],
+        [
+          0.0015872747069356863,
+          -0.0014307291304786122,
+          -0.035064646644292534
+        ],
+        [
+          0.00010224922091264689,
+          0.0032092030881940336,
+          0.06607902455378728
+        ],
+        [
+          -0.0015106757129284686,
+          0.0024395282804821955,
+          -0.0197503880603602
+        ]
+      ]
+    },
+    {
+      "id": "cluster_3_nominal",
+      "cluster": 3,
+      "regime": "nominal",
+      "initial_ratio": 1.2251057415338735,
+      "initial_glucose": 21.259465544358548,
+      "target_ratio": 0.7,
+      "kappa_before": [
+        1.0,
+        1.0
+      ],
+      "kappa_after": [
+        1.0,
+        1.0
+      ],
+      "change_stage": 99,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "cluster_3_constant_mismatch",
+      "cluster": 3,
+      "regime": "constant_mismatch",
+      "initial_ratio": 1.2251057415338735,
+      "initial_glucose": 21.259465544358548,
+      "target_ratio": 0.7,
+      "kappa_before": [
+        1.1740186122516325,
+        0.85221735666284
+      ],
+      "kappa_after": [
+        1.1740186122516325,
+        0.85221735666284
+      ],
+      "change_stage": 99,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "cluster_3_step_mismatch",
+      "cluster": 3,
+      "regime": "step_mismatch",
+      "initial_ratio": 1.2251057415338735,
+      "initial_glucose": 21.259465544358548,
+      "target_ratio": 0.7,
+      "kappa_before": [
+        1.0,
+        1.0
+      ],
+      "kappa_after": [
+        1.1740186122516325,
+        0.85221735666284
+      ],
+      "change_stage": 4,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "cluster_3_noisy_mismatch",
+      "cluster": 3,
+      "regime": "noisy_mismatch",
+      "initial_ratio": 1.2251057415338735,
+      "initial_glucose": 21.259465544358548,
+      "target_ratio": 0.7,
+      "kappa_before": [
+        1.1740186122516325,
+        0.85221735666284
+      ],
+      "kappa_after": [
+        1.1740186122516325,
+        0.85221735666284
+      ],
+      "change_stage": 99,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0014728971052894958,
+          0.0032384915636973917,
+          0.060350943213987485
+        ],
+        [
+          0.0053865282988684446,
+          0.002067231676970394,
+          0.02649612981566098
+        ],
+        [
+          -0.0011062547325851803,
+          0.001179559998481524,
+          -0.036716315360781265
+        ],
+        [
+          -0.0014094412271826247,
+          0.00413701643439416,
+          0.006175842837819668
+        ],
+        [
+          -0.000433083050699004,
+          0.00034971875941906203,
+          0.0335252172132117
+        ],
+        [
+          0.007193606890069306,
+          0.005238693181218171,
+          -0.0036898744361570875
+        ],
+        [
+          0.0024293260464522803,
+          0.0029087418102832683,
+          0.03515104934183804
+        ]
+      ]
+    },
+    {
+      "id": "cluster_4_nominal",
+      "cluster": 4,
+      "regime": "nominal",
+      "initial_ratio": 0.6604498462238976,
+      "initial_glucose": 19.53336919677527,
+      "target_ratio": 1.0,
+      "kappa_before": [
+        1.0,
+        1.0
+      ],
+      "kappa_after": [
+        1.0,
+        1.0
+      ],
+      "change_stage": 99,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "cluster_4_constant_mismatch",
+      "cluster": 4,
+      "regime": "constant_mismatch",
+      "initial_ratio": 0.6604498462238976,
+      "initial_glucose": 19.53336919677527,
+      "target_ratio": 1.0,
+      "kappa_before": [
+        0.8240209416617441,
+        1.0859873607575168
+      ],
+      "kappa_after": [
+        0.8240209416617441,
+        1.0859873607575168
+      ],
+      "change_stage": 99,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "cluster_4_step_mismatch",
+      "cluster": 4,
+      "regime": "step_mismatch",
+      "initial_ratio": 0.6604498462238976,
+      "initial_glucose": 19.53336919677527,
+      "target_ratio": 1.0,
+      "kappa_before": [
+        1.0,
+        1.0
+      ],
+      "kappa_after": [
+        0.8240209416617441,
+        1.0859873607575168
+      ],
+      "change_stage": 3,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "cluster_4_noisy_mismatch",
+      "cluster": 4,
+      "regime": "noisy_mismatch",
+      "initial_ratio": 0.6604498462238976,
+      "initial_glucose": 19.53336919677527,
+      "target_ratio": 1.0,
+      "kappa_before": [
+        0.8240209416617441,
+        1.0859873607575168
+      ],
+      "kappa_after": [
+        0.8240209416617441,
+        1.0859873607575168
+      ],
+      "change_stage": 99,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.009487003048926914,
+          0.007081535635367127,
+          -0.11606939127627813
+        ],
+        [
+          0.0030755695426407633,
+          -0.0007856441936298606,
+          0.003364142245587614
+        ],
+        [
+          0.004927881773317673,
+          -0.0035592334474695885,
+          -0.12726649923107713
+        ],
+        [
+          0.0012125467372863289,
+          0.0040167121098514825,
+          0.05311727594723667
+        ],
+        [
+          -0.0028599792302319506,
+          0.005524246894214606,
+          0.135586441154237
+        ],
+        [
+          0.0026178843360451036,
+          -0.0005870828634154294,
+          0.03004666253103157
+        ],
+        [
+          -0.00502547749214933,
+          -0.0019927831819830993,
+          -0.02633516388909471
+        ]
+      ]
+    },
+    {
+      "id": "cluster_5_nominal",
+      "cluster": 5,
+      "regime": "nominal",
+      "initial_ratio": 0.8763755359253089,
+      "initial_glucose": 22.489636584146243,
+      "target_ratio": 1.4,
+      "kappa_before": [
+        1.0,
+        1.0
+      ],
+      "kappa_after": [
+        1.0,
+        1.0
+      ],
+      "change_stage": 99,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "cluster_5_constant_mismatch",
+      "cluster": 5,
+      "regime": "constant_mismatch",
+      "initial_ratio": 0.8763755359253089,
+      "initial_glucose": 22.489636584146243,
+      "target_ratio": 1.4,
+      "kappa_before": [
+        1.150719811521186,
+        0.9244610658743543
+      ],
+      "kappa_after": [
+        1.150719811521186,
+        0.9244610658743543
+      ],
+      "change_stage": 99,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "cluster_5_step_mismatch",
+      "cluster": 5,
+      "regime": "step_mismatch",
+      "initial_ratio": 0.8763755359253089,
+      "initial_glucose": 22.489636584146243,
+      "target_ratio": 1.4,
+      "kappa_before": [
+        1.0,
+        1.0
+      ],
+      "kappa_after": [
+        1.150719811521186,
+        0.9244610658743543
+      ],
+      "change_stage": 4,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "cluster_5_noisy_mismatch",
+      "cluster": 5,
+      "regime": "noisy_mismatch",
+      "initial_ratio": 0.8763755359253089,
+      "initial_glucose": 22.489636584146243,
+      "target_ratio": 1.4,
+      "kappa_before": [
+        1.150719811521186,
+        0.9244610658743543
+      ],
+      "kappa_after": [
+        1.150719811521186,
+        0.9244610658743543
+      ],
+      "change_stage": 99,
+      "observation_noise": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.002239318093390541,
+          -0.0010947479114517752,
+          -0.04179258441848221
+        ],
+        [
+          0.002697306895914049,
+          -0.001139287251231927,
+          0.10807596103466349
+        ],
+        [
+          -0.002493773308850437,
+          0.009165899681054997,
+          -0.00987459246697557
+        ],
+        [
+          0.0055520561019686545,
+          -0.0002540741471793239,
+          -0.01367667809842162
+        ],
+        [
+          -0.005629688974858847,
+          -0.0037721388662227593,
+          0.032883727813116125
+        ],
+        [
+          0.009352947776399749,
+          -0.0018277091573819537,
+          0.07037657158370829
+        ],
+        [
+          -0.0024278557069549495,
+          -0.003952874184549393,
+          -0.005093900216740332
+        ]
+      ]
+    }
+  ],
+  "plant": {
+    "basis": "paired finite-barrier response curves, species-specific affinity map kappa*S",
+    "nominal_Ks_g_L": [
+      6.95,
+      0.385
+    ],
+    "true_Ks_definition": "nominal_Ks/kappa",
+    "uncertainty_scope": "Synthetic bounded affinity stress; no experimental calibration or structural model uncertainty",
+    "duration_h": 14,
+    "interval_h": 2,
+    "feed_concentration_g_L": 100,
+    "feed_bounds_L_h": [
+      0,
+      0.2
+    ],
+    "volume_cap_L": 1.8,
+    "initial_volume_L": 0.5,
+    "initial_total_biomass_gDW_L": 0.002,
+    "depletion_closure": "paired physical-S rate multiplier min(1,max(S,0)/1e-5), inherited numerical convention",
+    "table_domain_g_L": [
+      0,
+      100
+    ],
+    "domain_bound": "For S0<=24 and V<=1.8, S<=78.889 by substrate balance; estimated kappa<=1.25 implies effective S<=98.612, with per-call rejection outside table"
+  },
+  "observation": {
+    "variables": "exact volume; species amounts and glucose concentration",
+    "noise_regime": "additive Gaussian errors to log amounts (SD .004 each) and glucose g/L (SD .05); prescribed realized sequences, positive-S observation clipping logged by definition",
+    "same_information": "all adaptive controllers share estimator algorithm, bounds, prior and past-only access; policies yield different histories"
+  },
+  "controllers": {
+    "objective": "maximize log total terminal biomass amount",
+    "terminal_log_ratio_design_band": 0.008,
+    "terminal_log_ratio_acceptance_band": 0.009950330853168092,
+    "estimator": "least_squares, past2 intervals, kappa bounds [.75,1.25], previous estimate prior",
+    "surrogate": "online local affine z and logB using analytic variational sensitivities shared by direct baseline",
+    "trust_radius_L_h": 0.035,
+    "radius_contraction": 0.5,
+    "max_local_corrections": 2,
+    "LP_slack_penalty": 100,
+    "gate": "nonlinear controller-model feasibility; <=.002 logB loss versus feasible incumbent",
+    "fallback": "45-iteration SLSQP from best evaluated center; least-violation policy if no feasible plan found, expressly not a safety guarantee. Failure of initial center prediction terminates the episode as a recorded controller failure.",
+    "limited_direct_iterations": 5,
+    "ordinary_direct_iterations": 45,
+    "SLSQP_ftol": 1e-06,
+    "prediction_solver": "LSODA rtol2e-7 atol2e-9 maxstep.35h",
+    "plant_solver": "DOP853 rtol2e-10 atol2e-12 maxstep.1h"
+  },
+  "endpoints": [
+    "actual terminal composition/volume feasibility by regime",
+    "paired terminal biomass differences on jointly feasible cases",
+    "complete controller seconds including estimation, sensitivities, LP, checks, correction, fallback and failures",
+    "nominal acceptance versus actual terminal outcome, correction/fallback counts, residuals and estimator conditioning"
+  ],
+  "quality_reference": {
+    "biomass_loss_tolerance_percent": 0.5,
+    "use": "descriptive decision-quality/cost comparison against shared-estimator full and limited direct; no noninferiority or optimum proof"
+  },
+  "timing": {
+    "execution": "serial rotated method order, BLAS threads fixed to1; expensive independent audits run separately",
+    "included": "all online controller work; shared response table excluded equally; no offline neural-model training in this feedback study",
+    "excluded_separately_reported": "plant simulation, raw output serialization, development, final independent auditing",
+    "deadline": "No real-time necessity or hardware-general speed claim"
+  },
+  "validation": {
+    "before_freeze": "core-model consistency, gradient/amount-state probes and three development scenarios",
+    "after": "prespecified clusters0,3 at stages0,3,6: replay selected controller predictions with tighter DOP853; all applied plant segments independent amount-state replay; conservation/volume/feed/cost/action audit",
+    "failed_cases": "preserve all failed attempts with cause; count failure rather than replace cases"
+  },
+  "limits": [
+    "single model pair",
+    "synthetic parameter mismatch",
+    "no culture experiments",
+    "nominal gate not true-plant safety guarantee",
+    "local affine/trust-region/fallback is established methodology",
+    "the terminal neural model is not applied outside its specified domain",
+    "computational assessment with the stated model and scenario limitations"
+  ]
+}

@@ -1,0 +1,686 @@
+{
+  "edwards": {
+    "description": "Capacity/prescribed glucose, differentiated/direct KKT and LP uptake map",
+    "commands": [
+      [
+        "research_completion/scripts/python_migration/edwards_comparison.py"
+      ],
+      [
+        "research_completion/scripts/python_consistency/edwards_differentiated_check.py"
+      ],
+      [
+        "research_completion/scripts/python_consistency/edwards_phase_review.py"
+      ],
+      [
+        "research_completion/scripts/python_consistency/edwards_render_adoption.py"
+      ]
+    ],
+    "output_directories": [
+      "research_completion/runs/python_consistency/edwards",
+      "research_completion/runs/python_migration/edwards_matched_comparison"
+    ]
+  },
+  "diauxic": {
+    "description": "Sequential glucose\u2013xylose uptake and numerical refinements",
+    "commands": [
+      [
+        "research_completion/scripts/diauxic_consistent_2026-10-21/run.py",
+        "--label",
+        "primary"
+      ],
+      [
+        "research_completion/scripts/diauxic_consistent_2026-10-21/run.py",
+        "--label",
+        "refined",
+        "--refine"
+      ],
+      [
+        "research_completion/scripts/diauxic_consistent_2026-10-21/run.py",
+        "--label",
+        "small_barrier",
+        "--refine",
+        "--mu",
+        "1e-8",
+        "--epsilon",
+        "1e-8"
+      ],
+      [
+        "research_completion/scripts/diauxic_consistent_2026-10-21/package.py"
+      ]
+    ],
+    "output_directories": [
+      "research_completion/runs/diauxic_consistent_2026-10-21"
+    ]
+  },
+  "yeast-experiment": {
+    "description": "Published observations, fit, direct finite-barrier verification and plotting",
+    "commands": [
+      [
+        "research_completion/scripts/figure11_zampar_2026-10-21/fit_batch.py"
+      ],
+      [
+        "research_completion/scripts/figure11_zampar_2026-10-21/direct_run.py"
+      ],
+      [
+        "research_completion/scripts/figure11_zampar_2026-10-21/sensitivity.py"
+      ],
+      [
+        "research_completion/scripts/figure11_zampar_2026-10-21/package_results.py"
+      ]
+    ],
+    "output_directories": [
+      "research_completion/runs/figure11_zampar_2026-10-21"
+    ]
+  },
+  "yeast-batch-fedbatch": {
+    "description": "Independent concentration and amount balances",
+    "commands": [
+      [
+        "research_completion/scripts/figure12_13_consistent_2026-10-21/run_consistent.py",
+        "--mode",
+        "batch",
+        "--method",
+        "concentration"
+      ],
+      [
+        "research_completion/scripts/figure12_13_consistent_2026-10-21/run_consistent.py",
+        "--mode",
+        "batch",
+        "--method",
+        "direct"
+      ],
+      [
+        "research_completion/scripts/figure12_13_consistent_2026-10-21/run_consistent.py",
+        "--mode",
+        "fed_batch",
+        "--method",
+        "concentration"
+      ],
+      [
+        "research_completion/scripts/figure12_13_consistent_2026-10-21/run_consistent.py",
+        "--mode",
+        "fed_batch",
+        "--method",
+        "direct"
+      ],
+      [
+        "research_completion/scripts/figure12_13_consistent_2026-10-21/finalise.py"
+      ]
+    ],
+    "output_directories": [
+      "research_completion/runs/figure12_13_consistent_2026-10-21"
+    ]
+  },
+  "independent-shared": {
+    "description": "Resource-pool cases and matched references",
+    "commands": [
+      [
+        "research_completion/scripts/python_consistency/independent_shared_supported.py",
+        "--case",
+        "independent_identical"
+      ],
+      [
+        "research_completion/scripts/python_consistency/independent_shared_supported.py",
+        "--case",
+        "independent_different"
+      ],
+      [
+        "research_completion/scripts/python_consistency/independent_shared_supported.py",
+        "--case",
+        "shared_competition"
+      ],
+      [
+        "research_completion/scripts/python_consistency/independent_shared_supported.py",
+        "--case",
+        "matched_controls"
+      ],
+      [
+        "research_completion/scripts/python_consistency/independent_shared_differentiated.py",
+        "--case",
+        "independent_identical"
+      ],
+      [
+        "research_completion/scripts/python_consistency/independent_shared_differentiated.py",
+        "--case",
+        "independent_different"
+      ],
+      [
+        "research_completion/scripts/python_consistency/independent_shared_differentiated.py",
+        "--case",
+        "shared_competition"
+      ],
+      [
+        "research_completion/scripts/python_consistency/independent_shared_render.py"
+      ]
+    ],
+    "output_directories": [
+      "research_completion/runs/python_consistency/independent_shared/supported"
+    ]
+  },
+  "product-inhibition": {
+    "description": "Separate substrate pools with a complete ethanol balance and matched reference",
+    "commands": [
+      [
+        "research_completion/scripts/python_consistency/product_inhibition_check.py",
+        "separate",
+        "--flow",
+        "1.0",
+        "--complete-ethanol-balance"
+      ],
+      [
+        "research_completion/scripts/python_consistency/product_inhibition_check.py",
+        "separate",
+        "--flow",
+        "1.0",
+        "--complete-ethanol-balance",
+        "--refined"
+      ],
+      [
+        "research_completion/scripts/python_consistency/product_inhibition_check.py",
+        "separate",
+        "--flow",
+        "1.0",
+        "--complete-ethanol-balance",
+        "--refined",
+        "--disable-inhibition"
+      ],
+      [
+        "research_completion/scripts/python_consistency/product_inhibition_differentiated.py"
+      ],
+      [
+        "research_completion/scripts/python_consistency/account_product_inhibition.py"
+      ],
+      [
+        "research_completion/scripts/python_consistency/render_product_inhibition.py"
+      ]
+    ],
+    "output_directories": [
+      "research_completion/runs/python_consistency/product_inhibition"
+    ]
+  },
+  "resource-diversion": {
+    "description": "Recipient-dependent secretion and full changing-bound derivative",
+    "commands": [
+      [
+        "research_completion/runs/python_consistency/resource_diversion/resource_diversion.py",
+        "--case",
+        "fedbatch",
+        "--name",
+        "fedbatch_refined",
+        "--horizon",
+        "10",
+        "--refined"
+      ],
+      [
+        "research_completion/runs/python_consistency/resource_diversion/resource_diversion.py",
+        "--case",
+        "fedbatch",
+        "--name",
+        "fedbatch_no_diversion",
+        "--horizon",
+        "10",
+        "--refined",
+        "--kp",
+        "0"
+      ],
+      [
+        "research_completion/runs/python_consistency/resource_diversion/differentiated_diversion.py",
+        "--case",
+        "fedbatch",
+        "--horizon",
+        "10",
+        "--name",
+        "fedbatch_differentiated",
+        "--tight"
+      ],
+      [
+        "research_completion/runs/python_consistency/resource_diversion/resource_diversion.py",
+        "--case",
+        "batch",
+        "--name",
+        "batch_refined_2p4",
+        "--horizon",
+        "2.4",
+        "--refined"
+      ],
+      [
+        "research_completion/runs/python_consistency/resource_diversion/resource_diversion.py",
+        "--case",
+        "batch",
+        "--name",
+        "batch_no_diversion_2p4",
+        "--horizon",
+        "2.4",
+        "--refined",
+        "--kp",
+        "0"
+      ],
+      [
+        "research_completion/runs/python_consistency/resource_diversion/differentiated_diversion.py",
+        "--case",
+        "batch",
+        "--horizon",
+        "2.4",
+        "--name",
+        "batch_differentiated_2p4",
+        "--tight"
+      ],
+      [
+        "research_completion/runs/python_consistency/resource_diversion/validate_and_plot.py"
+      ]
+    ],
+    "output_directories": [
+      "research_completion/runs/python_consistency/resource_diversion"
+    ]
+  },
+  "biomass-transfer": {
+    "description": "Transfer/loss accounting with independent balance formulations",
+    "commands": [
+      [
+        "research_completion/scripts/python_consistency/biomass_transfer.py",
+        "primary"
+      ],
+      [
+        "research_completion/scripts/python_consistency/biomass_transfer.py",
+        "refined"
+      ],
+      [
+        "research_completion/scripts/python_consistency/biomass_transfer.py",
+        "reference"
+      ],
+      [
+        "research_completion/scripts/python_consistency/biomass_transfer.py",
+        "barrier"
+      ],
+      [
+        "research_completion/scripts/python_consistency/render_biomass_transfer.py"
+      ]
+    ],
+    "output_directories": [
+      "research_completion/runs/python_consistency/biomass_transfer"
+    ]
+  },
+  "pyruvate-crossfeeding": {
+    "description": "Chemically specified transfer with active/quiescent modes",
+    "commands": [
+      [
+        "research_completion/scripts/python_consistency/pyruvate_crossfeeding.py",
+        "--run",
+        "primary"
+      ],
+      [
+        "research_completion/scripts/python_consistency/pyruvate_crossfeeding.py",
+        "--run",
+        "refined"
+      ],
+      [
+        "research_completion/scripts/python_consistency/pyruvate_crossfeeding.py",
+        "--run",
+        "reference"
+      ],
+      [
+        "research_completion/scripts/python_consistency/pyruvate_crossfeeding.py",
+        "--run",
+        "threshold"
+      ],
+      [
+        "research_completion/scripts/python_consistency/pyruvate_crossfeeding.py",
+        "--run",
+        "barrier_sensitivity"
+      ],
+      [
+        "research_completion/scripts/python_consistency/validate_and_plot_pyruvate.py"
+      ]
+    ],
+    "output_directories": [
+      "research_completion/runs/python_consistency/interactions/pyruvate_batch"
+    ]
+  },
+  "genome-scale-yeasts": {
+    "description": "Isolated yeast and inhibited yeast-pair examples",
+    "commands": [
+      [
+        "research_completion/scripts/inhibition_experiment.py"
+      ],
+      [
+        "research_completion/scripts/revision_model_validation.py",
+        "inhibition"
+      ],
+      [
+        "research_completion/scripts/revision_model_validation.py",
+        "batch"
+      ],
+      [
+        "research_completion/scripts/revision_model_figures.py"
+      ]
+    ],
+    "output_directories": [
+      "research_completion/runs/revision_validation",
+      "research_completion/runs/model_plot_revision"
+    ]
+  },
+  "cstr": {
+    "description": "72 h light/dark pair, numerical refinements and separate loading sensitivities",
+    "commands": [
+      [
+        "research_completion/runs/cstr_dynamic_range_2026-10-21/benchmark.py",
+        "run",
+        "--case",
+        "light",
+        "--label",
+        "nominal_light",
+        "--mu",
+        "1e-8",
+        "--epsilon",
+        "1e-7",
+        "--rtol",
+        "1e-7",
+        "--atol",
+        "1e-10",
+        "--max-step",
+        ".2",
+        "--initial-biomass",
+        ".025",
+        "--horizon",
+        "72"
+      ],
+      [
+        "research_completion/runs/cstr_dynamic_range_2026-10-21/benchmark.py",
+        "run",
+        "--case",
+        "dark",
+        "--label",
+        "nominal_dark",
+        "--mu",
+        "1e-8",
+        "--epsilon",
+        "1e-7",
+        "--rtol",
+        "1e-7",
+        "--atol",
+        "1e-10",
+        "--max-step",
+        ".2",
+        "--initial-biomass",
+        ".025",
+        "--horizon",
+        "72"
+      ],
+      [
+        "research_completion/runs/cstr_dynamic_range_2026-10-21/benchmark.py",
+        "run",
+        "--case",
+        "light",
+        "--label",
+        "nominal_light_ode_refined",
+        "--mu",
+        "1e-8",
+        "--epsilon",
+        "1e-7",
+        "--rtol",
+        "2e-8",
+        "--atol",
+        "2e-11",
+        "--max-step",
+        ".1",
+        "--initial-biomass",
+        ".025",
+        "--horizon",
+        "72"
+      ],
+      [
+        "research_completion/runs/cstr_dynamic_range_2026-10-21/benchmark.py",
+        "run",
+        "--case",
+        "light",
+        "--label",
+        "nominal_light_parameter_refined",
+        "--mu",
+        "1e-9",
+        "--epsilon",
+        "1e-8",
+        "--rtol",
+        "2e-8",
+        "--atol",
+        "2e-11",
+        "--max-step",
+        ".1",
+        "--initial-biomass",
+        ".025",
+        "--horizon",
+        "72"
+      ],
+      [
+        "research_completion/runs/cstr_dynamic_range_2026-10-21/benchmark.py",
+        "run",
+        "--case",
+        "dark",
+        "--label",
+        "nominal_dark_parameter_refined",
+        "--mu",
+        "1e-9",
+        "--epsilon",
+        "1e-8",
+        "--rtol",
+        "2e-8",
+        "--atol",
+        "2e-11",
+        "--max-step",
+        ".1",
+        "--initial-biomass",
+        ".025",
+        "--horizon",
+        "72"
+      ],
+      [
+        "research_completion/runs/cstr_dynamic_range_2026-10-21/benchmark.py",
+        "run",
+        "--case",
+        "light",
+        "--label",
+        "loading_002_light",
+        "--mu",
+        "1e-8",
+        "--epsilon",
+        "1e-7",
+        "--rtol",
+        "1e-7",
+        "--atol",
+        "1e-10",
+        "--max-step",
+        ".2",
+        "--initial-biomass",
+        ".02",
+        "--horizon",
+        "72"
+      ],
+      [
+        "research_completion/runs/cstr_dynamic_range_2026-10-21/benchmark.py",
+        "run",
+        "--case",
+        "light",
+        "--label",
+        "loading_005_light",
+        "--mu",
+        "1e-8",
+        "--epsilon",
+        "1e-7",
+        "--rtol",
+        "1e-7",
+        "--atol",
+        "1e-10",
+        "--max-step",
+        ".2",
+        "--initial-biomass",
+        ".05",
+        "--horizon",
+        "72"
+      ],
+      [
+        "research_completion/runs/cstr_dynamic_range_2026-10-21/audit_results.py"
+      ],
+      [
+        "research_completion/runs/cstr_dynamic_range_2026-10-21/plot_results.py"
+      ]
+    ],
+    "output_directories": [
+      "research_completion/runs/cstr_dynamic_range_2026-10-21"
+    ]
+  },
+  "control-neural": {
+    "description": "Frozen-table comparisons, neural selection, correction and direct KKT check",
+    "commands": [
+      [
+        "research_completion/scripts/control_experiments.py"
+      ],
+      [
+        "research_completion/scripts/additional_controls.py"
+      ],
+      [
+        "research_completion/scripts/validate_controls.py"
+      ],
+      [
+        "research_completion/scripts/revision_neural_extension.py"
+      ],
+      [
+        "research_completion/scripts/revision_model_validation.py",
+        "best"
+      ],
+      [
+        "research_completion/scripts/revision_model_validation.py",
+        "polished"
+      ],
+      [
+        "research_completion/scripts/final_figures.py"
+      ],
+      [
+        "research_completion/scripts/revision_finalize_validation.py"
+      ]
+    ],
+    "output_directories": [
+      "research_completion/runs/revision_validation"
+    ]
+  },
+  "moving-bound-analytic": {
+    "description": "Self-contained analytic check of both moving bounds, finite differences and separate refinements",
+    "commands": [
+      [
+        "experiments/moving_bound_benchmark/run_benchmark.py"
+      ],
+      [
+        "experiments/moving_bound_benchmark/render_figures.py"
+      ]
+    ],
+    "output_directories": [
+      "experiments/moving_bound_benchmark/results",
+      "experiments/moving_bound_benchmark/figures"
+    ]
+  },
+  "neural-audit-statistics": {
+    "description": "Independent descriptive statistics from the published 200-case fixed audit predictions",
+    "commands": [
+      [
+        "experiments/neural_audit_diagnostics/run_diagnostics.py"
+      ]
+    ],
+    "output_directories": [
+      "experiments/neural_audit_diagnostics/results"
+    ]
+  },
+  "constrained-control": {
+    "description": "Biomass/composition design: grouped surrogate prediction, equal-budget policy checks and study figures",
+    "commands": [
+      [
+        "experiments/constrained_control/run.py",
+        "verify",
+        "--integrate",
+        "--output",
+        "local_verification/constrained_control.json"
+      ],
+      [
+        "experiments/constrained_control/run.py",
+        "balance-check"
+      ],
+      [
+        "experiments/constrained_control/run.py",
+        "figures",
+        "--output",
+        "local_verification/control_figures"
+      ]
+    ],
+    "output_directories": [
+      "local_verification"
+    ]
+  },
+  "adaptive-feedback": {
+    "description": "Adaptive two-species feed control under affinity mismatch and observation noise; recorded 144-episode campaign and independent diagnostics",
+    "commands": [
+      [
+        "experiments/adaptive_feedback/run.py",
+        "verify",
+        "--numerical"
+      ],
+      [
+        "experiments/adaptive_feedback/run.py",
+        "summary",
+        "--label",
+        "local_case_summary"
+      ],
+      [
+        "experiments/adaptive_feedback/run.py",
+        "plots"
+      ]
+    ],
+    "output_directories": [
+      "experiments/adaptive_feedback/local_results"
+    ]
+  },
+  "terminal-recovery": {
+    "description": "Finite-action terminal composition recovery: full fixed panel, exploratory target intervals and independent numerical audits",
+    "commands": [
+      [
+        "experiments/terminal_recovery/run.py",
+        "verify"
+      ]
+    ],
+    "output_directories": [
+      "experiments/terminal_recovery/local_results"
+    ]
+  },
+  "scenario-feedback": {
+    "description": "Causal scenario feedback: all 440 episodes, isolated serial comparisons and independent numerical audits",
+    "commands": [
+      [
+        "experiments/scenario_feedback/run.py",
+        "verify"
+      ]
+    ],
+    "output_directories": [
+      "experiments/scenario_feedback/local_results"
+    ]
+  },
+  "yeast-assessment": {
+    "description": "Finite-barrier numerical decomposition, chronological yeast prediction and independent oxygen-limited culture assessment",
+    "commands": [
+      [
+        "experiments/yeast_assessment/run.py",
+        "verify"
+      ]
+    ],
+    "output_directories": [
+      "experiments/yeast_assessment/local_results"
+    ]
+  },
+  "sensing-actuation": {
+    "description": "Finite-grid target recovery, ratio-observation uncertainty and continuous causal-control comparison",
+    "commands": [
+      [
+        "experiments/sensing_actuation/run.py",
+        "verify"
+      ]
+    ],
+    "output_directories": [
+      "experiments/sensing_actuation/local_results"
+    ]
+  }
+}

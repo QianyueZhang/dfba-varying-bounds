@@ -1,0 +1,167 @@
+{
+  "analysis_status": "Secondary post hoc; no holdout refit; not a new-policy intervention experiment",
+  "protocol_sha256": "30d8b4fd9a9229a0bc5b554fa6ad62374eade6df39c16e48b0fa0a577e1903c5",
+  "script_sha256": "11c0df028706c5ec76dc2c284af5391146dc0e2f5e2bd64e167146b8c7fae391",
+  "software_sha256": "a4d4e43459abf1c73c7d8ddb185ea0cd6a94fa5b93393ccff9678e5c996d5c70",
+  "published_variable_parameters": [
+    0.007227552687697017,
+    6.467024536808274e-06,
+    57.15852671432749,
+    2.02016267067656e-07,
+    2.0019910069814582e-05,
+    1985.0878022389134,
+    1.3548486835431328,
+    1.5557103815624092,
+    1.5388479702123439,
+    0.2548971497249051,
+    196.3930019326237
+  ],
+  "published_fixed_parameters": {
+    "N_p": 10,
+    "K_D": 1300,
+    "K_C": 0.3333333333333333,
+    "k": 90,
+    "n_r": 12221,
+    "n_T": 597,
+    "n_C": 219,
+    "g_0": 0.098685,
+    "phi_max": 0.547,
+    "phi_0": 0.066,
+    "d_cell": 2000000000,
+    "nu": 0.1921,
+    "A_ext": 10500
+  },
+  "constitutive_growth_per_min": 0.0263949125,
+  "assumed_ambient_light_digital_au": 196.3930019326237,
+  "assumed_initial_internal_state": [
+    1754.6109856873877,
+    84.11488933333948,
+    360.589584038677
+  ],
+  "initial_steady_rhs": [
+    0.0,
+    4.440892098500626e-16,
+    1.7763568394002505e-15
+  ],
+  "initial_fraction": "Measured initial fraction per run; not fitted",
+  "numerical_references": [
+    {
+      "file": "OL_Simulation_0L.mat",
+      "light": 0,
+      "points": 121,
+      "max_internal_abs_error": [
+        1.2973286149567684,
+        0.07182063371248404,
+        0.41545015613209557
+      ],
+      "max_fraction_abs_error": 0.00046702270471808693,
+      "initial_internal_max_abs_difference": 5.684341886080802e-14,
+      "qualification": "Archived numerical outputs, not measured biology; publisher-supplied solver tolerances not recorded in data."
+    },
+    {
+      "file": "OL_Simulation_800L.mat",
+      "light": 800,
+      "points": 121,
+      "max_internal_abs_error": [
+        0.1538399761157052,
+        0.11612364257541685,
+        0.25787067056967317
+      ],
+      "max_fraction_abs_error": 0.00024869297705232274,
+      "initial_internal_max_abs_difference": 5.684341886080802e-14,
+      "qualification": "Archived numerical outputs, not measured biology; publisher-supplied solver tolerances not recorded in data."
+    }
+  ],
+  "tolerance_checks": [
+    {
+      "trajectory": "closedloop_highSetpoint_main",
+      "max_free_run_fraction_change": 7.058103657087145e-09
+    },
+    {
+      "trajectory": "closedloop_lowSetpoint_main",
+      "max_free_run_fraction_change": 3.4693145023467764e-09
+    },
+    {
+      "trajectory": "closedloop_changingSetpoint_main",
+      "max_free_run_fraction_change": 4.818075383106191e-09
+    },
+    {
+      "trajectory": "closedloop_high_rep1",
+      "max_free_run_fraction_change": 2.2829164114668288e-09
+    },
+    {
+      "trajectory": "closedloop_high_rep2",
+      "max_free_run_fraction_change": 3.7665086605187525e-09
+    },
+    {
+      "trajectory": "closedloop_low_rep1",
+      "max_free_run_fraction_change": 3.374686308177388e-09
+    },
+    {
+      "trajectory": "closedloop_low_rep2",
+      "max_free_run_fraction_change": 7.916073907487942e-09
+    },
+    {
+      "trajectory": "closedloop_changing_13h",
+      "max_free_run_fraction_change": 2.0984678439361915e-09
+    }
+  ],
+  "summaries": [
+    {
+      "mode": "free_run",
+      "window": "full",
+      "trajectories": 8,
+      "macro_rmse": 0.3022031015021776,
+      "macro_baseline_rmse": 0.1938088469065515,
+      "better_than_baseline_count": 2
+    },
+    {
+      "mode": "free_run",
+      "window": "through40h",
+      "trajectories": 8,
+      "macro_rmse": 0.21995160477839082,
+      "macro_baseline_rmse": 0.19562403945437754,
+      "better_than_baseline_count": 4
+    },
+    {
+      "mode": "free_run",
+      "window": "after40h",
+      "trajectories": 8,
+      "macro_rmse": 0.3815192469986386,
+      "macro_baseline_rmse": 0.1743368852376591,
+      "better_than_baseline_count": 2
+    },
+    {
+      "mode": "one_step",
+      "window": "full",
+      "trajectories": 8,
+      "macro_rmse": 0.017986593229735566,
+      "macro_baseline_rmse": 0.013839229018152321,
+      "better_than_baseline_count": 2
+    },
+    {
+      "mode": "one_step",
+      "window": "through40h",
+      "trajectories": 8,
+      "macro_rmse": 0.016220791367986594,
+      "macro_baseline_rmse": 0.016991582852859677,
+      "better_than_baseline_count": 5
+    },
+    {
+      "mode": "one_step",
+      "window": "after40h",
+      "trajectories": 8,
+      "macro_rmse": 0.019309316113411638,
+      "macro_baseline_rmse": 0.006422197951432625,
+      "better_than_baseline_count": 1
+    }
+  ],
+  "diagnostics": {
+    "negative_fractional_operand_rhs_evaluations": 0,
+    "minimum_trial_operand": 0.0,
+    "integrations": 2145,
+    "nfev": 210513,
+    "accepted_state_minimum": 0.0
+  },
+  "elapsed_seconds": 5.2229713327251375
+}

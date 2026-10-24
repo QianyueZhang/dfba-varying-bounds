@@ -1,0 +1,144 @@
+{
+  "version": "1.0",
+  "declared_utc": "2026-10-24T03:07:45.912305+00:00",
+  "status": "post_hoc_diagnostic_declared_before_its_execution",
+  "selection": "Every unique episode in the completed original audit failure list; outcome-selected diagnostic, not new held-out evidence.",
+  "original_failure_count": 18,
+  "episodes": [
+    {
+      "case": "table_0_inhibition_0",
+      "method": "scenario_managed"
+    },
+    {
+      "case": "table_0_static_-1",
+      "method": "ce_direct"
+    },
+    {
+      "case": "table_0_step_4_-1",
+      "method": "ce_limited"
+    },
+    {
+      "case": "table_3_static_1",
+      "method": "scenario_open"
+    },
+    {
+      "case": "table_3_step_3_1",
+      "method": "scenario_open"
+    },
+    {
+      "case": "table_3_step_4_1",
+      "method": "scenario_open"
+    }
+  ],
+  "inputs_sha256": {
+    "LOCK.json": "e7cc9e4362dc92f6edbd51b970912f1db4b008ca83a41b5b137b766e2c9d18ae",
+    "audit/campaign_audit_protocol.json": "a4d6034726ba049ae51ec799e4a444eae1f8c7dae1d8f6e2dfb9044aae785072",
+    "audit/independent_amount_model.py": "b0b42a3ab3bab1a014367fad97d9bdf71152ba7e209c8877eb4ad118c5b0995e",
+    "audit/replay_campaign.py": "0d5d4b869fda258a38f9c593f37a012a43da0f5a5a15e49aeca5f0e491b867fd",
+    "audit/replay_discrepancy_diagnostic.py": "e7f76aa4f39780a04c0d947a9839f085ccc249b7b2c2e6e5351196081be8ba79",
+    "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb",
+    "protocol.json": "0e1f3450616b890ba48bed1c374a0d53ff33c2d0be98bd570d9c1dac2a48adf5",
+    "results/locked/independent_amount_audit.json": "1c476e31f5a1918e33229da6a6a5e9521c07e7cc2130c587eb034e56a1258a39",
+    "results/locked/table_0_inhibition_0__scenario_managed.json": "5d4bd4897ce8645297e8361a5a6884a5bfc56eee7fca96488a059bd3e1b2b214",
+    "results/locked/table_0_static_-1__ce_direct.json": "1685404379b3c5b6977817651736df5fb41ac8aac767135c4460f09e352f23ed",
+    "results/locked/table_0_step_4_-1__ce_limited.json": "f1449633386e9d389aa25deec5c0a95cba9f8bc9355e1a20c07f60938d10beaa",
+    "results/locked/table_3_static_1__scenario_open.json": "b56031d5b3df851e270eea98f66218558d0665f16cb47e0c4b5cc94006c5a4c8",
+    "results/locked/table_3_step_3_1__scenario_open.json": "5a04ab722fe2709c200d929c30781e4961da8021560ba081827f896ee258dc8e",
+    "results/locked/table_3_step_4_1__scenario_open.json": "f7282149b73df15344545183adfa9856c6d4a96f2193814a0ed55b80a178e601",
+    "scripts/base_model.py": "4aa2ce6ee5246ce0f2335aa16a8e37855c01381a8d55307d781201ecd3a5d9a4",
+    "scripts/controllers.py": "ad4ccfb43b430ef52d584fc9152979be074d747bd8ccd34dffac2e821cc819ad",
+    "scripts/freeze_protocol.py": "299c1fad453a87f755f09564aa2cb5126df7a7039d5e49d6c190193f68ebc726",
+    "scripts/kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6",
+    "scripts/model.py": "293a7441d5d4f6cb891490d10e8a33136c0266253c61524a46ae2c26fd5ecf68",
+    "scripts/run_parallel.py": "fc7d9dd83c5ea4e12dfbc0b6bae1d882d174d6a41ee59ba811fbbddff6587608",
+    "scripts/run_study.py": "d0718d1e096da60465a4766f3b35a025c0a8fa48329dfd73f3c6abc83a0fd3cd"
+  },
+  "method": "DOP853",
+  "arms": [
+    {
+      "id": "amount_audit",
+      "formulation": "amount",
+      "rtol": 2e-13,
+      "atol": 2e-14,
+      "max_step_h": 0.025
+    },
+    {
+      "id": "amount_refine_1",
+      "formulation": "amount",
+      "rtol": 5e-14,
+      "atol": 5e-15,
+      "max_step_h": 0.0125
+    },
+    {
+      "id": "amount_refine_2",
+      "formulation": "amount",
+      "rtol": 3e-14,
+      "atol": 2e-15,
+      "max_step_h": 0.00625
+    },
+    {
+      "id": "log_uncompiled_original",
+      "formulation": "log",
+      "rtol": 5e-12,
+      "atol": 5e-14,
+      "max_step_h": 0.05
+    },
+    {
+      "id": "log_uncompiled_refine_1",
+      "formulation": "log",
+      "rtol": 5e-14,
+      "atol": 5e-15,
+      "max_step_h": 0.0125
+    },
+    {
+      "id": "log_uncompiled_refine_2",
+      "formulation": "log",
+      "rtol": 3e-14,
+      "atol": 2e-15,
+      "max_step_h": 0.00625
+    }
+  ],
+  "replay": "Chain saved executed feed and true-kappa intervals from the initial condition. Never reset to saved intermediate states; never optimize or change the executed policy.",
+  "implementations": {
+    "amount": "Frozen independent AmountReactor.interval; numerical globals overridden in memory only.",
+    "log": "Frozen Reactor(fast=False).predict invokes its original uncompiled log-state RHS; only solve_ivp tolerances/max_step overridden in memory. Original analytic endpoint-volume correction retained.",
+    "rhs_consistency": "At up to 33 uniformly spaced solver-node indices per interval of the finest uncompiled log replay, compare independently assembled rates and physical-amount derivatives. This is a finite sample, not a proof."
+  },
+  "tolerances": {
+    "log_state_atol": 2e-07,
+    "amount_atol_g": 2e-07,
+    "amount_rtol": 2e-08,
+    "volume_replay_atol_L": 2e-13,
+    "saved_arithmetic_atol": 2e-12,
+    "policy_z_logB_atol": 2e-06,
+    "policy_feed_atol": 2e-06,
+    "policy_state_atol": 5e-06,
+    "cost_sum_atol_s": 1e-05
+  },
+  "physical_constraints": {
+    "feed_min_L_h": 0.0,
+    "feed_max_L_h": 0.2,
+    "volume_max_L": 1.8,
+    "volume_guard_L": 1e-11,
+    "substrate_min_g_L": -2e-07,
+    "interval_h": 2.0,
+    "terminal_log_ratio_tolerance": 0.009950330853168092,
+    "design_log_ratio_tolerance": 0.0075,
+    "inner_optimization_band": 0.007498,
+    "inner_gate_slack": 1e-09
+  },
+  "comparisons": [
+    "Every arm versus saved primary endpoints",
+    "Original independent arm versus archived audit endpoints",
+    "Each formulation refinement 1 versus refinement 2",
+    "Two finest formulations versus one another"
+  ],
+  "interpretation_rule": "Attribute a discrepancy as consistent with integration error only when both refinements and finest cross-formulation differences are materially smaller than the saved-to-refined discrepancy. Report all values even if nonmonotone; do not recategorize the original audit as passed.",
+  "limitations": [
+    "Six outcome-selected episodes only",
+    "Double precision and adaptive error estimators are not rigorous enclosures",
+    "Relative tolerances are above the SciPy roundoff floor, approximately 2.22e-14",
+    "Physical substrate minima are sampled at solver nodes, not globally certified",
+    "No online timing or controller-effectiveness inference"
+  ]
+}

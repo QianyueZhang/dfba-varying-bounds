@@ -1,0 +1,53 @@
+{
+  "scope": "Independent saved-record/source review plus freshly assembled ATP maximum and original-demand feasibility LPs; no forecast rerun or parameter fit. The301-state activity count is checked in implementation and saved summary, not independently re-integrated.",
+  "checks": {
+    "protocol_hash": true,
+    "script_hash": true,
+    "primary_hashes_unchanged": true,
+    "ATP_original_infeasible": true,
+    "ATP_relaxed_optimal": true,
+    "ATP_result_matches": true,
+    "ATP_shortfall_positive": true,
+    "ATP_primal_dual_numerical_checks": true,
+    "prefix_125steps126points": true,
+    "prefix_endpoint": true,
+    "prefix_exact239source_rows": true,
+    "missing17": true,
+    "no_prefix_extrapolation": true,
+    "primary_still_failed": true,
+    "accepted_before_failed_trial": true,
+    "matched1001_fullhorizon": true,
+    "matched_scalar_from_csv": true,
+    "matched_under2p57e12": true,
+    "matched_all256source_rows": true,
+    "SVD_condition_arithmetic": true
+  },
+  "ATP_independent": {
+    "status": "HighsModelStatus.kOptimal",
+    "maximum_supported_ATP": 12.517997083133464,
+    "demand": 12.679006785200711,
+    "shortfall": 0.16100970206724696,
+    "equality_max": 3.9968028886505635e-14,
+    "bound_max": 0.0,
+    "dual_stationarity_max": 1.4210854715202004e-14,
+    "primal_minus_dual_gap": 1.3147527511137014e-10,
+    "original_demand_status": "HighsModelStatus.kInfeasible"
+  },
+  "prefix_observations": 239,
+  "missing_observations": 17,
+  "matched_csv_max_abs_state_difference": [
+    1.0198508704206688e-12,
+    2.5626167854397863e-12,
+    2.5481838861196593e-12
+  ],
+  "source_sha256": {
+    "paper1_improvement_2026-10-24/temporal/failure_diagnostic.json": "eba103dbcedc7bc79d0cef3ca6cc93072739f9d2e3189cc0e4cd9e08ac4c0212",
+    "paper1_improvement_2026-10-24/temporal/failure_diagnostic_protocol.json": "dbf3adbca92bfd3c4130840bf742c9355b3011ef028321e6f3cb39b2c6a20d5a",
+    "paper1_improvement_2026-10-24/temporal/results.json": "bc3cb1bb7c65c362bf4d264da0fb64d6b19caa4d91d3dfc04dc200fdd3677947",
+    "paper1_improvement_2026-10-24/temporal/trajectory_temporal_prefix.csv": "b51afaa03369117020346f20ce172d7144a2fb570e31caa234152eb3dd987644",
+    "paper1_improvement_2026-10-24/temporal/observations_temporal_prefix.csv": "802c4bf2fc8709a457acc09210ee402b55238c78d29dd71d338e1f8b27e093ba",
+    "paper1_improvement_2026-10-24/temporal/trajectory_capacity_prescribed.csv": "2d456c7da669c5ba4b6c862ebb5bab31fb07af11c93b793fc4b08c71448f92e1",
+    "paper1_improvement_2026-10-24/temporal/observations_capacity_prescribed.csv": "b557d4bcbb38d59a016f3e8c8b5f0b7ac1f1274a9d377aff62a105fda5c63172",
+    "paper1_improvement_2026-10-24/scripts/temporal_failure_diagnostic.py": "b425eb6a33e6264f9023b4b26c5b06a9196f874b3e97e2d54d30ab595342e553"
+  }
+}

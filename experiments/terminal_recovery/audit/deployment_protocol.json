@@ -1,0 +1,216 @@
+{
+  "declared_utc": "2026-10-24T03:50:19.461580+00:00",
+  "status": "Declared before independent deployment execution",
+  "source_sha256": {
+    "PROTOCOL.json": "27108441b375d9179db5f7d02eec340edc4b144fa69adc06f065f94269551cfe",
+    "scripts/engine.py": "28843ca0c1064667a7990c569185d27b63557900809b597732a6d488e9905898",
+    "scripts/policies.py": "58c38af9e71e39f528dce0378c4971edfe552c690b293f6af55a54cdd25c1fa0",
+    "scripts/campaign.py": "3f218c425ba702d49aab14a0e1075464a6e91e53bab026c57c502ff7f48f5d17",
+    "scripts/continuous_baseline.py": "62e258ced1779db954105e3fe9534ec43e4c86cdba4600b8b2eb31ef68f54ea4",
+    "vendor/prior_kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6",
+    "audit/independent_amount_model.py": "b0b42a3ab3bab1a014367fad97d9bdf71152ba7e209c8877eb4ad118c5b0995e",
+    "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb",
+    "audit/design_lock.json": "4e2f1c4c0667a1174c1673d45ebc43d54bf786cc89b1a3df13896476ad9053db",
+    "audit/deploy_policies.py": "60bd3533cd360c6a54d66b79439703b3e2e52403ad90520842068843c90ef731",
+    "EXPLORATORY_TARGET_SET_PROTOCOL.md": "4c71b3bc22b120f27fdb013be1a05385823985efccf9828af5adbb4ad6497ec1",
+    "scripts/target_sets.py": "3d75c9940bac1a6f8d19556058af2fb2c8c11cc0058db14ba415bb4bb2547181",
+    "audit/target_set_lock.json": "d410708d774c2a14675b50168ebf075f480fadbdcfe838215ad193c03f7afdb1"
+  },
+  "primary": {
+    "roots": 18,
+    "targets": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      2.0
+    ],
+    "problems": 108,
+    "methods": [
+      "nominal_replan",
+      "open_grid",
+      "open_replan",
+      "recovery_economic",
+      "recovery_filter"
+    ],
+    "affinity_set": [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        0.975,
+        1.025
+      ],
+      [
+        1.025,
+        0.975
+      ]
+    ],
+    "paths": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "episodes": 4860
+  },
+  "source_files": [
+    "results/roots.json",
+    "results/primary_design.json",
+    "results/target_sets.json",
+    "results/target_set_witnesses.json"
+  ],
+  "source_binding": "Require exactly 18 declared roots and all 108 unique fixed-target rows, then bind complete-file hashes before execution. Reject partial inputs.",
+  "root_rule": "Engine-generated roots are prescribed primary initial states. Independently replay all 18 nominal five-interval prefixes separately; do not substitute replay endpoints into primary roots.",
+  "first_action": "Execute the saved per-method first feed and retain its plan/status/proposal fields.",
+  "second_action": "Fixed open_grid commits saved plan[1]. Other methods replan from independent actual state using the frozen one-step controller; no hidden affinity, inhibition, scenario identity or future state supplied.",
+  "nominal_guard": "Nominal composition and biomass objective with all-scenario physical guard, as frozen in the main protocol.",
+  "safe_label_rule": "Keep decision diagnostic, robust state recoverability, selected action robustness, achieved terminal bands and optimal-state J distinct. Stored J is not necessarily achieved by selected economic/filter policy.",
+  "cache": "Exact keys: family, inhibition, physical state bytes, feed, affinity for independent transitions; family and observed log-state bytes for controller maps. No state rounding. Targets/methods share identical transitions/maps.",
+  "independent": {
+    "class_name": "AmountReactor",
+    "rtol": 2e-13,
+    "atol": 2e-14,
+    "maxstep_h": 0.025
+  },
+  "engine": {
+    "rtol": 2e-11,
+    "atol": 2e-13,
+    "maxstep_h": 0.05
+  },
+  "thresholds": {
+    "amount_absolute_g": 2e-07,
+    "amount_relative": 2e-08,
+    "log_ratio_absolute": 1e-07,
+    "volume_absolute_L": 2e-13,
+    "physical_substrate_min_g_L": -2e-07,
+    "volume_cap_L": 1.8,
+    "feed_max_L_h": 0.2,
+    "inner": 0.00748,
+    "outer": 0.0075,
+    "actual": 0.009950330853168092,
+    "comparison_tolerance": 1e-10
+  },
+  "matching_rule": "Every distinct independent interval is compared with engine.flow from the SAME actual input state, feed, affinity and plant inhibition. This matched audit use of true parameters never enters a controller decision. Prefix cumulative endpoints are additionally compared with saved knots.",
+  "classification_rule": "Inner uses inner+1e-10; outer and actual use their stated bands without added comparison tolerance. All require physical validity and complete integration. Operational success additionally requires no controller exception. Compare final matched-engine and independent labels in each band; retain disagreements as hard audit failures.",
+  "failure_rule": "Retain all assigned episodes, failed evaluations, numerical discrepancies and incomplete paths. No silent fallback on a controller exception; mark path incomplete/unsuccessful and continue remaining assigned paths. Never loosen thresholds.",
+  "ood": {
+    "selection": "All six uniform-history roots and six fixed targets, all five methods",
+    "episodes": 720,
+    "stresses": [
+      {
+        "id": "persistent_minus",
+        "kappas": [
+          [
+            0.92,
+            1.08
+          ],
+          [
+            0.92,
+            1.08
+          ]
+        ],
+        "inhibition": null,
+        "observation_offset": null
+      },
+      {
+        "id": "persistent_plus",
+        "kappas": [
+          [
+            1.08,
+            0.92
+          ],
+          [
+            1.08,
+            0.92
+          ]
+        ],
+        "inhibition": null,
+        "observation_offset": null
+      },
+      {
+        "id": "omitted_inhibition",
+        "kappas": [
+          [
+            1.0,
+            1.0
+          ],
+          [
+            1.0,
+            1.0
+          ]
+        ],
+        "inhibition": [
+          180.0,
+          260.0
+        ],
+        "observation_offset": null
+      },
+      {
+        "id": "biased_second_observation",
+        "kappas": [
+          [
+            1.0,
+            1.0
+          ],
+          [
+            1.0,
+            1.0
+          ]
+        ],
+        "inhibition": null,
+        "observation_offset": {
+          "logM1": 0.0025,
+          "logM2": -0.0025,
+          "substrate_g_L": 0.025
+        }
+      }
+    ],
+    "interpretation": "Secondary, outside the primary finite-game assumptions. Fixed deterministic stresses, not biological replicates or new confidence-region evidence."
+  },
+  "exploratory": {
+    "selection": "Log midpoint of EVERY connected feedback target component from target_sets.json; verify one-to-one component coverage before execution",
+    "methods": [
+      "recovery_economic",
+      "recovery_filter"
+    ],
+    "witnesses": 41,
+    "episodes": 738,
+    "interpretation": "Exploratory constructive-policy consistency checks on selected feasible targets. Never merge with the fixed-target primary denominator or present as an unbiased success rate."
+  },
+  "timing": "Report unique independent calls, cache reuse, map calls, decision calls, matched engine calls and wall time. Offline cached audit timing is not complete online-controller latency."
+}

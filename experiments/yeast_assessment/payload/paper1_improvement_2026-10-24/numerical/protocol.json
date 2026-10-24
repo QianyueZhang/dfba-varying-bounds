@@ -1,0 +1,129 @@
+{
+  "declared_utc": "2026-10-24T10:19:18.100082+00:00",
+  "scope": "Full-trajectory numerical decomposition with frozen fitted parameters; no new calibration or biological validation.",
+  "source_sha256": {
+    "paper1_improvement_2026-10-24/numerical/regularization_experiment.py": "b5ac573b6bbd957a8d24d250efdf1acc847aa16e63f82a89e54871312e6b5c1f",
+    "research_completion/runs/figure11_source_review_2026-10-21/candidates/zampar2013/zampar2013_observations.csv": "07529687404d471e25363590939322397d1fae08b6c28dede451b8142036ade0",
+    "research_completion/scripts/figure11_zampar_2026-10-21/fit_batch.py": "c77090e6d9e3bb9d8ea95b4f7c75765eeecac4b10a382bd3ac72004fc74ff388",
+    "research_completion/scripts/figure11_zampar_2026-10-21/direct_run.py": "a92649e194c74c8b46a2b2c39832e610760cf7e6e2c080a8f29dc980ca640c6e",
+    "research_completion/scripts/figure11_zampar_2026-10-21/verify_barrier.py": "a686d9dc28047541bbcb75b2f16bd48be7d9b426ec7ec52829c47a37d63a172a",
+    "research_completion/scripts/flux_model.py": "480938e2a69b5632e5f22e768fed3858b4148e8da4f50c9f2424d79578d99387",
+    "14_control_pso/09_Sc_Kp/SC_Model.mat": "6712c7af12964a8e0ba919eee24c49fbbdb1d18392c28a275a3bd9e452d2bc2f",
+    "14_control_pso/09_Sc_Kp/SCerevisiae_Data.mat": "e69b562f34cae97d676513d57175f4642559ee629b32bb1a5839177dd943acbd",
+    "research_completion/runs/figure11_zampar_2026-10-21/fit_summary.json": "47751e39bc04d4c09f8d335207cd07779c2e1bb3a0692bdc6d42819c89b6a6f5",
+    "research_completion/runs/figure11_zampar_2026-10-21/direct_audit.json": "7cde2958ab2a596968c729e5a73dd9629a9db948f1294c41774181004037b031",
+    "research_completion/runs/figure11_zampar_2026-10-21/trajectory_direct_barrier.csv": "315d25a37cde10600d45793890a2b6a8bc2c7e5ee272c37793eb33310f33ab23",
+    "research_completion/runs/figure11_zampar_2026-10-21/final_observation_metrics.json": "7de2030ceb28705767fb1f7b00946f196b041f9137ddeb4c2558819fa4a5644c",
+    "research_completion/runs/figure11_zampar_2026-10-21/numerical_refinement/coarse/trajectory_direct_barrier.csv": "1bd4d47a9af1dfe4a363d4e4799cf3d3f87795d6390d7a61872b0d46affea6b2",
+    "research_completion/runs/figure11_zampar_2026-10-21/numerical_refinement/coarse/direct_run.py": "5be143b955435890662177ac0709e776d2e36b1d47ad0d5d717e36b78e82b354"
+  },
+  "parameters": [
+    11.005414756123924,
+    3.919072884652486,
+    10.0,
+    5.565032869183548
+  ],
+  "fixed_parameters": {
+    "qEmax_mmol_gDW_h": 10.0,
+    "KG_g_L": 0.01,
+    "KE_g_L": 0.1,
+    "glucose_repression_scale_g_L": 0.05,
+    "glucose_repression_exponent": 4,
+    "OD_gDW_L_per_OD": 0.486,
+    "MWG_g_mmol": 0.18,
+    "MWE_g_mmol": 0.046,
+    "growth_scaling": 1
+  },
+  "initial_state": [
+    0.09856522231342883,
+    4.84384260862773,
+    0.22730440275683
+  ],
+  "interval_h": [
+    -6.8,
+    8.0583333335
+  ],
+  "physical_bounds": "Reuse archived BatchModel.bounds_state unchanged: dynamic glucose/ethanol lower bounds exactly minus capacity; remaining/fixed bounds expanded.",
+  "direct_cases": {
+    "tight_pair": {
+      "epsilon": 1e-06,
+      "mu": 1e-08
+    },
+    "fixed_expansion_small_barrier": {
+      "epsilon": 1e-05,
+      "mu": 1e-08
+    }
+  },
+  "archived_direct": {
+    "epsilon": 1e-05,
+    "mu": 1e-07,
+    "source": "research_completion/runs/figure11_zampar_2026-10-21/trajectory_direct_barrier.csv"
+  },
+  "direct_integrator": {
+    "method": "LSODA",
+    "rtol": 2e-08,
+    "atol": [
+      2e-10,
+      1e-13,
+      2e-10
+    ],
+    "max_step_h": 0.25
+  },
+  "direct_KKT": {
+    "requested_stationarity_tolerance": 2e-07,
+    "same_archived_Newton_algorithm": true
+  },
+  "LP": {
+    "epsilon": {
+      "0": 0.0,
+      "1e-6": 1e-06,
+      "1e-5": 1e-05
+    },
+    "method": "RK45",
+    "fine_rtol": 2e-09,
+    "fine_atol": 2e-11,
+    "coarse_rtol": 2e-08,
+    "coarse_atol": 2e-10,
+    "max_step_h": 0.25,
+    "LP_feasibility_tolerance": 1e-09
+  },
+  "output_times": "Union of401 uniform times and every original eligible observation time; no time realignment.",
+  "observation_counts": {
+    "all": 256,
+    "calibration": 45,
+    "withheld": 211
+  },
+  "decomposition": "Signed expansion=LP_epsilon-LP0; barrier_difference=finite_epsilon_mu-LP_epsilon; total=finite_epsilon_mu-LP0. Store signed terms, exact sum residual, and cancellation fraction; no root-sum-square attribution.",
+  "integration_error": "Fresh LP fine/coarse differences for each epsilon. Existing adopted direct coarse/fine difference separately; it is not a refinement estimate for the two new pairs. Finite-minus-LP differences also include residual integration/solver errors.",
+  "metrics": "Per original variable observation times and counts, all/calibration/withheld: signed mean, maximum absolute and RMS; OD=X/0.486. Repeated observations retained without claiming independent replicates.",
+  "checks": {
+    "complete_interval": true,
+    "finite_state": true,
+    "min_external_concentration": -1e-09,
+    "minimum_slack_strictly_positive": true,
+    "equality_residual_max": 1e-08,
+    "stationarity_residual_max": 2.01e-07,
+    "growth_gap_lower": -1e-08,
+    "growth_gap_upper": "2*n*mu+1e-7 at saved outputs",
+    "decomposition_identity_absolute": 1e-12
+  },
+  "observation_scale": "Compare numerical differences with archived per-variable withheld RMSE in matching units; this is descriptive, not experimental uncertainty or statistical significance.",
+  "failure_rule": "Retain every failed/incomplete case, RHS state and exception. No parameter, bound, tolerance or threshold retuning. Do not overwrite original or new completed outputs.",
+  "runtime": {
+    "python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "platform": "macOS-14.6.1-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.2.2",
+      "scipy": "1.15.1",
+      "highspy": "1.15.1"
+    }
+  },
+  "runtime_limitations": "Archived adopted pair was generated under its recorded older NumPy/SciPy environment. Fresh runs use the recorded current environment; cross-runtime comparisons are numerical diagnostics, not pure analytical error bounds.",
+  "metadata_correction": {
+    "date": "2026-10-25",
+    "scope": "Output count only: accepted_steps excludes the initial saved state; saved_point_count includes it. Model equations, parameters, integration and scientific outputs are unchanged.",
+    "reference_protocol": "reference_execution/protocol.json",
+    "reference_protocol_sha256": "7280a0a16d163a72a3e309e2cfd24a9bf1bb7491f59d809d6a029fcd37c5735a",
+    "reference_producer_sha256": "5c6a8d3f909843667b0e6d30e5e9ff000646a57b0ba3f7a4cd4891dc57d0beae"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "protocol_sha256": "67a4e5a1b21c1e647d4e5b5f4f5d79f5bc313674d995f9a63f7dee63ff84b23f",
+  "amendment_01_sha256": "da710d97c2ede73c59daa88782595f3d9d4a1f74227dca6580912f1d8c50e0a7",
+  "amendment_02_sha256": "b926abf6136c284531ca134d8b4d9efd17fcbffd0d97d9d0f20d324022095018",
+  "amendment_03_sha256": "4fb819b83e156ba8b227c18d37e3fd81679c3ed693cda829183fcf34196d867a",
+  "selection": {
+    "quadratic_ridge": {
+      "selected": {
+        "setting": 1e-06,
+        "validation_joint_standardized_mse": 0.010005159814676772,
+        "seconds": 0.011946874670684338,
+        "warnings": []
+      },
+      "candidates": [
+        {
+          "setting": 1e-06,
+          "validation_joint_standardized_mse": 0.010005159814676772,
+          "seconds": 0.011946874670684338,
+          "warnings": []
+        },
+        {
+          "setting": 0.001,
+          "validation_joint_standardized_mse": 0.010005166043322857,
+          "seconds": 0.0012851669453084469,
+          "warnings": []
+        },
+        {
+          "setting": 1.0,
+          "validation_joint_standardized_mse": 0.010013835602405572,
+          "seconds": 0.0010409997776150703,
+          "warnings": []
+        }
+      ]
+    },
+    "mlp": {
+      "selected": {
+        "setting": 733,
+        "validation_joint_standardized_mse": 0.00023527469916905278,
+        "seconds": 0.3914272910915315,
+        "warnings": [
+          "lbfgs failed to converge (status=1):\nSTOP: TOTAL NO. OF ITERATIONS REACHED LIMIT.\n\nIncrease the number of iterations (max_iter) or scale the data as shown in:\n    https://scikit-learn.org/stable/modules/preprocessing.html"
+        ]
+      },
+      "candidates": [
+        {
+          "setting": 733,
+          "validation_joint_standardized_mse": 0.00023527469916905278,
+          "seconds": 0.3914272910915315,
+          "warnings": [
+            "lbfgs failed to converge (status=1):\nSTOP: TOTAL NO. OF ITERATIONS REACHED LIMIT.\n\nIncrease the number of iterations (max_iter) or scale the data as shown in:\n    https://scikit-learn.org/stable/modules/preprocessing.html"
+          ]
+        },
+        {
+          "setting": 734,
+          "validation_joint_standardized_mse": 0.00023589770280487075,
+          "seconds": 0.3815412912517786,
+          "warnings": [
+            "lbfgs failed to converge (status=1):\nSTOP: TOTAL NO. OF ITERATIONS REACHED LIMIT.\n\nIncrease the number of iterations (max_iter) or scale the data as shown in:\n    https://scikit-learn.org/stable/modules/preprocessing.html"
+          ]
+        },
+        {
+          "setting": 735,
+          "validation_joint_standardized_mse": 0.0002924648034573812,
+          "seconds": 0.385364375077188,
+          "warnings": [
+            "lbfgs failed to converge (status=1):\nSTOP: TOTAL NO. OF ITERATIONS REACHED LIMIT.\n\nIncrease the number of iterations (max_iter) or scale the data as shown in:\n    https://scikit-learn.org/stable/modules/preprocessing.html"
+          ]
+        }
+      ]
+    }
+  },
+  "costs_at_lock": {
+    "data": {
+      "training": {
+        "seconds": 21.720556041691452,
+        "successful_evaluations": 1152,
+        "failures": []
+      },
+      "validation": {
+        "seconds": 3.584010041784495,
+        "successful_evaluations": 192,
+        "failures": []
+      }
+    },
+    "fit": {
+      "quadratic_ridge": 0.01447416702285409,
+      "mlp": 1.1586221661418676
+    },
+    "test_label_seconds": 0.0,
+    "common_archived_response_table_build": "Not rerun; pre-existing shared infrastructure excluded equally"
+  },
+  "locked_before_test_labels": true,
+  "locked_before_test_optimization": true,
+  "source_hashes_at_recorded_execution": {
+    "run_study.py": "6ffd507ad30ccc71cd044b3fdfe53d4a4616dce486c831d3d6663c663d56cef3",
+    "simulator.py": "8c8cbeafe3e3fc990e4f94d212eb8acd6362d28357e6cea68fbbe1f7ac884482",
+    "surrogate_model.py": "e5ec95f358f2db19a2630ad30e42ad80904bba4938a3a9114300ac85a2a244c8"
+  },
+  "model_pickle_sha256_at_recorded_execution": "985ecab78ae43b8c6d5b744ddf1b625cc89ffd618985f4bf3bf020211810a107",
+  "scope": "Recorded training/validation choice. Released predictors use non-executable JSON weights; hashes at recorded execution identify the private original run, while release hashes are listed in SOURCE_MANIFEST.json.",
+  "released_json_model_sha256": "7baf010872eba2dc92811873aa2833bde33e0dd946a8295fc79a8027b8af2988"
+}

@@ -1,0 +1,117 @@
+{
+  "purpose": "Lightweight monkeypatched failure-routing checks; not biological or numerical validation",
+  "created_utc": "2026-10-24T02:22:28Z",
+  "source_hashes": {
+    "scripts/controllers.py": "ad4ccfb43b430ef52d584fc9152979be074d747bd8ccd34dffac2e821cc819ad",
+    "scripts/run_study.py": "d0718d1e096da60465a4766f3b35a025c0a8fa48329dfd73f3c6abc83a0fd3cd",
+    "scripts/model.py": "293a7441d5d4f6cb891490d10e8a33136c0266253c61524a46ae2c26fd5ecf68",
+    "scripts/base_model.py": "4aa2ce6ee5246ce0f2335aa16a8e37855c01381a8d55307d781201ecd3a5d9a4",
+    "scripts/kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6",
+    "audit/test_failure_routing.py": "897b030d591dd1f76b16ce96e606b3bfe2c7d7817abdd1de3af11d122da3672d"
+  },
+  "tests": {
+    "managed_candidate_verification_error": {
+      "passed": true,
+      "fallback_calls": [
+        {
+          "gain": true,
+          "maxiter": 12,
+          "center": [
+            0.05,
+            0.05,
+            0.0
+          ],
+          "failures_seen": 1
+        }
+      ],
+      "event": {
+        "attempt": 0,
+        "action": "verification_error",
+        "error": "RuntimeError('injected_candidate_verification_failure')"
+      },
+      "failure_record": {
+        "theta": [
+          0.06,
+          0.05,
+          0.0
+        ],
+        "error": "RuntimeError('injected_candidate_verification_failure')"
+      },
+      "returned_plan": [
+        0.05,
+        0.05
+      ],
+      "model_calls": 5,
+      "model_failures": 1,
+      "scope": "Candidate evaluation failure routes to retained-incumbent direct fallback; direct solver is a spy."
+    },
+    "whole_controller_error_backup": {
+      "passed": true,
+      "solver_attempts": [
+        {
+          "stage": 0,
+          "horizon": 7,
+          "method": "scenario_managed"
+        },
+        {
+          "stage": 1,
+          "horizon": 6,
+          "method": "scenario_managed"
+        },
+        {
+          "stage": 2,
+          "horizon": 5,
+          "method": "scenario_managed"
+        },
+        {
+          "stage": 3,
+          "horizon": 4,
+          "method": "scenario_managed"
+        },
+        {
+          "stage": 4,
+          "horizon": 3,
+          "method": "scenario_managed"
+        },
+        {
+          "stage": 5,
+          "horizon": 2,
+          "method": "scenario_managed"
+        },
+        {
+          "stage": 6,
+          "horizon": 1,
+          "method": "scenario_managed"
+        }
+      ],
+      "checkpoint_count": 14,
+      "executed_feeds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "result": {
+        "volume_L": 0.5,
+        "biomass_amount_gDW": 0.0010000000000000002,
+        "log_ratio": 0.0,
+        "ratio": 1.0,
+        "glucose_g_L": 20.0,
+        "SC_gDW_L": 0.0010000000000000002,
+        "KP_gDW_L": 0.0010000000000000002,
+        "log_ratio_error": 0.0,
+        "terminal_feasible": true,
+        "operational_success": false,
+        "physical_valid": true,
+        "controller_failure": true
+      },
+      "controller_seconds": 0.0004669995978474617,
+      "estimator_seconds": 3.0421651899814606e-06,
+      "scope": "Whole-solver exceptions execute zero-feed backup, preserve logs/timing, and separate physical endpoint from operational success."
+    }
+  },
+  "passed": true
+}

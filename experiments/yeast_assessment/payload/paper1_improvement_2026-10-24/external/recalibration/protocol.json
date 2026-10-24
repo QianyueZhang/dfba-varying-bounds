@@ -1,0 +1,33 @@
+{
+  "frozen_at_utc": "2026-10-24T10:50:18.316538+00:00",
+  "purpose": "Retrospective maintenance-only attribution check after original negative-transfer outcomes already examined",
+  "already_inspected_external_results_sha256": "09fb86ecb3499ceffe477570b26853d8775e52e24c9c14f63d7edcf7b5dc7784",
+  "calibration_condition": "20.9percent inlet oxygen, nominal glucose and oxygen uptake, archivedmedium, capacity semantics",
+  "calibration_target_growth_h-1": 0.1,
+  "maintenance_bounds_mmol_gDW_h": [
+    0.001,
+    20.0
+  ],
+  "original_maintenance_mmol_gDW_h": 5.565032869183548,
+  "fixed": "All other network, objective, bounds and inputs; no lipid opening, no kinetic changes",
+  "fit_outputs_used": "Only nominal dilution0.1 at20.9percent condition; no ethanol anywhere, no other condition growth",
+  "growth_attainment_tolerance_h-1": 1e-08,
+  "root_method": "Check endpoints; monotonic feasible-set nesting; if upper infeasible, at most50feasibility bisections to a feasible growth<=target; brentq xtol1e-9,maxiter50",
+  "failure_rule": "If target outside attainable interval, retain endpoint as explicit failed-calibration boundary diagnostic; do not relabel as successful fit",
+  "reporting": "All5 nominal conditions under original and selectedmaintenance and capacity/prescribed; ethanolFVA atgrowthoptimumminus1e-9, complete solver-call ledger, all savedvectors; no SEM panel required in this boundedfollowup",
+  "limits": [
+    "Retrospective,not blindvalidation",
+    "Crossstrain/medium differences remain",
+    "Original maximumyield/biomass/maintenance assumptions jointly determine transfer",
+    "No selectingparameters by heldout residuals"
+  ],
+  "script_sha256": "0d0b7d199889cc74cec4cd2c80b05a6e73cbc669d9832fa3dda688203036e4c5",
+  "input_sha256": {
+    "inputs/SC_Model.mat": "6712c7af12964a8e0ba919eee24c49fbbdb1d18392c28a275a3bd9e452d2bc2f",
+    "inputs/SCerevisiae_Data.mat": "e69b562f34cae97d676513d57175f4642559ee629b32bb1a5839177dd943acbd",
+    "observations.json": "0f2fc5ba4d2bafd4fc17295dd1a9ba3672cf871db14311a7536dc93b2a8670a4",
+    "results.json": "09fb86ecb3499ceffe477570b26853d8775e52e24c9c14f63d7edcf7b5dc7784",
+    "cached_scipy_driver.py": "86275ceaca96861e95f45cb112d1581e251eb1f850ffc2f82136cde5ca2a4b74",
+    "runtime_equivalence.json": "d5aec5ee11a0f7e27730c516cf2defa651028ba858936ba0afc00076d1b271c6"
+  }
+}

@@ -1,0 +1,806 @@
+{
+  "scope": "Read-only recount from all 440 executed episode files. No simulation; no use of parallel wall-time comparisons; source outcomes reconstructed from terminal log states and physical checks.",
+  "complete_manifest_sha256": "5ec5655ea14d0197428e7e1599a4b92136aea4d94bc4b897dcd4623443934073",
+  "summary_sha256": "1a5b7e93ab24ac2d60427380d74d56f14c49eea532d10155c56406843597a87e",
+  "hash_and_identity_checked_episodes": 440,
+  "summary_discrepancies": [],
+  "update_diagnostics": {
+    "ce_limited": {
+      "status_message_distribution": [
+        {
+          "success": false,
+          "message": "Iteration limit reached",
+          "count": 387
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "count": 229
+        }
+      ],
+      "by_family": {
+        "table": {
+          "updates": 308,
+          "selected_numerically_feasible": 197,
+          "solver_reported_unsuccessful": 212,
+          "fallbacks": 0
+        },
+        "analytic": {
+          "updates": 308,
+          "selected_numerically_feasible": 262,
+          "solver_reported_unsuccessful": 175,
+          "fallbacks": 0
+        }
+      }
+    },
+    "ce_direct": {
+      "status_message_distribution": [
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "count": 545
+        },
+        {
+          "success": false,
+          "message": "Positive directional derivative for linesearch",
+          "count": 14
+        },
+        {
+          "success": false,
+          "message": "Iteration limit reached",
+          "count": 57
+        }
+      ],
+      "by_family": {
+        "table": {
+          "updates": 308,
+          "selected_numerically_feasible": 260,
+          "solver_reported_unsuccessful": 54,
+          "fallbacks": 0
+        },
+        "analytic": {
+          "updates": 308,
+          "selected_numerically_feasible": 272,
+          "solver_reported_unsuccessful": 17,
+          "fallbacks": 0
+        }
+      }
+    },
+    "scenario_open": {
+      "status_message_distribution": [
+        {
+          "success": false,
+          "message": "Iteration limit reached",
+          "count": 108
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "count": 505
+        },
+        {
+          "success": false,
+          "message": "Positive directional derivative for linesearch",
+          "count": 3
+        }
+      ],
+      "by_family": {
+        "table": {
+          "updates": 308,
+          "selected_numerically_feasible": 34,
+          "solver_reported_unsuccessful": 39,
+          "fallbacks": 0
+        },
+        "analytic": {
+          "updates": 308,
+          "selected_numerically_feasible": 19,
+          "solver_reported_unsuccessful": 72,
+          "fallbacks": 0
+        }
+      }
+    },
+    "scenario_feedback": {
+      "status_message_distribution": [
+        {
+          "success": false,
+          "message": "Iteration limit reached",
+          "count": 384
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "count": 231
+        },
+        {
+          "success": false,
+          "message": "Positive directional derivative for linesearch",
+          "count": 1
+        }
+      ],
+      "by_family": {
+        "table": {
+          "updates": 308,
+          "selected_numerically_feasible": 71,
+          "solver_reported_unsuccessful": 175,
+          "fallbacks": 0
+        },
+        "analytic": {
+          "updates": 308,
+          "selected_numerically_feasible": 41,
+          "solver_reported_unsuccessful": 210,
+          "fallbacks": 0
+        }
+      }
+    },
+    "scenario_managed": {
+      "status_message_distribution": [
+        {
+          "success": false,
+          "message": "Iteration limit reached",
+          "count": 333
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "count": 168
+        },
+        {
+          "success": true,
+          "message": "finite-scenario gate accepted",
+          "count": 114
+        },
+        {
+          "success": false,
+          "message": "Positive directional derivative for linesearch",
+          "count": 1
+        }
+      ],
+      "by_family": {
+        "table": {
+          "updates": 308,
+          "selected_numerically_feasible": 93,
+          "solver_reported_unsuccessful": 167,
+          "fallbacks": 240
+        },
+        "analytic": {
+          "updates": 308,
+          "selected_numerically_feasible": 92,
+          "solver_reported_unsuccessful": 167,
+          "fallbacks": 262
+        }
+      }
+    }
+  },
+  "summary": {
+    "ce_limited": {
+      "n": 88,
+      "success": 53,
+      "physical_invalid": 0,
+      "controller_exception_episodes": 0,
+      "operational_success": 53,
+      "total_updates": 616,
+      "model_calls": 15180,
+      "fallback_updates": 0,
+      "selected_numerically_feasible_updates": 459,
+      "solver_reported_unsuccessful_updates": 387,
+      "family": {
+        "table": {
+          "n": 44,
+          "success": 28
+        },
+        "analytic": {
+          "n": 44,
+          "success": 25
+        }
+      },
+      "regime": {
+        "nominal": {
+          "n": 8,
+          "success": 8
+        },
+        "static": {
+          "n": 16,
+          "success": 16
+        },
+        "step": {
+          "n": 32,
+          "success": 22
+        },
+        "inhibition": {
+          "n": 16,
+          "success": 0
+        },
+        "noisy": {
+          "n": 16,
+          "success": 7
+        }
+      }
+    },
+    "ce_direct": {
+      "n": 88,
+      "success": 54,
+      "physical_invalid": 0,
+      "controller_exception_episodes": 0,
+      "operational_success": 54,
+      "total_updates": 616,
+      "model_calls": 16216,
+      "fallback_updates": 0,
+      "selected_numerically_feasible_updates": 532,
+      "solver_reported_unsuccessful_updates": 71,
+      "family": {
+        "table": {
+          "n": 44,
+          "success": 28
+        },
+        "analytic": {
+          "n": 44,
+          "success": 26
+        }
+      },
+      "regime": {
+        "nominal": {
+          "n": 8,
+          "success": 8
+        },
+        "static": {
+          "n": 16,
+          "success": 16
+        },
+        "step": {
+          "n": 32,
+          "success": 23
+        },
+        "inhibition": {
+          "n": 16,
+          "success": 0
+        },
+        "noisy": {
+          "n": 16,
+          "success": 7
+        }
+      }
+    },
+    "scenario_open": {
+      "n": 88,
+      "success": 68,
+      "physical_invalid": 0,
+      "controller_exception_episodes": 0,
+      "operational_success": 68,
+      "total_updates": 616,
+      "model_calls": 48541,
+      "fallback_updates": 0,
+      "selected_numerically_feasible_updates": 53,
+      "solver_reported_unsuccessful_updates": 111,
+      "family": {
+        "table": {
+          "n": 44,
+          "success": 35
+        },
+        "analytic": {
+          "n": 44,
+          "success": 33
+        }
+      },
+      "regime": {
+        "nominal": {
+          "n": 8,
+          "success": 8
+        },
+        "static": {
+          "n": 16,
+          "success": 16
+        },
+        "step": {
+          "n": 32,
+          "success": 30
+        },
+        "inhibition": {
+          "n": 16,
+          "success": 0
+        },
+        "noisy": {
+          "n": 16,
+          "success": 14
+        }
+      }
+    },
+    "scenario_feedback": {
+      "n": 88,
+      "success": 61,
+      "physical_invalid": 0,
+      "controller_exception_episodes": 0,
+      "operational_success": 61,
+      "total_updates": 616,
+      "model_calls": 76327,
+      "fallback_updates": 0,
+      "selected_numerically_feasible_updates": 112,
+      "solver_reported_unsuccessful_updates": 385,
+      "family": {
+        "table": {
+          "n": 44,
+          "success": 31
+        },
+        "analytic": {
+          "n": 44,
+          "success": 30
+        }
+      },
+      "regime": {
+        "nominal": {
+          "n": 8,
+          "success": 8
+        },
+        "static": {
+          "n": 16,
+          "success": 15
+        },
+        "step": {
+          "n": 32,
+          "success": 25
+        },
+        "inhibition": {
+          "n": 16,
+          "success": 0
+        },
+        "noisy": {
+          "n": 16,
+          "success": 13
+        }
+      }
+    },
+    "scenario_managed": {
+      "n": 88,
+      "success": 69,
+      "physical_invalid": 0,
+      "controller_exception_episodes": 0,
+      "operational_success": 69,
+      "total_updates": 616,
+      "model_calls": 80323,
+      "fallback_updates": 502,
+      "selected_numerically_feasible_updates": 185,
+      "solver_reported_unsuccessful_updates": 334,
+      "accepted_updates": 114,
+      "corrected_accepts": 39,
+      "rejected_proposals": 1552,
+      "verification_errors": 0,
+      "family": {
+        "table": {
+          "n": 44,
+          "success": 33
+        },
+        "analytic": {
+          "n": 44,
+          "success": 36
+        }
+      },
+      "regime": {
+        "nominal": {
+          "n": 8,
+          "success": 8
+        },
+        "static": {
+          "n": 16,
+          "success": 16
+        },
+        "step": {
+          "n": 32,
+          "success": 29
+        },
+        "inhibition": {
+          "n": 16,
+          "success": 3
+        },
+        "noisy": {
+          "n": 16,
+          "success": 13
+        }
+      }
+    }
+  },
+  "pairs": {
+    "scenario_feedback__ce_direct": {
+      "success_difference": 7,
+      "wins": 11,
+      "losses": 4,
+      "joint_n": 50,
+      "both_failed_n": 23,
+      "median_joint_biomass_ratio": 0.9621534730692229,
+      "median_joint_model_call_ratio": 4.810551948051948,
+      "joint_biomass_at_least_99_5pct": 17,
+      "joint_biomass_greater": 7,
+      "cluster_differences": {
+        "table_0": 1,
+        "table_1": 1,
+        "table_2": 1,
+        "table_3": 0,
+        "analytic_0": 1,
+        "analytic_1": 0,
+        "analytic_2": 1,
+        "analytic_3": 2
+      },
+      "by_family": {
+        "table": {
+          "joint_n": 27,
+          "median_biomass_ratio": 0.9973018747417426,
+          "median_model_call_ratio": 4.238317757009346,
+          "wins": 4,
+          "losses": 1
+        },
+        "analytic": {
+          "joint_n": 23,
+          "median_biomass_ratio": 0.8025076665800523,
+          "median_model_call_ratio": 5.931818181818182,
+          "wins": 7,
+          "losses": 3
+        }
+      },
+      "wins_ids": [
+        "table_0_noisy_0",
+        "table_0_noisy_1",
+        "table_1_step_4_1",
+        "table_2_noisy_0",
+        "analytic_0_step_4_1",
+        "analytic_1_noisy_0",
+        "analytic_2_step_4_1",
+        "analytic_2_noisy_1",
+        "analytic_3_step_3_1",
+        "analytic_3_step_4_1",
+        "analytic_3_noisy_1"
+      ],
+      "losses_ids": [
+        "table_0_step_3_1",
+        "analytic_1_step_3_1",
+        "analytic_2_static_1",
+        "analytic_3_step_4_-1"
+      ]
+    },
+    "scenario_managed__scenario_feedback": {
+      "success_difference": 8,
+      "wins": 13,
+      "losses": 5,
+      "joint_n": 56,
+      "both_failed_n": 14,
+      "median_joint_biomass_ratio": 0.8403258551396852,
+      "median_joint_model_call_ratio": 1.0590167814816023,
+      "joint_biomass_at_least_99_5pct": 12,
+      "joint_biomass_greater": 10,
+      "cluster_differences": {
+        "table_0": 0,
+        "table_1": 0,
+        "table_2": 2,
+        "table_3": 0,
+        "analytic_0": 2,
+        "analytic_1": 1,
+        "analytic_2": 1,
+        "analytic_3": 2
+      },
+      "by_family": {
+        "table": {
+          "joint_n": 28,
+          "median_biomass_ratio": 0.8961170737713593,
+          "median_model_call_ratio": 1.031316258955175,
+          "wins": 5,
+          "losses": 3
+        },
+        "analytic": {
+          "joint_n": 28,
+          "median_biomass_ratio": 0.6423985270561904,
+          "median_model_call_ratio": 1.065118501529052,
+          "wins": 8,
+          "losses": 2
+        }
+      },
+      "wins_ids": [
+        "table_0_step_3_1",
+        "table_0_step_4_1",
+        "table_2_step_4_1",
+        "table_2_noisy_1",
+        "table_3_step_4_1",
+        "analytic_0_inhibition_1",
+        "analytic_0_noisy_1",
+        "analytic_1_step_3_1",
+        "analytic_1_step_4_1",
+        "analytic_2_static_1",
+        "analytic_2_inhibition_1",
+        "analytic_3_step_4_-1",
+        "analytic_3_inhibition_1"
+      ],
+      "losses_ids": [
+        "table_0_noisy_0",
+        "table_0_noisy_1",
+        "table_3_step_3_-1",
+        "analytic_1_step_4_-1",
+        "analytic_2_step_4_-1"
+      ]
+    },
+    "scenario_feedback__scenario_open": {
+      "success_difference": -7,
+      "wins": 3,
+      "losses": 10,
+      "joint_n": 58,
+      "both_failed_n": 17,
+      "median_joint_biomass_ratio": 1.2436239317558042,
+      "median_joint_model_call_ratio": 1.733092833092833,
+      "joint_biomass_at_least_99_5pct": 45,
+      "joint_biomass_greater": 45,
+      "cluster_differences": {
+        "table_0": -1,
+        "table_1": 0,
+        "table_2": -2,
+        "table_3": -1,
+        "analytic_0": -1,
+        "analytic_1": -2,
+        "analytic_2": 0,
+        "analytic_3": 0
+      },
+      "by_family": {
+        "table": {
+          "joint_n": 30,
+          "median_biomass_ratio": 1.2845087427571196,
+          "median_model_call_ratio": 1.5970261753795798,
+          "wins": 1,
+          "losses": 5
+        },
+        "analytic": {
+          "joint_n": 28,
+          "median_biomass_ratio": 1.0133712632333318,
+          "median_model_call_ratio": 1.8889230695855392,
+          "wins": 2,
+          "losses": 5
+        }
+      },
+      "wins_ids": [
+        "table_0_noisy_0",
+        "analytic_2_step_4_-1",
+        "analytic_3_noisy_1"
+      ],
+      "losses_ids": [
+        "table_0_step_3_1",
+        "table_0_step_4_1",
+        "table_2_step_4_1",
+        "table_2_noisy_1",
+        "table_3_step_4_1",
+        "analytic_0_noisy_1",
+        "analytic_1_step_3_1",
+        "analytic_1_step_4_1",
+        "analytic_2_static_1",
+        "analytic_3_noisy_0"
+      ]
+    },
+    "scenario_managed__scenario_open": {
+      "success_difference": 1,
+      "wins": 5,
+      "losses": 4,
+      "joint_n": 64,
+      "both_failed_n": 15,
+      "median_joint_biomass_ratio": 1.0672920144992335,
+      "median_joint_model_call_ratio": 1.6776171331374672,
+      "joint_biomass_at_least_99_5pct": 36,
+      "joint_biomass_greater": 36,
+      "cluster_differences": {
+        "table_0": -1,
+        "table_1": 0,
+        "table_2": 0,
+        "table_3": -1,
+        "analytic_0": 1,
+        "analytic_1": -1,
+        "analytic_2": 1,
+        "analytic_3": 2
+      },
+      "by_family": {
+        "table": {
+          "joint_n": 33,
+          "median_biomass_ratio": 1.1264011424031646,
+          "median_model_call_ratio": 1.5741811175337186,
+          "wins": 0,
+          "losses": 2
+        },
+        "analytic": {
+          "joint_n": 31,
+          "median_biomass_ratio": 0.7241283228585719,
+          "median_model_call_ratio": 1.8984238178633976,
+          "wins": 5,
+          "losses": 2
+        }
+      },
+      "wins_ids": [
+        "analytic_0_inhibition_1",
+        "analytic_2_inhibition_1",
+        "analytic_3_step_4_-1",
+        "analytic_3_inhibition_1",
+        "analytic_3_noisy_1"
+      ],
+      "losses_ids": [
+        "table_0_noisy_1",
+        "table_3_step_3_-1",
+        "analytic_1_step_4_-1",
+        "analytic_3_noisy_0"
+      ]
+    },
+    "scenario_managed__ce_direct": {
+      "success_difference": 15,
+      "wins": 18,
+      "losses": 3,
+      "joint_n": 51,
+      "both_failed_n": 16,
+      "median_joint_biomass_ratio": 0.7784100616588499,
+      "median_joint_model_call_ratio": 4.914163090128755,
+      "joint_biomass_at_least_99_5pct": 4,
+      "joint_biomass_greater": 1,
+      "cluster_differences": {
+        "table_0": 1,
+        "table_1": 1,
+        "table_2": 3,
+        "table_3": 0,
+        "analytic_0": 3,
+        "analytic_1": 1,
+        "analytic_2": 2,
+        "analytic_3": 4
+      },
+      "by_family": {
+        "table": {
+          "joint_n": 27,
+          "median_biomass_ratio": 0.8469489368657873,
+          "median_model_call_ratio": 4.078817733990148,
+          "wins": 6,
+          "losses": 1
+        },
+        "analytic": {
+          "joint_n": 24,
+          "median_biomass_ratio": 0.5295120779603025,
+          "median_model_call_ratio": 7.008123291831157,
+          "wins": 12,
+          "losses": 2
+        }
+      },
+      "wins_ids": [
+        "table_0_step_4_1",
+        "table_1_step_4_1",
+        "table_2_step_4_1",
+        "table_2_noisy_0",
+        "table_2_noisy_1",
+        "table_3_step_4_1",
+        "analytic_0_step_4_1",
+        "analytic_0_inhibition_1",
+        "analytic_0_noisy_1",
+        "analytic_1_step_4_1",
+        "analytic_1_noisy_0",
+        "analytic_2_step_4_1",
+        "analytic_2_inhibition_1",
+        "analytic_2_noisy_1",
+        "analytic_3_step_3_1",
+        "analytic_3_step_4_1",
+        "analytic_3_inhibition_1",
+        "analytic_3_noisy_1"
+      ],
+      "losses_ids": [
+        "table_3_step_3_-1",
+        "analytic_1_step_4_-1",
+        "analytic_2_step_4_-1"
+      ]
+    },
+    "scenario_open__ce_direct": {
+      "success_difference": 14,
+      "wins": 16,
+      "losses": 2,
+      "joint_n": 52,
+      "both_failed_n": 18,
+      "median_joint_biomass_ratio": 0.7456280510395706,
+      "median_joint_model_call_ratio": 2.7786470143613,
+      "joint_biomass_at_least_99_5pct": 2,
+      "joint_biomass_greater": 2,
+      "cluster_differences": {
+        "table_0": 2,
+        "table_1": 1,
+        "table_2": 3,
+        "table_3": 1,
+        "analytic_0": 2,
+        "analytic_1": 2,
+        "analytic_2": 1,
+        "analytic_3": 2
+      },
+      "by_family": {
+        "table": {
+          "joint_n": 28,
+          "median_biomass_ratio": 0.7572326129554552,
+          "median_model_call_ratio": 2.5800482218203737,
+          "wins": 7,
+          "losses": 0
+        },
+        "analytic": {
+          "joint_n": 24,
+          "median_biomass_ratio": 0.6398720178456248,
+          "median_model_call_ratio": 3.2077982075210203,
+          "wins": 9,
+          "losses": 2
+        }
+      },
+      "wins_ids": [
+        "table_0_step_4_1",
+        "table_0_noisy_1",
+        "table_1_step_4_1",
+        "table_2_step_4_1",
+        "table_2_noisy_0",
+        "table_2_noisy_1",
+        "table_3_step_4_1",
+        "analytic_0_step_4_1",
+        "analytic_0_noisy_1",
+        "analytic_1_step_4_1",
+        "analytic_1_noisy_0",
+        "analytic_2_step_4_1",
+        "analytic_2_noisy_1",
+        "analytic_3_step_3_1",
+        "analytic_3_step_4_1",
+        "analytic_3_noisy_0"
+      ],
+      "losses_ids": [
+        "analytic_2_step_4_-1",
+        "analytic_3_step_4_-1"
+      ]
+    },
+    "scenario_managed__ce_limited": {
+      "success_difference": 16,
+      "wins": 19,
+      "losses": 3,
+      "joint_n": 50,
+      "both_failed_n": 16,
+      "median_joint_biomass_ratio": 0.7848497445162834,
+      "median_joint_model_call_ratio": 5.37264705882353,
+      "joint_biomass_at_least_99_5pct": 4,
+      "joint_biomass_greater": 1,
+      "cluster_differences": {
+        "table_0": 1,
+        "table_1": 1,
+        "table_2": 3,
+        "table_3": 0,
+        "analytic_0": 3,
+        "analytic_1": 1,
+        "analytic_2": 3,
+        "analytic_3": 4
+      },
+      "by_family": {
+        "table": {
+          "joint_n": 27,
+          "median_biomass_ratio": 0.8472625404901921,
+          "median_model_call_ratio": 4.5265017667844525,
+          "wins": 6,
+          "losses": 1
+        },
+        "analytic": {
+          "joint_n": 23,
+          "median_biomass_ratio": 0.5251796001978585,
+          "median_model_call_ratio": 7.047169811320755,
+          "wins": 13,
+          "losses": 2
+        }
+      },
+      "wins_ids": [
+        "table_0_step_4_1",
+        "table_1_step_4_1",
+        "table_2_step_4_1",
+        "table_2_noisy_0",
+        "table_2_noisy_1",
+        "table_3_step_4_1",
+        "analytic_0_step_4_1",
+        "analytic_0_inhibition_1",
+        "analytic_0_noisy_1",
+        "analytic_1_step_4_1",
+        "analytic_1_noisy_0",
+        "analytic_2_step_3_1",
+        "analytic_2_step_4_1",
+        "analytic_2_inhibition_1",
+        "analytic_2_noisy_1",
+        "analytic_3_step_3_1",
+        "analytic_3_step_4_1",
+        "analytic_3_inhibition_1",
+        "analytic_3_noisy_1"
+      ],
+      "losses_ids": [
+        "table_3_step_3_-1",
+        "analytic_1_step_4_-1",
+        "analytic_2_step_4_-1"
+      ]
+    }
+  },
+  "biological_reliability_inference": false
+}

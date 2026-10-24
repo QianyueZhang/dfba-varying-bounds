@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "created_utc": "2026-10-24T02:26:11Z",
+  "status": "Post hoc explanatory diagnostic; specified during the running main campaign, before executing this diagnostic",
+  "motivation": "Examine limitations of model-relative finite-scenario feasibility when a saved causal policy is transported to the true simulated plant and noisy future observations.",
+  "not_preregistered": true,
+  "controller_tuning_permitted": false,
+  "selection": {
+    "case_source": "Full frozen main-campaign manifest order, required to agree with its saved protocol cases",
+    "case_index_modulus": 10,
+    "case_index_remainder": 0,
+    "methods": ["scenario_feedback", "scenario_managed"],
+    "stages": [0, 3, 6],
+    "unit": "One saved remaining-horizon policy at one selected method/case/stage",
+    "missing_and_failed": "Retain every planned slot, including missing/failed episodes, absent stage policies and failed replays. No replacement or outcome-based selection."
+  },
+  "intervention": {
+    "start": "The selected decision's saved true_start_state, converted once to physical amounts",
+    "policy": "Hold saved theta, reference and basis fixed for the entire remaining horizon; no estimator, optimizer or replanning",
+    "first_action": "Use base theta[0] with the common physical guard; no feedback correction at the first remaining interval",
+    "future_observations": "At each subsequent global interval g, add case.noise[g,0:2] to the counterfactual plant's own log biomass amounts; add case.noise[g,2] to glucose concentration with the saved nonnegative clipping convention. Volume is observed exactly.",
+    "future_feedback": "Use z_observed = log(M_SC/M_KP) + noise[g,0] - noise[g,1] in the fixed saved policy; never use a saved future realized state",
+    "plant": "Use the case's actual family, inhibition and future affinity path only inside this retrospective independent plant replay",
+    "integration": "Independent physical-amount interval method; carry each counterfactual endpoint forward without resetting to saved actual states",
+    "scope": "Counterfactual forecast transport, not the realized deployed controller, which replans at every stage"
+  },
+  "physical_and_numerical_settings": {
+    "interval_h": 2.0,
+    "horizon_intervals": 7,
+    "feed_min_L_h": 0.0,
+    "feed_max_L_h": 0.2,
+    "volume_max_L": 1.8,
+    "volume_guard_L": 1e-11,
+    "substrate_min_g_L": -2e-7,
+    "terminal_log_ratio_tolerance": 0.009950330853168092,
+    "design_log_ratio_tolerance": 0.0075,
+    "inner_optimization_band": 0.007498,
+    "inner_gate_slack": 1e-9,
+    "DOP853_rtol": 2e-13,
+    "DOP853_atol": 2e-14,
+    "max_step_h": 0.025,
+    "saved_arithmetic_atol": 2e-12,
+    "forecast_envelope_numerical_cushion": 2e-6
+  },
+  "comparisons": {
+    "forecast_envelope": "Saved finite-scenario minimum and maximum terminal log ratio; report exact containment and containment after the separately stated 2e-6 numerical cushion",
+    "discrepancy": "Counterfactual true terminal log ratio minus saved center-scenario prediction, and signed/absolute distance outside the saved finite-scenario envelope",
+    "target": "True terminal log-ratio target error, with both design-band and actual acceptance-band indicators and physical validity",
+    "model_feasible_counterfactual_failed": "Saved selected.feasible is true, replay completes, and true counterfactual terminal/physical acceptance fails. Report count and completed model-feasible denominator; unavailable model-feasible slots remain separate.",
+    "realized_outcome": "Save the original full-episode terminal_feasible, operational_success, log_ratio_error and controller_failure separately; do not equate them with counterfactual results",
+    "guard_or_gate_causality": "No causal false-accept attribution. Selected model feasibility and a managed LP gate acceptance are distinct fields."
+  },
+  "inference_limits": [
+    "This is a post hoc explanatory diagnostic, not a new validation endpoint or a tuned controller evaluation.",
+    "The every-tenth-case subset follows the frozen ordering and is not a random or balanced sample of regimes.",
+    "Policies at several stages share episodes and methods share cases; policy counts are correlated and are reported descriptively without independence-based confidence intervals.",
+    "Finite model-scenario extrema are not a confidence interval or a bound on all parameter/noise realizations.",
+    "The replay combines hidden plant mismatch, initial observation error and future observation noise; it does not identify their separate causal effects.",
+    "A failed numerical replay is unknown feasibility, not evidence of a target miss; missing and failed slots remain visible in denominators.",
+    "No campaign output, controller setting or frozen audit source is modified."
+  ]
+}

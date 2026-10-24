@@ -1,0 +1,499 @@
+{
+  "summary": {
+    "ce_limited": {
+      "n": 8,
+      "total_seconds": 11.901974373031408,
+      "median_seconds": 1.09541193745099,
+      "p90_seconds": 3.4372272415086624,
+      "estimator_seconds": 0.7874893322587013,
+      "model_calls": 1266,
+      "success": 8
+    },
+    "ce_direct": {
+      "n": 8,
+      "total_seconds": 14.408071707934141,
+      "median_seconds": 1.621914208168164,
+      "p90_seconds": 3.6422901134938,
+      "estimator_seconds": 0.6121840397827327,
+      "model_calls": 1244,
+      "success": 8
+    },
+    "scenario_open": {
+      "n": 8,
+      "total_seconds": 85.95661166822538,
+      "median_seconds": 10.685415666550398,
+      "p90_seconds": 20.263870841730387,
+      "estimator_seconds": 0.8220169120468199,
+      "model_calls": 4001,
+      "success": 7
+    },
+    "scenario_feedback": {
+      "n": 8,
+      "total_seconds": 139.0355342081748,
+      "median_seconds": 13.542813374428079,
+      "p90_seconds": 39.06507490728982,
+      "estimator_seconds": 0.8205022914335132,
+      "model_calls": 6574,
+      "success": 7
+    },
+    "scenario_managed": {
+      "n": 8,
+      "total_seconds": 132.84927937481552,
+      "median_seconds": 15.43124235374853,
+      "p90_seconds": 31.677158983843402,
+      "estimator_seconds": 0.8579219207167625,
+      "model_calls": 7312,
+      "success": 7
+    }
+  },
+  "paired_managed_vs": {
+    "scenario_feedback": {
+      "all_pairs": [
+        {
+          "case": "table_0_nominal",
+          "jointly_feasible": true,
+          "time_ratio": 0.8287603842878343,
+          "biomass_ratio": 0.8006912188811107
+        },
+        {
+          "case": "table_0_step_3_1",
+          "jointly_feasible": false,
+          "time_ratio": 0.7820681036812142,
+          "biomass_ratio": 0.9182178821196718
+        },
+        {
+          "case": "table_2_nominal",
+          "jointly_feasible": true,
+          "time_ratio": 1.0799584660900474,
+          "biomass_ratio": 0.8308565785190626
+        },
+        {
+          "case": "table_2_step_4_-1",
+          "jointly_feasible": true,
+          "time_ratio": 1.0830901785401112,
+          "biomass_ratio": 0.8372172146378606
+        },
+        {
+          "case": "analytic_0_nominal",
+          "jointly_feasible": true,
+          "time_ratio": 1.9694749474682858,
+          "biomass_ratio": 0.3205713132204701
+        },
+        {
+          "case": "analytic_0_step_3_1",
+          "jointly_feasible": true,
+          "time_ratio": 1.6523976232287738,
+          "biomass_ratio": 0.5347711805416286
+        },
+        {
+          "case": "analytic_2_nominal",
+          "jointly_feasible": true,
+          "time_ratio": 1.0793955884199007,
+          "biomass_ratio": 0.6599747342681312
+        },
+        {
+          "case": "analytic_2_step_4_-1",
+          "jointly_feasible": false,
+          "time_ratio": 1.087514801378051,
+          "biomass_ratio": 0.612169331285857
+        }
+      ],
+      "joint_n": 6,
+      "faster_with_biomass_loss_le_0_5pct": 0,
+      "median_joint_time_ratio": 1.0815243223150794
+    },
+    "ce_limited": {
+      "all_pairs": [
+        {
+          "case": "table_0_nominal",
+          "jointly_feasible": true,
+          "time_ratio": 8.338896346773787,
+          "biomass_ratio": 0.7993062375012917
+        },
+        {
+          "case": "table_0_step_3_1",
+          "jointly_feasible": true,
+          "time_ratio": 9.655694995882206,
+          "biomass_ratio": 0.814286713666278
+        },
+        {
+          "case": "table_2_nominal",
+          "jointly_feasible": true,
+          "time_ratio": 13.887293824255606,
+          "biomass_ratio": 0.8147410046701387
+        },
+        {
+          "case": "table_2_step_4_-1",
+          "jointly_feasible": true,
+          "time_ratio": 12.514446983171228,
+          "biomass_ratio": 0.8161218569087667
+        },
+        {
+          "case": "analytic_0_nominal",
+          "jointly_feasible": true,
+          "time_ratio": 50.20633751900564,
+          "biomass_ratio": 0.17928688913599097
+        },
+        {
+          "case": "analytic_0_step_3_1",
+          "jointly_feasible": true,
+          "time_ratio": 37.15901526021324,
+          "biomass_ratio": 0.43487738354161476
+        },
+        {
+          "case": "analytic_2_nominal",
+          "jointly_feasible": true,
+          "time_ratio": 11.774538852304616,
+          "biomass_ratio": 0.3845198712571452
+        },
+        {
+          "case": "analytic_2_step_4_-1",
+          "jointly_feasible": false,
+          "time_ratio": 10.718666407662512,
+          "biomass_ratio": 0.35850397669859957
+        }
+      ],
+      "joint_n": 7,
+      "faster_with_biomass_loss_le_0_5pct": 0,
+      "median_joint_time_ratio": 12.514446983171228
+    },
+    "ce_direct": {
+      "all_pairs": [
+        {
+          "case": "table_0_nominal",
+          "jointly_feasible": true,
+          "time_ratio": 8.193274624664301,
+          "biomass_ratio": 0.7992604731592248
+        },
+        {
+          "case": "table_0_step_3_1",
+          "jointly_feasible": true,
+          "time_ratio": 8.934966315463848,
+          "biomass_ratio": 0.8142212003906998
+        },
+        {
+          "case": "table_2_nominal",
+          "jointly_feasible": true,
+          "time_ratio": 8.674338256054027,
+          "biomass_ratio": 0.8144611702978183
+        },
+        {
+          "case": "table_2_step_4_-1",
+          "jointly_feasible": true,
+          "time_ratio": 8.028971199468463,
+          "biomass_ratio": 0.8182740394632741
+        },
+        {
+          "case": "analytic_0_nominal",
+          "jointly_feasible": true,
+          "time_ratio": 48.814664392410535,
+          "biomass_ratio": 0.17928688914299293
+        },
+        {
+          "case": "analytic_0_step_3_1",
+          "jointly_feasible": true,
+          "time_ratio": 32.81289446998957,
+          "biomass_ratio": 0.4348774616096657
+        },
+        {
+          "case": "analytic_2_nominal",
+          "jointly_feasible": true,
+          "time_ratio": 13.57223165338589,
+          "biomass_ratio": 0.3845026373146437
+        },
+        {
+          "case": "analytic_2_step_4_-1",
+          "jointly_feasible": false,
+          "time_ratio": 12.28742234539368,
+          "biomass_ratio": 0.3580201405227116
+        }
+      ],
+      "joint_n": 7,
+      "faster_with_biomass_loss_le_0_5pct": 0,
+      "median_joint_time_ratio": 8.934966315463848
+    }
+  },
+  "verification": [
+    {
+      "case": "table_0_nominal",
+      "method": "ce_limited",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_0_nominal",
+      "method": "ce_direct",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_0_nominal",
+      "method": "scenario_open",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_0_nominal",
+      "method": "scenario_feedback",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_0_nominal",
+      "method": "scenario_managed",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_0_step_3_1",
+      "method": "ce_limited",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_0_step_3_1",
+      "method": "ce_direct",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_0_step_3_1",
+      "method": "scenario_open",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_0_step_3_1",
+      "method": "scenario_feedback",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_0_step_3_1",
+      "method": "scenario_managed",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_2_nominal",
+      "method": "ce_limited",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_2_nominal",
+      "method": "ce_direct",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_2_nominal",
+      "method": "scenario_open",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_2_nominal",
+      "method": "scenario_feedback",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_2_nominal",
+      "method": "scenario_managed",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_2_step_4_-1",
+      "method": "ce_limited",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_2_step_4_-1",
+      "method": "ce_direct",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_2_step_4_-1",
+      "method": "scenario_open",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_2_step_4_-1",
+      "method": "scenario_feedback",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "table_2_step_4_-1",
+      "method": "scenario_managed",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_0_nominal",
+      "method": "ce_limited",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_0_nominal",
+      "method": "ce_direct",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_0_nominal",
+      "method": "scenario_open",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_0_nominal",
+      "method": "scenario_feedback",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_0_nominal",
+      "method": "scenario_managed",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_0_step_3_1",
+      "method": "ce_limited",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_0_step_3_1",
+      "method": "ce_direct",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_0_step_3_1",
+      "method": "scenario_open",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_0_step_3_1",
+      "method": "scenario_feedback",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_0_step_3_1",
+      "method": "scenario_managed",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_2_nominal",
+      "method": "ce_limited",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_2_nominal",
+      "method": "ce_direct",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_2_nominal",
+      "method": "scenario_open",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_2_nominal",
+      "method": "scenario_feedback",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_2_nominal",
+      "method": "scenario_managed",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_2_step_4_-1",
+      "method": "ce_limited",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_2_step_4_-1",
+      "method": "ce_direct",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_2_step_4_-1",
+      "method": "scenario_open",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_2_step_4_-1",
+      "method": "scenario_feedback",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    },
+    {
+      "case": "analytic_2_step_4_-1",
+      "method": "scenario_managed",
+      "same_classification": true,
+      "absolute_error_difference": 0.0,
+      "relative_biomass_difference": 0.0
+    }
+  ],
+  "scope": "Eight preselected cases, one isolated serial repetition per method; no timing-distribution or universal speed claim."
+}

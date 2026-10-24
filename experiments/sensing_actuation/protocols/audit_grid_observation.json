@@ -1,0 +1,83 @@
+{
+  "declared_utc": "2026-10-24T07:43:47.526215+00:00",
+  "status": "Selection and evaluation rules frozen before reading new study outcome files",
+  "source_sha256": {
+    "scripts/grid_observation.py": "67655d301c8ff112db7df667ef62e105e584638f6b4bad2ed34012f8c2382cba",
+    "scripts/engine.py": "4d04e127bc7180d7ec24c63a9fed4384df10b2fbd86e4fca6610c7b3420b561b",
+    "audit/independent_amount_model.py": "b0b42a3ab3bab1a014367fad97d9bdf71152ba7e209c8877eb4ad118c5b0995e",
+    "vendor/prior_kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6",
+    "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb",
+    "data/prescribed_roots.json": "16ac9df9afc4d5bc3debc3f75cc6bae59892efe2ca91d2c353985f065ff00e66",
+    "protocols/grid_observation.json": "85c65574fc427873a7dcbcdaeb978a5a099cf94df93757465a46254b43c5ca52",
+    "audit/grid_observation_integrator_gate.json": "04b1268496421fb7935ce54b85e42a5eaf259a28b5967da4e1ffa10f3b746a36"
+  },
+  "fixed_cohort": {
+    "roots": "all six prescribed uniform roots",
+    "targets": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      2.0
+    ],
+    "grids": [
+      41,
+      81,
+      161
+    ],
+    "modes": [
+      "full",
+      "open",
+      "ratio"
+    ],
+    "ratio_epsilon": [
+      0.0,
+      0.001,
+      0.005,
+      0.01,
+      0.02
+    ],
+    "problems": 756
+  },
+  "representative_component_cohort": {
+    "grid": 161,
+    "modes": "full, open, and every declared ratio epsilon",
+    "selection": "For EVERY root/mode/epsilon with nonempty computed target set, select component indices 0,floor((n-1)/2),n-1 (unique indices), and lower endpoint, midpoint, upper endpoint of each selected component. Deduplicate exactly equal log-target values within that root/mode/epsilon, retaining all selection labels. Freeze all selected inputs before replay. Preserve empty-set cases in coverage record.",
+    "interpretation": "Exploratory boundary/component consistency checks, never a random success-rate estimate; only fixed cohort is a predetermined target panel."
+  },
+  "transition_reference": {
+    "method": "Independent physical-amount DOP853",
+    "requested_rtol": 2e-14,
+    "effective_rtol": 2.220446049250313e-14,
+    "atol": 2e-15,
+    "maxstep_h": 0.005
+  },
+  "matching_engine": {
+    "rtol": 2e-13,
+    "atol": 2e-15,
+    "maxstep_h": 0.01
+  },
+  "thresholds": {
+    "amount_absolute_g": 2e-07,
+    "amount_relative": 2e-08,
+    "log_ratio_absolute": 1e-07,
+    "volume_absolute_L": 2e-13,
+    "physical_substrate_min_g_L": -2e-07,
+    "physical_volume_max_L": 1.800000000002,
+    "inner": 0.00748,
+    "outer": 0.0075,
+    "actual": 0.009950330853168092
+  },
+  "first_action": "Use the frozen minimax policy first feed; do not replace prescribed roots or selected actions with audit-derived alternatives.",
+  "ratio_observation": "For each independent first-stage affinity endpoint, enumerate actual noise support [actual_z-epsilon,actual_z+epsilon] endpoints, all predicted compatibility breakpoints inside that support, and every intervening open-cell midpoint. Call choose_second(policy,measured_z) with measured ratio ONLY. Every resulting decision is executed for all3 second-stage affinities; no hidden branch argument or actual substrate/biomass is passed to that API.",
+  "open_policy": "Commit the saved common second feed independently of observations.",
+  "full_state_policy": "Recompute the frozen-grid one-step minimax action from independent actual full state, target, model family and action-grid size only. Evaluate all3 hypothetical second affinities within controller; no true affinity/scenario identity supplied to action selection.",
+  "controller_ties": "Ascending feed index; inner classification exact <=.00748 without added decision tolerance.",
+  "comparison": "Each distinct independent interval is compared with refined engine from exactly the same physical input, feed, and affinity; this audit comparison does not inform the controller. Amount allowance references independent amounts.",
+  "cache": "Exact state bytes/feed/affinity/family keys only, no rounding. Record logical observations/paths separately from unique ODE transitions; repeated observations are not statistical replicates.",
+  "failure_rule": "Retain all incomplete inputs, exceptions, out-of-support observations, physical violations, numerical mismatches, and predicted-feasible/actual-infeasible cases. Do not loosen thresholds or retune controls. Report any band-label differences; a conservative predicted failure followed by actual success is not a failed safety implication.",
+  "boundary_rule": "Retain exact requested log targets and exp/log round-trip shift. Numerical boundary flips are recorded, never removed or converted by a new tolerance.",
+  "execution_binding": "Before any independent deployment integration, freeze implementation SHA256, full completed result-file and tree hashes, and complete assigned problem list in a separate execution record. Refuse partial main results or changed source hashes.",
+  "scope": "Sampled independent numerical consistency and finite observation-cell execution, not interval-enclosed ODE certification or biological validation."
+}

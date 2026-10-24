@@ -1,0 +1,1839 @@
+{
+  "case_id": "condition_3_target_0.5",
+  "condition_id": 3,
+  "condition": [
+    1.2504547089749691,
+    16.073524292330397
+  ],
+  "initial": [
+    0.5,
+    0.0011112907129284312,
+    0.0008887092870715691,
+    16.073524292330397
+  ],
+  "target_ratio": 0.5,
+  "seed": 3101,
+  "method": "quadratic_ridge",
+  "controls": [
+    3.537131359448188e-13,
+    3.33184912440992e-13,
+    2.6173765843672365e-13,
+    0.024244897837303568,
+    0.19999999999162774,
+    0.1999999999999334,
+    0.19999999999996537
+  ],
+  "actual_unique_mechanistic_evaluations": 59,
+  "successful_mechanistic_evaluation_count": 59,
+  "failed_mechanistic_evaluation_count": 0,
+  "total_mechanistic_attempts": 59,
+  "mechanistic_seconds_sum": 1.0436250842176378,
+  "proposal": {
+    "seconds": 0.0398500831797719,
+    "unique_surrogate_evaluations": 160,
+    "selected_prediction": {
+      "u": [
+        5.194886554943195e-17,
+        0.0,
+        0.0,
+        0.07840452127254137,
+        0.08787999908662862,
+        0.2,
+        0.2
+      ],
+      "z": -0.6841471805597563,
+      "B": 87.36366626803813,
+      "violation": 1.8896863240858153e-13
+    },
+    "statuses": [
+      {
+        "success": true,
+        "message": "Optimization terminated successfully"
+      },
+      {
+        "success": true,
+        "message": "Optimization terminated successfully"
+      },
+      {
+        "success": true,
+        "message": "Optimization terminated successfully"
+      }
+    ]
+  },
+  "correction_or_direct_statuses": [
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "new_evaluations": 59
+    }
+  ],
+  "execution_error": null,
+  "first_feasible_ordinary_evaluation": 17,
+  "selection_mode": "optimization_margin_feasible",
+  "selected_ordinary": {
+    "terminal": [
+      1.7484897956595569,
+      18.150016034220464,
+      35.97480677088644,
+      0.14462720978379912
+    ],
+    "z": -0.6841474374150319,
+    "biomass_amount_gDW": 94.6367003666111,
+    "log_biomass_amount": 4.550045353958897,
+    "minimum_glucose_g_L": 0.14462720978379912,
+    "volume_analytic_L": 1.7484897956595575,
+    "rhs_evaluations": 1994,
+    "control": [
+      3.537131359448188e-13,
+      3.33184912440992e-13,
+      2.6173765843672365e-13,
+      0.024244897837303568,
+      0.19999999999162774,
+      0.1999999999999334,
+      0.19999999999996537
+    ],
+    "evaluation": 41,
+    "elapsed_seconds": 0.7663247077725828,
+    "simulation_seconds": 0.01803770801052451,
+    "log_ratio_error": 0.008999743144913364,
+    "violation": 0.0,
+    "feasible": true
+  },
+  "tight_verification": {
+    "terminal": [
+      1.7484897956595573,
+      18.150010222981063,
+      35.974816490991394,
+      0.14462716456870428
+    ],
+    "z": -0.6841480277852421,
+    "biomass_amount_gDW": 94.63670720122265,
+    "log_biomass_amount": 4.550045426178356,
+    "minimum_glucose_g_L": 0.14462716456870428,
+    "volume_analytic_L": 1.7484897956595575,
+    "rhs_evaluations": 5162,
+    "log_ratio_error": 0.0089991527747032,
+    "ratio_relative_error_percent": 0.9039766889489709,
+    "feasible": true,
+    "ratio_constraint_margin": 0.0009511780784648913,
+    "volume_constraint_margin_L": 0.05151020434044273,
+    "status": "completed"
+  },
+  "tight_verification_seconds": 0.04477029200643301,
+  "online_total_seconds": 1.1307787094265223,
+  "failed_evaluations": [],
+  "database_source_condition": null,
+  "trace": [
+    {
+      "terminal": [
+        1.63256904071834,
+        16.822623621575932,
+        36.67978056936399,
+        0.15610232030558335
+      ],
+      "z": -0.7795010404352407,
+      "biomass_amount_gDW": 87.34636868612769,
+      "log_biomass_amount": 4.469881463719678,
+      "minimum_glucose_g_L": 0.15610232030558335,
+      "volume_analytic_L": 1.63256904071834,
+      "rhs_evaluations": 2126,
+      "control": [
+        5.194886554943195e-17,
+        0.0,
+        0.0,
+        0.07840452127254137,
+        0.08787999908662862,
+        0.2,
+        0.2
+      ],
+      "evaluation": 1,
+      "elapsed_seconds": 0.058711042162030935,
+      "simulation_seconds": 0.018783250357955694,
+      "log_ratio_error": 0.08635385987529542,
+      "violation": 0.07640352902212733,
+      "feasible": false
+    },
+    {
+      "terminal": [
+        1.6325890407183412,
+        16.823942754817637,
+        36.67785084089821,
+        0.1561090608369278
+      ],
+      "z": -0.7793700177437343,
+      "biomass_amount_gDW": 87.34644188314043,
+      "log_biomass_amount": 4.46988230172798,
+      "minimum_glucose_g_L": 0.1561090608369278,
+      "volume_analytic_L": 1.63258904071834,
+      "rhs_evaluations": 2054,
+      "control": [
+        1.000000000005195e-05,
+        0.0,
+        0.0,
+        0.07840452127254137,
+        0.08787999908662862,
+        0.2,
+        0.2
+      ],
+      "evaluation": 2,
+      "elapsed_seconds": 0.07680024998262525,
+      "simulation_seconds": 0.018022083677351475,
+      "log_ratio_error": 0.08622283718378898,
+      "violation": 0.07627250633062088,
+      "feasible": false
+    },
+    {
+      "terminal": [
+        1.63258904071834,
+        16.82364046263911,
+        36.67835747470997,
+        0.15610656033924095
+      ],
+      "z": -0.779401798856977,
+      "biomass_amount_gDW": 87.34677548905134,
+      "log_biomass_amount": 4.46988612106242,
+      "minimum_glucose_g_L": 0.15610656033924095,
+      "volume_analytic_L": 1.63258904071834,
+      "rhs_evaluations": 2150,
+      "control": [
+        5.194886554943195e-17,
+        1e-05,
+        0.0,
+        0.07840452127254137,
+        0.08787999908662862,
+        0.2,
+        0.2
+      ],
+      "evaluation": 3,
+      "elapsed_seconds": 0.09574016695842147,
+      "simulation_seconds": 0.018930249847471714,
+      "log_ratio_error": 0.08625461829703174,
+      "violation": 0.07630428744386364,
+      "feasible": false
+    },
+    {
+      "terminal": [
+        1.6325890407183412,
+        16.823334299884017,
+        36.67887059080333,
+        0.15610402716966734
+      ],
+      "z": -0.7794339869048534,
+      "biomass_amount_gDW": 87.3471133588034,
+      "log_biomass_amount": 4.469889989197182,
+      "minimum_glucose_g_L": 0.15610402716966734,
+      "volume_analytic_L": 1.63258904071834,
+      "rhs_evaluations": 2198,
+      "control": [
+        5.194886554943195e-17,
+        0.0,
+        1e-05,
+        0.07840452127254137,
+        0.08787999908662862,
+        0.2,
+        0.2
+      ],
+      "evaluation": 4,
+      "elapsed_seconds": 0.11502187512814999,
+      "simulation_seconds": 0.01927275024354458,
+      "log_ratio_error": 0.08628680634490815,
+      "violation": 0.07633647549174005,
+      "feasible": false
+    },
+    {
+      "terminal": [
+        1.6325890407183394,
+        16.823078068366726,
+        36.67929993236005,
+        0.15610190831923398
+      ],
+      "z": -0.7794609230929259,
+      "biomass_amount_gDW": 87.34739597635652,
+      "log_biomass_amount": 4.469893224760272,
+      "minimum_glucose_g_L": 0.15610190831923398,
+      "volume_analytic_L": 1.63258904071834,
+      "rhs_evaluations": 2030,
+      "control": [
+        5.194886554943195e-17,
+        0.0,
+        0.0,
+        0.07841452127254137,
+        0.08787999908662862,
+        0.2,
+        0.2
+      ],
+      "evaluation": 5,
+      "elapsed_seconds": 0.13287712493911386,
+      "simulation_seconds": 0.017845915630459785,
+      "log_ratio_error": 0.08631374253298063,
+      "violation": 0.07636341167981253,
+      "feasible": false
+    },
+    {
+      "terminal": [
+        1.6325890407183408,
+        16.823003159883662,
+        36.679425426898504,
+        0.1561012887099961
+      ],
+      "z": -0.7794687972180848,
+      "biomass_amount_gDW": 87.34747856259622,
+      "log_biomass_amount": 4.469894170251545,
+      "minimum_glucose_g_L": 0.1561012887099961,
+      "volume_analytic_L": 1.63258904071834,
+      "rhs_evaluations": 2258,
+      "control": [
+        5.194886554943195e-17,
+        0.0,
+        0.0,
+        0.07840452127254137,
+        0.08788999908662862,
+        0.2,
+        0.2
+      ],
+      "evaluation": 6,
+      "elapsed_seconds": 0.15265945810824633,
+      "simulation_seconds": 0.019772792235016823,
+      "log_ratio_error": 0.08632161665813953,
+      "violation": 0.07637128580497143,
+      "feasible": false
+    },
+    {
+      "terminal": [
+        1.6325490407183405,
+        16.82232888165185,
+        36.67999392867863,
+        0.15610405169321181
+      ],
+      "z": -0.7795243778311038,
+      "biomass_amount_gDW": 87.345165780208,
+      "log_biomass_amount": 4.469867691948499,
+      "minimum_glucose_g_L": 0.15610405169321181,
+      "volume_analytic_L": 1.6325490407183403,
+      "rhs_evaluations": 2030,
+      "control": [
+        5.194886554943195e-17,
+        0.0,
+        0.0,
+        0.07840452127254137,
+        0.08787999908662862,
+        0.19999,
+        0.2
+      ],
+      "evaluation": 7,
+      "elapsed_seconds": 0.17056491691619158,
+      "simulation_seconds": 0.01789645804092288,
+      "log_ratio_error": 0.08637719727115856,
+      "violation": 0.07642686641799046,
+      "feasible": false
+    },
+    {
+      "terminal": [
+        1.6325490407183398,
+        16.822741946215217,
+        36.67931366233799,
+        0.15609665429989736
+      ],
+      "z": -0.7794812774421745,
+      "biomass_amount_gDW": 87.34472956020281,
+      "log_biomass_amount": 4.469862697727119,
+      "minimum_glucose_g_L": 0.15609665429989736,
+      "volume_analytic_L": 1.63254904071834,
+      "rhs_evaluations": 2150,
+      "control": [
+        5.194886554943195e-17,
+        0.0,
+        0.0,
+        0.07840452127254137,
+        0.08787999908662862,
+        0.2,
+        0.19999
+      ],
+      "evaluation": 8,
+      "elapsed_seconds": 0.1894255420193076,
+      "simulation_seconds": 0.018851791974157095,
+      "log_ratio_error": 0.08633409688222926,
+      "violation": 0.07638376602906116,
+      "feasible": false
+    },
+    {
+      "terminal": [
+        1.7241197473604115,
+        17.492913312702967,
+        36.772711841672596,
+        0.14391507082413937
+      ],
+      "z": -0.7429601987131542,
+      "biomass_amount_gDW": 93.56043593151679,
+      "log_biomass_amount": 4.538607601084311,
+      "minimum_glucose_g_L": 0.14391507082413937,
+      "volume_analytic_L": 1.7241197473604117,
+      "rhs_evaluations": 2018,
+      "control": [
+        1.031550212598858e-17,
+        0.0,
+        0.0,
+        0.01205987368020743,
+        0.2,
+        0.2,
+        0.19999999999999846
+      ],
+      "evaluation": 9,
+      "elapsed_seconds": 0.2073829579167068,
+      "simulation_seconds": 0.017707124818116426,
+      "log_ratio_error": 0.04981301815320893,
+      "violation": 0.03986268730004084,
+      "feasible": false
+    },
+    {
+      "terminal": [
+        1.7241397473604119,
+        17.494656984657613,
+        36.77004482440954,
+        0.14392454709258812
+      ],
+      "z": -0.742787995211951,
+      "biomass_amount_gDW": 93.55992926767311,
+      "log_biomass_amount": 4.538602185705358,
+      "minimum_glucose_g_L": 0.14392454709258812,
+      "volume_analytic_L": 1.7241397473604119,
+      "rhs_evaluations": 2078,
+      "control": [
+        1.0000000000010316e-05,
+        0.0,
+        0.0,
+        0.01205987368020743,
+        0.2,
+        0.2,
+        0.19999999999999846
+      ],
+      "evaluation": 10,
+      "elapsed_seconds": 0.225617041811347,
+      "simulation_seconds": 0.01816933322697878,
+      "log_ratio_error": 0.04964081465200576,
+      "violation": 0.03969048379883767,
+      "feasible": false
+    },
+    {
+      "terminal": [
+        1.724139747360413,
+        17.494284412856047,
+        36.77066843320611,
+        0.14392177719797875
+      ],
+      "z": -0.7428262513106213,
+      "biomass_amount_gDW": 93.56036209053433,
+      "log_biomass_amount": 4.538606811851011,
+      "minimum_glucose_g_L": 0.14392177719797875,
+      "volume_analytic_L": 1.7241397473604119,
+      "rhs_evaluations": 1898,
+      "control": [
+        1.031550212598858e-17,
+        1e-05,
+        0.0,
+        0.01205987368020743,
+        0.2,
+        0.2,
+        0.19999999999999846
+      ],
+      "evaluation": 11,
+      "elapsed_seconds": 0.24228075006976724,
+      "simulation_seconds": 0.016654834151268005,
+      "log_ratio_error": 0.04967907075067601,
+      "violation": 0.03972873989750792,
+      "feasible": false
+    },
+    {
+      "terminal": [
+        1.724139747360412,
+        17.493885654851965,
+        36.77133579499565,
+        0.14391881360846956
+      ],
+      "z": -0.7428671943190709,
+      "biomass_amount_gDW": 93.56082520099709,
+      "log_biomass_amount": 4.5386117616962895,
+      "minimum_glucose_g_L": 0.14391881360846956,
+      "volume_analytic_L": 1.7241397473604119,
+      "rhs_evaluations": 1946,
+      "control": [
+        1.031550212598858e-17,
+        0.0,
+        1e-05,
+        0.01205987368020743,
+        0.2,
+        0.2,
+        0.19999999999999846
+      ],
+      "evaluation": 12,
+      "elapsed_seconds": 0.25930308317765594,
+      "simulation_seconds": 0.017012542113661766,
+      "log_ratio_error": 0.0497200137591256,
+      "violation": 0.03976968290595751,
+      "feasible": false
+    },
+    {
+      "terminal": [
+        1.7241397473604134,
+        17.493488945830595,
+        36.77199970571358,
+        0.14391586581321278
+      ],
+      "z": -0.7429079265388719,
+      "biomass_amount_gDW": 93.56128589406275,
+      "log_biomass_amount": 4.538616685679489,
+      "minimum_glucose_g_L": 0.14391586581321278,
+      "volume_analytic_L": 1.7241397473604119,
+      "rhs_evaluations": 2006,
+      "control": [
+        1.031550212598858e-17,
+        0.0,
+        0.0,
+        0.01206987368020743,
+        0.2,
+        0.2,
+        0.19999999999999846
+      ],
+      "evaluation": 13,
+      "elapsed_seconds": 0.2768206251785159,
+      "simulation_seconds": 0.017509040888398886,
+      "log_ratio_error": 0.04976074597892666,
+      "violation": 0.039810415125758565,
+      "feasible": false
+    },
+    {
+      "terminal": [
+        1.7240997473604123,
+        17.492594348196086,
+        36.772994486631745,
+        0.14391618122451144
+      ],
+      "z": -0.74298611904611,
+      "biomass_amount_gDW": 93.55928800049067,
+      "log_biomass_amount": 4.538595331602484,
+      "minimum_glucose_g_L": 0.14391618122451144,
+      "volume_analytic_L": 1.7240997473604118,
+      "rhs_evaluations": 2054,
+      "control": [
+        1.031550212598858e-17,
+        0.0,
+        0.0,
+        0.01205987368020743,
+        0.19999,
+        0.2,
+        0.19999999999999846
+      ],
+      "evaluation": 14,
+      "elapsed_seconds": 0.294795332942158,
+      "simulation_seconds": 0.017965958919376135,
+      "log_ratio_error": 0.04983893848616472,
+      "violation": 0.03988860763299663,
+      "feasible": false
+    },
+    {
+      "terminal": [
+        1.7240997473604127,
+        17.49265417895525,
+        36.77289445811732,
+        0.14391662613396608
+      ],
+      "z": -0.7429799785379814,
+      "biomass_amount_gDW": 93.55921869555101,
+      "log_biomass_amount": 4.538594590842621,
+      "minimum_glucose_g_L": 0.14391662613396608,
+      "volume_analytic_L": 1.7240997473604118,
+      "rhs_evaluations": 1994,
+      "control": [
+        1.031550212598858e-17,
+        0.0,
+        0.0,
+        0.01205987368020743,
+        0.2,
+        0.19999,
+        0.19999999999999846
+      ],
+      "evaluation": 15,
+      "elapsed_seconds": 0.31222366681322455,
+      "simulation_seconds": 0.017419790849089622,
+      "log_ratio_error": 0.04983279797803608,
+      "violation": 0.03988246712486799,
+      "feasible": false
+    },
+    {
+      "terminal": [
+        1.7240997473604125,
+        17.493017240315876,
+        36.77229716612618,
+        0.14390958548307214
+      ],
+      "z": -0.7429429808213815,
+      "biomass_amount_gDW": 93.5588148585801,
+      "log_biomass_amount": 4.538590274455117,
+      "minimum_glucose_g_L": 0.14390958548307214,
+      "volume_analytic_L": 1.7240997473604118,
+      "rhs_evaluations": 1934,
+      "control": [
+        1.031550212598858e-17,
+        0.0,
+        0.0,
+        0.01205987368020743,
+        0.2,
+        0.2,
+        0.19998999999999845
+      ],
+      "evaluation": 16,
+      "elapsed_seconds": 0.3291830001398921,
+      "simulation_seconds": 0.01695075025781989,
+      "log_ratio_error": 0.04979580026143626,
+      "violation": 0.03984546940826817,
+      "feasible": false
+    },
+    {
+      "terminal": [
+        1.7466223575738165,
+        18.10232654364362,
+        36.03179193783838,
+        0.14458773321838664
+      ],
+      "z": -0.6883611897945492,
+      "biomass_amount_gDW": 94.5518616473064,
+      "log_biomass_amount": 4.549148484464372,
+      "minimum_glucose_g_L": 0.14458773321838664,
+      "volume_analytic_L": 1.7466223575738167,
+      "rhs_evaluations": 1934,
+      "control": [
+        0.0,
+        0.0,
+        0.0,
+        0.023311178786908228,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "evaluation": 17,
+      "elapsed_seconds": 0.34634783305227757,
+      "simulation_seconds": 0.016936874948441982,
+      "log_ratio_error": 0.004785990765396098,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7466423575738173,
+        18.103994516114646,
+        36.02924462759026,
+        0.14459694172452603
+      ],
+      "z": -0.6881983540231668,
+      "biomass_amount_gDW": 94.55140844106798,
+      "log_biomass_amount": 4.549143691250187,
+      "minimum_glucose_g_L": 0.14459694172452603,
+      "volume_analytic_L": 1.7466423575738164,
+      "rhs_evaluations": 2018,
+      "control": [
+        1e-05,
+        0.0,
+        0.0,
+        0.023311178786908228,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "evaluation": 18,
+      "elapsed_seconds": 0.36421599984169006,
+      "simulation_seconds": 0.017806833144277334,
+      "log_ratio_error": 0.004948826536778528,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.746642357573817,
+        18.10357522871048,
+        36.029946395909995,
+        0.1445937537105054
+      ],
+      "z": -0.6882409917821048,
+      "biomass_amount_gDW": 94.55190183420031,
+      "log_biomass_amount": 4.5491489094891655,
+      "minimum_glucose_g_L": 0.1445937537105054,
+      "volume_analytic_L": 1.7466423575738164,
+      "rhs_evaluations": 1802,
+      "control": [
+        0.0,
+        1e-05,
+        0.0,
+        0.023311178786908228,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "evaluation": 19,
+      "elapsed_seconds": 0.3799771252088249,
+      "simulation_seconds": 0.015752542298287153,
+      "log_ratio_error": 0.004906188777840437,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7466423575738164,
+        18.103192436902415,
+        36.030587234756275,
+        0.1445908480685546
+      ],
+      "z": -0.688279922673195,
+      "biomass_amount_gDW": 94.55235255008746,
+      "log_biomass_amount": 4.549153676340008,
+      "minimum_glucose_g_L": 0.1445908480685546,
+      "volume_analytic_L": 1.7466423575738164,
+      "rhs_evaluations": 2102,
+      "control": [
+        0.0,
+        0.0,
+        1e-05,
+        0.023311178786908228,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "evaluation": 20,
+      "elapsed_seconds": 0.3983085001818836,
+      "simulation_seconds": 0.018322375137358904,
+      "log_ratio_error": 0.0048672578867502425,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.746642357573817,
+        18.102834579863302,
+        36.03118643727842,
+        0.1445881313058514
+      ],
+      "z": -0.688316320735433,
+      "biomass_amount_gDW": 94.55277409433097,
+      "log_biomass_amount": 4.549158134645829,
+      "minimum_glucose_g_L": 0.1445881313058514,
+      "volume_analytic_L": 1.7466423575738164,
+      "rhs_evaluations": 2114,
+      "control": [
+        0.0,
+        0.0,
+        0.0,
+        0.023321178786908228,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "evaluation": 21,
+      "elapsed_seconds": 0.4168179580010474,
+      "simulation_seconds": 0.018500832840800285,
+      "log_ratio_error": 0.004830859824512257,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.746602357573816,
+        18.10201198373526,
+        36.032073590236486,
+        0.14458880355444811
+      ],
+      "z": -0.6883863834565157,
+      "biomass_amount_gDW": 94.55072148860175,
+      "log_biomass_amount": 4.54913642583793,
+      "minimum_glucose_g_L": 0.14458880355444811,
+      "volume_analytic_L": 1.7466023575738165,
+      "rhs_evaluations": 1826,
+      "control": [
+        0.0,
+        0.0,
+        0.0,
+        0.023311178786908228,
+        0.19999,
+        0.2,
+        0.2
+      ],
+      "evaluation": 22,
+      "elapsed_seconds": 0.43282666709274054,
+      "simulation_seconds": 0.015999999828636646,
+      "log_ratio_error": 0.0047607971034295815,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7466023575738154,
+        18.102069095092233,
+        36.03197810844705,
+        0.14458923723041592
+      ],
+      "z": -0.6883805785740611,
+      "biomass_amount_gDW": 94.55065447071392,
+      "log_biomass_amount": 4.549135717034121,
+      "minimum_glucose_g_L": 0.14458923723041592,
+      "volume_analytic_L": 1.7466023575738165,
+      "rhs_evaluations": 2114,
+      "control": [
+        0.0,
+        0.0,
+        0.0,
+        0.023311178786908228,
+        0.2,
+        0.19999,
+        0.2
+      ],
+      "evaluation": 23,
+      "elapsed_seconds": 0.4512209580279887,
+      "simulation_seconds": 0.018385666888207197,
+      "log_ratio_error": 0.004766601985884189,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7466023575738174,
+        18.102433475418145,
+        36.031378581458604,
+        0.14458221781474437
+      ],
+      "z": -0.6883438106819929,
+      "biomass_amount_gDW": 94.55024376299887,
+      "log_biomass_amount": 4.549131373239682,
+      "minimum_glucose_g_L": 0.14458221781474437,
+      "volume_analytic_L": 1.7466023575738165,
+      "rhs_evaluations": 1994,
+      "control": [
+        0.0,
+        0.0,
+        0.0,
+        0.023311178786908228,
+        0.2,
+        0.2,
+        0.19999
+      ],
+      "evaluation": 24,
+      "elapsed_seconds": 0.4686143328435719,
+      "simulation_seconds": 0.01738437544554472,
+      "log_ratio_error": 0.004803369877952379,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7485007157720671,
+        18.150296305028466,
+        35.9744710664621,
+        0.14462745233405247
+      ],
+      "z": -0.6841226639332616,
+      "biomass_amount_gDW": 94.63719449004788,
+      "log_biomass_amount": 4.550050575211802,
+      "minimum_glucose_g_L": 0.14462745233405247,
+      "volume_analytic_L": 1.748500715772066,
+      "rhs_evaluations": 1970,
+      "control": [
+        0.0,
+        0.0,
+        0.0,
+        0.02425035788640906,
+        0.2,
+        0.19999999999996373,
+        0.19999999999966028
+      ],
+      "evaluation": 25,
+      "elapsed_seconds": 0.48598129209131,
+      "simulation_seconds": 0.01713808299973607,
+      "log_ratio_error": 0.009024516626683687,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7485207157720677,
+        18.151932358480618,
+        35.971976513163995,
+        0.1446364352445009
+      ],
+      "z": -0.6839631840563739,
+      "biomass_amount_gDW": 94.63677588063021,
+      "log_biomass_amount": 4.5500461518944615,
+      "minimum_glucose_g_L": 0.1446364352445009,
+      "volume_analytic_L": 1.7485207157720661,
+      "rhs_evaluations": 2006,
+      "control": [
+        1e-05,
+        0.0,
+        0.0,
+        0.02425035788640906,
+        0.2,
+        0.19999999999996373,
+        0.19999999999966028
+      ],
+      "evaluation": 26,
+      "elapsed_seconds": 0.503582791890949,
+      "simulation_seconds": 0.017535957973450422,
+      "log_ratio_error": 0.009183996503571379,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7485207157720672,
+        18.151564613010688,
+        35.972592264343035,
+        0.14463363787280575
+      ],
+      "z": -0.6840005609407795,
+      "biomass_amount_gDW": 94.6372095237502,
+      "log_biomass_amount": 4.550050734067961,
+      "minimum_glucose_g_L": 0.14463363787280575,
+      "volume_analytic_L": 1.7485207157720661,
+      "rhs_evaluations": 1958,
+      "control": [
+        0.0,
+        1e-05,
+        0.0,
+        0.02425035788640906,
+        0.2,
+        0.19999999999996373,
+        0.19999999999966028
+      ],
+      "evaluation": 27,
+      "elapsed_seconds": 0.5206229169853032,
+      "simulation_seconds": 0.01703187497332692,
+      "log_ratio_error": 0.009146619619165741,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7485207157720668,
+        18.15117599995786,
+        35.973242867496246,
+        0.14463068466205756
+      ],
+      "z": -0.6840400564275256,
+      "biomass_amount_gDW": 94.63766761886802,
+      "log_biomass_amount": 4.550055574595396,
+      "minimum_glucose_g_L": 0.14463068466205756,
+      "volume_analytic_L": 1.7485207157720661,
+      "rhs_evaluations": 2066,
+      "control": [
+        0.0,
+        0.0,
+        1e-05,
+        0.02425035788640906,
+        0.2,
+        0.19999999999996373,
+        0.19999999999966028
+      ],
+      "evaluation": 28,
+      "elapsed_seconds": 0.5388042922131717,
+      "simulation_seconds": 0.018172833137214184,
+      "log_ratio_error": 0.009107124132419653,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7485207157720666,
+        18.15080903409008,
+        35.97385719813838,
+        0.14462789483807234
+      ],
+      "z": -0.6840773511141738,
+      "biomass_amount_gDW": 94.63810014130031,
+      "log_biomass_amount": 4.550060144883895,
+      "minimum_glucose_g_L": 0.14462789483807234,
+      "volume_analytic_L": 1.7485207157720661,
+      "rhs_evaluations": 1982,
+      "control": [
+        0.0,
+        0.0,
+        0.0,
+        0.02426035788640906,
+        0.2,
+        0.19999999999996373,
+        0.19999999999966028
+      ],
+      "evaluation": 29,
+      "elapsed_seconds": 0.5561382919549942,
+      "simulation_seconds": 0.01732424972578883,
+      "log_ratio_error": 0.009069829445771505,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484807157720668,
+        18.14998377306089,
+        35.974749872420915,
+        0.1446285300694005
+      ],
+      "z": -0.6841476332683797,
+      "biomass_amount_gDW": 94.63605302542449,
+      "log_biomass_amount": 4.550038513659118,
+      "minimum_glucose_g_L": 0.1446285300694005,
+      "volume_analytic_L": 1.7484807157720663,
+      "rhs_evaluations": 1874,
+      "control": [
+        0.0,
+        0.0,
+        0.0,
+        0.02425035788640906,
+        0.19999,
+        0.19999999999996373,
+        0.19999999999966028
+      ],
+      "evaluation": 30,
+      "elapsed_seconds": 0.5727069168351591,
+      "simulation_seconds": 0.016559999901801348,
+      "log_ratio_error": 0.008999547291565602,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484807157720663,
+        18.150039604900435,
+        35.97465651572506,
+        0.14462895510829463
+      ],
+      "z": -0.6841419620708751,
+      "biomass_amount_gDW": 94.63598741393685,
+      "log_biomass_amount": 4.55003782035558,
+      "minimum_glucose_g_L": 0.14462895510829463,
+      "volume_analytic_L": 1.7484807157720663,
+      "rhs_evaluations": 2054,
+      "control": [
+        0.0,
+        0.0,
+        0.0,
+        0.02425035788640906,
+        0.2,
+        0.19998999999996372,
+        0.19999999999966028
+      ],
+      "evaluation": 31,
+      "elapsed_seconds": 0.5907791671343148,
+      "simulation_seconds": 0.01806362485513091,
+      "log_ratio_error": 0.00900521848907021,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484807157720659,
+        18.15040522458098,
+        35.97405491467382,
+        0.14462194836295567
+      ],
+      "z": -0.6841050949298763,
+      "biomass_amount_gDW": 94.63557480506088,
+      "log_biomass_amount": 4.55003346038865,
+      "minimum_glucose_g_L": 0.14462194836295567,
+      "volume_analytic_L": 1.748480715772066,
+      "rhs_evaluations": 1922,
+      "control": [
+        0.0,
+        0.0,
+        0.0,
+        0.02425035788640906,
+        0.2,
+        0.19999999999996373,
+        0.19998999999966027
+      ],
+      "evaluation": 32,
+      "elapsed_seconds": 0.6075957082211971,
+      "simulation_seconds": 0.016808041837066412,
+      "log_ratio_error": 0.00904208563006903,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484898947240428,
+        18.150021062023,
+        35.974799579944985,
+        0.14462722970022174
+      ],
+      "z": -0.6841469605131232,
+      "biomass_amount_gDW": 94.63670194623231,
+      "log_biomass_amount": 4.550045370650319,
+      "minimum_glucose_g_L": 0.14462722970022174,
+      "volume_analytic_L": 1.7484898947240417,
+      "rhs_evaluations": 2066,
+      "control": [
+        0.0,
+        0.0,
+        0.0,
+        0.02424494736202081,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "evaluation": 33,
+      "elapsed_seconds": 0.6258510830812156,
+      "simulation_seconds": 0.018026167061179876,
+      "log_ratio_error": 0.009000220046822105,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.748509894724041,
+        18.151673569634628,
+        35.97227753967308,
+        0.14463633704340384
+      ],
+      "z": -0.6839858093054036,
+      "biomass_amount_gDW": 94.63626405618477,
+      "log_biomass_amount": 4.550040743575922,
+      "minimum_glucose_g_L": 0.14463633704340384,
+      "volume_analytic_L": 1.7485098947240418,
+      "rhs_evaluations": 2018,
+      "control": [
+        1e-05,
+        0.0,
+        0.0,
+        0.02424494736202081,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "evaluation": 34,
+      "elapsed_seconds": 0.643651083111763,
+      "simulation_seconds": 0.017739959061145782,
+      "log_ratio_error": 0.00916137125454164,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7485098947240418,
+        18.151287987680654,
+        35.97292311153781,
+        0.1446334050303223
+      ],
+      "z": -0.6840249979678148,
+      "biomass_amount_gDW": 94.6367186511163,
+      "log_biomass_amount": 4.550045547166218,
+      "minimum_glucose_g_L": 0.1446334050303223,
+      "volume_analytic_L": 1.7485098947240418,
+      "rhs_evaluations": 2066,
+      "control": [
+        0.0,
+        1e-05,
+        0.0,
+        0.02424494736202081,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "evaluation": 35,
+      "elapsed_seconds": 0.6616810830309987,
+      "simulation_seconds": 0.018021333031356335,
+      "log_ratio_error": 0.00912218259213049,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.748509894724042,
+        18.15089278140349,
+        35.97358471448502,
+        0.14463040103055924
+      ],
+      "z": -0.6840651626338689,
+      "biomass_amount_gDW": 94.6371844483298,
+      "log_biomass_amount": 4.550050469104276,
+      "minimum_glucose_g_L": 0.14463040103055924,
+      "volume_analytic_L": 1.7485098947240418,
+      "rhs_evaluations": 1970,
+      "control": [
+        0.0,
+        0.0,
+        1e-05,
+        0.02424494736202081,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "evaluation": 36,
+      "elapsed_seconds": 0.6789005831815302,
+      "simulation_seconds": 0.017210834193974733,
+      "log_ratio_error": 0.009082017926076436,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7485098947240423,
+        18.15052511361705,
+        35.974200213672226,
+        0.14462760665538768
+      ],
+      "z": -0.6841025286286538,
+      "biomass_amount_gDW": 94.63761778398627,
+      "log_biomass_amount": 4.550055048009142,
+      "minimum_glucose_g_L": 0.14462760665538768,
+      "volume_analytic_L": 1.7485098947240418,
+      "rhs_evaluations": 1946,
+      "control": [
+        0.0,
+        0.0,
+        0.0,
+        0.024254947362020808,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "evaluation": 37,
+      "elapsed_seconds": 0.6959071671590209,
+      "simulation_seconds": 0.016998416744172573,
+      "log_ratio_error": 0.009044651931291448,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484698947240414,
+        18.149707989452565,
+        35.975079277913984,
+        0.14462830524583684
+      ],
+      "z": -0.6841719846195855,
+      "biomass_amount_gDW": 94.63556109533353,
+      "log_biomass_amount": 4.550033315519996,
+      "minimum_glucose_g_L": 0.14462830524583684,
+      "volume_analytic_L": 1.7484698947240416,
+      "rhs_evaluations": 2066,
+      "control": [
+        0.0,
+        0.0,
+        0.0,
+        0.02424494736202081,
+        0.19999,
+        0.2,
+        0.2
+      ],
+      "evaluation": 38,
+      "elapsed_seconds": 0.714001249987632,
+      "simulation_seconds": 0.018085415940731764,
+      "log_ratio_error": 0.008975195940359781,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484698947240411,
+        18.149763479713002,
+        35.974986495134665,
+        0.14462872601841695
+      ],
+      "z": -0.6841663481723423,
+      "biomass_amount_gDW": 94.63549589048695,
+      "log_biomass_amount": 4.550032626509773,
+      "minimum_glucose_g_L": 0.14462872601841695,
+      "volume_analytic_L": 1.7484698947240416,
+      "rhs_evaluations": 1910,
+      "control": [
+        0.0,
+        0.0,
+        0.0,
+        0.02424494736202081,
+        0.2,
+        0.19999,
+        0.2
+      ],
+      "evaluation": 39,
+      "elapsed_seconds": 0.7307039578445256,
+      "simulation_seconds": 0.016694582998752594,
+      "log_ratio_error": 0.008980832387602944,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.748469894724043,
+        18.15012909800768,
+        35.97438489704891,
+        0.1446217193603543
+      ],
+      "z": -0.684129481037062,
+      "biomass_amount_gDW": 94.63508328692659,
+      "log_biomass_amount": 4.550028266576368,
+      "minimum_glucose_g_L": 0.1446217193603543,
+      "volume_analytic_L": 1.7484698947240416,
+      "rhs_evaluations": 1970,
+      "control": [
+        0.0,
+        0.0,
+        0.0,
+        0.02424494736202081,
+        0.2,
+        0.2,
+        0.19999
+      ],
+      "evaluation": 40,
+      "elapsed_seconds": 0.7480481672100723,
+      "simulation_seconds": 0.017335582990199327,
+      "log_ratio_error": 0.009017699522883338,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484897956595569,
+        18.150016034220464,
+        35.97480677088644,
+        0.14462720978379912
+      ],
+      "z": -0.6841474374150319,
+      "biomass_amount_gDW": 94.6367003666111,
+      "log_biomass_amount": 4.550045353958897,
+      "minimum_glucose_g_L": 0.14462720978379912,
+      "volume_analytic_L": 1.7484897956595575,
+      "rhs_evaluations": 1994,
+      "control": [
+        3.537131359448188e-13,
+        3.33184912440992e-13,
+        2.6173765843672365e-13,
+        0.024244897837303568,
+        0.19999999999162774,
+        0.1999999999999334,
+        0.19999999999996537
+      ],
+      "evaluation": 41,
+      "elapsed_seconds": 0.7663247077725828,
+      "simulation_seconds": 0.01803770801052451,
+      "log_ratio_error": 0.008999743144913364,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7485097956595563,
+        18.15166857378145,
+        35.972284688937776,
+        0.14463631636984867
+      ],
+      "z": -0.6839862832773945,
+      "biomass_amount_gDW": 94.63626245968457,
+      "log_biomass_amount": 4.550040726706065,
+      "minimum_glucose_g_L": 0.14463631636984867,
+      "volume_analytic_L": 1.7485097956595574,
+      "rhs_evaluations": 1922,
+      "control": [
+        1.0000000353713136e-05,
+        3.33184912440992e-13,
+        2.6173765843672365e-13,
+        0.024244897837303568,
+        0.19999999999162774,
+        0.1999999999999334,
+        0.19999999999996537
+      ],
+      "evaluation": 42,
+      "elapsed_seconds": 0.7832508748397231,
+      "simulation_seconds": 0.016858207993209362,
+      "log_ratio_error": 0.009160897282550762,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7485097956595572,
+        18.151291991521944,
+        35.97291520323092,
+        0.14463345200871336
+      ],
+      "z": -0.6840245575456106,
+      "biomass_amount_gDW": 94.63670646233287,
+      "log_biomass_amount": 4.55004541837071,
+      "minimum_glucose_g_L": 0.14463345200871336,
+      "volume_analytic_L": 1.7485097956595574,
+      "rhs_evaluations": 2006,
+      "control": [
+        3.537131359448188e-13,
+        1.0000000333184913e-05,
+        2.6173765843672365e-13,
+        0.024244897837303568,
+        0.19999999999162774,
+        0.1999999999999334,
+        0.19999999999996537
+      ],
+      "evaluation": 43,
+      "elapsed_seconds": 0.8008804167620838,
+      "simulation_seconds": 0.017620583064854145,
+      "log_ratio_error": 0.009122623014334641,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7485097956595566,
+        18.150890127805926,
+        35.973587944807555,
+        0.14463039789398133
+      ],
+      "z": -0.6840653986274773,
+      "biomass_amount_gDW": 94.63718009492555,
+      "log_biomass_amount": 4.550050423103285,
+      "minimum_glucose_g_L": 0.14463039789398133,
+      "volume_analytic_L": 1.7485097956595574,
+      "rhs_evaluations": 1934,
+      "control": [
+        3.537131359448188e-13,
+        3.33184912440992e-13,
+        1.0000000261737659e-05,
+        0.024244897837303568,
+        0.19999999999162774,
+        0.1999999999999334,
+        0.19999999999996537
+      ],
+      "evaluation": 44,
+      "elapsed_seconds": 0.8178867502138019,
+      "simulation_seconds": 0.016996500082314014,
+      "log_ratio_error": 0.009081781932468003,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7485097956595577,
+        18.1505230174604,
+        35.974202513903556,
+        0.14462760699877886
+      ],
+      "z": -0.6841027080571804,
+      "biomass_amount_gDW": 94.63761277897484,
+      "log_biomass_amount": 4.550054995123073,
+      "minimum_glucose_g_L": 0.14462760699877886,
+      "volume_analytic_L": 1.7485097956595574,
+      "rhs_evaluations": 1994,
+      "control": [
+        3.537131359448188e-13,
+        3.33184912440992e-13,
+        2.6173765843672365e-13,
+        0.024254897837303568,
+        0.19999999999162774,
+        0.1999999999999334,
+        0.19999999999996537
+      ],
+      "evaluation": 45,
+      "elapsed_seconds": 0.8356030830182135,
+      "simulation_seconds": 0.017701124772429466,
+      "log_ratio_error": 0.009044472502764855,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484697956595565,
+        18.149705798261785,
+        35.97508173759876,
+        0.14462830589535572
+      ],
+      "z": -0.6841721737202043,
+      "biomass_amount_gDW": 94.635556202943,
+      "log_biomass_amount": 4.550033263822827,
+      "minimum_glucose_g_L": 0.14462830589535572,
+      "volume_analytic_L": 1.7484697956595574,
+      "rhs_evaluations": 2066,
+      "control": [
+        3.537131359448188e-13,
+        3.33184912440992e-13,
+        2.6173765843672365e-13,
+        0.024244897837303568,
+        0.19998999999162773,
+        0.1999999999999334,
+        0.19999999999996537
+      ],
+      "evaluation": 46,
+      "elapsed_seconds": 0.853772500064224,
+      "simulation_seconds": 0.018155999947339296,
+      "log_ratio_error": 0.008975006839740951,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484697956595574,
+        18.149761295956623,
+        35.97498894567796,
+        0.14462872657601453
+      ],
+      "z": -0.6841665366090478,
+      "biomass_amount_gDW": 94.63549099511539,
+      "log_biomass_amount": 4.550032574781068,
+      "minimum_glucose_g_L": 0.14462872657601453,
+      "volume_analytic_L": 1.7484697956595574,
+      "rhs_evaluations": 1994,
+      "control": [
+        3.537131359448188e-13,
+        3.33184912440992e-13,
+        2.6173765843672365e-13,
+        0.024244897837303568,
+        0.19999999999162774,
+        0.1999899999999334,
+        0.19999999999996537
+      ],
+      "evaluation": 47,
+      "elapsed_seconds": 0.8713083751499653,
+      "simulation_seconds": 0.017525916919112206,
+      "log_ratio_error": 0.008980643950897482,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484697956595567,
+        18.150126383213095,
+        35.974388231839605,
+        0.14462171639760701
+      ],
+      "z": -0.6841297233104975,
+      "biomass_amount_gDW": 94.6350790091539,
+      "log_biomass_amount": 4.550028221373546,
+      "minimum_glucose_g_L": 0.14462171639760701,
+      "volume_analytic_L": 1.7484697956595574,
+      "rhs_evaluations": 2006,
+      "control": [
+        3.537131359448188e-13,
+        3.33184912440992e-13,
+        2.6173765843672365e-13,
+        0.024244897837303568,
+        0.19999999999162774,
+        0.1999999999999334,
+        0.19998999999996536
+      ],
+      "evaluation": 48,
+      "elapsed_seconds": 0.8887949171476066,
+      "simulation_seconds": 0.017478332854807377,
+      "log_ratio_error": 0.009017457249447802,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484899116775046,
+        18.150021989557256,
+        35.974798236579694,
+        0.14462723366137062
+      ],
+      "z": -0.684146872067525,
+      "biomass_amount_gDW": 94.636702136759,
+      "log_biomass_amount": 4.550045372663563,
+      "minimum_glucose_g_L": 0.14462723366137062,
+      "volume_analytic_L": 1.7484899116775048,
+      "rhs_evaluations": 2042,
+      "control": [
+        7.627569723014701e-12,
+        7.317880825606492e-12,
+        3.226540334827573e-12,
+        0.024244955987313115,
+        0.19999999983409417,
+        0.19999999999917312,
+        0.2
+      ],
+      "evaluation": 49,
+      "elapsed_seconds": 0.90687295794487,
+      "simulation_seconds": 0.01783724967390299,
+      "log_ratio_error": 0.009000308492420284,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484898268182991,
+        18.150018519784354,
+        35.97480300329494,
+        0.14462722325583627
+      ],
+      "z": -0.6841471957408781,
+      "biomass_amount_gDW": 94.63669981146026,
+      "log_biomass_amount": 4.5500453480927705,
+      "minimum_glucose_g_L": 0.14462722325583627,
+      "volume_analytic_L": 1.7484898268183002,
+      "rhs_evaluations": 2030,
+      "control": [
+        2.307240426874859e-12,
+        2.209052813036051e-12,
+        1.0579896701752532e-12,
+        0.02424491345455272,
+        0.19999999994931922,
+        0.1999999999997292,
+        0.19999999999997467
+      ],
+      "evaluation": 50,
+      "elapsed_seconds": 0.9246180830523372,
+      "simulation_seconds": 0.017719208728522062,
+      "log_ratio_error": 0.008999984819067164,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484898068601333,
+        18.150017197535465,
+        35.97480496747372,
+        0.1446272160787323
+      ],
+      "z": -0.6841473231907197,
+      "biomass_amount_gDW": 94.63669985363599,
+      "log_biomass_amount": 4.550045348538429,
+      "minimum_glucose_g_L": 0.1446272160787323,
+      "volume_analytic_L": 1.7484898068601327,
+      "rhs_evaluations": 1958,
+      "control": [
+        1.0559439469007262e-12,
+        1.0074996472271562e-12,
+        5.479648836843512e-13,
+        0.024244903451206987,
+        0.19999999997641918,
+        0.19999999999986,
+        0.1999999999999687
+      ],
+      "evaluation": 51,
+      "elapsed_seconds": 0.9417404998093843,
+      "simulation_seconds": 0.01709658419713378,
+      "log_ratio_error": 0.008999857369225595,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484897984528058,
+        18.150016398563462,
+        35.97480619853731,
+        0.14462721055380648
+      ],
+      "z": -0.6841474014313345,
+      "biomass_amount_gDW": 94.6367001540986,
+      "log_biomass_amount": 4.550045351713336,
+      "minimum_glucose_g_L": 0.14462721055380648,
+      "volume_analytic_L": 1.7484897984528045,
+      "rhs_evaluations": 2078,
+      "control": [
+        5.288384463530759e-13,
+        5.01348392880621e-13,
+        3.33118222898929e-13,
+        0.02424489923732271,
+        0.19999999998783496,
+        0.1999999999999151,
+        0.1999999999999662
+      ],
+      "evaluation": 52,
+      "elapsed_seconds": 0.9600759171880782,
+      "simulation_seconds": 0.018309874925762415,
+      "log_ratio_error": 0.00899977912861083,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.748489796182756,
+        18.1500162151459,
+        35.97480647569314,
+        0.14462721093614386
+      ],
+      "z": -0.684147419241141,
+      "biomass_amount_gDW": 94.63670019513296,
+      "log_biomass_amount": 4.550045352146934,
+      "minimum_glucose_g_L": 0.14462721093614386,
+      "volume_analytic_L": 1.7484897961827564,
+      "rhs_evaluations": 2090,
+      "control": [
+        3.865156026899494e-13,
+        3.646833689576821e-13,
+        2.751078479687888e-13,
+        0.024244898099539114,
+        0.1999999999909173,
+        0.19999999999992996,
+        0.19999999999996554
+      ],
+      "evaluation": 53,
+      "elapsed_seconds": 0.9783299579285085,
+      "simulation_seconds": 0.018228332977741957,
+      "log_ratio_error": 0.008999761318804311,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484897957118783,
+        18.15001648266284,
+        35.97480602452315,
+        0.1446272124568471
+      ],
+      "z": -0.6841473919606523,
+      "biomass_amount_gDW": 94.6366998485313,
+      "log_biomass_amount": 4.550045348484489,
+      "minimum_glucose_g_L": 0.1446272124568471,
+      "volume_analytic_L": 1.7484897957118775,
+      "rhs_evaluations": 2054,
+      "control": [
+        3.569933826193319e-13,
+        3.36334758092661e-13,
+        2.6307467738993015e-13,
+        0.024244897863527123,
+        0.19999999999155668,
+        0.19999999999993306,
+        0.1999999999999654
+      ],
+      "evaluation": 54,
+      "elapsed_seconds": 0.9962773327715695,
+      "simulation_seconds": 0.017923208884894848,
+      "log_ratio_error": 0.008999788599292957,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484897956647902,
+        18.15001645422661,
+        35.97480607205413,
+        0.1446272117734664
+      ],
+      "z": -0.684147394848615,
+      "biomass_amount_gDW": 94.63669987936964,
+      "log_biomass_amount": 4.55004534881035,
+      "minimum_glucose_g_L": 0.1446272117734664,
+      "volume_analytic_L": 1.7484897956647893,
+      "rhs_evaluations": 1910,
+      "control": [
+        3.5404116061227013e-13,
+        3.334998970061589e-13,
+        2.618713603320443e-13,
+        0.024244897839925925,
+        0.19999999999162063,
+        0.19999999999993337,
+        0.19999999999996537
+      ],
+      "evaluation": 55,
+      "elapsed_seconds": 1.0129262497648597,
+      "simulation_seconds": 0.016625000163912773,
+      "log_ratio_error": 0.00899978571133031,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484897956600804,
+        18.150016303453157,
+        35.97480632280165,
+        0.1446272111977091
+      ],
+      "z": -0.6841474101257715,
+      "biomass_amount_gDW": 94.63670005391836,
+      "log_biomass_amount": 4.5500453506547585,
+      "minimum_glucose_g_L": 0.1446272111977091,
+      "volume_analytic_L": 1.7484897956600807,
+      "rhs_evaluations": 2078,
+      "control": [
+        3.5374593841156395e-13,
+        3.332164108975087e-13,
+        2.617510286262557e-13,
+        0.024244897837565803,
+        0.19999999999162701,
+        0.1999999999999334,
+        0.19999999999996537
+      ],
+      "evaluation": 56,
+      "elapsed_seconds": 1.031386457849294,
+      "simulation_seconds": 0.01843554200604558,
+      "log_ratio_error": 0.00899977043417377,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.74848979565961,
+        18.15001631714857,
+        35.974806299945996,
+        0.1446272112130243
+      ],
+      "z": -0.6841474087358801,
+      "biomass_amount_gDW": 94.63670003787631,
+      "log_biomass_amount": 4.550045350485246,
+      "minimum_glucose_g_L": 0.1446272112130243,
+      "volume_analytic_L": 1.7484897956596097,
+      "rhs_evaluations": 2222,
+      "control": [
+        3.5371641619149334e-13,
+        3.3318806228664365e-13,
+        2.6173899545567684e-13,
+        0.02424489783732979,
+        0.19999999999162765,
+        0.1999999999999334,
+        0.19999999999996537
+      ],
+      "evaluation": 57,
+      "elapsed_seconds": 1.0509327920153737,
+      "simulation_seconds": 0.019512916915118694,
+      "log_ratio_error": 0.008999771824065195,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484897956595629,
+        18.150016677187544,
+        35.97480569990932,
+        0.14462721435188863
+      ],
+      "z": -0.6841473722196818,
+      "biomass_amount_gDW": 94.63669961824023,
+      "log_biomass_amount": 4.550045346051067,
+      "minimum_glucose_g_L": 0.14462721435188863,
+      "volume_analytic_L": 1.7484897956595626,
+      "rhs_evaluations": 1982,
+      "control": [
+        3.5371346396948625e-13,
+        3.331852274255572e-13,
+        2.61737792138619e-13,
+        0.02424489783730619,
+        0.19999999999162774,
+        0.1999999999999334,
+        0.19999999999996537
+      ],
+      "evaluation": 58,
+      "elapsed_seconds": 1.0682941251434386,
+      "simulation_seconds": 0.01733145909383893,
+      "log_ratio_error": 0.008999808340263482,
+      "violation": 0.0,
+      "feasible": true
+    },
+    {
+      "terminal": [
+        1.7484897956595584,
+        18.150016547693944,
+        35.97480591573826,
+        0.1446272133310474
+      ],
+      "z": -0.684147385353756,
+      "biomass_amount_gDW": 94.63669976919645,
+      "log_biomass_amount": 4.55004534764618,
+      "minimum_glucose_g_L": 0.1446272133310474,
+      "volume_analytic_L": 1.748489795659558,
+      "rhs_evaluations": 2018,
+      "control": [
+        3.537131687472856e-13,
+        3.331849439394485e-13,
+        2.6173767180691317e-13,
+        0.024244897837303832,
+        0.19999999999162774,
+        0.1999999999999334,
+        0.19999999999996537
+      ],
+      "evaluation": 59,
+      "elapsed_seconds": 1.0859483750537038,
+      "simulation_seconds": 0.01763020781800151,
+      "log_ratio_error": 0.00899979520618932,
+      "violation": 0.0,
+      "feasible": true
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "primary_forecast_remains_failed": true,
+  "prefix_complete": false,
+  "accepted_terminal_time": 6.043698792915234,
+  "accepted_terminal_state": [
+    1.3302324293161123,
+    -3.3679374297331255e-11,
+    0.016642070744201688
+  ],
+  "failed_trial": {
+    "time": 6.049266246003514,
+    "state": [
+      1.3302369393010531,
+      -3.3679374297331255e-11,
+      0.016156006055450763
+    ]
+  },
+  "failure": "RuntimeError('HighsModelStatus.kInfeasible state=[ 1.33023694e+00 -3.36793743e-11  1.61560061e-02] params=[10.73642812  6.26901171 10.         12.67900679]')",
+  "accepted_steps": 125,
+  "prefix_observation_count": 239,
+  "missing_full_window_observations": 17,
+  "maintenance_feasibility": {
+    "status": "HighsModelStatus.kOptimal",
+    "fitted_demand": 12.679006785200711,
+    "maximum_supported_ATP": 12.517997083133464,
+    "shortfall": 0.16100970206724696,
+    "glucose_bound": -0.0,
+    "ethanol_bound": -1.39088856479261,
+    "equality_residual": 3.9968028886505635e-14
+  },
+  "training_log_parameter_jacobian": {
+    "singular_values": [
+      1.7032546828214798,
+      0.42627010860620096,
+      0.024492681151809303
+    ],
+    "condition_number": 69.54137328879808,
+    "column_norms": [
+      1.4602332013511332,
+      0.8521453222188303,
+      0.47428889821166215
+    ],
+    "right_singular_vectors": [
+      [
+        -0.8470290132329796,
+        -0.4607963555136607,
+        0.2649689972183392
+      ],
+      [
+        -0.5291541907613195,
+        0.7782245440302367,
+        -0.33817510474406975
+      ],
+      [
+        0.050375521250873315,
+        0.4266535805712378,
+        0.9030110902112138
+      ]
+    ]
+  },
+  "matched_capacity_prescribed": {
+    "complete": true,
+    "parameters": [
+      11.005414756123924,
+      3.919072884652486,
+      10.0,
+      5.565032869183548
+    ],
+    "max_absolute_state_difference": [
+      1.0198508704206688e-12,
+      2.5626167854397863e-12,
+      2.5481838861196593e-12
+    ],
+    "matched_states": 301,
+    "capacity_active_within_1e7": 301,
+    "capacity_gap_range": [
+      0.0,
+      0.0
+    ],
+    "maximum_selected_flux_difference": [
+      1.0477729794899915e-12,
+      0.0,
+      6.5281113847959205e-12,
+      0.0
+    ],
+    "flux_order": [
+      "growth",
+      "glucose",
+      "ethanol",
+      "oxygen"
+    ]
+  },
+  "protocol_sha256": "dbf3adbca92bfd3c4130840bf742c9355b3011ef028321e6f3cb39b2c6a20d5a",
+  "elapsed_seconds": 7.136409958824515,
+  "complete": true
+}

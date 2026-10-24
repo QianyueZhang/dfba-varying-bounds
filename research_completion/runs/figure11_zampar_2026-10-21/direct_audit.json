@@ -1,0 +1,48 @@
+{
+  "physical_dynamic_lower_bounds": "Glucose/ethanol uptake lower bounds are exact minus-capacity, without epsilon subtraction; remaining/fixed bounds expanded",
+  "parameters": [
+    11.005414756123924,
+    3.919072884652486,
+    10.0,
+    5.565032869183548
+  ],
+  "epsilon": 1e-05,
+  "mu": 1e-07,
+  "method": "External-state LSODA integration with a converged direct finite-barrier KKT solve at every RHS; LP solutions provide Newton predictors only, not the adopted flux; no flux interpolation",
+  "integrator": "LSODA",
+  "rtol": 2e-08,
+  "atol": [
+    2e-10,
+    1e-13,
+    2e-10
+  ],
+  "max_step_h": 0.25,
+  "no_flux_clipping": true,
+  "continuous_extracellular_states": true,
+  "accepted_step_count": 312,
+  "max_equality_residual_all_solves": 8.582778932009205e-11,
+  "max_stationarity_residual_all_solves": 1.9179390750623637e-07,
+  "minimum_slack_all_solves": 1.1171703572879582e-07,
+  "output_min_slack": 1.1172063201002084e-07,
+  "output_max_equality_residual": 2.6005864128819667e-12,
+  "output_max_stationarity_residual": 1.8915063817110154e-07,
+  "max_absolute_state_difference_from_unrelaxed_LP": {
+    "X_gDW_L": 0.0015226653940507706,
+    "G_g_L": 0.0023499995521925887,
+    "E_g_L": 0.0013942405608585728
+  },
+  "minimum_external_concentrations": {
+    "X_gDW_L": 0.09856522231342883,
+    "G_g_L": 1.006536447933314e-09,
+    "E_g_L": 0.22730440275683
+  },
+  "elapsed_seconds": 312.94053449993953,
+  "rhs_calls": 680,
+  "total_KKT_solves": 1220,
+  "total_Newton_steps": 1300,
+  "coarse_vs_fine_max_state_difference": {
+    "X_gDW_L": 9.210478164600744e-07,
+    "G_g_L": 1.2539613219175738e-06,
+    "E_g_L": 2.650243315471812e-06
+  }
+}

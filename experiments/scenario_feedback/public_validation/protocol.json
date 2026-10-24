@@ -1,0 +1,297 @@
+{
+  "created_utc": "2026-10-24T02:09:33.210997+00:00",
+  "study": "Retrospective independent-system measured trajectory validation; not an intervention trial",
+  "source": {
+    "doi": "10.1038/s41467-022-32392-z",
+    "authors": "Joaquin Gutierrez Mena, Sant Kumar, Mustafa Khammash",
+    "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-022-32392-z/MediaObjects/41467_2022_32392_MOESM6_ESM.zip",
+    "sha256": "dd451bc6a2ecc27e9a690da6793396ca314e93b0a5e5eb2b18247ee6b14eb280",
+    "license": "Article/source-data context CC BY4.0; no separate notice in source ZIP; code licensing distinct"
+  },
+  "prior_inspection": "Array field names, sizes, ranges, first values and published figures/captions inspected before freezing. No fitting or holdout model scoring has occurred. Public holdout is not claimed prospectively unseen to humanity.",
+  "train_trajectories": [
+    {
+      "id": "openloop_dark_main",
+      "file": "figure5.mat",
+      "path": [
+        "figure5",
+        "figure5b",
+        "OL_BlueLight_0"
+      ],
+      "time_path": [
+        "figure5",
+        "figure5b",
+        "time"
+      ],
+      "constant_light": 0,
+      "published_figure": "5b"
+    },
+    {
+      "id": "openloop_bright_main",
+      "file": "figure5.mat",
+      "path": [
+        "figure5",
+        "figure5b",
+        "OL_BlueLight_800"
+      ],
+      "time_path": [
+        "figure5",
+        "figure5b",
+        "time"
+      ],
+      "constant_light": 800,
+      "published_figure": "5b"
+    },
+    {
+      "id": "openloop_dark_rep1",
+      "file": "suppl_fig_12.mat",
+      "path": [
+        "suppl_fig_12",
+        "OL_BlueLight0",
+        "rep1"
+      ],
+      "time_path": [
+        "suppl_fig_12",
+        "time"
+      ],
+      "constant_light": 0,
+      "published_figure": "Supplementary Fig6; stale source filename12"
+    },
+    {
+      "id": "openloop_dark_rep2",
+      "file": "suppl_fig_12.mat",
+      "path": [
+        "suppl_fig_12",
+        "OL_BlueLight0",
+        "rep2"
+      ],
+      "time_path": [
+        "suppl_fig_12",
+        "time"
+      ],
+      "constant_light": 0,
+      "published_figure": "Supplementary Fig6; stale source filename12"
+    },
+    {
+      "id": "openloop_bright_rep1",
+      "file": "suppl_fig_12.mat",
+      "path": [
+        "suppl_fig_12",
+        "OL_BlueLight800",
+        "rep1"
+      ],
+      "time_path": [
+        "suppl_fig_12",
+        "time"
+      ],
+      "constant_light": 800,
+      "published_figure": "Supplementary Fig6; stale source filename12"
+    },
+    {
+      "id": "openloop_bright_rep2",
+      "file": "suppl_fig_12.mat",
+      "path": [
+        "suppl_fig_12",
+        "OL_BlueLight800",
+        "rep2"
+      ],
+      "time_path": [
+        "suppl_fig_12",
+        "time"
+      ],
+      "constant_light": 800,
+      "published_figure": "Supplementary Fig6; stale source filename12"
+    }
+  ],
+  "holdout_trajectories": [
+    {
+      "id": "closedloop_highSetpoint_main",
+      "file": "suppl_fig_17.mat",
+      "path": [
+        "suppl_fig_17",
+        "highSetpoint"
+      ],
+      "published_figure": "Main Fig6 and Supplementary Fig11; source filename17"
+    },
+    {
+      "id": "closedloop_lowSetpoint_main",
+      "file": "suppl_fig_17.mat",
+      "path": [
+        "suppl_fig_17",
+        "lowSetpoint"
+      ],
+      "published_figure": "Main Fig6 and Supplementary Fig11; source filename17"
+    },
+    {
+      "id": "closedloop_changingSetpoint_main",
+      "file": "suppl_fig_17.mat",
+      "path": [
+        "suppl_fig_17",
+        "changingSetpoint"
+      ],
+      "published_figure": "Main Fig6 and Supplementary Fig11; source filename17"
+    },
+    {
+      "id": "closedloop_high_rep1",
+      "file": "suppl_fig_15.mat",
+      "path": [
+        "suppl_fig_15",
+        "rep1"
+      ],
+      "published_figure": "Supplementary Fig9; stale source filename"
+    },
+    {
+      "id": "closedloop_high_rep2",
+      "file": "suppl_fig_15.mat",
+      "path": [
+        "suppl_fig_15",
+        "rep2"
+      ],
+      "published_figure": "Supplementary Fig9; stale source filename"
+    },
+    {
+      "id": "closedloop_low_rep1",
+      "file": "suppl_fig_16.mat",
+      "path": [
+        "suppl_fig_16",
+        "rep1"
+      ],
+      "published_figure": "Supplementary Fig10; stale source filename"
+    },
+    {
+      "id": "closedloop_low_rep2",
+      "file": "suppl_fig_16.mat",
+      "path": [
+        "suppl_fig_16",
+        "rep2"
+      ],
+      "published_figure": "Supplementary Fig10; stale source filename"
+    },
+    {
+      "id": "closedloop_changing_13h",
+      "file": "suppl_fig_19.mat",
+      "path": [
+        "suppl_fig_18",
+        "changingSetpoint"
+      ],
+      "published_figure": "Supplementary Fig13; source filename19 and internal variable18"
+    }
+  ],
+  "additional_training": {
+    "source": "figure2.mat: figure2.figure2b",
+    "variables": [
+      "light",
+      "steady_state_growth_rate_replicate1",
+      "steady_state_growth_rate_replicate2",
+      "steady_state_growth_rate_replicate3"
+    ],
+    "role": "18 steady-state growth observations at6 light levels,3 biological replicate series; only Hill shape model calibration",
+    "units": "growth1/h; digital light0..800 arb.units"
+  },
+  "models": {
+    "shared_dynamics": "z=logit(photophilic cell fraction); dz/dt=g; dg/dt=(g_inf(L)-g)/tau_sign; tau_up if g_inf>=g else tau_down; exact constant-input update",
+    "linear": "g_inf=g_dark+(g_bright-g_dark)*(L/800)",
+    "dose_informed": "g_inf=g_dark+(g_bright-g_dark)*H(L)/H(800), H=L^n/(K^n+L^n). K,n fitted only to figure2 steady-state growth rates with independent offset/amplitude.",
+    "composition_parameters": [
+      "g_dark",
+      "g_bright",
+      "tau_down_h",
+      "tau_up_h",
+      "g_initial"
+    ],
+    "composition_bounds": [
+      [
+        -2,
+        -1e-06
+      ],
+      [
+        1e-06,
+        2
+      ],
+      [
+        0.05,
+        24
+      ],
+      [
+        0.05,
+        24
+      ],
+      [
+        -2,
+        2
+      ]
+    ],
+    "dose_bounds": {
+      "offset": [
+        0,
+        3
+      ],
+      "amplitude": [
+        1e-06,
+        5
+      ],
+      "K": [
+        0.1,
+        10000
+      ],
+      "n": [
+        0.1,
+        5
+      ]
+    },
+    "composition_loss": "Equal trajectory total weight: residual_fraction/sqrt(number_of_post_initial_observations), soft_l1 f_scale0.03; deterministic8starts; lowest training objective retained. No holdout model selection.",
+    "composition_starts_tau_down_up": [
+      [
+        0.25,
+        0.25
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        0.5,
+        4
+      ],
+      [
+        4,
+        0.5
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        8,
+        1
+      ]
+    ],
+    "dose_loss": "ordinary least squares across18 observations;12starts K30/100/300/1000 x n0.5/1/2; lowest training objective",
+    "max_nfev": 3000
+  },
+  "evaluation": {
+    "primary": "Each complete heldout trajectory: free-run fraction RMSE/MAE/terminal absolute error. Macro-average across8 trajectories, not pooled observations as replicates. All postinitial points included.",
+    "one_step": "Reinitialize z to measured fraction at time k, propagate g using training parameters and input history only, predict k+1. Not an observer or closed-loop controller simulation.",
+    "baselines": "Free-run constant initial fraction; one-step persistence of current measured fraction.",
+    "inputs": "Zero-order hold of recorded LightInput[k] over [t[k],t[k+1]); final input unused. Setpoint never a model input.",
+    "diagnostics": "Report <=40h and >40h separately because published SI describes drift after40h; primary remains full trajectory.",
+    "sensitivity": "Six leave-one-training-trajectory-out refits and three leave-one-dose-replicate-out refits. Report deterministic sensitivity ranges, not confidence intervals. No holdout retuning.",
+    "uncertainty": "Report optimizer convergence, active bounds, Jacobian singular values/conditioning, multistart costs and all fit failures. No calibrated probability coverage or safety claim.",
+    "alignment": "Left-held input specified from publisher code control update at measured state. No optimization of input delay on holdout."
+  },
+  "limits": [
+    "Cell fraction is not yeast dry-weight ratio.",
+    "Optogenetic E.coli turbidostat in LB+chloramphenicol is not glucose-fed SC/KP fed-batch.",
+    "Recorded-input prediction is not off-policy validation of a new controller.",
+    "Long-run mutation/drift not present in fixed-parameter model; retain failure.",
+    "Six open-loop traces do not identify arbitrary intermediate input response; dose-informed model uses explicitly separate training measurements."
+  ]
+}

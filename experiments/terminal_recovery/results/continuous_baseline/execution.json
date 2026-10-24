@@ -1,0 +1,315 @@
+{
+  "status": "declared_before_continuous_execution",
+  "declared_utc": "2026-10-24T03:47:35.850207+00:00",
+  "source_input_sha256": {
+    "PROTOCOL.json": "27108441b375d9179db5f7d02eec340edc4b144fa69adc06f065f94269551cfe",
+    "scripts/engine.py": "28843ca0c1064667a7990c569185d27b63557900809b597732a6d488e9905898",
+    "scripts/policies.py": "58c38af9e71e39f528dce0378c4971edfe552c690b293f6af55a54cdd25c1fa0",
+    "scripts/campaign.py": "3f218c425ba702d49aab14a0e1075464a6e91e53bab026c57c502ff7f48f5d17",
+    "scripts/continuous_baseline.py": "62e258ced1779db954105e3fe9534ec43e4c86cdba4600b8b2eb31ef68f54ea4",
+    "vendor/prior_kernel.py": "885d8ae76654b6cc9a42206330a4e03385998231b6a454c34a22f18f4a8b84e6",
+    "audit/independent_amount_model.py": "b0b42a3ab3bab1a014367fad97d9bdf71152ba7e209c8877eb4ad118c5b0995e",
+    "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb",
+    "audit/design_lock.json": "4e2f1c4c0667a1174c1673d45ebc43d54bf786cc89b1a3df13896476ad9053db",
+    "results/roots.json": "16ac9df9afc4d5bc3debc3f75cc6bae59892efe2ca91d2c353985f065ff00e66",
+    "results/primary_design.json": "726b2a74047de6fedbfb66017c332f56689f7ebdc7df6f741d5e67600892a5b7",
+    "scripts/run_continuous.py": "7ac9d2b4f8d69cbbce1c21a8a461929d408bd843d38edc8bb0d0edeea398c356"
+  },
+  "original_protocol": {
+    "status": "frozen_before_evaluation",
+    "date": "2026-10-24",
+    "question": "Does full-state terminal recoverability distinguish matched-volume histories and improve causal action selection against matched and continuous open-loop baselines?",
+    "primary_initial": {
+      "V_L": 0.5,
+      "M1_gDW": 0.0005,
+      "M2_gDW": 0.0005,
+      "Q_g": 10
+    },
+    "families": [
+      "analytic",
+      "table"
+    ],
+    "root_volumes_L": [
+      0.9,
+      1.3,
+      1.7
+    ],
+    "prefix": {
+      "intervals": 5,
+      "interval_hours": 2,
+      "kappa": [
+        1,
+        1
+      ],
+      "schedules": [
+        "earliest capacity-limited feed",
+        "reversed earliest feed",
+        "uniform feed"
+      ],
+      "total_feed_sum": "(root_volume-0.5)/2",
+      "common_initial_and_total_feed": true
+    },
+    "root_count": 18,
+    "fixed_targets": [
+      0.5,
+      0.75,
+      1,
+      1.25,
+      1.5,
+      2
+    ],
+    "primary_root_target_count": 108,
+    "recovery_intervals": 2,
+    "interval_hours": 2,
+    "K": [
+      [
+        1,
+        1
+      ],
+      [
+        0.975,
+        1.025
+      ],
+      [
+        1.025,
+        0.975
+      ]
+    ],
+    "uncertainty_pattern": "rectangular K x K: independent adversarial choice each interval",
+    "observation": "full state exact at boundaries, no disturbance identity supplied",
+    "raw_action_grid": {
+      "min": 0,
+      "max": 0.2,
+      "count": 21,
+      "unit": "L/h"
+    },
+    "volume_cap_L": 1.8,
+    "volume_guard_L": 1e-11,
+    "inner_design_band": 0.00748,
+    "outer_design_band": 0.0075,
+    "actual_acceptance_band": "log(1.01)",
+    "comparison_tolerance": 1e-10,
+    "physical_substrate_tolerance_g_L": 2e-07,
+    "methods": [
+      "nominal_replan",
+      "open_grid",
+      "open_replan",
+      "recovery_economic",
+      "recovery_filter"
+    ],
+    "nominal_guard": "Nominal composition/biomass objective with the same all-scenario physical admissibility guard",
+    "open_grid": "Exhaustive robust economic two-feed common plan if feasible; otherwise minimax terminal-error plan; commit both feeds",
+    "open_replan": "Same first decision as open_grid; robust one-step economic/minimax replan at observed next state",
+    "recovery_economic": "Causal finite-game guaranteed-biomass optimum over terminal-band-feasible policies; minimax fallback if empty",
+    "recovery_filter": "Two nominal constant-feed probes (zero and shared-horizon volume cap), affine terminal-ratio interpolation, projected then quantized proposal; accept safe, else nearest safe with economic/error/index tie breaks, else minimax fallback",
+    "fallback_claim": "No guarantee of terminal-band recovery when safe action set is empty",
+    "primary_deployment": "All 9 KxK paths, independent physical-amount DOP853, second decision recomputed at actual independently integrated full state",
+    "primary_episode_count": 4860,
+    "root_initialization": "Engine-generated roots define primary initial states. Independent prefix replay separately assesses root provenance with fixed tolerances.",
+    "dense_target_map": {
+      "count": 161,
+      "minimum": 0.25,
+      "maximum": 4,
+      "spacing": "log",
+      "role": "descriptive recovery map; no post hoc target selection or efficacy denominator"
+    },
+    "nested_grid_subset": "All 6 uniform-history roots x 6 fixed targets; 11,21,41 raw actions",
+    "continuous_open_subset": "All 6 uniform-history roots x 6 fixed targets; two SLSQP minimax starts and optional feasible economic polish, max60iterations each; retain every evaluated incumbent; local baseline only",
+    "ood_subset": "All 6 uniform-history roots x 6 fixed targets x 5methods x4 stresses =720episodes, descriptive separate from primary finite-game claims",
+    "ood_stresses": [
+      "persistent kappa=(0.92,1.08)",
+      "persistent kappa=(1.08,0.92)",
+      "unmodeled inhibition=(180,260), nominal kappa",
+      "nominal plant; second observation logM1+0.0025,logM2-0.0025,S+0.025g/L"
+    ],
+    "audit": {
+      "amount_absolute_g": 2e-07,
+      "amount_relative": 2e-08,
+      "log_ratio_absolute": 1e-07,
+      "volume_absolute_L": 2e-13,
+      "independent_rtol": 2e-13,
+      "independent_atol": 2e-14,
+      "independent_maxstep_h": 0.025,
+      "engine_rtol": 2e-11,
+      "engine_atol": 2e-13,
+      "engine_maxstep_h": 0.05
+    },
+    "analysis": "Complete denominators; paired finite-panel counts and exact worst-case values; no population significance or random-sampling CI for designed cases. Conditional biomass comparisons disclose jointly feasible denominator and family splits. Offline tree and proposal costs included, no real-time acceleration claim.",
+    "limitations": "Finite actions and finite uncertainty only. Full-state exact sensing. No validated integration enclosure, biological controller validation, continuous-control infeasibility proof, general recursive feasibility, or novel Bellman theorem claim.",
+    "development_seen": "Two manual analytic baseline states and one manual runtime root, fixed engine validation panel; no generated evaluation root/target outcomes were inspected before freezing."
+  },
+  "assigned": [
+    {
+      "root": "analytic_v0.9_uniform",
+      "target": 0.5
+    },
+    {
+      "root": "analytic_v0.9_uniform",
+      "target": 0.75
+    },
+    {
+      "root": "analytic_v0.9_uniform",
+      "target": 1.0
+    },
+    {
+      "root": "analytic_v0.9_uniform",
+      "target": 1.25
+    },
+    {
+      "root": "analytic_v0.9_uniform",
+      "target": 1.5
+    },
+    {
+      "root": "analytic_v0.9_uniform",
+      "target": 2.0
+    },
+    {
+      "root": "analytic_v1.3_uniform",
+      "target": 0.5
+    },
+    {
+      "root": "analytic_v1.3_uniform",
+      "target": 0.75
+    },
+    {
+      "root": "analytic_v1.3_uniform",
+      "target": 1.0
+    },
+    {
+      "root": "analytic_v1.3_uniform",
+      "target": 1.25
+    },
+    {
+      "root": "analytic_v1.3_uniform",
+      "target": 1.5
+    },
+    {
+      "root": "analytic_v1.3_uniform",
+      "target": 2.0
+    },
+    {
+      "root": "analytic_v1.7_uniform",
+      "target": 0.5
+    },
+    {
+      "root": "analytic_v1.7_uniform",
+      "target": 0.75
+    },
+    {
+      "root": "analytic_v1.7_uniform",
+      "target": 1.0
+    },
+    {
+      "root": "analytic_v1.7_uniform",
+      "target": 1.25
+    },
+    {
+      "root": "analytic_v1.7_uniform",
+      "target": 1.5
+    },
+    {
+      "root": "analytic_v1.7_uniform",
+      "target": 2.0
+    },
+    {
+      "root": "table_v0.9_uniform",
+      "target": 0.5
+    },
+    {
+      "root": "table_v0.9_uniform",
+      "target": 0.75
+    },
+    {
+      "root": "table_v0.9_uniform",
+      "target": 1.0
+    },
+    {
+      "root": "table_v0.9_uniform",
+      "target": 1.25
+    },
+    {
+      "root": "table_v0.9_uniform",
+      "target": 1.5
+    },
+    {
+      "root": "table_v0.9_uniform",
+      "target": 2.0
+    },
+    {
+      "root": "table_v1.3_uniform",
+      "target": 0.5
+    },
+    {
+      "root": "table_v1.3_uniform",
+      "target": 0.75
+    },
+    {
+      "root": "table_v1.3_uniform",
+      "target": 1.0
+    },
+    {
+      "root": "table_v1.3_uniform",
+      "target": 1.25
+    },
+    {
+      "root": "table_v1.3_uniform",
+      "target": 1.5
+    },
+    {
+      "root": "table_v1.3_uniform",
+      "target": 2.0
+    },
+    {
+      "root": "table_v1.7_uniform",
+      "target": 0.5
+    },
+    {
+      "root": "table_v1.7_uniform",
+      "target": 0.75
+    },
+    {
+      "root": "table_v1.7_uniform",
+      "target": 1.0
+    },
+    {
+      "root": "table_v1.7_uniform",
+      "target": 1.25
+    },
+    {
+      "root": "table_v1.7_uniform",
+      "target": 1.5
+    },
+    {
+      "root": "table_v1.7_uniform",
+      "target": 2.0
+    }
+  ],
+  "expected": 36,
+  "runtime": {
+    "python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "numpy": "2.2.2",
+    "scipy": "1.15.1",
+    "numba": "0.68.0",
+    "llvmlite": "0.50.0",
+    "platform": "macOS-14.6.1-arm64-arm-64bit"
+  },
+  "audit": {
+    "checkpoints": "Three shared first-step states and all nine final paths, chained from the declared root state",
+    "numerical_comparisons": {
+      "amount_absolute_g": 2e-07,
+      "amount_relative": 2e-08,
+      "log_ratio_absolute": 1e-07,
+      "volume_absolute_L": 2e-13,
+      "independent_rtol": 2e-13,
+      "independent_atol": 2e-14,
+      "independent_maxstep_h": 0.025,
+      "engine_rtol": 2e-11,
+      "engine_atol": 2e-13,
+      "engine_maxstep_h": 0.05
+    },
+    "relative_amount_reference": "independent physical amount",
+    "label_checks": "Report inner, outer and actual-acceptance labels separately; any disagreement remains visible",
+    "classifications": "Solver convergence status is separate from validity of the retained candidate"
+  },
+  "scope": "Prespecified continuous local baseline on 36 uniform-root/target problems; no global optimum or controller-speed inference"
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "Post hoc hindsight final-interval recovery diagnostic, declared after the campaign started",
+  "campaign": "results/frozen_evaluation",
+  "script_sha256": "089c7747df98d4d1827dceeb9e9e6811d5291f9ab85780f44d770b4ee200193d",
+  "protocol_sha256": "318c1e0dc7ed4079aceb81b86965a5ea87653aa2176ae427109fe4ce46e68d84",
+  "lock_sha256": "22b4b94f29eaad8ab6b418fa713f970f6a2a17571832a56a4b28e322ecb03a8d",
+  "source_hashes": {
+    "scripts/model.py": "edafcc81bd5843b6e1da1dcf44cefecb1795732cb9cdf765a1067161989c3e4f",
+    "scripts/controllers.py": "d0f0bcb24da87131f48fb84cf8e8dbe3c0b99989f6162f35de7947ec552dc203",
+    "scripts/run_study.py": "a9e4c93341cf7d8d0fe40fd7beb7d482c56d824394d818060937e596f505e831",
+    "data/flux_table_eps1e-06.json": "bbac1bab6c5eacc656eb4e30058f5786e0822f5c36017aedc1a5370e705335eb"
+  },
+  "selection": "Completed episodes with terminal_feasible false; incomplete episodes are listed and skipped",
+  "scan": "101 uniformly spaced constant feeds in [0,min(.2,(1.8-V)/2)] L/h; one unique zero feed if no volume remains",
+  "refinement_requested": true,
+  "ratio_acceptance_band": 0.009950330853168092,
+  "solver": "Frozen reactor, tight DOP853 rtol2e-10 atol2e-12 maxstep.1h",
+  "information": "True saved state at stage6 and true final plant affinity used only offline after the executed policy outcomes",
+  "interpretation": "A found feasible feed is a model-based recovery witness. No sampled feasible recovery does not prove physical unreachability. Earlier policies create different final-interval states.",
+  "cost": "Diagnostic time and model calls are entirely separate from primary controller costs; no optimization is rerun for the earlier intervals"
+}

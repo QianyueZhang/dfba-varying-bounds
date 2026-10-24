@@ -1,0 +1,184 @@
+{
+  "scope": "Arithmetic/provenance comparison of two prospectively selected full-backend trajectories, same intracellular backend and matrices; no independent biological validation",
+  "passed": 22,
+  "total": 22,
+  "checks": [
+    {
+      "name": "direct_multistart: completed prospective case",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "direct_multistart: policy and initial state unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "direct_multistart: input and trajectory hashes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "direct_multistart: full trajectory time coverage",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "direct_multistart: all amount-concentration identities",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "direct_multistart: terminal values agree with CSV",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "direct_multistart: analytic terminal volume",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "direct_multistart: nominal constraint arithmetic",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "direct_multistart: KKT stopping and slack",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "direct_multistart: KKT counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "direct_multistart: backend hashes preserved",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "mlp: completed prospective case",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "mlp: policy and initial state unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "mlp: input and trajectory hashes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "mlp: full trajectory time coverage",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "mlp: all amount-concentration identities",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "mlp: terminal values agree with CSV",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "mlp: analytic terminal volume",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "mlp: nominal constraint arithmetic",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "mlp: KKT stopping and slack",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "mlp: KKT counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "mlp: backend hashes preserved",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "results": [
+    {
+      "method": "direct_multistart",
+      "case_id": "condition_0_target_1",
+      "seed": 3101,
+      "table_biomass_amount_gDW": 91.28720349964627,
+      "direct_biomass_amount_gDW": 91.28695151329451,
+      "direct_minus_table_biomass_gDW": -0.0002519863517562726,
+      "direct_minus_table_biomass_percent": -0.0002760368836951521,
+      "table_log_ratio": -0.008759313283861123,
+      "direct_log_ratio": -0.008735113565796046,
+      "direct_minus_table_log_ratio": 2.419971806507694e-05,
+      "direct_terminal_ratio": 0.9913029266961254,
+      "direct_absolute_log_ratio_target_error": 0.008735113565796046,
+      "direct_relative_ratio_target_error_percent": 0.8697073303874592,
+      "nominal_ratio_margin": 0.0012152172873720456,
+      "optimization_ratio_margin": 0.00026488643420395294,
+      "terminal_volume_L": 1.8000000009509478,
+      "strict_volume_margin_L": -9.509477649771725e-10,
+      "volume_acceptance_margin_L": 9.049052174248118e-09,
+      "nominal_feasible": true,
+      "minimum_accepted_glucose_g_L": 0.04329898717292485,
+      "minimum_rhs_stage_glucose_g_L": 0.04329897986352153,
+      "max_equality_residual": 3.5829850789064774e-12,
+      "max_primal_dual_residual": 9.88016328111143e-12,
+      "max_explicit_barrier_stationarity_residual": 3.7035809485589815e-06,
+      "minimum_slack": 2.885046529112478e-07,
+      "rhs_evaluations": 1190,
+      "KKT_solve_attempts": 2380,
+      "failed_attempts": 0,
+      "per_job_concurrent_wall_seconds": 572.4444285421632
+    },
+    {
+      "method": "mlp",
+      "case_id": "condition_0_target_1",
+      "seed": 3101,
+      "table_biomass_amount_gDW": 91.21029492628196,
+      "direct_biomass_amount_gDW": 91.21002605634376,
+      "direct_minus_table_biomass_gDW": -0.00026886993819630334,
+      "direct_minus_table_biomass_percent": -0.0002947802530517407,
+      "table_log_ratio": -0.008999804951690952,
+      "direct_log_ratio": -0.008976254815765828,
+      "direct_minus_table_log_ratio": 2.355013592512424e-05,
+      "direct_terminal_ratio": 0.9910639114886544,
+      "direct_absolute_log_ratio_target_error": 0.008976254815765828,
+      "direct_relative_ratio_target_error_percent": 0.8936088511345641,
+      "nominal_ratio_margin": 0.0009740760374022644,
+      "optimization_ratio_margin": 2.3745184234171685e-05,
+      "terminal_volume_L": 1.7999999999999636,
+      "strict_volume_margin_L": 3.6415315207705135e-14,
+      "volume_acceptance_margin_L": 1.0000036354540498e-08,
+      "nominal_feasible": true,
+      "minimum_accepted_glucose_g_L": 0.0955064725894351,
+      "minimum_rhs_stage_glucose_g_L": 0.0955064725894351,
+      "max_equality_residual": 3.705970722673599e-12,
+      "max_primal_dual_residual": 9.995991104933273e-12,
+      "max_explicit_barrier_stationarity_residual": 1.5302801599569242e-06,
+      "minimum_slack": 2.893302861851379e-07,
+      "rhs_evaluations": 1418,
+      "KKT_solve_attempts": 2836,
+      "failed_attempts": 0,
+      "per_job_concurrent_wall_seconds": 649.571974999737
+    }
+  ],
+  "stationarity_caveat": "The explicitly eliminated-barrier stationarity residual is reported separately. It is not asserted to satisfy the primal-dual solver stopping tolerance, especially near narrow bounds.",
+  "timing_caveat": "Per-job wall times were measured while the two direct checks ran concurrently after the timed main campaign. Their sum is not the elapsed wall time of that concurrent verification workload or a matched optimizer timing.",
+  "depletion_scope": "Both direct checks concern target ratio 1. They do not establish direct-backend verification of depleted target-2 outcomes."
+}

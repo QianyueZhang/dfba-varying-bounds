@@ -1,0 +1,44 @@
+{
+  "case": "fixed_expansion_small_barrier",
+  "epsilon": 1e-05,
+  "mu": 1e-08,
+  "complete": true,
+  "protocol_sha256": "7280a0a16d163a72a3e309e2cfd24a9bf1bb7491f59d809d6a029fcd37c5735a",
+  "runtime": {
+    "python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "platform": "macOS-14.6.1-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.2.2",
+      "scipy": "1.15.1",
+      "highspy": "1.15.1"
+    }
+  },
+  "passed": true,
+  "checks": {
+    "complete_interval": true,
+    "finite_states": true,
+    "external_states": true,
+    "positive_slacks": true,
+    "equality": true,
+    "stationarity": true,
+    "output_growth_gap": true
+  },
+  "minimum_states": [
+    0.09856522231342883,
+    1.1064044047833908e-10,
+    0.22730440275683003
+  ],
+  "accepted_steps": 300,
+  "maximum_equality": 2.2962928623469422e-12,
+  "maximum_stationarity": 1.9135331831157185e-07,
+  "minimum_slack": 1.1637953531220898e-08,
+  "output_growth_gap_range": [
+    7.264074287506583e-06,
+    7.723910932011524e-06
+  ],
+  "elapsed_seconds": 1716.313541083131,
+  "rhs_calls": 652,
+  "total_KKT_solves": 1192,
+  "total_Newton_steps": 7944,
+  "inputs_unchanged": true
+}
